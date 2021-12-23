@@ -1,6 +1,15 @@
 <template>
-<h1>hi</h1>
+    <section class="Navbar">
+        <div class="logo">
+            <h1>Lowballd</h1>
+        </div>
+
+    </section>
 </template>
+
+<script>
+
+</script>
 
 <style >
 
