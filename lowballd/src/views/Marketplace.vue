@@ -1,13 +1,18 @@
 <template>
     <div class="marketplace">
-        <h1>Marketplace</h1>
-        <div id="nav" class="w-full ">
-            <h1>hi</h1>
+        <Nav />
+        <div class="right">
+            <Card />
         </div>
+        
     </div>
 
 </template>
 
 <script>
-
+import Nav from '../components/Nav.vue';
+import Card from '../components/Card.vue';
+export default {
+  components: { Nav,Card },
+}
 </script>

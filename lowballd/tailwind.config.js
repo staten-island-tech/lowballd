@@ -6,7 +6,11 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'filler': "url('../assets/logo.png')",
+      }
+    },
   },
   plugins: [],
 }
