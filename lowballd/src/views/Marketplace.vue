@@ -1,7 +1,10 @@
 <template>
-    <div class="marketplace">
+    <div class="marketplace w-screen">
         <Nav />
-        <div class="right">
+        <div class="flex flex-row flex-wrap w-2/3">
+            <Card />
+            <Card />
+            <Card />
             <Card />
         </div>
         
@@ -13,6 +16,6 @@
 import Nav from '../components/Nav.vue';
 import Card from '../components/Card.vue';
 export default {
-  components: { Nav,Card },
+  components: { Nav, Card },
 }
 </script>

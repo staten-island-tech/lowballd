@@ -1,5 +1,5 @@
 <template>
-    <div id="nav-page" class="bg-slate-300 mx-3">
+    <div id="nav-page" class=" mx-3 flex justify-end">
         <a href="#" class="uppercase ">{{page}}</a>
     </div>
 </template>

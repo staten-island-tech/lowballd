@@ -8,7 +8,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundImage: {
-        'filler': "url('../assets/logo.png')",
+        'filler-color': "#C4C4C4",
       }
     },
   },
