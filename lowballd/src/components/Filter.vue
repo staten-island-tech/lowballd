@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import FilterCol from '../components/Filter-Col.vue';
+import FilterCol from '../components/marketplace/Filter-Col.vue';
 export default {
     name: "Filter",
     components: { FilterCol },

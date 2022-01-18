@@ -1,28 +1,25 @@
 <template>
-    <div class="marketplace w-screen">
-        <Nav />
-        <div class="flex flex-row m-5">
+    <section class="marketplace w-screen ">
+        <Navbar2></Navbar2>
+        <div class="flex flex-row">
           <div class="flex flex-col">
             <Filter />
           </div>
           <div class="flex flex-row flex-wrap w-[100rem]">
               <Card />
-              <Card />
-              <Card />
-              <Card />
           </div>
         </div>
         
-    </div>
+    </section>
 
 </template>
 
 <script>
-import Nav from '../components/Nav.vue';
+import Navbar2 from '../components/Navbar2.vue';
 import Card from '../components/Card.vue';
 import Filter from '../components/Filter.vue';
 export default {
-  components: { Nav, Card, Filter},
+  components: { Navbar2, Card, Filter},
 
 }
 </script>

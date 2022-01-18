@@ -1,5 +1,5 @@
 <template>
-    <section class="card-title-price my-1">
+    <section class="card-title-price my-1 ">
         <h2 class="my-1">{{title}}</h2>
         <h2>${{price}}</h2>
         
