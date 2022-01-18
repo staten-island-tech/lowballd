@@ -9,9 +9,9 @@
             <h1 class="text-4xl text-slate-800 font-['Spectral'] font-bold py-16">lowballd.</h1>
             <div class="h-1 w-4/5 bg-slate-800 mx-auto mb-12"></div>
             <ul class="text-xl text-slate-800 h-1/5 flex flex-col justify-around mb-12">
-                <li>FEED</li>
-                <li>MARKETPLACE</li>
-                <li>ABOUT</li>
+                <li><router-link to="about">ABOUT</router-link></li>
+                <li><router-link to="feed">FEED</router-link></li>
+                <li><router-link to="marketplace">MARKETPLACE</router-link></li>
             </ul>
             <div class="h-1 w-4/5 bg-slate-800 mx-auto mb-12"></div>
             <h1 class="text-xl text-slate-800 font-['Work_Sans'] font-bold">Log In / Sign Up</h1>

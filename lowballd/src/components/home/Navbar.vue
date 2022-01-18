@@ -7,15 +7,15 @@
   </div> 
   <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
-      <a class="btn btn-ghost btn-sm">
-              FEED
-            </a> 
-      <a class="btn btn-ghost btn-sm">
-              MARKETPLACE
-            </a> 
-      <a class="btn btn-ghost btn-sm">
-              ABOUT
-            </a> 
+        <router-link to="about">
+            <a class="btn btn-ghost btn-sm">ABOUT</a> 
+        </router-link>
+        <router-link to="feed">
+            <a class="btn btn-ghost btn-sm">FEED</a> 
+        </router-link>
+        <router-link to="marketplace">
+            <a class="btn btn-ghost btn-sm">MARKETPLACE</a> 
+        </router-link>
     </div>
   </div> 
     <div class="navbar-end">
