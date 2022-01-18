@@ -1,5 +1,6 @@
 <template>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <Hamburger></Hamburger>
     <section class="h-screen w-full bg-slate-800 flex flex-col justify-around items-center">
         <div class="h-12 w-12"></div>
         <div class="text-center w-3/5">
@@ -11,7 +12,12 @@
 </template>
 
 <script>
-    export default {
-        name: 'Landing',
-    }
+import Hamburger from './Hamburger.vue'
+export default {
+    name: 'Landing',   
+    components: {
+        Hamburger
+    },
+}
+
 </script>
