@@ -1,5 +1,5 @@
 <template>
-    <section id="nav" class="bg-slate-100 flex flex-row justify-between">
+    <section id="nav" class="h-[1rem] flex flex-row justify-between">
         <div id="logo" > 
             <h1 class="font-bold text-3xl">lowballd.</h1>
         </div>

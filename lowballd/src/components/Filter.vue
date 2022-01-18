@@ -3,8 +3,8 @@
        <div class=" h-auto bg-gray-300 p-3 my-2">
            <h1>Sort</h1>
            <div class="">
-                <FilterCol filterBtn='hi'/>
-                <FilterCol filterBtn='hi'/>
+                <FilterCol filterBtn='sort'/>
+                <FilterCol filterBtn='sort2'/>
            </div>
        </div>
        <div class=" h-auto bg-gray-300 p-3 my-2">

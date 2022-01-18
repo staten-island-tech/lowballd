@@ -5,7 +5,7 @@
           <div class="flex flex-col">
             <Filter />
           </div>
-          <div class="flex flex-row flex-wrap w-2/3">
+          <div class="flex flex-row flex-wrap w-[100rem]">
               <Card />
               <Card />
               <Card />

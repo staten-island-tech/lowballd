@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div class="flex flex-col w-60 max-h-96 my-[59px] mx-[1rem]">
+    <section class="">
+        <div class="flex flex-col w-60 max-h-96 my-[59px] mx-[1rem] ">
             <Card-Photo />
             <CardTitlePrice title="Name of Whatever This Is" price="XX.XX"/>
         </div>
