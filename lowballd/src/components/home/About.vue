@@ -2,13 +2,13 @@
     <div class="h-screen w-full bg-slate-100 flex justify-center">
         <div class="flex flex-row items-center justify-between w-4/5">
             <div class="w-1/2">
-                <h1 class="text-4xl text-gray-800 font-['Work_Sans'] font-extrabold">Lorem ipsum dolor.</h1>
+                <h1 class="text-4xl text-emerald-800 font-['Spectral'] font-bold">Lorem ipsum dolor.</h1>
                 <h2 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-                <h3 class="text-2xl text-gray-800 font-['Work_Sans'] font-extrabold">Buy.</h3>
+                <h3 class="text-2xl text-gray-800 font-['Spectral'] font-bold">Buy.</h3>
                 <h4 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                <h3 class="text-2xl text-gray-800 font-['Work_Sans'] font-extrabold">Sell.</h3>
+                <h3 class="text-2xl text-gray-800 font-['Spectral'] font-bold">Sell.</h3>
                 <h4 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                <h3 class="text-2xl text-gray-800 font-['Work_Sans'] font-extrabold">Explore.</h3>
+                <h3 class="text-2xl text-gray-800 font-['Spectral'] font-bold">Explore.</h3>
                 <h4 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             </div>
             <div class="w-1/3">
