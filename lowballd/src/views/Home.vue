@@ -1,7 +1,20 @@
 <template>
-    <div class="h-screen w-full bg-gray-600 flex flex-row justify-center items-center">
-        <div class="text-center">
-            <h1 class="text-5xl text-white">lowballd.</h1>
-        </div>
-    </div>
+    <Navbar></Navbar>
+    <Landing></Landing>
+    <About></About>
+    <Market></Market>
 </template>
+
+<script>
+import Landing from '../components/home/Landing.vue'
+import About from '../components/home/About.vue'
+import Market from '../components/home/Market.vue'
+import Navbar from '../components/home/Navbar.vue'
+
+export default {
+    name: 'Home',
+    components: {
+        Landing, About, Market, Navbar
+    },
+}
+</script>
