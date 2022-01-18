@@ -4,6 +4,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   fontFamily: {
     worksans: ['"Work Sans"', 'sans-serif'],
+    spectral: ['"Spectral"', 'serif'],
   },
   theme: {
     extend: {},
@@ -11,5 +12,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
