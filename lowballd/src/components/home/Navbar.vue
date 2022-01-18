@@ -56,7 +56,7 @@
                 if (currentScrollPosition < 0) {
                     return
                 }
-                if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 800) {
+                if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 700) {
                     return
                 }
                 this.showNavbar = currentScrollPosition < this.lastScrollPosition
