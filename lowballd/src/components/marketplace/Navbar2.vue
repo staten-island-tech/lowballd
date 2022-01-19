@@ -1,5 +1,5 @@
 <template>
-<div :class="{ 'navbar-hide': showNavbar }" class="navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] fixed w-screen z-10">
+<div :class="{ 'navbar-hide': showNavbar }" class="navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] w-screen z-10">
   <div class="px-2 mx-2 navbar-start">
     <span class="text-lg font-bold font-['Spectral']">
         lowballd.

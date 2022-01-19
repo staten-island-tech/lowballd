@@ -1,13 +1,13 @@
 <template>
-    <section class="w-[10rem] capitalize ">
-       <div class=" h-auto bg-gray-300 p-3 my-2 rounded">
+    <section class="w-60 capitalize ">
+       <div class=" h-auto bg-gray-300 p-4 rounded-xl">
            <h1>Sort</h1>
            <div class="">
                 <FilterCol filterBtn='sort'/>
                 <FilterCol filterBtn='sort2'/>
            </div>
        </div>
-       <div class=" h-auto bg-gray-300 p-3 my-2 rounded">
+       <div class=" h-auto bg-gray-300 p-3 my-2 rounded-xl">
            <h1>Sweater</h1>
            <div class="">
                 <FilterCol filterBtn='hi'/>
@@ -28,15 +28,13 @@
 </template>
 
 <script>
-import FilterCol from '../components/marketplace/Filter-Col.vue';
+import FilterCol from '../marketplace/Filter-Col.vue';
 export default {
     name: "Filter",
     components: { FilterCol },
     props: [
         'filterBtn',
-
     ]
-
 }
 
 </script>

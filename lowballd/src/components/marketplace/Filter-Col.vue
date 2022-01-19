@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-white flex justify-center my-2">
+    <section class="bg-white flex justify-center my-[7px]">
        <a href="#">{{filterBtn}}</a>
     </section>
 </template>
