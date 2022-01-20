@@ -1,19 +1,19 @@
 <template>
-    <section class="my-7 mx-5 flex justify-center w-screen">
+    <section class=" my-7 mx-5 flex flex-row justify-center w-screen ">
         <div class=''>
             <Filter/>
         </div>
         <div class='mx-3 flex flex-row flex-wrap '>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
+            <Card title='Name of Item' price='XX'/>
         </div>
     </section>
 </template>
@@ -26,5 +26,10 @@ export default {
     components: {
         Card, Filter,
     },
+    props: [
+        "title",
+        "price"
+    ],
 }
+
 </script>

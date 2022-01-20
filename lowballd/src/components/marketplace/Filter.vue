@@ -1,40 +1,41 @@
 <template>
     <section class="w-60 capitalize ">
-       <div class=" h-auto bg-gray-300 p-4 rounded-xl">
-           <h1>Sort</h1>
-           <div class="">
-                <FilterCol filterBtn='sort'/>
-                <FilterCol filterBtn='sort2'/>
+       <div class="h-auto bg-gray-300 p-3 mb-5 rounded-xl">
+           <FilterCategory filterCategory='sort'/>
+           <div class="mb-4">
+                <FilterBtn filterBtn='sort'/>
+                <FilterBtn filterBtn='sort2'/>
            </div>
        </div>
-       <div class=" h-auto bg-gray-300 p-3 my-2 rounded-xl">
-           <h1>Sweater</h1>
-           <div class="">
-                <FilterCol filterBtn='hi'/>
-                <FilterCol filterBtn='hi'/>
+       <div class=" h-auto bg-gray-300 p-3 rounded-xl">
+           <FilterCategory filterCategory='Fillter'/>
+           <div class=" mb-4">
+                <FilterBtn filterBtn='hi'/>
+                <FilterBtn filterBtn='hi'/>
            </div>
-           <h1>Jean</h1>
-           <div class="">
-                <FilterCol filterBtn='Blue'/>
-                <FilterCol filterBtn='Beige'/>
+            <FilterCategory filterCategory='Color'/>
+           <div class="mb-4">
+                <FilterBtn filterBtn='Blue'/>
+                <FilterBtn filterBtn='Beige'/>
            </div>
-           <h1>Price</h1>
-           <div class="">
-                <FilterCol filterBtn='High to Low'/>
-                <FilterCol filterBtn='Low to High'/>
+            <FilterCategory filterCategory='Price'/>
+           <div class="mb-4">
+                <FilterBtn filterBtn='High to Low'/>
+                <FilterBtn filterBtn='Low to High'/>
            </div>
        </div>
     </section>
 </template>
 
 <script>
-import FilterCol from '../marketplace/Filter-Col.vue';
+import FilterBtn from './Filter-Btn.vue';
+import FilterCategory from '../marketplace/Filter-Category.vue';
 export default {
     name: "Filter",
-    components: { FilterCol },
+    components: { FilterBtn, FilterCategory, },
     props: [
-        'filterBtn',
-    ]
+        'filterBtn', 'filterCategory',
+    ],
 }
 
 </script>
