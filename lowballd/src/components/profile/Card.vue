@@ -1,5 +1,5 @@
 <template>
-<div class="w-1/5 m-16">
+<div class="w-1/5 my-16">
     <div class="card text-center shadow-lg bg-sky-500">
     <div class="my-2"></div>
         <div class="avatar mx-auto my-4">
