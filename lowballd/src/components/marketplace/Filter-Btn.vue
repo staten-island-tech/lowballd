@@ -1,12 +1,12 @@
 <template>
-    <div class="cursor-pointer bg-white flex justify-center my-[7px]">
+    <a class="btn-ghost btn-sm hover:bg-gray-400 focus:bg-gray-600 rounded-btn bg-white mx-1 my-1.5 capitalize">
         <h2>{{filterBtn}}</h2>
-    </div>
+    </a>
 </template>
 
 <script>
 export default {
-    name: "FilterCol",
+    name: "FilterBtn",
     props: ['filterBtn']
 
 }

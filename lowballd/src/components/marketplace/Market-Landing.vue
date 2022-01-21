@@ -3,7 +3,7 @@
         <div class=''>
             <Filter/>
         </div>
-        <div class='mx-3 flex flex-row flex-wrap '>
+        <div class='max-w-screen-xl mx-3 flex flex-row flex-wrap '>
             <Card title='Name of Item' price='XX'/>
             <Card title='Name of Item' price='XX'/>
             <Card title='Name of Item' price='XX'/>
