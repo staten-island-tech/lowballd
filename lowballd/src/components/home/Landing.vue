@@ -19,5 +19,11 @@ export default {
         Hamburger
     },
 }
-
+import Button from './Button.vue'
+export deafult {
+    name 'Landing',
+    components:{
+        Button 
+    },
+}
 </script>
