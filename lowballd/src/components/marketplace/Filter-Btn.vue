@@ -1,6 +1,6 @@
 <template>
-    <a class="btn-ghost btn-sm hover:bg-gray-400 focus:bg-gray-600 rounded-btn bg-white mx-1 my-1.5 capitalize">
-        <h2>{{filterBtn}}</h2>
+    <a class="hover:bg-gray-400 flex justify-center items-center btn-ghost btn-sm cursor-pointer rounded-btn bg-white mx-1 my-1.5 capitalize">
+        <h2 >{{filterBtn}}</h2>
     </a>
 </template>
 

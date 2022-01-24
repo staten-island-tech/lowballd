@@ -1,6 +1,6 @@
 <template>
-    <section class="w-60 capitalize ">
-       <div class="h-auto bg-gray-200 p-3 mb-5 rounded-xl ">
+    <section class="w-60 sm:w-full sm:m-0 sm:flex sm:flex-col sm:items-center capitalize ">
+       <div class="sm:w-11/12 h-auto bg-gray-200 p-3 mb-5 rounded-xl ">
            <div class="flex flex-col mb-3">
                <FilterCategory filterCategory='sort'/>
                 <FilterBtn filterBtn='sort'/>
