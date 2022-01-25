@@ -1,5 +1,5 @@
 <template>
-    <section class=" my-7 mx-5 flex flex-row sm:flex-col justify-center w-screen ">
+    <section class=" my-7 mx-5 sm:mx-0 flex flex-row sm:flex-col justify-center w-full ">
         <div class=''>
             <Filter/>
         </div>
