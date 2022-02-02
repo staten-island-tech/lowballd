@@ -1,11 +1,11 @@
 <template>
-<div class="navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] fixed w-screen z-10">
+<div class="navbar navbar-transition bg-slate-100 text-slate-800 font-['Work_Sans'] w-screen">
   <div class="px-2 mx-2 navbar-start">
     <span class="text-lg font-bold font-['Spectral']">
         lowballd.
     </span>
   </div> 
-  <div class="px-2 mx-2 navbar-center lg:flex">
+  <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
         <router-link to="about">
             <a class="btn btn-ghost btn-sm">ABOUT</a> 
@@ -39,5 +39,4 @@
     export default {
         name: 'Navbar',
     }
-
 </script>
