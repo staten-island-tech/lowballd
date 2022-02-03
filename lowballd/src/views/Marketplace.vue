@@ -1,15 +1,15 @@
 <template>
-      <Navbar2></Navbar2> 
-      <MarketLanding> </MarketLanding>
+      <Navbar></Navbar> 
+      <MarketLanding></MarketLanding>
 </template>
 
 <script>
-import Navbar2 from '../components/marketplace/Navbar2.vue'
+import Navbar from '../components/marketplace/Navbar.vue'
 import MarketLanding from '../components/marketplace/Market-Landing.vue'
 export default {
   name: 'Marketplace',
   components: {
-    Navbar2, MarketLanding,
+    Navbar, MarketLanding,
   },
 }
 </script>

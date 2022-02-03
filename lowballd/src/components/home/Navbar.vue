@@ -5,7 +5,7 @@
         lowballd.
     </span>
   </div> 
-  <div class="hidden px-2 mx-2 navbar-center lg:flex">
+  <div class=" px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
         <router-link to="about">
             <a class="btn btn-ghost btn-sm">ABOUT</a> 
@@ -19,7 +19,7 @@
     </div>
   </div> 
     <div class="navbar-end">
-        <div class="flex-none hidden px-2 mx-2 lg:flex">
+        <div class="flex-none px-2 mx-2 lg:flex">
     <div class="flex items-stretch">
       <a class="btn btn-ghost btn-sm rounded-btn">
         

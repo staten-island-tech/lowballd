@@ -1,5 +1,5 @@
 <template>
-    <div class="capitalize w-auto cursor-pointer">
+    <div class="capitalize w-full cursor-pointer">
         <h1>{{filterCategory}}</h1>
     </div>
 </template>
