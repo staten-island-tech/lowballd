@@ -1,7 +1,7 @@
 <template>
     <section class="h-screen w-full bg-slate-100 flex justify-center">
-        <div class="sm:flex-col sm:justify-center flex flex-row items-center justify-between w-4/5">
-            <div class="w-1/2 sm:w-full">
+        <div class="flex flex-row items-center justify-between w-4/5">
+            <div class="w-1/2">
                 <h1 class="text-4xl text-slate-800 font-['Spectral'] font-bold">Lorem ipsum dolor.</h1>
                 <h2 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
                 <h3 class="text-2xl text-slate-800 font-['Spectral'] font-bold">Buy.</h3>
@@ -11,7 +11,7 @@
                 <h3 class="text-2xl text-slate-800 font-['Spectral'] font-bold">Explore.</h3>
                 <h4 class="py-6 text-l text-gray-700 font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
             </div>
-            <div class="w-1/3 sm:w-full sm:my-5">
+            <div class="w-1/3">
                 <img src="https://pagesix.com/wp-content/uploads/sites/3/2021/12/adam-sandler-27.jpg?quality=80&strip=all" class="h-full w-full overflow-hidden" />
             </div>
         </div>

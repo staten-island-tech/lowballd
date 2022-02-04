@@ -1,15 +1,5 @@
 <template>
-      <Navbar></Navbar> 
-      <MarketLanding></MarketLanding>
+    <div class="marketplace">
+        <h1>Marketplace</h1>
+    </div>
 </template>
-
-<script>
-import Navbar from '../components/marketplace/Navbar.vue'
-import MarketLanding from '../components/marketplace/Market-Landing.vue'
-export default {
-  name: 'Marketplace',
-  components: {
-    Navbar, MarketLanding,
-  },
-}
-</script>
