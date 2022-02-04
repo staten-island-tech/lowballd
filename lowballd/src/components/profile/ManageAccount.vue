@@ -24,11 +24,6 @@
 <script>
     export default {
         name: 'ManageAccount',
-        data() {
-            return {
-                manageAccountToggled: false;
-            }
-    }
     }
     
 </script>
