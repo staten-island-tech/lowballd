@@ -1,5 +1,5 @@
 <template>
-<div :class="{ 'navbar-hide': showNavbar }" class="navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] fixed w-screen z-10">
+<div class="navbar navbar-transition bg-slate-100 text-slate-800 font-['Work_Sans'] w-screen">
   <div class="px-2 mx-2 navbar-start">
     <span class="text-lg font-bold font-['Spectral']">
         lowballd.
@@ -33,16 +33,10 @@
   </div> 
     </div>
 </div>
-<div>
-<h1 class="text-center text-3xl mt-20 font-['Spectral'] font-bold font-['Work_Sans'] font-semibold">OUTFIT OF THE DAY</h1>
-<h1 class="text-center text-3xl font-['Work_Sans'] font-semibold">WHAT DID YOU WEAR TODAY?</h1>
-<div class="flex items-center justify-center"><button class="mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current cursor-pointer select-none">Trending</button><button class="mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current cursor-pointer select-none">Following</button></div></div>
-
 </template>
 
 <script>
-
+    export default {
+        name: 'Navbar',
+    }
 </script>
-
-
-

@@ -32,4 +32,10 @@ module.exports = {
   plugins: [
     require('daisyui'),
   ],
+  variants: {
+    extend: {
+        // ...
+       borderStyle: ['hover'],
+    }
+}
 }
