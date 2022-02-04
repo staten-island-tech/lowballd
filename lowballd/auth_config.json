@@ -1,6 +1,6 @@
 {
-    "domain": "YOUR_AUTH0_DOMAIN",
-    "clientId": "YOUR_AUTH0_CLIENT_ID",
+    "domain": "dev-55hrcnew.us.auth0.com",
+    "clientId": "fgOdzhZdKE6kl4rGvvlcjqGZVbRb0nU8",
     "audience": "",
     "serverUrl": ""
   }
