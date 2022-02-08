@@ -6,6 +6,7 @@
 <div class="flex items-center justify-center"><button class="mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current hover:font-bold cursor-pointer select-none">Trending</button><button class="mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current cursor-pointer hover:font-bold select-none">Following</button></div>
 
 </div>
+<div class="w-1/3 rounded p-0 border-black bg-slate-600 mt-20 ml-20">BOX</div>
 
 </template>
 
