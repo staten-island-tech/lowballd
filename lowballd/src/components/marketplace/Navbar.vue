@@ -1,11 +1,11 @@
 <template>
-<div :class="{ 'navbar-hide': showNavbar }" class=" navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] w-screen z-10">
-  <div class="px-2 mx-2 navbar-start">
+<div :class="{ 'navbar-hide': showNavbar }" class=" navbar navbar-transition shadow-sm bg-slate-100 text-slate-800 font-['Work_Sans'] w-screen z-10 flex justify-between">
+  <div class="px-2 mx-2 justify-start">
     <span class="text-lg font-bold font-['Spectral']">
         lowballd.
     </span>
   </div> 
-  <div class="px-2 mx-2 navbar-center lg:flex h-auto flex flex-wrap ">
+  <div class="sm:hidden px-2 mx-2 navbar-center flex justify-center h-auto">
     <div class="flex items-stretch justify-center">
         <router-link to="about">
             <a class="btn btn-ghost btn-sm">ABOUT</a> 
@@ -18,7 +18,7 @@
         </router-link>
     </div>
   </div> 
-    <div class="navbar-end">
+    <div class="justify-end">
         <div class="flex-none px-2 mx-2 lg:flex">
     <div class="flex items-stretch">
       <a class="btn btn-ghost btn-sm rounded-btn">
