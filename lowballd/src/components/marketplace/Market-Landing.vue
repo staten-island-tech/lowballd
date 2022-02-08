@@ -1,9 +1,9 @@
 <template>
-    <section class=" my-7 mx-5 sm:mx-0 flex flex-row sm:flex-col justify-center w-full ">
+    <section class="bg-white my-7 mx-5 sm:mx-0 flex flex-row sm:flex-col justify-center w-full ">
         <div class=''>
             <Filter/>
         </div>
-        <div class='sm:justify-center max-w-screen-xl mx-3 flex flex-row flex-wrap '>
+        <div class='bg-white sm:justify-center max-w-screen-xl mx-3 flex flex-row flex-wrap '>
             <Card title='Name of Item' price='XX'/>
             <Card title='Name of Item' price='XX'/>
             <Card title='Name of Item' price='XX'/>
