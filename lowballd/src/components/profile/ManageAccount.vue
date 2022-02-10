@@ -8,9 +8,9 @@
     <p class="text-gray-400/[.7] italic text-xs">Max 150 Words</p>
     </div>
     </div>
-            <button class="btn w-28 mx-24 -my-12">Save
+            <!--<button class="btn w-28 mx-24 -my-12">Save
                 <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 3h2.996v5h-2.996v-5zm11 1v20h-24v-24h20l4 4zm-17 5h10v-7h-10v7zm15-4.171l-2.828-2.829h-.172v9h-14v-9h-3v20h20v-17.171z"/></svg>
-            </button>
+            </button>-->
     <h1 class="text-2xl font-bold mx-10 mt-14">Recieve Emails</h1>
         <div class="mx-10 card">
             <div class="form-control">

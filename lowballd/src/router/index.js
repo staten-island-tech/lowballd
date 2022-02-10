@@ -5,6 +5,7 @@ import Marketplace from "../views/Marketplace.vue";
 import About from "../views/About.vue";
 import Login from "../views/Login.vue";
 import Profile from "../views/Profile.vue";
+import Product from "../views/Product.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -13,6 +14,7 @@ const routes = [
   { path: "/about", name: "About", component: About },
   { path: "/login", name: "Login", component: Login },
   { path: "/profile", name: "Profile", component: Profile },
+  { path: "/product", name: "Product", component: Product },
 ];
 const router = createRouter({
   history: createWebHistory(),
