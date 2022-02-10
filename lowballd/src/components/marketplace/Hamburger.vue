@@ -1,11 +1,16 @@
 <template>
-    <div @click="hamburgerClicked=true" class="sm:bg-black sm:fixed sm:rounded-full sm:right-10 sm:top-10 z-10 text-white absolute w-12 h-12 right-20 top-20 hover:cursor-pointer">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="sm:p-3 z-20 svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+    <div @click="hamburgerClicked=true" class="sm:flex hidden">
+        <button class="btn btn-square btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">           
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>               
+        </svg>
+        </button>
     </div>
+
     <div v-show="hamburgerClicked">
         <div @click="hamburgerClicked=false" class="fixed left-0 w-4/5 h-screen opacity-50 animate__slideInRight">
         </div>
-        <div class="fixed right-0 w-1/5 h-screen bg-gray-50 font-['Work_Sans'] text-lg flex flex-col text-center animate__animated animate__slideInRight z-20">
+        <div class="fixed z-50 right-0 w-80 h-screen bg-gray-50 font-['Work_Sans'] text-lg flex flex-col text-center animate__animated animate__slideInRight z-20">
             <h1 class="text-4xl text-slate-800 font-['Spectral'] font-bold py-16">lowballd.</h1>
             <div class="h-1 w-4/5 bg-slate-800 mx-auto mb-12"></div>
             <ul class="text-xl text-slate-800 h-1/5 flex flex-col justify-around mb-12">
@@ -17,6 +22,7 @@
             <h1 class="text-xl text-slate-800 font-['Work_Sans'] font-bold">Log In / Sign Up</h1>
         </div>
     </div>
+
 </template>
 
 <script>
