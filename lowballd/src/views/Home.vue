@@ -1,8 +1,20 @@
 <template>
-    <div class="h-screen w-full bg-slate-600 flex flex-row justify-center items-center">
-        <div class="text-center w-2/3">
-            <h1 class="text-9xl text-white font-['Work_Sans'] font-extrabold">lowballd.</h1>
-            <h2 class="p-6 text-xl text-white font-['Work_Sans'] font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        </div>
-    </div>
+    <Navbar></Navbar>
+    <Landing></Landing>
+    <About></About>
+    <Market></Market>
 </template>
+
+<script>
+import Landing from '../components/home/Landing.vue'
+import About from '../components/home/About.vue'
+import Market from '../components/home/Market.vue'
+import Navbar from '../components/home/Navbar.vue'
+
+export default {
+    name: 'Home',
+    components: {
+        Landing, About, Market, Navbar
+    },
+}
+</script>
