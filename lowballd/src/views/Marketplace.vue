@@ -1,17 +1,17 @@
 <template>
       <Navbar></Navbar> 
       <MarketLanding></MarketLanding>
-      <Footer2></Footer2>
+      <Footer></Footer>
 </template>
 
 <script>
 import Navbar from '../components/marketplace/Navbar.vue'
 import MarketLanding from '../components/marketplace/Market-Landing.vue'
-import Footer2 from '../components/footer/Footer2.vue'
+import Footer from '../components/footer/Footer.vue'
 export default {
   name: 'Marketplace',
   components: {
-    Navbar, MarketLanding, Footer2,
+    Navbar, MarketLanding, Footer,
   },
 }
 </script>
