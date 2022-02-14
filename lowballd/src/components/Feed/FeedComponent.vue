@@ -9,6 +9,10 @@
 <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] "></div>
 <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] "></div>
 <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] mr-[5rem]"></div>
+<div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ml-[5rem] "></div>
+<div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] "></div>
+<div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] "></div>
+<div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] mr-[5rem]"></div>
 
 </div>
 
