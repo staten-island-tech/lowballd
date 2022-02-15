@@ -1,23 +1,39 @@
 <template>
-<div v-if="!manageAccountToggled">
-    <h1 class="text-2xl m-10 font-bold">Email</h1>
-    <p class="mx-10 -my-8 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <h1 class="text-xl font-semibold mx-10 mt-14">Change Email</h1>
-    <h1 class=
-    "text-base font-light mx-14 mt-2">Current Email:<input class="ml-1.5" type="text" placeholder="jonny.smith@gmail.com"></h1>
-    <h1 class=
-    "text-base font-light mx-16 mt-2">New Email:<input class="ml-1.5 w-48" type="text" placeholder="JonnySmith11@gmail.com"></h1>
-    <h1 class= 
-    "text-base font-light mx-14 mt-2">Password:<input class="ml-1.5" type="text" placeholder="xL1!4?78ax"></h1>
-    <h1 class="text-2xl m-10 font-bold">Password</h1>
-    <p class="mx-10 -my-8 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <h1 class="text-xl font-semibold mx-10 mt-14">Change Password</h1>
-    <h1 class=
-    "text-base font-light mx-14 mt-2">Current Password:<input class="ml-1.5" type="text" placeholder="xL1!4?78ax"></h1>
-    <h1 class=
-    "text-base font-light mx-14 mt-2">New Password:<input class="ml-1.5 w-48" type="text" placeholder="Strong Password"></h1>
-    <h1 class= 
-    "text-base font-light mx-14 mt-2">Re-Enter Password:<input class="ml-1.5" type="text" placeholder="Strong Password"></h1>
+<div class="pb-8">
+    <h1 class="text-2xl m-10 font-bold">Description</h1>
+    <p class="mx-10 -my-8 text-base text-gray-400">Write a little joke or greeting for any passerbys.</p>
+    <div class="relative h-32 mb-16">
+    <input class="px-4 pb-20 mx-10 my-12 w-11/12 h-32 border-solid border-2 border-black rounded-lg placeholder:" type="text" placeholder="I drink coffee. I am tiktok. My name Alston Chan. I dress well am smart am cool.">
+    <div class="absolute -bottom-10 right-10">
+    <p class="text-gray-400/[.7] italic text-xs">Max 150 Words</p>
+    </div>
+    </div>
+            <!--<button class="btn w-28 mx-24 -my-12">Save
+                <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 3h2.996v5h-2.996v-5zm11 1v20h-24v-24h20l4 4zm-17 5h10v-7h-10v7zm15-4.171l-2.828-2.829h-.172v9h-14v-9h-3v20h20v-17.171z"/></svg>
+            </button>-->
+    <h1 class="text-2xl font-bold mx-10 mt-14">Recieve Emails</h1>
+        <div class="mx-10 card">
+            <div class="form-control">
+                <label class="cursor-pointer label">
+                <span class="label-text">Lowballd Newsletter</span> 
+                <input type="checkbox" checked="checked" class="toggle">
+                </label>
+            </div>
+            <div class="form-control">
+                <label class="cursor-pointer label">
+                <span class="label-text">New Messages</span> 
+                <input type="checkbox" checked="checked" class="toggle">
+                </label>
+            </div>
+            <div class="form-control">
+                <label class="cursor-pointer label">
+                <span class="label-text">Offers Recieved</span> 
+                <input type="checkbox" checked="checked" class="toggle">
+                </label>
+            </div>
+        </div>
+         <h1 class="text-2xl m-10 font-bold">Blocked Accounts</h1>
+    <p class="mx-10 -my-8 text-base text-gray-400">The following usernames are blocked.</p>
 </div>
 </template>
 
