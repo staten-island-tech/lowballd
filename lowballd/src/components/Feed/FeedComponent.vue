@@ -6,36 +6,35 @@
 </div>
 <div class="flex justify-between flex-wrap ">
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ml-[5rem]">
-        h
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem]"></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] mr-[5rem]">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ml-[5rem] ">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] ">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
     <div class="w-1/5 rounded p-0 bg-slate-100 h-[30rem] mt-[10rem] mr-[5rem]">
-        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] ml-[1.5rem]"></div>
+        <div class="w-[15rem]  p-0 bg-slate-300 h-[20rem] mt-[3rem] "></div>
         <h1 class="text-sm ml-[.5rem] mt-[1rem]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</h1>
     </div>
 
