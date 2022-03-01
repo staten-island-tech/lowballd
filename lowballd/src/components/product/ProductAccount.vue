@@ -18,7 +18,22 @@
         </div>
     </div>
 </div>
-
+<h1 class="font-bold text-2xl p-4 text-center">US $125</h1>
+<button class="btn btn-lg btn-wide w-[30rem]">BUY</button>
+<div class="flex flex-col w-full pt-12">
+  <div class="grid">Size</div> 
+  <div class="divider"></div> 
+  <div class="grid">Brand</div>
+  <div class="divider"></div> 
+  <div class="grid">Condition</div>
+  <div class="divider"></div> 
+  <div class="grid">Style</div>
+  <div class="divider"></div> 
+  <div class="grid">Color</div>
+  <div class="divider"></div> 
+  <div class="grid">Shipping</div>
+  
+</div>
 
 </template>
 
