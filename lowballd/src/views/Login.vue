@@ -1,10 +1,3 @@
-<script setup>
-import { useAuth0, AuthState } from "../utils/useAuth0";
-const { login, logout, initAuth } = useAuth0(AuthState);
-
-initAuth();
-</script>
-
 <template>
   <div v-if="!AuthState.loading">
     <div v-if="!AuthState.isAuthenticated">
@@ -23,7 +16,11 @@ initAuth();
 </template>
 
 <script>
-import LoginComponent from '../components/login/LoginComponent.vue'
+import LoginComponent from '../components/login/LoginComponent.vue';
+import { useAuth0, AuthState } from "../utils/useAuth0";
+const { login, logout, initAuth } = useAuth0(AuthState);
+
+initAuth();
 
 export default {
     name: 'Login',

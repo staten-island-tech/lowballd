@@ -1,5 +1,5 @@
 <template>
-   <h1 class="text-left ... ml-10 ">Lowballd</h1>
+   <h1 class="text-left ">Lowballd</h1>
 </template>
 
 <script>
