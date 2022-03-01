@@ -5,17 +5,20 @@
             <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGBvBlLy-uljw/profile-displayphoto-shrink_200_200/0/1610509335728?e=1648684800&v=beta&t=u9GCzx6GctOLBqOeRB1Z9Jv7aBXeb8XZrHCyvFBA-qw">
         </div>
     </div> 
-    <div>
+    <div class="p-4">
         <h1>Alston Chan</h1>
+        <p class="text-slate-500 text-sm">Staten Island, NY</p>
+        <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+            <input type="radio" name="rating-2" checked="checked" class="mask mask-star-2 bg-warning"> 
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning">
+            <p>(483)</p>
+        </div>
     </div>
 </div>
-<div class="rating pt-12">
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-  <input type="radio" name="rating-2" checked="checked" class="mask mask-star-2 bg-warning"> 
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning">
-</div>
+
 
 </template>
 
