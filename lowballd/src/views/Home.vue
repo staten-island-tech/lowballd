@@ -1,6 +1,6 @@
 <template>
-  <Navbar><Login></Login></Navbar>
-
+  <Navbar></Navbar>
+  <Login></Login>
   <Landing></Landing>
   <About></About>
 
