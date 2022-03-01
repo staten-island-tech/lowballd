@@ -9,15 +9,14 @@
   <div class="sm:hidden px-2 mx-2 navbar-center flex justify-center h-auto">
     <div class="flex items-stretch justify-center">
         <router-link to="about">
-          <a class="btn btn-ghost btn-sm">ABOUT</a>
+            <a class="btn btn-ghost btn-sm">ABOUT</a> 
         </router-link>
         <router-link to="feed">
-          <a class="btn btn-ghost btn-sm">FEED</a>
+            <a class="btn btn-ghost btn-sm">FEED</a> 
         </router-link>
         <router-link to="marketplace">
-          <a class="btn btn-ghost btn-sm">MARKETPLACE</a>
+            <a class="btn btn-ghost btn-sm">MARKETPLACE</a> 
         </router-link>
-      </div>
     </div>
   </div> 
   
@@ -54,44 +53,43 @@
 </template>
 
 <script>
-export default {
-  name: "Navbar",
-  data() {
-    return {
-      showNavbar: true,
-      lastScrollPosition: 0,
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.onScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
-  },
-  methods: {
-    onScroll() {
-      const currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScrollPosition < 0) {
-        return;
-      }
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 700) {
-        return;
-      }
-      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
-      this.lastScrollPosition = currentScrollPosition;
-    },
-  },
-};
+    export default {
+        name: 'Navbar',
+        data () {
+            return {
+            showNavbar: true,
+            lastScrollPosition: 0
+            }
+        },
+        mounted () {
+            window.addEventListener('scroll', this.onScroll)
+        },
+        beforeDestroy () {
+            window.removeEventListener('scroll', this.onScroll)
+        },
+        methods: {
+            onScroll () {
+                const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+                if (currentScrollPosition < 0) {
+                    return
+                }
+                if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 700) {
+                    return
+                }
+                this.showNavbar = currentScrollPosition < this.lastScrollPosition
+                this.lastScrollPosition = currentScrollPosition
+            }
+        }
+    }
 </script>
 
 <style scoped>
-.navbar-transition {
-  transition: 0.2s all ease-out;
-}
-.navbar-hide {
-  box-shadow: none;
-  opacity: 0;
-  transform: translate3d(0, -100%, 0);
-}
+    .navbar-transition {
+        transition: 0.2s all ease-out;
+    }
+    .navbar-hide  {
+        box-shadow: none;
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
 </style>
