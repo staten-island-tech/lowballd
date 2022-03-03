@@ -14,9 +14,6 @@ const config = {
 };
 
 export const useAuth0 = (state) => {
-
-
-    
   const handleStateChange = async () => {
     state.isAuthenticated = !!(await state.auth0.isAuthenticated());
     state.user = await state.auth0.getUser();

@@ -1,3 +1,10 @@
+<script setup>
+import { useAuth0, AuthState } from "@/utils/useAuth0";
+const { login, logout, initAuth } = useAuth0(AuthState);
+
+initAuth();
+</script>
+
 <template>
   <div>
     <div v-if="!AuthState.loading">
@@ -16,16 +23,6 @@
     <div v-else>Loading ...</div>
   </div>
 </template>
-
-<script>
-import { useAuth0, AuthState } from "@/utils/useAuth0.js";
-const { login, logout, initAuth } = useAuth0(AuthState);
-
-initAuth();
-export default {
-  name: "Login",
-};
-</script>
 
 <style>
 #app {
