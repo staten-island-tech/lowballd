@@ -33,7 +33,9 @@ initAuth();
         <p>
           Welcome to VueAuth <strong>{{ AuthState.user.name }}</strong>
         </p>
-        <button @click="logout()" class="btn btn-secondary">Logout</button>
+        <button @click="logout()" class="btn btn-ghost btn-sm rounded-btn">
+          Logout
+        </button>
       </div>
     </div>
 
