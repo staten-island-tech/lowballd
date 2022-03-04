@@ -1,53 +1,134 @@
 import createAuth0Client from "@auth0/auth0-spa-js";
-import { reactive } from "vue";
+import { computed, reactive, watchEffect } from "vue";
 
-export const AuthState = reactive({
-  user: null,
-  loading: false,
+let client;
+const state = reactive({
+  loading: true,
   isAuthenticated: false,
-  auth0: null,
+  user: {},
+  popupOpen: false,
+  error: null,
 });
 
-const config = {
-  domain: import.meta.env.VITE_AUTH0_DOMAIN,
-  client_id: import.meta.env.VITE_AUTH0_CLIENT_ID,
+async function loginWithPopup() {
+  state.popupOpen = true;
+
+  try {
+    await client.loginWithPopup(0);
+  } catch (e) {
+    console.error(e);
+  } finally {
+    state.popupOpen = false;
+  }
+
+  state.user = await client.getUser();
+  state.isAuthenticated = true;
+}
+
+async function handleRedirectCallback() {
+  state.loading = true;
+
+  try {
+    await client.handleRedirectCallback();
+    state.user = await client.getUser();
+    state.isAuthenticated = true;
+  } catch (e) {
+    state.error = e;
+  } finally {
+    state.loading = false;
+  }
+}
+
+function loginWithRedirect(o) {
+  return client.loginWithRedirect(o);
+}
+
+function getIdTokenClaims(o) {
+  return client.getIdTokenClaims(o);
+}
+
+function getTokenSilently(o) {
+  return client.getTokenSilently(o);
+}
+
+function getTokenWithPopup(o) {
+  return client.getTokenWithPopup(o);
+}
+
+function logout(o) {
+  return client.logout(o);
+}
+
+const authPlugin = {
+  isAuthenticated: computed(() => state.isAuthenticated),
+  loading: computed(() => state.loading),
+  user: computed(() => state.user),
+  getIdTokenClaims,
+  getTokenSilently,
+  getTokenWithPopup,
+  handleRedirectCallback,
+  loginWithRedirect,
+  loginWithPopup,
+  logout,
 };
 
-export const useAuth0 = (state) => {
-  const handleStateChange = async () => {
-    state.isAuthenticated = !!(await state.auth0.isAuthenticated());
-    state.user = await state.auth0.getUser();
+export const routeGuard = (to, from, next) => {
+  const { isAuthenticated, loading, loginWithRedirect } = authPlugin;
+
+  const verify = () => {
+    // If the user is authenticated, continue with the route
+    if (isAuthenticated.value) {
+      return next();
+    }
+
+    // Otherwise, log in
+    loginWithRedirect({ appState: { targetUrl: to.fullPath } });
+  };
+
+  // If loading has already finished, check our auth state using `fn()`
+  if (!loading.value) {
+    return verify();
+  }
+
+  // Watch for the loading property to change before we check isAuthenticated
+  watchEffect(() => {
+    if (loading.value === false) {
+      return verify();
+    }
+  });
+};
+
+export const setupAuth = async (options, callbackRedirect) => {
+  client = await createAuth0Client({
+    ...options,
+  });
+
+  try {
+    // If the user is returning to the app after authentication
+
+    if (
+      window.location.search.includes("code=") &&
+      window.location.search.includes("state=")
+    ) {
+      // handle the redirect and retrieve tokens
+      const { appState } = await client.handleRedirectCallback();
+
+      // Notify subscribers that the redirect callback has happened, passing the appState
+      // (useful for retrieving any pre-authentication state)
+      callbackRedirect(appState);
+    }
+  } catch (e) {
+    state.error = e;
+  } finally {
+    // Initialize our internal authentication state
+    state.isAuthenticated = await client.isAuthenticated();
+    state.user = await client.getUser();
     state.loading = false;
-  };
-
-  const initAuth = () => {
-    state.loading = true;
-    createAuth0Client({
-      domain: config.domain,
-      client_id: config.client_id,
-      cacheLocation: "localstorage",
-      redirect_uri: window.location.origin,
-    }).then(async (auth) => {
-      state.auth0 = auth;
-      await handleStateChange();
-    });
-  };
-
-  const login = async () => {
-    await state.auth0.loginWithPopup();
-    await handleStateChange();
-    await auth0.handleRedirectCallback();
-  };
-
-  const logout = async () => {
-    state.auth0.logout({
-      returnTo: window.location.origin,
-    });
-  };
+  }
 
   return {
-    login,
-    logout,
-    initAuth,
+    install: (app) => {
+      app.config.globalProperties.$auth = authPlugin;
+    },
   };
 };
