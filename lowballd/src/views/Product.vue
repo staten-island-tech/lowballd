@@ -1,17 +1,17 @@
 <template>
-<ProductNavbar></ProductNavbar>
+<Navbar></Navbar>
 <ProductCarousel></ProductCarousel>
 </template>
 
 <script>
-import ProductNavbar from '../components/product/ProductNavbar.vue'
+import Navbar from '../components/home/Navbar.vue'
 import ProductCarousel from '../components/product/ProductCarousel.vue'
 
 
 export default {
     name: 'Home',
     components: {
-        ProductNavbar, ProductCarousel,
+        Navbar, ProductCarousel,
     },
 }
 </script>

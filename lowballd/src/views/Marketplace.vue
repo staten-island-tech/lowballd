@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Navbar from "../components/marketplace/Navbar.vue";
+import Navbar from "../components/home/Navbar.vue";
 import MarketLanding from "../components/marketplace/Market-Landing.vue";
 import Footer from "../components/footer/Footer.vue";
 export default {

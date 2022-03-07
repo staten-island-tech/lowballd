@@ -1,5 +1,5 @@
 <template>
-<ProfileNavbar></ProfileNavbar>
+<Navbar></Navbar>
 <div class="w-full flex flex-row inline block justify-around">
 <ProfileCard></ProfileCard>
 <ProfileContent></ProfileContent>
@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import ProfileNavbar from "../components/profile/ProfileNavbar.vue"
-import ProfileCard from "../components/profile/ProfileCard.vue"
-import ProfileContent from "../components/profile/ProfileContent.vue"
+import Navbar from "../components/home/Navbar.vue";
+import ProfileCard from "../components/profile/ProfileCard.vue";
+import ProfileContent from "../components/profile/ProfileContent.vue";
 
 export default {
     name: 'Profile',
     components: {
-        ProfileNavbar, ProfileCard, ProfileContent,
+        Navbar, ProfileCard, ProfileContent,
     },
 }
 </script>
