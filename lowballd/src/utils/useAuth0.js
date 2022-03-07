@@ -1,134 +1,107 @@
 import createAuth0Client from "@auth0/auth0-spa-js";
 import { computed, reactive, watchEffect } from "vue";
 
-let client;
-const state = reactive({
-  loading: true,
-  isAuthenticated: false,
-  user: {},
-  popupOpen: false,
-  error: null,
-});
+const DEFAULT_REDIRECT_CALLBACK = () =>
+  window.history.replaceState({}, document.title, window.location.pathname);
 
-async function loginWithPopup() {
-  state.popupOpen = true;
+let instance;
 
-  try {
-    await client.loginWithPopup(0);
-  } catch (e) {
-    console.error(e);
-  } finally {
-    state.popupOpen = false;
-  }
+export const getInstance = () => instance;
 
-  state.user = await client.getUser();
-  state.isAuthenticated = true;
-}
+export const useAuth0 = ({
+  onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
+  redirectUri = window.location.origin,
+  ...options
+}) => {
+  if (instance) return instance;
 
-async function handleRedirectCallback() {
-  state.loading = true;
-
-  try {
-    await client.handleRedirectCallback();
-    state.user = await client.getUser();
-    state.isAuthenticated = true;
-  } catch (e) {
-    state.error = e;
-  } finally {
-    state.loading = false;
-  }
-}
-
-function loginWithRedirect(o) {
-  return client.loginWithRedirect(o);
-}
-
-function getIdTokenClaims(o) {
-  return client.getIdTokenClaims(o);
-}
-
-function getTokenSilently(o) {
-  return client.getTokenSilently(o);
-}
-
-function getTokenWithPopup(o) {
-  return client.getTokenWithPopup(o);
-}
-
-function logout(o) {
-  return client.logout(o);
-}
-
-const authPlugin = {
-  isAuthenticated: computed(() => state.isAuthenticated),
-  loading: computed(() => state.loading),
-  user: computed(() => state.user),
-  getIdTokenClaims,
-  getTokenSilently,
-  getTokenWithPopup,
-  handleRedirectCallback,
-  loginWithRedirect,
-  loginWithPopup,
-  logout,
-};
-
-export const routeGuard = (to, from, next) => {
-  const { isAuthenticated, loading, loginWithRedirect } = authPlugin;
-
-  const verify = () => {
-    // If the user is authenticated, continue with the route
-    if (isAuthenticated.value) {
-      return next();
-    }
-
-    // Otherwise, log in
-    loginWithRedirect({ appState: { targetUrl: to.fullPath } });
-  };
-
-  // If loading has already finished, check our auth state using `fn()`
-  if (!loading.value) {
-    return verify();
-  }
-
-  // Watch for the loading property to change before we check isAuthenticated
-  watchEffect(() => {
-    if (loading.value === false) {
-      return verify();
-    }
-  });
-};
-
-export const setupAuth = async (options, callbackRedirect) => {
-  client = await createAuth0Client({
-    ...options,
-  });
-
-  try {
-    // If the user is returning to the app after authentication
-
-    if (
-      window.location.search.includes("code=") &&
-      window.location.search.includes("state=")
-    ) {
-      // handle the redirect and retrieve tokens
-      const { appState } = await client.handleRedirectCallback();
-
-      // Notify subscribers that the redirect callback has happened, passing the appState
-      // (useful for retrieving any pre-authentication state)
-      callbackRedirect(appState);
-    }
-  } catch (e) {
-    state.error = e;
-  } finally {
-    // Initialize our internal authentication state
-    state.isAuthenticated = await client.isAuthenticated();
-    state.user = await client.getUser();
-    state.loading = false;
-  }
-
-  return {
-    install: (app) => {
-      app.config.globalProperties.$auth = authPlugin;
+  instance = new Vue({
+    data() {
+      return {
+        loading: true,
+        isAuthenticated: false,
+        user: {},
+        auth0Client: null,
+        popupOpen: false,
+        error: null,
+      };
     },
-  };
+    methods: {
+      async loginWithPopup(options, config) {
+        this.popupOpen = true;
+
+        try {
+          await this.auth0Client.loginWithPopup(options, config);
+          this.user = await this.auth0Client.getUser();
+          this.isAuthenticated = await this.auth0Client.isAuthenticated();
+          this.error = null;
+        } catch (e) {
+          console.error(e);
+          this.error = e;
+        } finally {
+          this.popupOpen = false;
+        }
+      },
+      async handleRedirectCallback() {
+        this.loading = true;
+        try {
+          await this.auth0Client.handleRedirectCallback();
+          this.user = await this.auth0Client.getUser();
+          this.isAuthenticated = true;
+          this.error = null;
+        } catch (e) {
+          this.error = e;
+        } finally {
+          this.loading = false;
+        }
+      },
+      loginWithRedirect(o) {
+        return this.auth0Client.loginWithRedirect(o);
+      },
+      getIdTokenClaims(o) {
+        return this.auth0Client.getIdTokenClaims(o);
+      },
+      getTokenSilently(o) {
+        return this.auth0Client.getTokenSilently(o);
+      },
+      getTokenWithPopup(o) {
+        return this.auth0Client.getTokenWithPopup(o);
+      },
+      logout(o) {
+        return this.auth0Client.logout(o);
+      },
+    },
+    async created() {
+      this.auth0Client = await createAuth0Client({
+        ...options,
+        client_id: options.clientId,
+        redirect_uri: redirectUri,
+      });
+
+      try {
+        if (
+          window.location.search.includes("code=") &&
+          window.location.search.includes("state=")
+        ) {
+          const { appState } = await this.auth0Client.handleRedirectCallback();
+          this.error = null;
+          onRedirectCallback(appState);
+        }
+      } catch (e) {
+        this.error = e;
+      } finally {
+        this.isAuthenticated = await this.auth0Client.isAuthenticated();
+        this.user = await this.auth0Client.getUser();
+        this.loading = false;
+      }
+    },
+  });
+
+  return instance;
+};
+
+export const Auth0Plugin = {
+  install(Vue, options) {
+    Vue.prototype.$auth = useAuth0(options);
+  },
 };
