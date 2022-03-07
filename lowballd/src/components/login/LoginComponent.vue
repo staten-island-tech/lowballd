@@ -3,6 +3,7 @@ import { useAuth0, AuthState } from "@/utils/useAuth0";
 const { login, logout, initAuth } = useAuth0(AuthState);
 
 initAuth();
+console.log(AuthState);
 </script>
 
 <template>
@@ -31,7 +32,7 @@ initAuth();
 
       <div v-else>
         <p>
-          Welcome to VueAuth <strong>{{ AuthState.user.name }}</strong>
+          Welcome to VueAuth <strong>{{ AuthState.user.nickname }}</strong>
         </p>
         <button @click="logout()" class="btn btn-ghost btn-sm rounded-btn">
           Logout
