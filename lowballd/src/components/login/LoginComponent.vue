@@ -1,15 +1,7 @@
-<script setup>
-import { useAuth0, AuthState } from "@/utils/useAuth0";
-const { login, logout, initAuth } = useAuth0(AuthState);
-
-initAuth();
-console.log(AuthState);
-</script>
-
 <template>
   <div>
-    <div v-if="!AuthState.loading">
-      <div v-if="!AuthState.isAuthenticated">
+    <div v-if="!auth.loading">
+      <div v-if="!auth.isAuthenticated">
         <button @click="login()" class="btn btn-ghost btn-sm rounded-btn">
           <svg
             aria-hidden="true"
@@ -34,7 +26,11 @@ console.log(AuthState);
         <p>
           Welcome to VueAuth <strong>{{ AuthState.user.nickname }}</strong>
         </p>
-        <button @click="logout()" class="btn btn-ghost btn-sm rounded-btn">
+        <button
+          v-if="$auth.isAuthenticated"
+          @click="logout()"
+          class="btn btn-ghost btn-sm rounded-btn"
+        >
           Logout
         </button>
       </div>
@@ -43,6 +39,24 @@ console.log(AuthState);
     <div v-else>Loading ...</div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Login",
+  methods: {
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
+  },
+};
+</script>
 
 <style>
 #app {
