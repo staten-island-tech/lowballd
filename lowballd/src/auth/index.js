@@ -1,4 +1,6 @@
-import Vue from "vue";
+// src/auth/index.js
+
+// import Vue from "vue";
 import createAuth0Client from "@auth0/auth0-spa-js";
 
 /** Define a default action to perform after authentication */
@@ -93,7 +95,7 @@ export const useAuth0 = ({
       });
 
       try {
-        // If the user is returning to the app after authentication..
+        // If the user is returning to the app after authentication...
         if (
           window.location.search.includes("code=") &&
           window.location.search.includes("state=")
@@ -108,7 +110,7 @@ export const useAuth0 = ({
       } catch (e) {
         this.error = e;
       } finally {
-        // Initialize the internal authentication state
+        // Initialize our internal authentication state
         this.isAuthenticated = await this.auth0Client.isAuthenticated();
         this.user = await this.auth0Client.getUser();
         this.loading = false;
