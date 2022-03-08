@@ -22,17 +22,6 @@
                     <FilterBtn filterBtn='Low to High'/>
                 </div>
             </div> 
-            <div class="collapse collapse-arrow w-full rounded-xl">
-                <input type="checkbox"> 
-                <div class="collapse-title">
-                    <FilterCategory filterCategory='Color'/>
-                </div> 
-                <div class="collapse-content"> 
-                    <FilterBtn filterBtn='Beige'/>
-                    <FilterBtn filterBtn='Beige'/>
-                    <FilterBtn filterBtn='Beige'/>
-                </div>
-            </div> 
         </div>
 
     </div>
