@@ -1,28 +1,21 @@
 // src/main.js
 import "./tailwind.css";
 import { createApp } from "vue";
-let app = createApp;
 import App from "./App.vue";
 import router from "./router";
+import store from "./store";
 
 // Import the Auth0 configuration
-import { domain, clientId } from "../auth_config.json";
 
-// Import the plugin here
-import { Auth0Plugin } from "./auth";
+import authConfig from "../auth_config.json";
+import { setupAuth } from "./auth";
 
-// Install the authentication plugin here
-app.use(Auth0Plugin, {
-  domain,
-  clientId,
-  onRedirectCallback: (appState) => {
-    router.push(
-      appState && appState.targetUrl
-        ? appState.targetUrl
-        : window.location.pathname
-    );
-  },
+let app = createApp(App).use(store).use(router);
+
+function callbackRedirect(appState) {
+  router.push(appState && appState.targetUrl ? appState.targetUrl : "/");
+}
+
+setupAuth(authConfig, callbackRedirect).then((auth) => {
+  app.use(auth).mount("#app");
 });
-
-createApp.config.productionTip = false;
-createApp(App).use(router).mount("#app");

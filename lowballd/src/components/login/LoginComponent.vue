@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-if="!auth.loading">
-      <div v-if="!auth.isAuthenticated">
+    <div v-if="!$auth.loading.value">
+      <div v-if="!$auth.isAuthenticated.value">
         <button @click="login()" class="btn btn-ghost btn-sm rounded-btn">
           <svg
             aria-hidden="true"
@@ -24,7 +24,7 @@
 
       <div>
         <button
-          v-if="$auth.isAuthenticated"
+          v-if="$auth.isAuthenticated.value"
           @click="logout()"
           class="btn btn-ghost btn-sm rounded-btn"
         >
@@ -32,8 +32,7 @@
         </button>
       </div>
     </div>
-
-    <div v-else>Loading ...</div>
+    <div v-else>Loading</div>
   </div>
 </template>
 <script>
