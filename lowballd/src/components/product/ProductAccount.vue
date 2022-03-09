@@ -16,22 +16,43 @@
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning">
             <p>(483)</p>
         </div>
+        <a href="#" class="text-blue-600 visited:text-purple-600">Message Seller</a>
     </div>
 </div>
+
 <h1 class="font-bold text-2xl p-4 text-center">US $125</h1>
 <button class="btn btn-lg btn-wide w-[30rem]">BUY</button>
 <div class="flex flex-col w-full pt-12">
-  <div class="grid">Size</div> 
-  <div class="divider"></div> 
-  <div class="grid">Brand</div>
-  <div class="divider"></div> 
-  <div class="grid">Condition</div>
-  <div class="divider"></div> 
-  <div class="grid">Style</div>
-  <div class="divider"></div> 
-  <div class="grid">Color</div>
-  <div class="divider"></div> 
-  <div class="grid">Shipping</div>
+    <div class="flex justify-between">
+        <div class="grid font-bold">Size</div> 
+        <h1 class="text-slate-700 text-right">Small</h1>
+    </div>
+        <div class="divider"></div> 
+    <div class="flex justify-between">
+        <div class="grid font-bold">Brand</div>
+        <h1 class="text-slate-700 text-right">Nike</h1>
+    </div>
+        <div class="divider"></div> 
+    <div class="flex justify-between">
+        <div class="grid font-bold">Condition</div>
+        <h1 class="text-slate-700 text-right">Brand New</h1>
+    </div>
+        <div class="divider"></div>
+    <div class="flex justify-between"> 
+        <div class="grid font-bold">Style</div>
+        <h1 class="text-slate-700 text-right">High Top Jordan Air</h1>
+    </div>
+        <div class="divider"></div>
+    <div class="flex justify-between"> 
+        <div class="grid font-bold">Color</div>
+        <h1 class="text-slate-700 text-right">Red-Black</h1>
+    </div>
+        <div class="divider"></div> 
+    <div class="flex justify-between">
+        <div class="grid font-bold">Shipping</div>
+        <h1 class="text-slate-700 text-right">Free</h1>
+    </div>
+        <div class="divider"></div>
   
 </div>
 
