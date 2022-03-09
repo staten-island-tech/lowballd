@@ -10,7 +10,7 @@
                     Marketplace
                 </router-link>
             </div>
-            <Login></Login>
+            <h1>LOG IN</h1>
         </div>
         <div class="h-screen w-screen flex flex-col justify-center">
             <div class="flex flex-row justify-around -mt-12 h-96">
@@ -44,12 +44,11 @@
 
 <script>
 import Model from '../components/home/Model.vue'
-import Login from "../components/login/LoginComponent.vue";
+
 export default {
     name: 'Home',
     components: {
-    Login,
-  },
+    },
 }
 
 </script>
