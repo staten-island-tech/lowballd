@@ -15,5 +15,12 @@ export default {
     MarketLanding,
     Footer,
   },
+  methods: {
+  async addArray() {
+    const { data } = await axios.post("http://http://localhost:3001/products");
+    
+    console.log(this.product_img);
+  }
+}
 };
 </script>

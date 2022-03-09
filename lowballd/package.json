@@ -7,9 +7,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.26.0",
     "@auth0/auth0-spa-js": "^1.20.1",
+    "axios": "^0.26.0",
     "daisyui": "^1.24.3",
+    "json-server": "^0.17.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
