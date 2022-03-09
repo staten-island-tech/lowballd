@@ -1,53 +1,107 @@
 import createAuth0Client from "@auth0/auth0-spa-js";
-import { reactive } from "vue";
+import { computed, reactive, watchEffect } from "vue";
 
-export const AuthState = reactive({
-  user: null,
-  loading: false,
-  isAuthenticated: false,
-  auth0: null,
-});
+const DEFAULT_REDIRECT_CALLBACK = () =>
+  window.history.replaceState({}, document.title, window.location.pathname);
 
-const config = {
-  domain: import.meta.env.VITE_AUTH0_DOMAIN,
-  client_id: import.meta.env.VITE_AUTH0_CLIENT_ID,
+let instance;
+
+export const getInstance = () => instance;
+
+export const useAuth0 = ({
+  onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
+  redirectUri = window.location.origin,
+  ...options
+}) => {
+  if (instance) return instance;
+
+  instance = new Vue({
+    data() {
+      return {
+        loading: true,
+        isAuthenticated: false,
+        user: {},
+        auth0Client: null,
+        popupOpen: false,
+        error: null,
+      };
+    },
+    methods: {
+      async loginWithPopup(options, config) {
+        this.popupOpen = true;
+
+        try {
+          await this.auth0Client.loginWithPopup(options, config);
+          this.user = await this.auth0Client.getUser();
+          this.isAuthenticated = await this.auth0Client.isAuthenticated();
+          this.error = null;
+        } catch (e) {
+          console.error(e);
+          this.error = e;
+        } finally {
+          this.popupOpen = false;
+        }
+      },
+      async handleRedirectCallback() {
+        this.loading = true;
+        try {
+          await this.auth0Client.handleRedirectCallback();
+          this.user = await this.auth0Client.getUser();
+          this.isAuthenticated = true;
+          this.error = null;
+        } catch (e) {
+          this.error = e;
+        } finally {
+          this.loading = false;
+        }
+      },
+      loginWithRedirect(o) {
+        return this.auth0Client.loginWithRedirect(o);
+      },
+      getIdTokenClaims(o) {
+        return this.auth0Client.getIdTokenClaims(o);
+      },
+      getTokenSilently(o) {
+        return this.auth0Client.getTokenSilently(o);
+      },
+      getTokenWithPopup(o) {
+        return this.auth0Client.getTokenWithPopup(o);
+      },
+      logout(o) {
+        return this.auth0Client.logout(o);
+      },
+    },
+    async created() {
+      this.auth0Client = await createAuth0Client({
+        ...options,
+        client_id: options.clientId,
+        redirect_uri: redirectUri,
+      });
+
+      try {
+        if (
+          window.location.search.includes("code=") &&
+          window.location.search.includes("state=")
+        ) {
+          const { appState } = await this.auth0Client.handleRedirectCallback();
+          this.error = null;
+          onRedirectCallback(appState);
+        }
+      } catch (e) {
+        this.error = e;
+      } finally {
+        this.isAuthenticated = await this.auth0Client.isAuthenticated();
+        this.user = await this.auth0Client.getUser();
+        this.loading = false;
+      }
+    },
+  });
+
+  return instance;
 };
 
-export const useAuth0 = (state) => {
-  const handleStateChange = async () => {
-    state.isAuthenticated = !!(await state.auth0.isAuthenticated());
-    state.user = await state.auth0.getUser();
-    state.loading = false;
-  };
-
-  const initAuth = () => {
-    state.loading = true;
-    createAuth0Client({
-      domain: config.domain,
-      client_id: config.client_id,
-      cacheLocation: "localstorage",
-      redirect_uri: window.location.origin,
-    }).then(async (auth) => {
-      state.auth0 = auth;
-      await handleStateChange();
-    });
-  };
-
-  const login = async () => {
-    await state.auth0.loginWithPopup();
-    await handleStateChange();
-    await auth0.handleRedirectCallback();
-  };
-
-  const logout = async () => {
-    state.auth0.logout({
-      returnTo: window.location.origin,
-    });
-  };
-
-  return {
-    login,
-    logout,
-    initAuth,
-  };
+export const Auth0Plugin = {
+  install(Vue, options) {
+    Vue.prototype.$auth = useAuth0(options);
+  },
 };
