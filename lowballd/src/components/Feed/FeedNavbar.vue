@@ -17,8 +17,8 @@
           <a class="btn btn-ghost btn-sm">MARKETPLACE</a>
         </router-link>
       </div>
-      <Login></Login>
     </div>
+    <Login></Login>
   </div>
 </template>
 
