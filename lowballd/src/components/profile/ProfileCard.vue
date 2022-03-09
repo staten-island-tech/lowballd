@@ -8,6 +8,7 @@
             </div>
         </div> 
     <h1 class="text-2xl">Alston Chan</h1>
+    <h1 class="text-base">alstonc2004@gmail.com</h1>
     <div class="py-6">
         <button class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100">Posts</button>
         <button class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100">Manage Account</button>
