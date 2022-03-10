@@ -42,6 +42,7 @@
 <script>
 import FilterBtn from './Filter-Btn.vue';
 import FilterCategory from '../marketplace/Filter-Category.vue';
+import axios from 'axios';
 export default {
     name: "Filter",
     components: { FilterBtn, FilterCategory, },
@@ -51,8 +52,37 @@ export default {
     data () {
         return {
             filterClicked: false,
+            profile_data: [],
+        }
+    },
+    async created() {
+        try {
+        const res = await axios.get(`http://localhost:3001/profiledata`);
+            this.profile_data = res.data[0];
+            console.log(res.data[0])
+        } catch (error) {
+            console.log(error);
         }
     },
 }
+
+
+    export default {
+        name: 'ProfileCard',
+        data() {
+            return {
+                profile_data: [],
+            }
+        },
+        async created() {
+            try {
+            const res = await axios.get(`http://localhost:3001/profiledata`);
+                this.profile_data = res.data[0];
+                console.log(res.data[0])
+            } catch (error) {
+                console.log(error);
+            }
+        },
+    }
 
 </script>

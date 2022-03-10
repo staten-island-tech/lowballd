@@ -10,17 +10,20 @@
       {
         "product_title": "Carhartt Double Knee Cargo Tactical Pants",
         "product_img": "https://media-photos.depop.com/b0/27687955/1173757715_0f031502cba145aea2d146dafb6fb8b3/P0.jpg",
-        "product_price": "79.00"
+        "product_price": "79.00",
+        "product_categ": "Pant"
       },
       {
         "product_title": "Dr. Marten Gray Suede Industrial Boots",
         "product_img": "https://media-photos.depop.com/b0/14864161/1181924176_4c27d7c0143349eda377a76893e71d4d/P0.jpg",
-        "product_price": "89.00"
+        "product_price": "89.00",
+        "product_categ": "Shoes"
       },
       {
         "product_title": "Hard Rock Niagara Falls Tee",
         "product_img": "https://media-photos.depop.com/b0/33314125/1183416694_7d34845ebc5143fbb67cd568b44b9fd3/P0.jpg",
-        "product_price": "15.00"
+        "product_price": "15.00",
+        "product_categ": "Shirt"
       }
     ]
   }
