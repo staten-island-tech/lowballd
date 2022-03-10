@@ -1,6 +1,21 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './tailwind.css'
-import router from './router'
+// src/main.js
+import "./tailwind.css";
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
 
-createApp(App).use(router).mount('#app')
+// Import the Auth0 configuration
+
+import authConfig from "../auth_config.json";
+import { setupAuth } from "./auth";
+
+let app = createApp(App).use(store).use(router);
+
+function callbackRedirect(appState) {
+  router.push(appState && appState.targetUrl ? appState.targetUrl : "/");
+}
+
+setupAuth(authConfig, callbackRedirect).then((auth) => {
+  app.use(auth).mount("#app");
+});
