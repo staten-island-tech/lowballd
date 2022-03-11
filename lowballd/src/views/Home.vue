@@ -1,16 +1,18 @@
 <template>
-  <div class="font-Spartan">
+  <div>
     <div class="w-full h-14 flex flex-row justify-between px-8 pt-4">
       <h1 class="text-xl">Lowballd</h1>
       <div>
         <router-link to="feed" class="px-6"> Feed </router-link>
         <router-link to="marketplace" class="px-6"> Marketplace </router-link>
       </div>
-      <Login></Login>
+      <div>
+        <Login></Login>
+      </div>
     </div>
     <div class="h-screen w-screen flex flex-col justify-center">
       <div class="flex flex-row justify-around -mt-12 h-96">
-        <div class="h-2/3 w-1/3">
+        <div class="h-2/3 w-1/3 text-left">
           <p class="font-normal mb-1">— NOW PRESENTING</p>
           <h1 class="font-bold text-6xl mb-4">Lowballd</h1>
           <h2 class="font-light text-lg">

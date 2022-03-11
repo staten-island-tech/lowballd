@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-0">
     <div v-if="!$auth.loading.value">
       <div v-if="!$auth.isAuthenticated.value">
         <button @click="login()" class="btn btn-ghost btn-sm rounded-btn">
@@ -36,6 +36,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "Login",
   methods: {
@@ -54,35 +55,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.btn {
-  padding: 8px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  border: none;
-  cursor: pointer;
-  min-width: 100px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.btn-primary {
-  background: #41b883;
-  color: white;
-}
-
-.btn-secondary {
-  background: #aaa;
-  color: white;
-}
 </style>
