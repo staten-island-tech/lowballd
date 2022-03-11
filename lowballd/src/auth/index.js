@@ -2,7 +2,7 @@ import createAuth0Client from "@auth0/auth0-spa-js";
 import { computed, reactive, watchEffect } from "vue";
 
 let client;
-const state = reactive({
+export const state = reactive({
   loading: true,
   isAuthenticated: false,
   user: {},
