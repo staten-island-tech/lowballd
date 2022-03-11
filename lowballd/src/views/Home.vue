@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div class="w-full h-14 flex flex-row justify-between px-8 pt-4">
-      <h1 class="text-xl">Lowballd</h1>
-      <div>
-        <router-link to="feed" class="px-6"> Feed </router-link>
-        <router-link to="marketplace" class="px-6"> Marketplace </router-link>
-      </div>
-      <div>
-        <Login></Login>
-      </div>
-    </div>
+    <GlobalNavbar />
     <div class="h-screen w-screen flex flex-col justify-center">
       <div class="flex flex-row justify-around -mt-12 h-96">
         <div class="h-2/3 w-1/3 text-left">
@@ -64,13 +55,12 @@
 </template>
 
 <script>
-import Model from "../components/home/Model.vue";
-import Login from "../components/login/LoginComponent.vue";
+import GlobalNavbar from "../components/GlobalNavbar.vue";
 
 export default {
   name: "Home",
   components: {
-    Login,
+    GlobalNavbar,
   },
 };
 </script>
