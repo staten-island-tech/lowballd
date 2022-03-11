@@ -4,7 +4,7 @@
             <Filter/>
         </div>
         <div class='bg-white sm:justify-center max-w-screen-xl mx-3 flex flex-row flex-wrap '>
-            <Card title='Name of Item' price='XX'/>
+            <Card title="" price='XX'/>
         </div>
     </section>
 </template>
@@ -21,6 +21,20 @@ export default {
         "title",
         "price"
     ],
+    data () {
+        return {
+            profile_data: [],
+        }
+    },
+    async created() {
+        try {
+        const res = await axios.get(`http://localhost:3001/products`);
+            this.profile_data = res.data[0];
+            console.log(res.data[0])
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 
 </script>
