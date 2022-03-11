@@ -1,9 +1,28 @@
 {
     "profiledata": [
         {
-            "name": "Mike Whalen",
-            "profile_picture": "https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg",
-            "email": "mikewhalen@gmail.com"
+            "user_username": "",
+            "user_fullname": "Mike Whalen",
+            "user_picture": "https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg",
+            "user_email": "mikewhalen@gmail.com"
+        }
+    ],
+    "feedposts": [
+        {
+            "id": "1",
+            "user_id": "1",
+            "user_name": "Mike Whalen",
+            "user_profile_picture": "https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg",
+            "post_text": "This is a test post",
+            "post_image": "https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg",
+            "post_date": "2020-01-01T00:00:00.000Z",
+            "post_likes": "0",
+            "post_comments": "0",
+            "post_shares": "0",
+            "post_views": "0",
+            "post_type": "text",
+            "post_privacy": "public",
+            "post_status": "active"
         }
     ],
     "products": [
