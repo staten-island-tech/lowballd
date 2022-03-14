@@ -1,6 +1,8 @@
 <template>
   <Navbar></Navbar>
-  <MarketLanding></MarketLanding>
+  <MarketLanding v-for="product in products" 
+    :key="product" 
+    :prod="product" />
   <Footer></Footer>
 </template>
 
@@ -16,16 +18,16 @@ export default {
     MarketLanding,
     Footer,
   },
-  data() {
+  data () {
       return {
-          profile_data: [],
+          products: [],
       }
   },
   async created() {
       try {
-      const res = await axios.get(`http://localhost:3001/profiledata`);
-          this.profile_data = res.data[0];
-          console.log(res.data[0])
+      const res = await axios.get(`http://localhost:3001/products`);
+          this.products = res.data[0];
+          console.log(res.data[0]);
       } catch (error) {
           console.log(error);
       }

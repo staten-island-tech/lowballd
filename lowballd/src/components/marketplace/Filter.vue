@@ -49,21 +49,7 @@ export default {
     props: [
         'filterBtn', 'filterCategory',
     ],
-    data () {
-        return {
-            filterClicked: false,
-            profile_data: [],
-        }
-    },
-    async created() {
-        try {
-        const res = await axios.get(`http://localhost:3001/products`);
-            this.profile_data = res.data[0];
-            console.log(res.data[0])
-        } catch (error) {
-            console.log(error);
-        }
-    },
+    
 }
 
 
