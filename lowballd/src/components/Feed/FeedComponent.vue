@@ -15,32 +15,22 @@
     </svg>
   </button>
 
-  <img
+  <img 
+    src=""
     class="object-contain w-full h-56 lg:h-72"
-    src="https://www.hyperui.dev/photos/toy-1.jpeg"
-    alt="Build Your Own Drone"
+    alt="@KESHI"
     loading="lazy"
   />
 
   <div class="p-6">
-    <strong class="inline-block px-3 py-1 text-xs font-medium bg-yellow-400">
-      New
-    </strong>
-
+    
     <h5 class="mt-4 text-lg font-bold">
-      Build Your Own Drone
+      LIKE I NEED YOU
     </h5>
 
-    <p class="mt-2 text-sm text-gray-700">
-      $14.99
-    </p>
+    
 
-    <button
-      class="block w-full p-4 mt-4 text-sm font-medium bg-yellow-500 rounded-sm"
-      type="button"
-    >
-      Add to Cart
-    </button>
+    
   </div>
 </a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
   <button
@@ -54,30 +44,21 @@
 
   <img
     class="object-contain w-full h-56 lg:h-72"
-    src="https://www.hyperui.dev/photos/toy-1.jpeg"
-    alt="Build Your Own Drone"
+    src=""
+    alt="@KESHI"
     loading="lazy"
   />
 
   <div class="p-6">
-    <strong class="inline-block px-3 py-1 text-xs font-medium bg-yellow-400">
-      New
-    </strong>
-
     <h5 class="mt-4 text-lg font-bold">
-      Build Your Own Drone
+      ON OFF ON OFF
     </h5>
 
-    <p class="mt-2 text-sm text-gray-700">
-      $14.99
-    </p>
+    
 
-    <button
-      class="block w-full p-4 mt-4 text-sm font-medium bg-yellow-500 rounded-sm"
-      type="button"
-    >
-      Add to Cart
-    </button>
+    
+
+    
   </div>
 </a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
   <button
@@ -91,30 +72,21 @@
 
   <img
     class="object-contain w-full h-56 lg:h-72"
-    src="https://www.hyperui.dev/photos/toy-1.jpeg"
+    src=""
     alt="Build Your Own Drone"
     loading="lazy"
   />
 
   <div class="p-6">
-    <strong class="inline-block px-3 py-1 text-xs font-medium bg-yellow-400">
-      New
-    </strong>
+    
 
-    <h5 class="mt-4 text-lg font-bold">
-      Build Your Own Drone
-    </h5>
+    
 
     <p class="mt-2 text-sm text-gray-700">
       $14.99
     </p>
 
-    <button
-      class="block w-full p-4 mt-4 text-sm font-medium bg-yellow-500 rounded-sm"
-      type="button"
-    >
-      Add to Cart
-    </button>
+    
   </div>
 </a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
   <button
@@ -128,30 +100,21 @@
 
   <img
     class="object-contain w-full h-56 lg:h-72"
-    src="https://www.hyperui.dev/photos/toy-1.jpeg"
+    src=""
     alt="Build Your Own Drone"
     loading="lazy"
   />
 
   <div class="p-6">
-    <strong class="inline-block px-3 py-1 text-xs font-medium bg-yellow-400">
-      New
-    </strong>
+    
 
-    <h5 class="mt-4 text-lg font-bold">
-      Build Your Own Drone
-    </h5>
+    
 
     <p class="mt-2 text-sm text-gray-700">
       $14.99
     </p>
 
-    <button
-      class="block w-full p-4 mt-4 text-sm font-medium bg-yellow-500 rounded-sm"
-      type="button"
-    >
-      Add to Cart
-    </button>
+    
   </div>
 </a>
 </div>
