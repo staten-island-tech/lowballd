@@ -1,20 +1,21 @@
 <template>
-  <Navbar></Navbar>
+  <GlobalNavbar />
   <MarketLanding></MarketLanding>
   <Footer></Footer>
 </template>
 
 <script>
-import Navbar from "../components/marketplace/Navbar.vue";
+import GlobalNavbar from "../components/GlobalNavbar.vue";
 import MarketLanding from "../components/marketplace/Market-Landing.vue";
 import Footer from "../components/footer/Footer.vue";
 import axios from 'axios';
+
 export default {
   name: "Marketplace",
   components: {
-    Navbar,
     MarketLanding,
     Footer,
+    GlobalNavbar,
   },
   data() {
       return {

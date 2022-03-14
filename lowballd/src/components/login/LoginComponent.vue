@@ -26,7 +26,7 @@
         <button
           v-if="$auth.isAuthenticated.value"
           @click="logout()"
-          class="btn btn-ghost btn-sm rounded-btn"
+          class="font-Spartan text-md"
         >
           Logout
         </button>
@@ -36,7 +36,6 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "Login",
   methods: {

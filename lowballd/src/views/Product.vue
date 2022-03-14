@@ -1,19 +1,18 @@
 <template>
-<ProductNavbar></ProductNavbar>
+<GlobalNavbar />
 <!--<ProductContent></ProductContent>-->
 <ProductTest></ProductTest>
 </template>
 
 <script>
-import ProductNavbar from '../components/product/ProductNavbar.vue'
+import GlobalNavbar from "../components/GlobalNavbar.vue";
 import ProductContent from '../components/product/ProductContent.vue'
 import ProductTest from '../components/product/ProductTest.vue'
-
 
 export default {
     name: 'Home',
     components: {
-        ProductNavbar, ProductContent, ProductTest
+        GlobalNavbar, ProductContent, ProductTest,
     },
 }
 </script>
