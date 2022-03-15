@@ -1,5 +1,5 @@
 <template>
-<FeedNavbar></FeedNavbar>
+<GlobalNavbar />
 <FeedComponent></FeedComponent>
 
 
@@ -7,12 +7,13 @@
 </template>
 
 <script>
-import FeedNavbar from '../components/Feed/FeedNavbar.vue'
+import GlobalNavbar from "../components/GlobalNavbar.vue";
 import FeedComponent from '../components/Feed/FeedComponent.vue'
+
 export default {
     name: 'Home',
     components: {
-        FeedNavbar, FeedComponent
+        GlobalNavbar, FeedComponent
     },
 }
 

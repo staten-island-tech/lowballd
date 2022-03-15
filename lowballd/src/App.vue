@@ -6,5 +6,8 @@
 </script>
 
 <style>
+#app {
+  font-family: "League Spartan";
+}
 </style>
 

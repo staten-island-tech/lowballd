@@ -1,33 +1,32 @@
 <template>
-  <Navbar></Navbar>
-  <MarketLanding v-for="product in products" 
-    :key="product" 
-    :prod="product" />
+  <GlobalNavbar />
+  <MarketLanding></MarketLanding>
   <Footer></Footer>
 </template>
 
 <script>
-import Navbar from "../components/marketplace/Navbar.vue";
+import GlobalNavbar from "../components/GlobalNavbar.vue";
 import MarketLanding from "../components/marketplace/Market-Landing.vue";
 import Footer from "../components/footer/Footer.vue";
 import axios from 'axios';
+
 export default {
   name: "Marketplace",
   components: {
-    Navbar,
     MarketLanding,
     Footer,
+    GlobalNavbar,
   },
-  data () {
+  data() {
       return {
-          products: [],
+          profile_data: [],
       }
   },
   async created() {
       try {
-      const res = await axios.get(`http://localhost:3001/products`);
-          this.products = res.data[0];
-          console.log(res.data[0]);
+      const res = await axios.get(`http://localhost:3001/profiledata`);
+          this.profile_data = res.data[0];
+          console.log(res.data[0])
       } catch (error) {
           console.log(error);
       }
