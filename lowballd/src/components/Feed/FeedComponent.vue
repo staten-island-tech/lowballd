@@ -4,8 +4,8 @@
 <h1 class="text-center text-3xl font-['SPectral'] font-semibold">WHAT DID YOU WEAR TODAY?</h1>
 <div class="flex items-center justify-center"><button class=" mb-20 mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current hover:font-bold cursor-pointer select-none">Trending</button><button class="mb-20 mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current cursor-pointer hover:font-bold select-none">Following</button></div>
 </div>
-<div class=" flex justify-between">
-<a class="relative block border border-gray-100" href="/product/build-your-own-drone">
+<div class=" flex space-between">
+<a class="relative block border bg-slate-200 ml-[2rem]" href="/product/build-your-own-drone">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -16,15 +16,16 @@
   </button>
 
   <img 
-    src=""
-    class="object-contain w-full h-56 lg:h-72"
+    src="https://lastfm.freetls.fastly.net/i/u/770x0/0e62a68e63a22d617d4d0756cca6695c.jpg"
+    class="object-contain w-full h-30 lg:h-72 mt-[4rem]"
     alt="@KESHI"
     loading="lazy"
   />
 
   <div class="p-6">
-    
+    <h1>@KESHI</h1>
     <h5 class="mt-4 text-lg font-bold">
+    
       LIKE I NEED YOU
     </h5>
 
@@ -32,7 +33,7 @@
 
     
   </div>
-</a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 border-gray-100" href="/product/build-your-own-drone">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -43,13 +44,14 @@
   </button>
 
   <img
-    class="object-contain w-full h-56 lg:h-72"
-    src=""
+    class="object-contain w-full h-30 lg:h-72 mt-[4rem]"
+    src="https://media-exp1.licdn.com/dms/image/C4E03AQGBvBlLy-uljw/profile-displayphoto-shrink_200_200/0/1610509335728?e=1651104000&v=beta&t=nfpAtG9KtEb083UxET9aH9RNvZYOEiZszKFxuSxvgvw"
     alt="@KESHI"
     loading="lazy"
   />
 
   <div class="p-6">
+    <h1>@alstn</h1>
     <h5 class="mt-4 text-lg font-bold">
       ON OFF ON OFF
     </h5>
@@ -60,7 +62,7 @@
 
     
   </div>
-</a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 " href="/product/build-your-own-drone">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -71,24 +73,22 @@
   </button>
 
   <img
-    class="object-contain w-full h-56 lg:h-72"
-    src=""
+    class="object-contain w-full h-30 lg:h-72 mt-[4rem]"
+    src="https://www.highsnobiety.com/static-assets/thumbor/SXbsUkCaRWjLAt7gYKByA8AagBA=/1600x2400/www.highsnobiety.com/static-assets/wp-content/uploads/2021/12/08155944/adam-s-04.jpg"
     alt="Build Your Own Drone"
     loading="lazy"
   />
-
   <div class="p-6">
-    
+    <h1>@alstn</h1>
+    <h5 class="mt-4 text-lg font-bold">
+      ON OFF ON OFF
+    </h5>
 
-    
-
-    <p class="mt-2 text-sm text-gray-700">
-      $14.99
-    </p>
+  
 
     
   </div>
-</a><a class="relative block border border-gray-100" href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 mr-[2rem]" href="/product/build-your-own-drone">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -99,7 +99,7 @@
   </button>
 
   <img
-    class="object-contain w-full h-56 lg:h-72"
+    class="object-contain w-full h-30 lg:h-72 mt-[4rem]"
     src=""
     alt="Build Your Own Drone"
     loading="lazy"
