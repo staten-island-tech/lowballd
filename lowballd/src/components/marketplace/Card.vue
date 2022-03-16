@@ -1,5 +1,5 @@
 <template>
-    <router-link to="product" class="hover:bg-slate-200 cursor-pointer m-1">
+    <a v-on:click="update()" class="hover:bg-slate-200 cursor-pointer m-1">
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full h-[21rem]">
@@ -9,10 +9,11 @@
             <h2 class="my-1">{{name}}</h2>
             <h2>${{price}}</h2>
         </div>
-    </router-link>
+    </a>
 </template>
 
 <script>
+// change a tag to router-link and paste:  to="product"
 export default {
     name: "Card",
     props: {
@@ -20,6 +21,18 @@ export default {
         price: String,
         imageUrl: String,
     },
+    data () {
+        return {
+            Main: {
+                title: '',
+            }
+        }
+    },
+    methods: {
+        update() {
+            this.Main.title = this.products.product_title
+        }
+    }
 }
     
 </script>
