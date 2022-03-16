@@ -298,7 +298,7 @@
 
             <button
               type="submit"
-              class="block px-5 py-3 ml-3 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-500"
+              class="block px-5 py-3 ml-3 text-xs font-medium text-white bg-blue-600 rounded hover:bg-green-500"
             >
               Add to Cart
             </button>

@@ -1,5 +1,5 @@
 <template>
-<ProfileNavbar></ProfileNavbar>
+<!--<ProfileNavbar></ProfileNavbar>-->
 <div class="w-full flex flex-row inline block justify-around">
 <ProfileCard></ProfileCard>
 <ProfileContent></ProfileContent>
