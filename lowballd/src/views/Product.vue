@@ -1,5 +1,5 @@
 <template>
-<!--<ProductNavbar></ProductNavbar>-->
+<ProductNavbar></ProductNavbar>
 <!--<ProductContent></ProductContent>-->
 <ProductTest></ProductTest>
 </template>
