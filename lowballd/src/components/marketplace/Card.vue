@@ -1,5 +1,5 @@
 <template>
-    <a v-on:click="update()" class="hover:bg-slate-200 cursor-pointer m-1">
+    <router-link to="product" v-on:click="update()" class="hover:bg-slate-200 cursor-pointer m-1">
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full h-[21rem]">
@@ -9,7 +9,7 @@
             <h2 class="my-1">{{name}}</h2>
             <h2>${{price}}</h2>
         </div>
-    </a>
+    </router-link>
 </template>
 
 <script>
@@ -39,5 +39,6 @@ export default {
         }
     }
 }
-    
+
+
 </script>
