@@ -25,12 +25,17 @@ export default {
         return {
             Main: {
                 title: '',
+                price: '',
+                imgUrl: '',
             }
         }
     },
     methods: {
         update() {
-            this.Main.title = this.products.product_title
+            this.Main.title = this.name
+            this.Main.price = this.price
+            this.Main.imgUrl = this.imageUrl
+            console.log(this.Main)
         }
     }
 }
