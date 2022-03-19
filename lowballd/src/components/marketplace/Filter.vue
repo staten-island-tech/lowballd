@@ -42,17 +42,15 @@
 <script>
 import FilterBtn from './Filter-Btn.vue';
 import FilterCategory from '../marketplace/Filter-Category.vue';
+import axios from 'axios';
 export default {
     name: "Filter",
     components: { FilterBtn, FilterCategory, },
     props: [
         'filterBtn', 'filterCategory',
     ],
-    data () {
-        return {
-            filterClicked: false,
-        }
-    },
+    
 }
+
 
 </script>

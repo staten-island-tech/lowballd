@@ -18,7 +18,9 @@
         </router-link>
       </div>
     </div>
-    <Login></Login>
+    <div class="navbar-end">
+      <Login></Login>
+    </div>
   </div>
 </template>
 

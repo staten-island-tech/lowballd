@@ -7,6 +7,7 @@
 <script>
 export default {
     name: "FilterCategory",
-    props: ['filterCategory']
+    props: ['filterCategory'],
+    
 }
 </script>

@@ -2,10 +2,6 @@ module.exports = {
   mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
-  fontFamily: {
-    worksans: ['"Work Sans"', 'sans-serif'],
-    spectral: ['"Spectral"', 'serif'],
-  },
   theme: {
     extend: {
       screens: {
@@ -24,12 +20,17 @@ module.exports = {
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       },
+      fontFamily: {
+        Spartan: ['"League Spartan"', 'sans-serif'],
+      },
     },
   },
   variants: {
     extend: {},
   },
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   plugins: [
+    require('tw-elements/dist/plugin'),
     require('daisyui'),
   ],
 }

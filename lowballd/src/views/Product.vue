@@ -1,17 +1,18 @@
 <template>
-<ProductNavbar></ProductNavbar>
-<ProductCarousel></ProductCarousel>
+<GlobalNavbar />
+<!--<ProductContent></ProductContent>-->
+<ProductTest></ProductTest>
 </template>
 
 <script>
-import ProductNavbar from '../components/product/ProductNavbar.vue'
-import ProductCarousel from '../components/product/ProductCarousel.vue'
-
+import GlobalNavbar from "../components/GlobalNavbar.vue";
+import ProductContent from '../components/product/ProductContent.vue'
+import ProductTest from '../components/product/ProductTest.vue'
 
 export default {
     name: 'Home',
     components: {
-        ProductNavbar, ProductCarousel,
+        GlobalNavbar, ProductContent, ProductTest,
     },
 }
 </script>
