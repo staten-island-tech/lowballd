@@ -59,7 +59,7 @@ function logout(o) {
   return client.logout(o);
 }
 
-const authPlugin = {
+export const authPlugin = {
   isAuthenticated: computed(() => state.isAuthenticated),
   loading: computed(() => state.loading),
   user: computed(() => state.user),
@@ -132,4 +132,3 @@ export const setupAuth = async (options, callbackRedirect) => {
     },
   };
 };
-console.log(authPlugin.user.value);

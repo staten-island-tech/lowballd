@@ -23,6 +23,7 @@
       </div>
 
       <div>
+        Welcome {{ $auth.user }}
         <button
           v-if="$auth.isAuthenticated.value"
           @click="logout()"
@@ -53,5 +54,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
