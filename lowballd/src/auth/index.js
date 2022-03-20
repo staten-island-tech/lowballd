@@ -132,3 +132,4 @@ export const setupAuth = async (options, callbackRedirect) => {
     },
   };
 };
+console.log(authPlugin.user.value);
