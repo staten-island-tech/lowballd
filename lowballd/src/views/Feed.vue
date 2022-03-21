@@ -2,8 +2,6 @@
 <GlobalNavbar />
 <FeedComponent></FeedComponent>
 
-
-
 </template>
 
 <script>
