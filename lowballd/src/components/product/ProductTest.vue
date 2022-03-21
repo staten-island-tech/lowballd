@@ -309,3 +309,26 @@
   </div>
 </section>
 </template>
+
+<script>
+  import Card from "/src/components/marketplace/Card.vue";
+
+  export default {
+    components: {
+      Card,
+    },
+    data: () => {
+      return {
+          Main: {
+              title: "",
+              price: "",
+              imgUrl: "",
+          }
+      }
+    },
+    created: function () {
+      console.log(this.Main)
+    }
+  }
+
+</script>
