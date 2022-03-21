@@ -39,10 +39,12 @@
 <script>
 export default {
   name: "Login",
+
   methods: {
     // Log the user in
     login() {
       this.$auth.loginWithRedirect();
+      //this.test = $auth.user;
     },
     // Log the user out
     logout() {
