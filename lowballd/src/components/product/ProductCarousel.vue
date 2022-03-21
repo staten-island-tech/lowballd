@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import Card from "../components/marketplace/Card.vue";
+  import Card from "/src/components/marketplace/Card.vue";
   import 'tw-elements';
 
   export default {
