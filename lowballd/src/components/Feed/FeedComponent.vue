@@ -5,7 +5,7 @@
 <div class="flex items-center justify-center"><button class=" mb-20 mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current hover:font-bold cursor-pointer select-none">Trending</button><button class="mb-20 mt-6 mr-5 text-xl border-b-2 border-double border-transparent hover:border-current cursor-pointer hover:font-bold select-none">Following</button></div>
 </div>
 <div class="flex justify-between flex-wrap">
-<a class="relative block border bg-slate-200 ml-[5rem] w-1/6" href="/product/build-your-own-drone">
+<a class="relative block border bg-slate-200 ml-[10rem] w-1/6">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -30,7 +30,7 @@
 
     
   </div>
-</a><a class="relative block border bg-slate-200 border-gray-100 w-1/6" href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 border-gray-100 w-1/6">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -57,7 +57,7 @@
 
     
   </div>
-</a><a class="relative block border bg-slate-200 w-1/6 " href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 w-1/6 ">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -86,7 +86,7 @@
     
   </div>
 </a>
-<a class="relative block border bg-slate-200 mr-[5rem] w-1/6" href="/product/build-your-own-drone">
+<a class="relative block border bg-slate-200 mr-[10rem] w-1/6" >
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -120,7 +120,7 @@
 
 
 <div class="flex justify-between flex-wrap mt-[5rem]">
-<a class="relative block border bg-slate-200 ml-[5rem] w-1/6" href="/product/build-your-own-drone">
+<a class="relative block border bg-slate-200 ml-[10rem] w-1/6" >
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -145,7 +145,7 @@
 
     
   </div>
-</a><a class="relative block border bg-slate-200 border-gray-100 w-1/6" href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 border-gray-100 w-1/6" >
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -172,7 +172,7 @@
 
     
   </div>
-</a><a class="relative block border bg-slate-200 w-1/6 " href="/product/build-your-own-drone">
+</a><a class="relative block border bg-slate-200 w-1/6 ">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
@@ -200,7 +200,7 @@
     
   </div>
 </a>
-<a class="relative block border bg-slate-200 mr-[5rem] w-1/6" href="/product/build-your-own-drone">
+<a class="relative block border bg-slate-200 mr-[10rem] w-1/6">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
     type="button"
