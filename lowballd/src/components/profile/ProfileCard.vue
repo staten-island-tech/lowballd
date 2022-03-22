@@ -6,11 +6,11 @@
         <div
           class="rounded-full w-24 h-24 ring ring-primary ring-offset-base-100 ring-offset-2"
         >
-          <img :url="profile_data.user_picture" />
+          <img :src="userdata.picture" />
         </div>
       </div>
-      <h1 class="text-2xl">{{ profile_data.username }}</h1>
-      <h1 class="text-base">{{ profile_data.email }}</h1>
+      <h1 class="text-2xl">{{ userdata.nickname }}</h1>
+      <h1 class="text-base">{{ userdata.email }}</h1>
       <div class="py-6">
         <button
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
@@ -53,12 +53,7 @@ export default {
   name: "ProfileCard",
   data() {
     return {
-      profile_data: [
-        {
-          user_picture:
-            "https://s.gravatar.com/avatar/fceea777bb8dfece779ffbaa14304f…?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fal.png]",
-        },
-      ],
+      userdata: this.$auth.user,
     };
   },
   async created() {

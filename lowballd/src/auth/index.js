@@ -31,6 +31,8 @@ async function handleRedirectCallback() {
   try {
     await client.handleRedirectCallback();
     state.user = await client.getUser();
+    0;
+    console.log(state);
     state.isAuthenticated = true;
   } catch (e) {
     state.error = e;
