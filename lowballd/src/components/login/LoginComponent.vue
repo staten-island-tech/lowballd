@@ -22,8 +22,8 @@
         </button>
       </div>
 
-      <div>
-        Welcome {{ test.nickname }}
+      <div v-if="$auth.isAuthenticated.value">
+        Welcome {{ userdata.nickname }}
         <button
           v-if="$auth.isAuthenticated.value"
           @click="logout()"
@@ -41,7 +41,7 @@ export default {
   name: "Login",
   data() {
     return {
-      test: this.$auth.user,
+      userdata: this.$auth.user,
     };
   },
   methods: {
