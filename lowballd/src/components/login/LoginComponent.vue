@@ -1,5 +1,6 @@
 <template>
   <div class="m-0">
+    <button @click="getToken">GET TOKEN</button>
     <div v-if="!$auth.loading.value">
       <div v-if="!$auth.isAuthenticated.value">
         <button @click="login()" class="font-Spartan text-md">
@@ -23,7 +24,7 @@
       </div>
 
       <div v-if="$auth.isAuthenticated.value">
-        Welcome {{ userdata.nickname }}
+        Welcome {{ $auth }}
         <button
           v-if="$auth.isAuthenticated.value"
           @click="logout()"
@@ -42,11 +43,13 @@ export default {
   data() {
     return {
       userdata: this.$auth.user,
+      token: null,
     };
   },
+
   methods: {
     // Log the user in
-    login() {
+    async login() {
       this.$auth.loginWithRedirect();
     },
     // Log the user out
@@ -54,6 +57,10 @@ export default {
       this.$auth.logout({
         returnTo: window.location.origin,
       });
+    },
+    async getToken() {
+      const token = await this.$auth.getTokenSilently();
+      console.log(token);
     },
   },
 };
