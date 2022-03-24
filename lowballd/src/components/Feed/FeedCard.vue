@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-between flex-wrap">
+<div id="card" class="flex justify-between flex-wrap">
 <a class="relative block border bg-slate-200 ml-[10rem] w-1/6">
   <button
     class="absolute p-2 text-white bg-black rounded-full right-4 top-4"
@@ -32,6 +32,9 @@
 <script>
  
     export default {
+      props:[
+        'card'
+      ],
         name: 'FeedCard',
     }
 
