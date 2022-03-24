@@ -25,20 +25,20 @@ export default {
     components: {
         Card, Filter,
     },
-    data () {
-      return {
-          products: [''],
-      }
-    },
-    async created() {
-        try {
-        const res = await axios.get(`http://localhost:3001/products`);
-            this.products = res.data;
-            console.log(res.data);
-        } catch (error) {
-            console.log(error);
-        }
-    },
+    // data () {
+    //   return {
+    //       products: [''],
+    //   }
+    // },
+    // async created() {
+    //     try {
+    //     const res = await axios.get(`http://localhost:3001/products`);
+    //         this.products = res.data;
+    //         console.log(res.data);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // },
     
 }
 
