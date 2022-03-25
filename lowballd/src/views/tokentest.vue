@@ -6,9 +6,8 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
-  name: "api",
+  name: "Api",
   data() {
     return {
       apiMessage: "",
