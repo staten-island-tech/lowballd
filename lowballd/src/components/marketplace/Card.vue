@@ -1,5 +1,5 @@
 <template>
-    <router-link to="product" v-on:click="update()" class="hover:bg-slate-200 cursor-pointer m-1">
+    <router-link to="product" class="hover:bg-slate-200 cursor-pointer m-1">
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full h-60">
@@ -13,30 +13,18 @@
 </template>
 
 <script>
-// change a tag to router-link and paste:  to="product"
+import {computed} from "vue";
+import {useStore} from "vuex";
+
 export default {
     name: "Card",
-    props: {
-        name: String,
-        price: String,
-        imageUrl: String,
-    },
-    data () {
-        return {
-            Main: {
-                title: '',
-                price: '',
-                imgUrl: '',
-            }
-        }
-    },
-    methods: {
-        update() {
-            this.Main.title = this.name
-            this.Main.price = this.price
-            this.Main.imgUrl = this.imageUrl
-            console.log(this.Main)
-        }
+    props : ['product'],
+    setup(){
+        const store = useStore();
+
+        let cart = computed(function () {
+            return store.state.cart
+        });
     }
 }
 

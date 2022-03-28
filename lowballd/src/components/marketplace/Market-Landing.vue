@@ -5,7 +5,6 @@
         </div>
         <div class='bg-white sm:justify-center max-w-screen-xl mx-3 flex flex-row flex-wrap '>
             <Card v-for="product in products" 
-                :key="product" 
                 :product="product"
                 :name="product.product_title"
                 :price="product.product_price"
@@ -16,29 +15,35 @@
 </template>
 
 <script>
-
-import axios from 'axios';
 import Card from './Card.vue';
 import Filter from './Filter.vue';
+import axios from 'axios';
+
+import {computed} from 'vue';
+import {useStore} from "vuex";
+
 export default {
     name: 'MarketLanding',
     components: {
         Card, Filter,
     },
-    // data () {
-    //   return {
-    //       products: [''],
-    //   }
-    // },
-    // async created() {
-    //     try {
-    //     const res = await axios.get(`http://localhost:3001/products`);
-    //         this.products = res.data;
-    //         console.log(res.data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // },
+    setup(){
+        const store = useStore();
+
+        let products = computed(function () {
+        return store.state.products
+        });
+
+        let cart = computed(function () {
+        return store.state.cart
+        });
+
+        return {
+        products,
+        cart
+        }
+    }
+
     
 }
 
