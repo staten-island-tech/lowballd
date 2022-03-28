@@ -1,5 +1,5 @@
 <template>
-<div id="card" class="flex justify-between flex-wrap">
+<div id="card" class="flex justify-between flex-between">
 <a class="relative block border bg-slate-200 ml-[10rem] w-1/6">
   <div class="p-6">
     <h1 class="text-[1.4rem]">@KESHI</h1>
@@ -30,6 +30,7 @@
     export default {
       props:[
         'card'
+        
       ],
         name: 'FeedCard',
     }
