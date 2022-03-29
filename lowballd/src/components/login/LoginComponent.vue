@@ -1,6 +1,6 @@
 <template>
   <div class="m-0">
-    <button @click="getToken">GET TOKEN</button>
+    <!-- <button @click="getToken">GET TOKEN</button> -->
     <div v-if="!$auth.loading.value">
       <div v-if="!$auth.isAuthenticated.value">
         <button @click="login()" class="font-Spartan text-md">
@@ -24,7 +24,7 @@
       </div>
 
       <div v-if="$auth.isAuthenticated.value">
-        Welcome {{ $auth }}
+        Welcome {{ userdata.nickname }}
         <button
           v-if="$auth.isAuthenticated.value"
           @click="logout()"
