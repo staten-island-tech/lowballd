@@ -1,5 +1,5 @@
 <template>
-    <router-link to="product" class="hover:bg-slate-200 cursor-pointer m-1">
+    <router-link  class="hover:bg-slate-200 cursor-pointer m-1">
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full h-60">
@@ -13,19 +13,14 @@
 </template>
 
 <script>
-import {computed} from "vue";
-import {useStore} from "vuex";
+import { mapState, mapActions } from 'vuex'
 
 export default {
     name: "Card",
     props : ['product'],
-    setup(){
-        const store = useStore();
-
-        let cart = computed(function () {
-            return store.state.cart
-        });
-    }
+    computed: mapState({
+        products: state => state.products
+    }),
 }
 
 

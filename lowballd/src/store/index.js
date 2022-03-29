@@ -1,11 +1,10 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+// Create a new store instance.
+const store = createStore({
   
   state: {
-    product: [
+    products: [
       {
         product_title: "Carhartt Double Knee Cargo Tactical Pants",
         product_img: "https://media-photos.depop.com/b0/27687955/1173757715_0f031502cba145aea2d146dafb6fb8b3/P0.jpg",
@@ -20,26 +19,11 @@ export default new Vuex.Store({
     ], cart: []
   },
   mutations: {
-    addCartItem(state, item) {
-      item.quantity = 1;
-      state.cart.push(item);
+    setProducts (state, products) {
+      state.all = products
     },
-    updateCartItem(state, updatedItem) {
-      state.cart = state.cart.map((cartItem) => {
-        if (cartItem.title == updatedItem.title) {
-          return updatedItem;
-        }
-
-        return cartItem;
-      });
-    },
-    removeCartItem(state, item) {
-      state.cart = state.cart.filter((cartItem) => {
-        return cartItem.title != item.title;
-      });
-    }
   }
 });
 
-
+export default store
 
