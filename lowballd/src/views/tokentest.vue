@@ -19,7 +19,7 @@ export default {
       //const token = await this.$auth.getTokenSilently();
       try {
         const token = await this.$auth.getTokenSilently();
-        const response = await fetch("http://localhost:3000/authorized", {
+        const response = await fetch("http://localhost:3001/authorized", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
