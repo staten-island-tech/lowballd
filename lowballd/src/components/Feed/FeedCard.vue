@@ -1,6 +1,13 @@
 <template>
 <div class="flex justify-center items-center min-h-full bg-slate-200">
-<div class="position: relative;"></div>
+  <div class="position: relative;">
+    <div >
+      <div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
 </template>
 
