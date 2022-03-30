@@ -1,7 +1,7 @@
 <template>
   <GlobalNavbar />
   <MarketLanding></MarketLanding>
-  <Footer></Footer>
+  <Footer />
 </template>
 
 <script>
@@ -13,9 +13,8 @@ import axios from 'axios';
 export default {
   name: "Marketplace",
   components: {
-    MarketLanding,
-    Footer,
-    GlobalNavbar,
+    GlobalNavbar, MarketLanding, Footer
+    
   },
 };
 </script>
