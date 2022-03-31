@@ -1,6 +1,6 @@
 <template>
-  <div class="w-1/5 my-16">
-    <div class="card text-center shadow-lg bg-sky-500">
+  <div class="w-1/5 md:w-3/12 my-16 sm:w-5/6 sm:mx-auto sm:mt-12 sm:mb-6">
+    <div class="card text-center shadow-lg bg-slate-200">
       <div class="my-2"></div>
       <div class="avatar mx-auto my-4">
         <div
@@ -10,10 +10,14 @@
         </div>
       </div>
       <h1 class="text-2xl">{{ userdata.nickname }}</h1>
-      <h1 class="text-base">{{ userdata.email }}</h1>
+      <h1 class="text-base md:text-sm">{{ userdata.email }}</h1>
+      <div class="flex flex-row justify-center mt-2">
+        <p class="text-sm text-slate-700 pr-2"><span class="font-bold">300</span> Followers</p>
+        <p class="text-sm text-slate-700"><span class="font-bold">200</span> Following</p>
+      </div>
       <div class="py-6">
         <button
-          class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
+          class="btn btn-sm w-4/5 mx-auto mb-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Posts
         </button>
@@ -48,24 +52,12 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   name: "ProfileCard",
   data() {
     return {
       userdata: this.$auth.user,
     };
-  },
-  async created() {
-    try {
-      const res = await axios.get(
-        `http://localhost:3001/api/user/profile/622bd521df4c680012e9a3ae`
-      );
-      this.profile_data = res.data;
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
   },
 };
 </script>

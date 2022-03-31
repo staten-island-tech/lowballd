@@ -1,5 +1,5 @@
 <template>
-    <div class="w-3/5 h-auto bg-slate-200 my-16 pb-8">
+    <div class="w-8/12 h-auto bg-slate-200 rounded-2xl shadow-lg my-16 pb-8 sm:w-5/6 sm:mx-auto">
         <ProfilePosts></ProfilePosts>
         <!--<Settings></Settings>-->
         <ManageAccount></ManageAccount>
