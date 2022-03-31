@@ -30,11 +30,8 @@ const store = createStore({
 
     ], cart: []
   },
-  computed: {
-    products() {
-        return store.state.products
-    },
-  },
+
+
 });
 
 export default store

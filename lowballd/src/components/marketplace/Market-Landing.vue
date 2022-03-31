@@ -15,7 +15,6 @@
 <script>
 import Card from './Card.vue';
 import Filter from './Filter.vue';
-import axios from 'axios';
 
 export default {
     name: 'MarketLanding',
@@ -25,6 +24,7 @@ export default {
     created() {
         console.log(this.$store.state.products)
     },
+    
     
     
 }
