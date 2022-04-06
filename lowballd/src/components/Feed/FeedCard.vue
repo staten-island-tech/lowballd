@@ -1,9 +1,9 @@
 <template>
-<body class="flex justify-center items-center min-h-full">
-  <div class="position: relative; h-[400px] w-[360px] bg-slate-200 shadow-slate-500 p-[20px]">
-    <div class="flex justify-content: space-between items-center">
+<body class="flex justify-center items-center">
+  <div class="relative w-[22.5rem] h-[25rem] bg-slate-200 shadow-slate-500 p-[20px] flex justify-between items-center flex items-center">
+    <div class="flex justify-between items-center flex items-center">
       <div class="flex items-center">
-        <div class="relative"> 
+        <div class="relative w-[36px] h-[36px] rounded-[50%] truncate mr-[8px]"> 
           <div>
             <img>
           </div>
