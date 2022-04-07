@@ -16,6 +16,14 @@
         </div>
     </div>
 </section>
+<div class="flex flex-row justify-center w-4/5 mx-auto divider"></div>
+<div class="flex flex-row justify-center w-4/5 mx-auto">
+    <ul class="flex flex-row text-xl">
+        <li class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">FITS OF THE DAY</li>
+        <li class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">MARKETPLACE LISTINGS</li>
+    </ul>
+</div>
+<div class="flex flex-row justify-center w-4/5 mx-auto divider"></div>
 </template>
 
 <script>
