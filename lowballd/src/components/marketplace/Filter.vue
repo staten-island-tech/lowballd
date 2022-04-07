@@ -1,7 +1,8 @@
 <template>
-    <div class="w-60 h-auto bg-gray-100 rounded-xl capitalize sm:w-9/12 sm:mx-auto " >
+    <div class="w-60 h-auto bg-gray-100 rounded-xl capitalize sm:w-11/12 sm:mx-auto " >
         <div class='flex flex-col '>
-            <div class="collapse collapse-arrow w-full rounded-xl">
+            
+            <div class="collapse collapse-arrow rounded-xl">
                 <input type="checkbox"> 
                 <div class="collapse-title">
                     <h1> hi </h1>
@@ -21,9 +22,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     name: "Filter",
-    
+    computed: {
+        ...mapGetters([
+            'filterByColor',
+        ])
+    }
 }
 
 

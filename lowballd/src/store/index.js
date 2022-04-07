@@ -1,5 +1,7 @@
+import { InterpolateSmooth } from 'three';
 import { createStore } from 'vuex'
 import { getByKeyword } from "./filter-functions.js";
+
 
 // Create a new store instance.
 const store = createStore({
@@ -14,7 +16,7 @@ const store = createStore({
         product_size: "",
         product_brand: "",
         product_condition: "",
-        product_color: "",
+        product_color: "vu",
         product_shipping: "",
       },
       {
@@ -25,7 +27,7 @@ const store = createStore({
         product_size: "",
         product_brand: "",
         product_condition: "",
-        product_color: "",
+        product_color: "vue",
         product_shipping: "",
       },
       {
@@ -36,7 +38,7 @@ const store = createStore({
         product_size: "Small",
         product_brand: "",
         product_condition: "",
-        product_color: "",
+        product_color: "vuex",
         product_shipping: "Varies",
       },
       {
@@ -55,6 +57,7 @@ const store = createStore({
     cart: [],
     keywords: "",
 
+
   },
   mutations: {
     setProducts(state, products) {
@@ -69,9 +72,10 @@ const store = createStore({
   },
 
   getters: {
-    loadFilters(state) {
-      return getByKeyword(getByColor(state.cars, state.colors), state.keywords);
+    filterByColor: ({products}) => (e) => {
+      return products.filter(product => product.product_color.indexOf(e) > -1)
     }
+
   }
 
 
