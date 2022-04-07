@@ -1,5 +1,5 @@
 <template>
-<div class="pb-8">
+<div class="pb-8 border-current">
     <h1 class="text-2xl m-10 font-bold">Description</h1>
     <p class="mx-10 -my-8 text-base text-gray-400">Write a little joke or greeting for any passerbys.</p>
     <div class="relative h-32 mb-16">

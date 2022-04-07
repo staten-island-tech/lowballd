@@ -10,11 +10,12 @@
 import ProfilePosts from './ProfilePosts.vue'
 import Settings from './Settings.vue'
 import ManageAccount from './ManageAccount.vue'
+import ProfileWatchlist from './ProfileWatchlist.vue'
 
     export default {
         name: 'ProfileContent',
         components: {
-            ProfilePosts, Settings, ManageAccount,
+            ProfilePosts, Settings, ManageAccount, ProfileWatchlist,
         },
     }
 </script>
