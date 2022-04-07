@@ -18,6 +18,10 @@ import { computed } from 'vue';
 
 export default {
     name: 'Card',
+    props:{
+
+    },
+    data(){},
     created() {
         console.log(this.$store.state.products)
     },

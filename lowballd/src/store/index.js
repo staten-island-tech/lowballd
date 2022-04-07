@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { getByKeyword } from "./filter-functions.js";
 
 // Create a new store instance.
 const store = createStore({
@@ -52,8 +53,26 @@ const store = createStore({
 
     ], 
     cart: [],
-    chosenOne:[],
+    keywords: "",
+
   },
+  mutations: {
+    setProducts(state, products) {
+      state.products = products;
+    },
+    setKeywords(state, keys) {
+      state.keywords = keys;
+    },
+    setTitle(state, cart) {
+      state.cart = cart;
+    }
+  },
+
+  getters: {
+    loadFilters(state) {
+      return getByKeyword(getByColor(state.cars, state.colors), state.keywords);
+    }
+  }
 
 
 
