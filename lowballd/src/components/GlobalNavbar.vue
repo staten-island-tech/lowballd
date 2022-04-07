@@ -1,11 +1,11 @@
 <template>
-<div class="w-full h-14 flex flex-row justify-between px-8 pt-4">
-      <router-link to="/" class="text-xl">Lowballd</router-link>
-      <div>
+<div class="w-full h-20 flex flex-row justify-between px-8 py-4">
+      <router-link to="/" class="text-xl my-auto">Lowballd</router-link>
+      <div class="my-auto">
         <router-link to="feed" class="px-6">Feed</router-link>
         <router-link to="marketplace" class="px-6">Marketplace</router-link>
       </div>
-      <div>
+      <div class="my-auto">
         <Login></Login>
       </div>
     </div>
