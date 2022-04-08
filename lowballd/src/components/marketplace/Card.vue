@@ -31,7 +31,7 @@ export default {
             products
         };
     }
-    
+    //Mr. Whalen suggests make a call to the data base with an async function (if I'm not mistaken)
 }
 
 
