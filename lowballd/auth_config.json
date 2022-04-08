@@ -1,6 +1,0 @@
-{
-  "domain": "dev-5t61kzw2.us.auth0.com",
-  "client_id": "ZxpmPPmMWimzX2lIp5NmoTNkzb0Q3TTN",
-  "redirect_uri": "http://localhost:3000"
-  ,"audience":"http://localhost:3001/api"
-}
