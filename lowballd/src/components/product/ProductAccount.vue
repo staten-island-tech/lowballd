@@ -6,7 +6,7 @@
         </div>
     </div> 
     <div class="p-4">
-        <h1>Alston Chan</h1>
+        <p class="text-lg text-bold">Alston Chan</p>
         <p class="text-slate-500 text-sm">Staten Island, NY</p>
         <div class="rating">
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 

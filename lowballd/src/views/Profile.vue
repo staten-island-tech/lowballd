@@ -1,8 +1,8 @@
 <template>
 <GlobalNavbar></GlobalNavbar>
-<div class="w-full flex flex-row inline block justify-around">
-<ProfileCard></ProfileCard>
-<ProfileContent></ProfileContent>
+<div class="w-full flex flex-row justify-around sm:flex sm:flex-col sm:justify-center">
+    <ProfileCard></ProfileCard>
+    <ProfileContent></ProfileContent>
 </div>
 </template>
 

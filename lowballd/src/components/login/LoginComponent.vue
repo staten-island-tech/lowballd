@@ -2,7 +2,7 @@
   <div class="m-0">
     <div v-if="!$auth.loading.value">
       <div v-if="!$auth.isAuthenticated.value">
-        <button @click="login()" class="font-Spartan text-md">
+        <button @click="login()" class="text-md">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -22,15 +22,23 @@
         </button>
       </div>
 
-      <div>
-        Welcome {{ $auth.user }}
-        <button
-          v-if="$auth.isAuthenticated.value"
+      <div v-if="$auth.isAuthenticated.value">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn m-1">
+          <div class="avatar my-auto mr-2">
+          <div class="rounded-full w-6 h-6">
+            <img :src="userdata.picture" />
+          </div>
+        </div>
+        <p class="font-Spartan font-bold text-slate-700">{{ userdata.nickname }}</p>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li><router-link to="profile">View Profile</router-link></li>
+          <li><a v-if="$auth.isAuthenticated.value"
           @click="logout()"
-          class="font-Spartan text-md"
-        >
-          Logout
-        </button>
+          class="font-Spartan text-md">Logout</a></li>
+        </ul>
+      </div>
       </div>
     </div>
     <div v-else>Loading</div>
@@ -39,6 +47,11 @@
 <script>
 export default {
   name: "Login",
+  data() {
+    return {
+      userdata: this.$auth.user,
+    };
+  },
   methods: {
     // Log the user in
     login() {
@@ -54,4 +67,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.btn {
+  @apply bg-slate-200;
+  @apply border-none;
+}
+
+.btn:hover {
+  @apply bg-slate-400
+}
+</style>

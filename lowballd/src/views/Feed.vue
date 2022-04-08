@@ -13,6 +13,9 @@ export default {
     components: {
         GlobalNavbar, FeedComponent, Footer
     },
+    
+
+    
 }
 
 
