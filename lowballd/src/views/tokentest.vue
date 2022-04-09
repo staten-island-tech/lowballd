@@ -30,18 +30,7 @@ export default {
       } catch (error) {
         console.log(error);
       }
-      // Use Axios to make a call to the API
-      /*  const { data } = await axios
-        .get("localhost:3000/authorized", {
-          headers: {
-            Authorization: `Bearer ${token}`, // send the access token through the 'Authorization' header
-          },
-        })
-        .then(console.log(data))
-        .catch(function (error) {
-          console.log(error);
-        });
-      this.apiMessage = data; */
+      
     },
   },
 };
