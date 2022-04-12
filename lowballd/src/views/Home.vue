@@ -1,6 +1,7 @@
 <template>
   <div>
     <GlobalNavbar />
+    <token></token>
     <div class="h-screen w-screen flex flex-col justify-center">
       <div class="flex flex-row justify-around -mt-12 h-96">
         <div class="h-2/3 w-1/3 text-left">

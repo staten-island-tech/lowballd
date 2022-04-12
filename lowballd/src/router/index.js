@@ -7,7 +7,7 @@ import Profile from "../views/Profile.vue";
 import ViewProfile from "../views/ViewProfile.vue";
 import Product from "../views/Product.vue";
 import Chat from "../views/Chat.vue";
-
+import Api from "../views/tokentest.vue";
 const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/feed", name: "Feed", component: Feed },
@@ -17,6 +17,7 @@ const routes = [
   { path: "/profiles", name: "ViewProfile", component: ViewProfile },
   { path: "/product", name: "Product", component: Product },
   { path: "/chat", name: "Chat", component: Chat },
+  { path: "/token", name: "token", component: Api },
 ];
 const router = createRouter({
   history: createWebHistory(),
