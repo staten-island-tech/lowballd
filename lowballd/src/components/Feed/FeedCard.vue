@@ -91,7 +91,7 @@ export default {
   name: "FeedCard",
   data() {
     return {
-      apiMessage: "",
+      apiMessage: [],
     };
   },
   methods: {
