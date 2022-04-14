@@ -1,6 +1,4 @@
-import { InterpolateSmooth } from 'three';
 import { createStore } from 'vuex'
-import { getByKeyword } from "./filter-functions.js";
 
 
 // Create a new store instance.
@@ -56,26 +54,26 @@ const store = createStore({
     ], 
     cart: [],
     keywords: "",
+    posts: []
 
 
   },
   mutations: {
-    setProducts(state, products) {
-      state.products = products;
-    },
-    setKeywords(state, keys) {
-      state.keywords = keys;
-    },
-    setTitle(state, cart) {
-      state.cart = cart;
+    FETCH_USERS(state, users) {
+      state.users = users
     }
   },
-
-  getters: {
-    filterByColor: ({products}) => (e) => {
-      return products.filter(product => product.product_color.indexOf(e) > -1)
+  actions: {
+    fetchUsers({ commit }, { self }) {          
+      Vue.http.get("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          commit("FETCH_USERS", response.body);
+          self.filterUsers();   
+        })
+        .catch((error) => {
+          console.log(error.statusText)
+        });
     }
-
   }
 
 
