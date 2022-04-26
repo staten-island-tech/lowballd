@@ -32,7 +32,7 @@
               </div>
             </div>
             <p class="font-Spartan font-bold text-slate-700">
-              {{ userdata }}
+              {{ userId }}
             </p>
           </label>
           <ul
@@ -61,15 +61,19 @@ export default {
   data() {
     return {
       userdata: this.$auth.user,
-      // authsub: this.$auth.user.sub,
+
       token: null,
       newStr: null,
     };
   },
-  async mounted() {
-    // console.log(this.$auth.user.sub.replace("auth0|", ""));
-    let test = await this.$auth.user;
+  computed: {
+    // a computed getter
+    userId: function () {
+      // `this` points to the vm instance
+      return this.userdata.sub.replace("auth0|", "");
+    },
   },
+
   methods: {
     // Log the user in
     async login() {
