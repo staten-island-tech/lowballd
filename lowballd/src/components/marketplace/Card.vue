@@ -3,11 +3,11 @@
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full h-60">
-                    <img class="h-full w-auto object-cover" :src="product.product_img">
+                    <img class="h-full w-auto object-cover" :src="product.img">
                 </div>
             </div>
-            <h2 class="mt-2 my-1">{{product.product_title}}</h2>
-            <h2>${{product.product_price}}</h2>
+            <h2 class="mt-2 my-1">{{product.title}}</h2>
+            <h2>${{product.price}}</h2>
         </div>
     </div>
 </template>
