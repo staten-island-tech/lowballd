@@ -31,7 +31,9 @@
                 <img :src="userdata.picture" />
               </div>
             </div>
-            <p class="font-Spartan font-bold text-slate-700">{{ userdata }}</p>
+            <p class="font-Spartan font-bold text-slate-700">
+              {{ userdata }}
+            </p>
           </label>
           <ul
             tabindex="0"
@@ -58,11 +60,16 @@ export default {
   name: "Login",
   data() {
     return {
-      userdata: this.$auth,
+      userdata: this.$auth.user,
+      // authsub: this.$auth.user.sub,
       token: null,
+      newStr: null,
     };
   },
-
+  async mounted() {
+    // console.log(this.$auth.user.sub.replace("auth0|", ""));
+    let test = await this.$auth.user;
+  },
   methods: {
     // Log the user in
     async login() {
