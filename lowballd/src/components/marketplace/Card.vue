@@ -7,7 +7,7 @@
                 </div>
             </div>
             <h2 class="mt-2 my-1">{{product.title}}</h2>
-            <h2>${{product.price}}</h2>
+            <h2>price</h2>
         </div>
     </div>
 </template>
@@ -18,21 +18,9 @@ import { computed } from 'vue';
 
 export default {
     name: 'Card',
-    data(){},
     created() {
         console.log(this.$store.state.products)
     },
-    setup() {
-        const store = useStore();
-
-        const products = computed(() => store.state.products);
-
-        return {
-            products
-        };
-    }
-    //Mr. Whalen suggests make a call to the data base with an async function (if I'm not mistaken)
 }
-
 
 </script>
