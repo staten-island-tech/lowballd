@@ -4,21 +4,36 @@ import { createStore } from 'vuex'
 const store = createStore({
   
   state: {
-    products: [], 
+    products:{
+    }, 
   },
 
-  actions: {
-    async callApi() {
-      try {
-        const response = await fetch("http://localhost:3001/api/posts/", {});
-        const data = await response.json();
-        return data
-      } catch (error) {
-        console.log(error);
-      }
+  mutations: {
+    loadProduct(state, products) {
+      console.log('loadProduct is runned');
+      state.products = products;
+      console.log(state.products);
     },
   },
 
+
+  actions: {
+
+    callApi({commit}) {
+      return fetch("http://localhost:3001/api/posts/")
+        .then(response => {
+          return response.json();
+        })
+        .then(jsonObj => {
+          commit("loadProduct", jsonObj);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+
+    },
+
+  },
 
 });
 
