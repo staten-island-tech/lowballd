@@ -4,8 +4,7 @@ import { createStore } from 'vuex'
 const store = createStore({
   
   state: {
-    products:{
-    }, 
+    products:{}, 
   },
 
   mutations: {
@@ -18,7 +17,6 @@ const store = createStore({
 
 
   actions: {
-
     callApi({commit}) {
       return fetch("http://localhost:3001/api/posts/")
         .then(response => {
