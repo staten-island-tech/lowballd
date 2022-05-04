@@ -32,7 +32,7 @@
               </div>
             </div>
             <p class="font-Spartan font-bold text-slate-700">
-              {{ userId }}
+              {{ userdata.nickname }}
             </p>
           </label>
           <ul

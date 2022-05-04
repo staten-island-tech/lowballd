@@ -9,14 +9,16 @@
           <img :src="profileData.profile_picture" />
         </div>
       </div>
-      <h1 class="text-2xl">{{ userdata.nickname }}</h1>
-      <h1 class="text-base md:text-sm">{{ userdata.email }}</h1>
+      <h1 class="text-2xl">{{ profileData.username }}</h1>
+      <h1 class="text-base md:text-sm">{{ profileData.email }}</h1>
       <div class="flex flex-row justify-center mt-2">
         <p class="text-sm text-slate-700 pr-2">
-          <span class="font-bold">300</span> Followers
+          <span class="font-bold">{{ profileData.totalFollowers }}</span>
+          Followers
         </p>
         <p class="text-sm text-slate-700">
-          <span class="font-bold">200</span> Following
+          <span class="font-bold">{{ profileData.totalFollowing }}</span>
+          Following
         </p>
       </div>
       <div class="py-6">
@@ -62,7 +64,6 @@ export default {
     return {
       userdata: this.$auth.user,
       profileData: [],
-      userId: this.getUserId,
     };
   },
   computed: {
@@ -74,12 +75,14 @@ export default {
   },
   methods: {
     async callApi() {
+      const getUserId = this.userdata.sub.replace("auth0|", "");
+
       // Get the access token from the auth wrapper
       //const token = await this.$auth.getTokenSilently();
       try {
         // const token = await this.$auth.getTokenSilently();
         const response = await fetch(
-          `http://localhost:3001/api/user/${this.userId}`,
+          `http://localhost:3001/api/user/${getUserId}`,
           {
             // headers: {
             //   Authorization: `Bearer ${token}`,
