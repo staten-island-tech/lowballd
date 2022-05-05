@@ -66,13 +66,7 @@ export default {
       profileData: [],
     };
   },
-  computed: {
-    // a computed getter
-    getUserId: function () {
-      // `this` points to the vm instance
-      return this.userdata.sub.replace("auth0|", "");
-    },
-  },
+
   methods: {
     async callApi() {
       const getUserId = this.userdata.sub.replace("auth0|", "");
