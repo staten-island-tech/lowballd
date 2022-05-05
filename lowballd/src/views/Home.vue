@@ -59,7 +59,7 @@
         <div class="relative h-64 sm:h-80 lg:h-full">
           <img
             class="absolute inset-0 object-cover w-full h-full"
-            src="https://www.hyperui.dev/photos/house-1.jpeg"
+            src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/narrative/homepage-narrative-seller@2x.jpg"
             alt="Indoors house"
           />
         </div>
@@ -71,23 +71,19 @@
         ></span>
 
         <div class="p-8 sm:p-16 lg:p-24">
-          <h2 class="text-2xl font-bold sm:text-3xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
-            debitis.
+          <h2 class="text-5xl font-bold sm:text-3xl">
+            What is Lowballd?
           </h2>
 
-          <p class="mt-4 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            molestiae! Quidem est esse numquam odio deleniti, beatae, magni
-            dolores provident quaerat totam eos, aperiam architecto eius quis
-            quibusdam fugiat dicta.
+          <p class="mt-4 text-gray-600 text-lg">
+            Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
 
           <a
             class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="/contact"
+            href="https://dev-5t61kzw2.us.auth0.com/u/login/identifier?state=hKFo2SB4VERYNlBzWGxFaHB6OGdZb3A3M0s2NkQ2SmxOWWlvQ6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGxXRWRMOTBMLTE2LUNYVkN4UFNSS0RwMkh4RXExbkU1o2NpZNkgWnhwbVBQbU1XaW16WDJsSXA1Tm1vVE5remIwUTNUVE4"
           >
-            Get in Touch
+            Get started
           </a>
         </div>
       </div>
@@ -100,20 +96,17 @@
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
       <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0">
-        <h2 class="text-3xl font-bold sm:text-4xl">Find your career path</h2>
+        <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
-        <p class="mt-4 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero
-          aliquid sint distinctio iure ipsum cupiditate? Quis, odit assumenda?
-          Deleniti quasi inventore, libero reiciendis minima aliquid tempora.
-          Obcaecati, autem.
+        <p class="mt-4 text-gray-600 text-lg">
+          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Depop.
         </p>
 
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/get-started"
+          href="/marketplace"
         >
-          <span class="text-sm font-medium"> Get Started </span>
+          <span class="text-sm font-medium"> Browse more </span>
 
           <svg
             class="w-5 h-5 ml-3"
@@ -158,7 +151,26 @@
             </svg>
           </span>
 
-          <h6 class="mt-2 font-bold">Accountant</h6>
+          <h6 class="mt-2 font-bold">Menswear</h6>
+          
+
+          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </a>
+
+        <a
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
+          href="/accountant"
+        >
+          <span class="inline-block p-3 rounded-lg bg-gray-50">
+            <img class="w-20 h-20"
+            src="https://th.bing.com/th/id/OIP.1QPk_-hSafNSIvzeB8OnYgHaHa?pid=ImgDet&rs=1"
+            />
+
+          </span>
+
+          <h6 class="mt-2 font-bold">Womenswear</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -190,7 +202,7 @@
             </svg>
           </span>
 
-          <h6 class="mt-2 font-bold">Accountant</h6>
+          <h6 class="mt-2 font-bold">Accesories</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -222,7 +234,7 @@
             </svg>
           </span>
 
-          <h6 class="mt-2 font-bold">Accountant</h6>
+          <h6 class="mt-2 font-bold">Vintage</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -254,7 +266,7 @@
             </svg>
           </span>
 
-          <h6 class="mt-2 font-bold">Accountant</h6>
+          <h6 class="mt-2 font-bold">Techwear</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -286,39 +298,7 @@
             </svg>
           </span>
 
-          <h6 class="mt-2 font-bold">Accountant</h6>
-
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
-        </a>
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
-          </span>
-
-          <h6 class="mt-2 font-bold">Accountant</h6>
+          <h6 class="mt-2 font-bold">Minimalist</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
