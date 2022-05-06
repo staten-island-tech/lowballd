@@ -1,8 +1,8 @@
 <template>
-    <router-link to="product"  v-for="(product, index) in $store.state.products" :key="index" class="hover:bg-slate-200 cursor-pointer m-1"> 
+    <router-link to="product" v-for="(product, index) in $store.state.products" :key="index" class="hover:bg-slate-200 cursor-pointer m-1 p-0.5"> 
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
-                <div class="w-full h-60">
+                <div class="w-full max-h-60">
                     <img class="h-full w-auto object-cover" :src="product.img">
                 </div>
             </div>
@@ -22,12 +22,9 @@ export default {
         this.callApi()
         console.log(this.$store.state.products)
     },
-    data: {
-        product: {}
-    },
 
     methods: {
-        ...mapActions(['callApi'])
+        ...mapActions(['callApi']),
     }
 }
 

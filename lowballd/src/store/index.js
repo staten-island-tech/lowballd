@@ -5,6 +5,7 @@ const store = createStore({
   
   state: {
     products:{}, 
+    prod: {}
   },
 
   mutations: {
@@ -13,6 +14,7 @@ const store = createStore({
       state.products = products;
       console.log(state.products);
     },
+
   },
 
 

@@ -212,7 +212,7 @@
                   <input type="radio" name="color" id="color_tt" class="sr-only peer" />
 
                   <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    tags {{products.tags}}
+                    tags
                     
                   </span>
                 </label>
@@ -298,19 +298,18 @@
 
 <script>
   import Card from "/src/components/marketplace/Card.vue";
-
   export default {
     components: {
       Card,
     },
-    props: ['products'],
     data: () => {
       return {
           Main: {
               title: "",
               price: "",
               imgUrl: "",
-          }
+          },
+          
       }
     },
     created: function () {
