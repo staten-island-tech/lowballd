@@ -28,9 +28,14 @@ module.exports = {
   variants: {
     extend: {},
   },
-  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+  content: [
+    "./src/**/*.{vue,js,ts,jsx,tsx}", 
+    './node_modules/tw-elements/dist/js/**/*.js',
+    "./node_modules/flowbite/**/*.js"
+  ],
   plugins: [
     require('tw-elements/dist/plugin'),
     require('daisyui'),
+    require('flowbite/plugin')
   ],
 }
