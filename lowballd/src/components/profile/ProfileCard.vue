@@ -17,7 +17,7 @@
           Followers
         </p>
         <p class="text-sm text-slate-700">
-          <span class="font-bold">{{ totalFollowing }}</span>
+          <span class="font-bold">{{ userdata }}</span>
           Following
         </p>
       </div>
@@ -62,7 +62,8 @@ export default {
   name: "ProfileCard",
   data() {
     return {
-      userdata: this.$auth.user,
+      userdata: this.$auth,
+      authenticationStatus: this.$auth.isAuthenticated,
       profileData: [],
       totalFollowers: [],
       totalFollowing: [],
@@ -73,16 +74,14 @@ export default {
     async callApi() {
       const getUserId = this.userdata.sub.replace("auth0|", "");
 
-      // Get the access token from the auth wrapper
-      //const token = await this.$auth.getTokenSilently();
       try {
-        // const token = await this.$auth.getTokenSilently();
+        const token = await this.$auth.getTokenSilently();
         const response = await fetch(
           `http://localhost:3001/api/user/${getUserId}`,
           {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
         );
         const data = await response.json();
