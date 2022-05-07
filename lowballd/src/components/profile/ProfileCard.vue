@@ -17,7 +17,7 @@
           Followers
         </p>
         <p class="text-sm text-slate-700">
-          <span class="font-bold">{{ userdata }}</span>
+          <span class="font-bold">{{ totalFollowing }}</span>
           Following
         </p>
       </div>
@@ -62,7 +62,7 @@ export default {
   name: "ProfileCard",
   data() {
     return {
-      userdata: this.$auth,
+      userdata: this.$auth.user,
       authenticationStatus: this.$auth.isAuthenticated,
       profileData: [],
       totalFollowers: [],
