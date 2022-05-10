@@ -1,5 +1,5 @@
 <template>
-    <router-link to="product" v-for="(product, index) in $store.state.products" :key="index" class="hover:bg-slate-200 cursor-pointer m-1 p-0.5"> 
+    <router-link to="product" v-for="(product, index) in $store.state.products" :key="index" @click="getUserIdFromPost()" class="hover:bg-slate-200 cursor-pointer m-1 p-0.5"> 
         <div class="flex flex-col w-60 m-3">
             <div class="card-photo">
                 <div class="w-full max-h-60">
@@ -22,9 +22,18 @@ export default {
         this.callApi()
         console.log(this.$store.state.products)
     },
+    data(){
+        return {
+            id: "",
+        }
+    },
 
     methods: {
         ...mapActions(['callApi']),
+        getUserIdFromPost (){
+            this.id = this.$store.state.products._id
+            console.log(this.id)
+        }
     }
 }
 
