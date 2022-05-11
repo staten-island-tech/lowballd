@@ -137,7 +137,7 @@
 
           </span>
 
-          <h6 class="mt-2 font-bold">Luxury</h6>
+          <h6 class="mt-2 font-bold ">Luxury</h6>
           
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
