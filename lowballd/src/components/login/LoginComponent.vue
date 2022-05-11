@@ -28,11 +28,11 @@
           <label tabindex="0" class="btn m-1">
             <div class="avatar my-auto mr-2">
               <div class="rounded-full w-6 h-6">
-                <img :src="userdata.picture" />
+                <img :src="profileData.profile_picture" />
               </div>
             </div>
             <p class="font-Spartan font-bold text-slate-700">
-              {{ userdata.nickname }}
+              {{ profileData.username }}
             </p>
           </label>
           <ul
@@ -61,20 +61,32 @@ export default {
   data() {
     return {
       userdata: this.$auth.user,
-
+      profileData: [],
       token: null,
       newStr: null,
     };
   },
-  computed: {
-    // a computed getter
-    userId: function () {
-      // `this` points to the vm instance
-      return this.userdata.sub.replace("auth0|", "");
-    },
-  },
-
   methods: {
+    async callApi() {
+      const getUserId = this.userdata.sub.replace("auth0|", "");
+
+      try {
+        const token = await this.$auth.getTokenSilently();
+        const response = await fetch(
+          `http://localhost:3001/api/user/${getUserId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        this.profileData = data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
     // Log the user in
     async login() {
       this.$auth.loginWithRedirect();
@@ -89,6 +101,9 @@ export default {
       const token = await this.$auth.getTokenSilently();
       console.log(token);
     },
+  },
+  created() {
+    this.callApi();
   },
 };
 </script>
