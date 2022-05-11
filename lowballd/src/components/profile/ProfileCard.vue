@@ -63,6 +63,7 @@ export default {
   data() {
     return {
       userdata: this.$auth.user,
+      authenticationStatus: this.$auth.isAuthenticated,
       profileData: [],
       totalFollowers: [],
       totalFollowing: [],
@@ -73,16 +74,14 @@ export default {
     async callApi() {
       const getUserId = this.userdata.sub.replace("auth0|", "");
 
-      // Get the access token from the auth wrapper
-      //const token = await this.$auth.getTokenSilently();
       try {
-        // const token = await this.$auth.getTokenSilently();
+        const token = await this.$auth.getTokenSilently();
         const response = await fetch(
           `http://localhost:3001/api/user/${getUserId}`,
           {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
         );
         const data = await response.json();
