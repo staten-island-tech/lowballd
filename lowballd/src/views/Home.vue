@@ -131,27 +131,13 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"
+            />
+
           </span>
 
-          <h6 class="mt-2 font-bold">Menswear</h6>
+          <h6 class="mt-2 font-bold">Luxury</h6>
           
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
@@ -164,13 +150,13 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-20 h-20"
-            src="https://th.bing.com/th/id/OIP.1QPk_-hSafNSIvzeB8OnYgHaHa?pid=ImgDet&rs=1"
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/hHu9wROVc4oPwjH5oBBzh/49023c5409f1c667eca2c93553865601/ShopByStyle_Streetwear2.jpg?fm=webp&h=245&w=390"
             />
 
           </span>
 
-          <h6 class="mt-2 font-bold">Womenswear</h6>
+          <h6 class="mt-2 font-bold">Streetwear</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -182,27 +168,12 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/2I3OaWW2bWHgka7uk0px2m/fbf148955eefc10e5b7e66d106016375/ShopByStyle_Web-AvantGarde.jpg?fm=webp&h=245&w=390"
+            />
           </span>
 
-          <h6 class="mt-2 font-bold">Accesories</h6>
+          <h6 class="mt-2 font-bold">Avant Grade</h6>
 
           <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
             Lorem ipsum dolor sit amet consectetur.
@@ -214,24 +185,9 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/64c54eca4b895d9aba3ca6aad1465d1e/ShopByStyle_Web-Vintage4.jpg?fm=webp&h=245&w=390"
+            />
           </span>
 
           <h6 class="mt-2 font-bold">Vintage</h6>
@@ -246,24 +202,9 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/7767e0a2dcd4dff3fd77e46297121e3c/ShopByStyle_Web-Tech3.jpg?fm=webp&h=245&w=390"
+            />
           </span>
 
           <h6 class="mt-2 font-bold">Techwear</h6>
@@ -278,24 +219,9 @@
           href="/accountant"
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-              <path
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-              ></path>
-            </svg>
+            <img class="w-40 h-35"
+            src="https://images.ctfassets.net/bdvz0u6oqffk/1itLXxA6Ajm41pG1sU7HuN/7f295c2f005a71791794b4f19a18d384/ShopByStyle_Web-Minimal-2.jpg?fm=webp&h=245&w=390"
+            />
           </span>
 
           <h6 class="mt-2 font-bold">Minimalist</h6>
