@@ -297,24 +297,33 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex';
+  import { useStore } from 'vuex';
   import Card from "/src/components/marketplace/Card.vue";
+  
   export default {
     components: {
       Card,
     },
-    data: () => {
-      return {
-          Main: {
-              title: "",
-              price: "",
-              imgUrl: "",
-          },
-          
-      }
+    computed() {
+        this.callApi()
     },
-    created: function () {
-      console.log(this.Main)
+    methods: {
+        ...mapActions(['prodPath']),
     }
+    // data: () => {
+    //   return {
+    //       Main: {
+    //           title: "",
+    //           price: "",
+    //           imgUrl: "",
+    //       },
+          
+    //   }
+    // },
+    // created: function () {
+    //   console.log(this.Main)
+    // }
   }
 
 </script>

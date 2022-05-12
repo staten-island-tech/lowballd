@@ -4,17 +4,22 @@ import { createStore } from 'vuex'
 const store = createStore({
   
   state: {
-    products:{}, 
-    prod: {}
+    products:{},
+    singleProduct: {},
   },
 
   mutations: {
     loadProduct(state, products) {
       console.log('loadProduct is runned');
       state.products = products;
-      console.log(state.products);
+      console.log(this.state.products);
     },
 
+    loadSingleProd(state, prod) {
+      console.log('loadProduct is runned');
+      state.singleProduct = prod;
+      console.log(this.state.singleProduct);
+    },
   },
 
 
@@ -32,6 +37,24 @@ const store = createStore({
         });
 
     },
+
+    fetchProduct() {
+      return fetch("http://localhost:3001/api/posts/${this.products._id}")
+        .then(response => {
+          return response.json();
+        })
+        .then(jsonObj => {
+          commit("loadSingleProd", jsonObj);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+
+    prodPath() {
+      return `/product/${this.products._id}`;
+    }
+
 
   },
 
