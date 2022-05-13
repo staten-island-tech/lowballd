@@ -77,12 +77,7 @@ export default {
         returnTo: window.location.origin,
       });
     },
-    async getToken() {
-      const token = await this.$auth.getTokenSilently();
-      console.log(token);
-    },
   },
-  
 };
 </script>
 
