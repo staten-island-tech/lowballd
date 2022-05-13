@@ -25,7 +25,7 @@ const store = createStore({
 
   actions: {
     callApi({commit}) {
-      return fetch("http://localhost:3001/api/posts/")
+      return fetch("https://lowballd-backend.onrender.com/api/posts/")
         .then(response => {
           return response.json();
         })
@@ -50,10 +50,6 @@ const store = createStore({
           console.log(error);
         });
     },
-
-    prodPath() {
-      return `/product/${this.products._id}`;
-    }
 
 
   },
