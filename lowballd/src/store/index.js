@@ -39,7 +39,7 @@ const store = createStore({
     },
 
     fetchProduct() {
-      return fetch("http://localhost:3001/api/posts/${this.products._id}")
+      return fetch("http://localhost:3001/api/posts/${this.$route.params._id}")
         .then(response => {
           return response.json();
         })
@@ -50,9 +50,13 @@ const store = createStore({
           console.log(error);
         });
     },
-
-
   },
+
+  getters: {
+    productPath () {
+      return 'marketplace/${this.products._id}'
+    }
+  }
 
 });
 

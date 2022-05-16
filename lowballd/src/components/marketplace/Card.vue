@@ -1,5 +1,5 @@
 <template>
-    <router-link to="product" > 
+    <router-link :to="productPath" to="/product" > 
         <div class="hover:bg-slate-200 cursor-pointer m-1 p-0.5">
             <div class="flex flex-col w-60 m-3">
                 <div class="card-photo">
@@ -16,11 +16,17 @@
 </template>
 
 <script>
-
 export default {
     name: 'Card',
-    props: ["product"],
-
+    props: ["product", "id"],
+    data: {
+        clicked: false
+    }
+    computed: {
+        productPath () {
+            return '/product/${this.id}}'
+        },
+    }
 }
 
 </script>
