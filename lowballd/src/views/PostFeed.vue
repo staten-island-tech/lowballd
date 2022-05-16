@@ -41,7 +41,7 @@
             <div>
               <label class="block text-sm font-medium text-gray-700"> Add photos </label>
 
-                <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All" ref="upload"/>
+                <UploadImages :max="1" maxError="Maximum of 1 file." clearAll="Clear All" ref="upload"/>
 
             </div>
           </div>
@@ -73,13 +73,13 @@ export default {
         date: new Date('2022-01-01T00:01:01Z'),
         title: null,
         description: null,
-        images: null,
+        img: null,
       },
     }
   },
   methods: {
     postData(e){
-      this.posts.images = this.$refs.upload.files
+      this.posts.img = this.$refs.upload.files[0]
       console.log(this.posts)
       e.preventDefault();
     },
