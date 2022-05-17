@@ -1,8 +1,8 @@
 <template>
-    <section class="w-full flex justify-center flex-row sm:flex-col ">
+    <section class="sm:w-full w-100 flex justify-center flex-row flex-wrap ">
         <Filter />        
-        <div v-for="product in $store.state.products" :key="product._id">
-            <Card :product="product"/>
+        <div v-for="product in $store.state.products" :id="product.id">
+            <Card :product="product"  />
         </div>
     </section>
 </template>

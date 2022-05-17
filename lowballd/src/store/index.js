@@ -16,8 +16,8 @@ const store = createStore({
     },
 
     loadSingleProd(state, prod) {
-      console.log('loadProduct is runned');
-      state.singleProduct = prod;
+      console.log('loadSingleProduct is runned');
+      state.singleProduct.push(prod);
       console.log(this.state.singleProduct);
     },
   },
@@ -25,7 +25,8 @@ const store = createStore({
 
   actions: {
     callApi({commit}) {
-      return fetch("https://lowballd-backend.onrender.com/api/posts/")
+      //https://lowballd-backend.onrender.com/api/posts/
+      return fetch("https://ghibliapi.herokuapp.com/films/")
         .then(response => {
           return response.json();
         })
@@ -37,25 +38,12 @@ const store = createStore({
         });
 
     },
-
-    fetchProduct() {
-      return fetch("http://localhost:3001/api/posts/${this.$route.params._id}")
-        .then(response => {
-          return response.json();
-        })
-        .then(jsonObj => {
-          commit("loadSingleProd", jsonObj);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    },
   },
 
   getters: {
     productPath () {
       return 'marketplace/${this.products._id}'
-    }
+    },
   }
 
 });
