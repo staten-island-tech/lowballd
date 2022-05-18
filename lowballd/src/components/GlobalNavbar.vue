@@ -5,7 +5,9 @@
       <router-link to="feed" class="px-6">Feed</router-link>
       <router-link to="marketplace" class="px-6">Marketplace</router-link>
     </div>
-    <div class="my-auto"><Login></Login></div>
+    <div class="my-auto">
+      <Login :logindata="profileData"></Login>
+    </div>
   </div>
 </template>
 
@@ -46,10 +48,9 @@ export default {
         console.log(error);
       }
     },
-
-    components: {
-      Login,
-    },
+  },
+  components: {
+    Login,
   },
 };
 </script>
