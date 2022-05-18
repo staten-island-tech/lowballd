@@ -6,7 +6,7 @@
 <div>
   <div class="md:grid md:grid-cols-3 md:gap-6">
     <div class="mt-5 md:mt-0 md:col-span-2">
-      <form action="#" method="POST">
+      <form @submit.prevent="postData" action="#" method="POST">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
             <h1 class="text-2xl mb-4">Share your fit with the world</h1>
@@ -16,16 +16,17 @@
                 <label for="date" class="block text-sm font-medium text-gray-700 pb-1">When did you wear this?</label>
               <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                 </div>
-
-                <input datepicker datepicker-buttons type="text" id="datepickerId" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                <input type="date" id="start" name="outfit-date"
+       min="2022-01-01" :value="dateToYYYYMMDD(posts.date)"
+                       @input="posts.date = $event.target.valueAsDate">
+                
               </div>
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                <input type="text" name="title" id="post-title" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input v-model="posts.title" type="text" name="title" id="post-title" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
               
             </div>
@@ -33,14 +34,14 @@
             <div>
               <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
               <div class="mt-1">
-                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Provide a brief caption for your outfit."></textarea>
+                <textarea v-model="posts.description" id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Provide a brief caption for your outfit."></textarea>
               </div>
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700"> Add photos </label>
 
-                <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All"/>
+                <UploadImages :max="1" maxError="Maximum of 1 file." clearAll="Clear All" ref="upload"/>
 
             </div>
           </div>
@@ -59,7 +60,6 @@
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
-import Datepicker from '@themesberg/tailwind-datepicker/Datepicker';
 import UploadImages from "../components/postfeed/vue-upload-drop-images.vue"
 
 export default {
@@ -67,12 +67,27 @@ export default {
   components: {
     GlobalNavbar, UploadImages
   },
-  mounted() {
-    const datepickerEl = document.getElementById('datepickerId');
-    new Datepicker(datepickerEl, {
-        // options
-    }); 
+  data(){
+    return {
+      posts: {
+        date: new Date('2022-01-01T00:01:01Z'),
+        title: null,
+        description: null,
+        img: null,
+      },
+    }
+  },
+  methods: {
+    postData(e){
+      this.posts.img = this.$refs.upload.files[0]
+      console.log(this.posts)
+      e.preventDefault();
     },
+    dateToYYYYMMDD(d) {
+      // alternative implementations in https://stackoverflow.com/q/23593052/1850609
+    	return d && new Date(d.getTime()-(d.getTimezoneOffset()*60*1000)).toISOString().split('T')[0]
+    }
+  }
 };
 </script>
 
