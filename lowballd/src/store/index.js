@@ -1,52 +1,56 @@
-import { createStore } from 'vuex'
-
+import { createStore } from "vuex";
+import router from "@/router";
 // Create a new store instance.
 const store = createStore({
-  
   state: {
-    products:{},
-    singleProduct: {},
+    products: {},
+    selectProd: {},
   },
 
   mutations: {
     loadProduct(state, products) {
-      console.log('loadProduct is runned');
+      console.log("loadProduct is runned");
       state.products = products;
       console.log(this.state.products);
     },
 
-    loadSingleProd(state, prod) {
-      console.log('loadSingleProduct is runned');
-      state.singleProduct.push(prod);
-      console.log(this.state.singleProduct);
+    loadSelectProd(state, product) {
+      console.log("loadSelectProd is runned");
+      state.selectProd = product;
+      console.log(this.state.selectProd);
     },
   },
-
 
   actions: {
-    callApi({commit}) {
+    callApi({ commit }) {
       //https://lowballd-backend.onrender.com/api/posts/
       return fetch("https://ghibliapi.herokuapp.com/films/")
-        .then(response => {
+        .then((response) => {
           return response.json();
         })
-        .then(jsonObj => {
+        .then((jsonObj) => {
           commit("loadProduct", jsonObj);
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
+    },
 
+    fetchById({ commit }, id) {
+      return fetch(
+        `https://ghibliapi.herokuapp.com/films/${this.$route.params.id}`
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((jsonObj) => {
+          commit("loadSelectProd", jsonObj);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
-
-  getters: {
-    productPath () {
-      return 'marketplace/${this.products._id}'
-    },
-  }
-
 });
 
 export default store;
-

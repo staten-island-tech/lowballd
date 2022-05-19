@@ -11,6 +11,8 @@ import Api from "../views/tokentest.vue";
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
 
+import productTest from "../components/product/ProductTest.vue";
+
 const routes = [
   { path: "/", name: "Home", component: Home },
   { path: "/feed", name: "Feed", component: Feed },
@@ -23,6 +25,8 @@ const routes = [
   { path: "/token", name: "token", component: Api },
   { path: "/shareoutfit", name: "PostFeed", component: PostFeed },
   { path: "/verfiedemail", name: "Email", component: Email },
+
+  { path: "/marketplace/:id", name: "productTest", component: productTest },
 ];
 const router = createRouter({
   history: createWebHistory(),

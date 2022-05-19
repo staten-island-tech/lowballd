@@ -16,30 +16,14 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
-import { useStore } from 'vuex';
 export default {
     name: 'Card',
     props: ["product", "id"],
-    data() {
-        return {
-            clicked: false,
-            singleProd:{}
-        }
-    },
     computed: {
         productPath () {
-            return '/product/${this.id}}'
+            return `/marketplace/${this.product.id}}`
         },
     },
-    methods: {
-        ...mapMutations(['loadSingleProd']),
-        getSingleProduct (prod) {
-            this.singleProd = this.product,
-            console.log(this.singleProd),
-            store.commit('loadSingleProduct')
-        },
-    }
 }
 
 </script>

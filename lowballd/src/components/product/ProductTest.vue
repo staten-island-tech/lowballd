@@ -212,7 +212,7 @@
                   <input type="radio" name="color" id="color_tt" class="sr-only peer" />
 
                   <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    tags
+                    tag
                     
                   </span>
                 </label>
@@ -299,18 +299,18 @@
 <script>
   import { mapActions } from 'vuex';
   import { useStore } from 'vuex';
-  import Card from "/src/components/marketplace/Card.vue";
+
   
   export default {
-    components: {
-      Card,
-    },
-    computed() {
-        this.callApi()
-    },
-    methods: {
-        ...mapActions(['prodPath']),
+    name:'productTest',
+    // created() {
+    //   this.fetchById();
+    // },
+    method: {
+      ...mapActions(['fetchById']),
+      
     }
+
     // data: () => {
     //   return {
     //       Main: {
