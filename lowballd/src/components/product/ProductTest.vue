@@ -303,11 +303,12 @@
   
   export default {
     name:'productTest',
-    // created() {
-    //   this.fetchById();
-    // },
-    method: {
-      ...mapActions(['fetchById']),
+    created() {
+      // this.fetchSingleProduct()
+      
+    },
+    methods: {
+      //  ...mapActions(['fetchSingleProduct']), 
       
     }
 

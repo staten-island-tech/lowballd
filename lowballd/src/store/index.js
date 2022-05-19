@@ -1,56 +1,61 @@
-import { createStore } from "vuex";
-import router from "@/router";
+import { createStore } from 'vuex'
+import router from '../router/index.js'
+
 // Create a new store instance.
 const store = createStore({
+  
   state: {
-    products: {},
-    selectProd: {},
+    products:{},
+    singleProduct: {},
   },
 
   mutations: {
     loadProduct(state, products) {
-      console.log("loadProduct is runned");
+      console.log('loadProduct is runned');
       state.products = products;
       console.log(this.state.products);
     },
-
-    loadSelectProd(state, product) {
-      console.log("loadSelectProd is runned");
-      state.selectProd = product;
-      console.log(this.state.selectProd);
+    loadSingleProduct(state, singleProd) {
+      console.log('loadProduct is runned');
+      state.singleProduct = singleProd;
+      console.log(this.state.singleProducts);
     },
+    
   },
+
 
   actions: {
-    callApi({ commit }) {
+    
+    callApi({commit}) {
       //https://lowballd-backend.onrender.com/api/posts/
-      return fetch("https://ghibliapi.herokuapp.com/films/")
-        .then((response) => {
+      return fetch("https://lowballd-backend.onrender.com/api/posts/")
+        .then(response => {
           return response.json();
         })
-        .then((jsonObj) => {
+        .then(jsonObj => {
           commit("loadProduct", jsonObj);
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error);
         });
+
     },
 
-    fetchById({ commit }, id) {
-      return fetch(
-        `https://ghibliapi.herokuapp.com/films/${this.$route.params.id}`
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((jsonObj) => {
-          commit("loadSelectProd", jsonObj);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    fetchSingleProduct({commit}) {
+      return fetch( `https://lowballd-backend.onrender.com/api/posts/${this.$router.params._id}`)
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonObj => {
+        commit("loadSingleProduct", jsonObj);
+      })
+      .catch(error => {
+        console.log(error);
+      });
     },
   },
+
 });
 
 export default store;
+
