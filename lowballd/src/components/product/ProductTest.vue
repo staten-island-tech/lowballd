@@ -296,20 +296,13 @@
 </section>
 </template>
 
-<script>
-  import { mapActions } from 'vuex';
-  import { useStore } from 'vuex';
-
-  
+<script>  
   export default {
     name:'productTest',
-    created() {
-      // this.fetchSingleProduct()
-      
-    },
-    methods: {
-      //  ...mapActions(['fetchSingleProduct']), 
-      
+    mounted(){
+        // (${this.$router.params.id}) - figure out if it's router or routes
+        //returns undefined 
+        console.log(this.$router.params)
     }
 
     // data: () => {

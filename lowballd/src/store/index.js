@@ -1,12 +1,11 @@
 import { createStore } from 'vuex'
-import router from '../router/index.js'
 
 // Create a new store instance.
 const store = createStore({
   
   state: {
     products:{},
-    singleProduct: {},
+    // singleProduct: {},
   },
 
   mutations: {
@@ -15,17 +14,16 @@ const store = createStore({
       state.products = products;
       console.log(this.state.products);
     },
-    loadSingleProduct(state, singleProd) {
-      console.log('loadProduct is runned');
-      state.singleProduct = singleProd;
-      console.log(this.state.singleProducts);
-    },
+    // loadSingleProduct(state, product) {
+    //   console.log('loadSingleProduct is runned');
+    //   state.singleProduct = product;
+    //   console.log(this.state.singleProducts);
+    // },
     
   },
 
 
   actions: {
-    
     callApi({commit}) {
       //https://lowballd-backend.onrender.com/api/posts/
       return fetch("https://lowballd-backend.onrender.com/api/posts/")
@@ -41,18 +39,19 @@ const store = createStore({
 
     },
 
-    fetchSingleProduct({commit}) {
-      return fetch( `https://lowballd-backend.onrender.com/api/posts/${this.$router.params._id}`)
-      .then(response => {
-        return response.json();
-      })
-      .then(jsonObj => {
-        commit("loadSingleProduct", jsonObj);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    },
+    // fetchSingleProduct({commit}) {
+    //   //Unable to identify $router.params
+    //   return fetch( `https://lowballd-backend.onrender.com/api/posts/${this.$router.params.id}`)
+    //   .then(response => {
+    //     return response.json();
+    //   })
+    //   .then(jsonObj => {
+    //     commit("loadSingleProduct", jsonObj);
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //   });
+    // },
   },
 
 });

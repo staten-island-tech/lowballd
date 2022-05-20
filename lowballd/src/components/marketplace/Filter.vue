@@ -1,5 +1,5 @@
 <template>
-    <div class="w-60 h-auto bg-gray-100 rounded-xl capitalize " >
+    <div class="w-60 h-full bg-gray-100 rounded-xl capitalize " >
         <div class='flex flex-col '>
             <p> hi</p>
             <div class="collapse collapse-arrow rounded-xl">
