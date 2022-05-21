@@ -81,6 +81,7 @@ export default {
   },
   mounted(){
     this.posts.userId = this.$refs.navbarGlobal.userId;
+    console.log(userId)
   },
   methods: {
     uploadFile() {
@@ -89,7 +90,7 @@ export default {
     },
     async postData(e){
       const formData = new FormData();
-      formData.append('_id', this.posts.userId);
+      formData.append('userId', this.posts.userId);
       formData.append('title', this.posts.title);
       formData.append('description', this.posts.description);
       // formData.append('pictures', this.posts.images, this.posts.images.name);
