@@ -62,6 +62,7 @@ export default {
     return {
       userdata: this.$auth.user,
       profileData: [],
+      userId: null,
       token: null,
       newStr: null,
     };
@@ -69,7 +70,8 @@ export default {
   methods: {
     async callApi() {
       const getUserId = this.userdata.sub.replace("auth0|", "");
-
+      this.userId = getUserId;
+      
       try {
         const token = await this.$auth.getTokenSilently();
         const response = await fetch(

@@ -6,7 +6,7 @@
         <router-link to="marketplace" class="px-6">Marketplace</router-link>
       </div>
       <div class="my-auto">
-        <Login></Login>
+        <Login ref="loginComponent"></Login>
       </div>
     </div>
 </template>
@@ -18,6 +18,14 @@ export default {
   name: "GlobalNavbar",
   components: {
     Login,
+  },
+  data() {
+    return {
+      userId: null,
+    };
+  },
+  mounted() {
+    this.userId = this.$refs.loginComponent.userId;
   },
 };
 </script>

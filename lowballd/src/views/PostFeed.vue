@@ -1,6 +1,6 @@
 <template>
 
-    <GlobalNavbar />
+    <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
       
 <div>
@@ -75,8 +75,12 @@ export default {
         title: null,
         description: null,
         images: null,
+        userId: null,
       },
     }
+  },
+  mounted(){
+    this.posts.userId = this.$refs.navbarGlobal.userId;
   },
   methods: {
     uploadFile() {
@@ -85,6 +89,7 @@ export default {
     },
     async postData(e){
       const formData = new FormData();
+      formData.append('_id', this.posts.userId);
       formData.append('title', this.posts.title);
       formData.append('description', this.posts.description);
       // formData.append('pictures', this.posts.images, this.posts.images.name);
@@ -102,7 +107,7 @@ export default {
       // alternative implementations in https://stackoverflow.com/q/23593052/1850609
     	return d && new Date(d.getTime()-(d.getTimezoneOffset()*60*1000)).toISOString().split('T')[0]
     },
-  },
+  }
 };
 </script>
 
