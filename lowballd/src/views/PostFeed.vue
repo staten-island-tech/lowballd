@@ -6,7 +6,7 @@
 <div>
   <div class="md:grid md:grid-cols-3 md:gap-6">
     <div class="mt-5 md:mt-0 md:col-span-2">
-      <form @submit.prevent="postData" action="#" method="POST">
+      <form @submit.prevent="postData" action="#" method="POST" enctype="multipart/form-data">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
             <h1 class="text-2xl mb-4">Share your fit with the world</h1>
@@ -41,8 +41,8 @@
             <div>
               <label class="block text-sm font-medium text-gray-700"> Add photos </label>
 
-                <UploadImages :max="1" maxError="Maximum of 1 file." clearAll="Clear All" ref="upload"/>
-
+                <!-- <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All" ref="upload"/> -->
+                <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile">
             </div>
           </div>
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -61,6 +61,7 @@
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import UploadImages from "../components/postfeed/vue-upload-drop-images.vue"
+import axios from "axios"
 
 export default {
   name: "PostFeed",
@@ -73,21 +74,31 @@ export default {
         date: new Date('2022-01-01T00:01:01Z'),
         title: null,
         description: null,
-        img: null,
+        images: null,
       },
     }
   },
   methods: {
-    postData(e){
-      this.posts.img = this.$refs.upload.files[0]
-      console.log(this.posts)
-      e.preventDefault();
+    uploadFile() {
+      const file = this.$refs.file.files[0];
+      this.posts.images = file;
+      console.log(this.posts.images)
+    },
+    async postData(e){
+      const formData = new FormData();
+      formData.append('title', this.posts.title);
+      formData.append('description', this.posts.description);
+      formData.append('pictures', this.posts.images, this.posts.images.name);
+      formData.append('date', this.posts.date);
+      const headers = { 'Content-Type': `multipart/form-data` };
+      const res = await axios.post('http://localhost:3001/api/posts/upload', formData, { headers });
+      console.log(res);
     },
     dateToYYYYMMDD(d) {
       // alternative implementations in https://stackoverflow.com/q/23593052/1850609
     	return d && new Date(d.getTime()-(d.getTimezoneOffset()*60*1000)).toISOString().split('T')[0]
-    }
-  }
+    },
+  },
 };
 </script>
 
