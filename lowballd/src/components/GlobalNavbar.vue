@@ -21,15 +21,18 @@ export default {
       userdata: this.$auth.user,
       profileData: [],
       token: null,
+      userId: null,
       newStr: null,
     };
   },
   mounted() {
     this.callApi();
+    this.userId = this.userdata.sub.replace("auth0|", "");
   },
   methods: {
     async callApi() {
       const getUserId = this.userdata.sub.replace("auth0|", "");
+      this.userId = getUserId;
 
       try {
         const token = await this.$auth.getTokenSilently();
