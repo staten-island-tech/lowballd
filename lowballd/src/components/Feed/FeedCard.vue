@@ -14,7 +14,7 @@
       </div>
       <h1 class="mt-2">${{ post.price }}</h1>
       <div class="mt-8 bg-slate-500 h-[18rem] w-[17rem]">
-        <img :src="post.img" alt="" />
+        <img :src="post.images" alt="" />
       </div>
       <div class="flex flex-row mt-2">
         <svg

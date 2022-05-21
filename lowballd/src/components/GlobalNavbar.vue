@@ -6,9 +6,6 @@
         <router-link to="feed" class="px-6">Feed</router-link>
         <router-link to="marketplace" class="px-6">Marketplace</router-link>
       </div>
-      <div class="my-auto">
-        <Login ref="loginComponent"></Login>
-      </div>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>
