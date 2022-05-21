@@ -12,9 +12,9 @@
         v-for="product in products"
         :key="product"
         :product="product"
-        :name="product.product_title"
-        :price="product.product_price"
-        :imageUrl="product.product_img"
+        :name="product.title"
+        :price="product.price"
+        :imageUrl="product.images"
       />
     </div>
   </section>
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      products: [""],
+      products: [],
     };
   },
   async created() {
