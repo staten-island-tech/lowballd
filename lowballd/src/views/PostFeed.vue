@@ -95,7 +95,7 @@ export default {
 
       formData.append('date', this.posts.date);
       const headers = { 'Content-Type': `multipart/form-data` };
-      const res = await axios.post('http://localhost:3001/api/posts/upload', formData, { headers });
+      const res = await axios.post('https://lowballd-backend.onrender.com/api/posts/upload', formData, { headers });
       console.log(res);
     },
     dateToYYYYMMDD(d) {
