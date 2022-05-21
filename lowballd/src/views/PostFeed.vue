@@ -71,7 +71,7 @@ export default {
   data(){
     return {
       posts: {
-        date: new Date('2022-01-01T00:01:01Z'),
+        date: new Date(),
         title: null,
         description: null,
         images: null,
