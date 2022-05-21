@@ -41,8 +41,8 @@
             <div>
               <label class="block text-sm font-medium text-gray-700"> Add photos </label>
 
-                <!-- <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All" ref="upload"/> -->
-                <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile">
+                <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All" ref="file" @change="uploadFile"/> 
+                <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
             </div>
           </div>
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -80,15 +80,19 @@ export default {
   },
   methods: {
     uploadFile() {
-      const file = this.$refs.file.files[0];
-      this.posts.images = file;
+      this.posts.images = this.$refs.file.files;
       console.log(this.posts.images)
     },
     async postData(e){
       const formData = new FormData();
       formData.append('title', this.posts.title);
       formData.append('description', this.posts.description);
-      formData.append('pictures', this.posts.images, this.posts.images.name);
+      // formData.append('pictures', this.posts.images, this.posts.images.name);
+      for( var i = 0; i < this.posts.images.length; i++ ){
+        let file = this.posts.images[i];
+        formData.append('pictures', file, file.name);
+      }
+
       formData.append('date', this.posts.date);
       const headers = { 'Content-Type': `multipart/form-data` };
       const res = await axios.post('http://localhost:3001/api/posts/upload', formData, { headers });
