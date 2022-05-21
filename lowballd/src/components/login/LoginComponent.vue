@@ -62,11 +62,34 @@ export default {
   data() {
     return {
       userdata: this.$auth.user,
+      profileData: [],
+      userId: null,
       token: null,
       newStr: null,
     };
   },
   methods: {
+    async callApi() {
+      const getUserId = this.userdata.sub.replace("auth0|", "");
+      this.userId = getUserId;
+
+      try {
+        const token = await this.$auth.getTokenSilently();
+        const response = await fetch(
+          `http://localhost:3001/api/user/${getUserId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        this.profileData = data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
     // Log the user in
     async login() {
       this.$auth.loginWithRedirect();
