@@ -212,7 +212,7 @@
                   <input type="radio" name="color" id="color_tt" class="sr-only peer" />
 
                   <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    tag
+                    {{tag}}
                     
                   </span>
                 </label>
@@ -297,12 +297,23 @@
 </template>
 
 <script>  
+import { mapActions } from 'vuex';
+import { useStore } from 'vuex';
+
   export default {
     name:'productTest',
-    mounted(){
-        // (${this.$router.params.id}) - figure out if it's router or routes
-        //returns undefined 
-        console.log(this.$router.params)
+    data() {
+      return {
+        singlePokemon:{}
+      }
+    },
+    mounted() {
+      console.log(this.$route.params.id)
+    }, 
+    created() {
+      // this.fetchData();
+    },
+    methods: {
     }
 
     // data: () => {
