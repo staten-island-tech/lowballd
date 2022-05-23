@@ -10,6 +10,7 @@ import Chat from "../views/Chat.vue";
 import Api from "../views/tokentest.vue";
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
+import Contact from "../views/Contact.vue";
 
 import productTest from "../components/product/ProductTest.vue";
 
@@ -27,6 +28,7 @@ const routes = [
   { path: "/verfiedemail", name: "Email", component: Email },
 
   { path: "/marketplace/:id", name: "productTest", component: productTest },
+  { path: "/contact", name: "Contact", component: Contact },
 ];
 const router = createRouter({
   history: createWebHistory(),

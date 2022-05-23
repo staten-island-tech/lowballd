@@ -28,11 +28,11 @@
           <label tabindex="0" class="btn m-1">
             <div class="avatar my-auto mr-2">
               <div class="rounded-full w-6 h-6">
-                <img :src="userdata.picture" />
+                <img :src="logindata.profile_picture" />
               </div>
             </div>
             <p class="font-Spartan font-bold text-slate-700">
-              {{ userdata.nickname }}
+              {{ logindata.username }}
             </p>
           </label>
           <ul
@@ -58,22 +58,14 @@
 <script>
 export default {
   name: "Login",
+  props: ["logindata"],
   data() {
     return {
       userdata: this.$auth.user,
-
       token: null,
       newStr: null,
     };
   },
-  computed: {
-    // a computed getter
-    userId: function () {
-      // `this` points to the vm instance
-      return this.userdata.sub.replace("auth0|", "");
-    },
-  },
-
   methods: {
     // Log the user in
     async login() {
@@ -84,10 +76,6 @@ export default {
       this.$auth.logout({
         returnTo: window.location.origin,
       });
-    },
-    async getToken() {
-      const token = await this.$auth.getTokenSilently();
-      console.log(token);
     },
   },
 };

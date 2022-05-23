@@ -14,7 +14,7 @@
       </div>
       <h1 class="mt-2">${{ post.price }}</h1>
       <div class="mt-8 bg-slate-500 h-[18rem] w-[17rem]">
-        <img :src="post.img" alt="" />
+        <img :src="post.images" alt="" />
       </div>
       <div class="flex flex-row mt-2">
         <svg
@@ -66,11 +66,11 @@
       </div>
       <div>
         <h1 class="mt-2">3,684 likes</h1>
-        <h1 class="mt-2">{{ post.caption }}</h1>
+        <h1 class="mt-2"></h1>
         <div class="flex flex-row">
           <h1>
-            <span class="font-bold">online_tutorials</span
-            ><span class="ml-[4px]">Thanks for your love and supports</span
+            <span class="font-bold"></span
+            ><span class="ml-[4px]">{{ post.description }}</span
             ><span class="ml-[4px] text-blue-500">#cards #html #css</span>
           </h1>
         </div>
@@ -163,11 +163,14 @@ export default {
       //const token = await this.$auth.getTokenSilently();
       try {
         // const token = await this.$auth.getTokenSilently();
-        const response = await fetch("http://localhost:3001/api/posts/", {
-          // headers: {
-          //   Authorization: `Bearer ${token}`,
-          // },
-        });
+        const response = await fetch(
+          "https://lowballd-backend.onrender.com/api/posts/",
+          {
+            // headers: {
+            //   Authorization: `Bearer ${token}`,
+            // },
+          }
+        );
         const data = await response.json();
         console.log(data);
         this.apiMessage = data;
