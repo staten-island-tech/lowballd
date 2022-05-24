@@ -302,19 +302,14 @@ import { useStore } from 'vuex';
 
   export default {
     name:'productTest',
-    data() {
-      return {
-        singlePokemon:{}
-      }
-    },
     mounted() {
       console.log(this.$route.params.id)
-    }, 
-    created() {
-      // this.fetchData();
     },
-    methods: {
-    }
+    // methods: {
+    //   ...mapActions(['Test']), 
+    // },
+
+    
 
     // data: () => {
     //   return {

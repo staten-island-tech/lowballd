@@ -5,7 +5,7 @@ const store = createStore({
   
   state: {
     products:{},
-    singleProduct: {},
+    test: {},
   },
 
   mutations: {
@@ -14,11 +14,12 @@ const store = createStore({
       state.products = products;
       console.log(this.state.products);
     },
-    loadSingleProduct(state, product) {
-      console.log('loadSingleProduct is runned');
-      state.singleProduct = product;
-      console.log(this.state.singleProducts);
+    test(state, a) {
+      console.log('test is runned');
+      state.test = a;
+      console.log(this.state.test);
     },
+
     
   },
 
@@ -39,19 +40,30 @@ const store = createStore({
 
     },
 
-    fetchSingleProduct({commit}) {
-      //Unable to identify $router.params (???) --> Does not work in actions 
-      return fetch( `https://lowballd-backend.onrender.com/api/posts/${this.$route.params.id}`)
-      .then(response => {
-        return response.json();
+    async Test({ commit }, { cat }) {
+      const products = await axios("https://lowballd-backend.onrender.com/api/posts/", {
+        method: "GET",
+        params: {
+          id,
+        }
       })
-      .then(jsonObj => {
-        commit("loadSingleProduct", jsonObj);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    },
+      commit('test', products.data)
+      return products
+    }
+
+    // Test({commit},{id}) {
+    //   //Unable to identify $router.params (???) --> Does not work in actions 
+    //   return fetch( `https://lowballd-backend.onrender.com/api/posts/${id}`)
+    //   .then(response => {
+    //     return response.json();
+    //   })
+    //   .then(jsonObj => {
+    //     commit("test", jsonObj);
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //   });
+    // },
   },
 
 });
