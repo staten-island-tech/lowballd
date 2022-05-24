@@ -151,6 +151,7 @@ export default {
         { headers }
       );
       console.log(res);
+      alert("Post has been saved");
     },
     dateToYYYYMMDD(d) {
       // alternative implementations in https://stackoverflow.com/q/23593052/1850609
