@@ -4,6 +4,7 @@
     <div class="my-auto">
       <router-link to="feed" class="px-6">Feed</router-link>
       <router-link to="marketplace" class="px-6">Marketplace</router-link>
+      <router-link to="contact" class="px-6">Contact</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>

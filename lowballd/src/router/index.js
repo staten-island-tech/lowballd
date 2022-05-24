@@ -10,6 +10,7 @@ import Chat from "../views/Chat.vue";
 import Api from "../views/tokentest.vue";
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
+import Contact from "../views/Contact.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -23,6 +24,7 @@ const routes = [
   { path: "/token", name: "token", component: Api },
   { path: "/shareoutfit", name: "PostFeed", component: PostFeed },
   { path: "/verfiedemail", name: "Email", component: Email },
+  { path: "/contact", name: "Contact", component: Contact },
 ];
 const router = createRouter({
   history: createWebHistory(),
