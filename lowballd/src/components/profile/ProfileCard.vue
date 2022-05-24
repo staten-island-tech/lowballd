@@ -25,7 +25,12 @@
         <button
           class="btn btn-sm w-4/5 mx-auto mb-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
-          Posts
+          Feed Posts
+        </button>
+        <button
+          class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
+        >
+          Listings
         </button>
         <button
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
@@ -40,17 +45,7 @@
         <button
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
-          Watchlist
-        </button>
-        <button
-          class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
-        >
-          Bid Offers
-        </button>
-        <button
-          class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
-        >
-          Settings
+          Notification Settings
         </button>
       </div>
     </div>

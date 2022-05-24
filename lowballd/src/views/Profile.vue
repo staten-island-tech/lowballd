@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <GlobalNavbar></GlobalNavbar>
     <div v-if="authenticationStatus" class="authenticated">
       <div
@@ -13,7 +12,6 @@
       Oh no, looks like you aren't signed in 😢, please return to the home page
       to sign in
     </h1>
-  </div>
 </template>
 
 <script>
