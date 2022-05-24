@@ -71,7 +71,7 @@
           <h1>
             <span class="font-bold"></span
             ><span class="ml-[4px]">{{ post.description }}</span
-            ><span class="ml-[4px] text-blue-500">{{ post.tags }}</span>
+            ><span class="ml-[4px] text-blue-500">#stylish #breathtaking</span>
           </h1>
         </div>
         <h1 class="mt-2 text-slate-500 font-light">View all 245 comments</h1>
