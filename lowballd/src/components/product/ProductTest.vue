@@ -93,7 +93,7 @@
         <div class="flex justify-between mt-8">
           <div class="max-w-[35ch]">
             <h1 class="text-2xl font-bold">
-              Fun Product That Does Something Cool
+              {{test.title}}
             </h1>
 
             <p class="mt-0.5 text-sm">
@@ -148,7 +148,7 @@
             <div>
               <div class="prose max-w-none group-open:hidden">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa veniam dicta beatae eos ex error culpa delectus rem tenetur, architecto quam nesciunt, dolor veritatis nisi minus inventore, rerum at recusandae?
+                  {{test.description}}
                 </p>
               </div>
 
@@ -212,7 +212,7 @@
                   <input type="radio" name="color" id="color_tt" class="sr-only peer" />
 
                   <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    {{tag}}
+                   {{test.tags}}
                     
                   </span>
                 </label>
@@ -302,14 +302,24 @@ import { useStore } from 'vuex';
 
   export default {
     name:'productTest',
+    data() {
+      return {
+        test:{}
+      }
+    },
     mounted() {
       console.log(this.$route.params.id)
     },
-    // methods: {
-    //   ...mapActions(['Test']), 
-    // },
-
-    
+    async created() {
+      // fetch(`https://lowballd-backend.onrender.com/api/posts/${this.$route.params.id}/`)
+      // .then(response => response.json)
+      // .then(data => (this.test = data))
+      // console.log(this.test)
+      const response = await fetch(`https://lowballd-backend.onrender.com/api/posts/${this.$route.params.id}/`);
+      const data = await response.json();
+      this.test = data;
+      console.log(this.test)
+    }
 
     // data: () => {
     //   return {
@@ -318,7 +328,6 @@ import { useStore } from 'vuex';
     //           price: "",
     //           imgUrl: "",
     //       },
-          
     //   }
     // },
     // created: function () {
