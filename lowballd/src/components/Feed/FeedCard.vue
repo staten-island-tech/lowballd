@@ -2,13 +2,13 @@
   <div>
     <div
       class="bg-slate-200 m-12 p-4 h-[39rem] w-[19.5rem]"
-      v-for="post in apiMessage"
-      :key="post"
+      v-for="post in $store.state.products"
+      :key="post._userid"
     >
       <div class="flex flex-row">
         <div class="h-12 w-12 rounded-full bg-slate-500"></div>
         <div class="flex flex-col -mt-2">
-          <p1 class="m-2 text-xl">online_tutorials</p1>
+          <p1 class="m-2 text-xl">user</p1>
           <p2 class="-mt-3 ml-2">Patna, India</p2>
         </div>
       </div>
@@ -65,7 +65,7 @@
         </svg>
       </div>
       <div>
-        <h1 class="mt-2">3,684 likes</h1>
+        <h1 class="mt-2">{{post.likes.length}}</h1>
         <h1 class="mt-2"></h1>
         <div class="flex flex-row">
           <h1>
@@ -74,7 +74,7 @@
             ><span class="ml-[4px] text-blue-500">#stylish #breathtaking</span>
           </h1>
         </div>
-        <h1 class="mt-2 text-slate-500 font-light">View all 245 comments</h1>
+        <h1 class="mt-2 text-slate-500 font-light">View all {{post.comments}} comments</h1>
       </div>
       <div class="flex flex-row mt-2">
         <div class="h-8 w-8 rounded-full bg-slate-500"></div>
@@ -92,38 +92,29 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+import { useStore } from "vuex";
 export default {
   props: ["name"],
   name: "FeedCard",
-  data() {
-    return {
-      apiMessage: [],
-    };
-  },
-  methods: {
-    async callApi() {
-      // Get the access token from the auth wrapper
-      //const token = await this.$auth.getTokenSilently();
-      try {
-        // const token = await this.$auth.getTokenSilently();
-        const response = await fetch(
-          "https://lowballd-backend.onrender.com/api/posts/",
-          {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
-          }
-        );
-        const data = await response.json();
-        console.log(data);
-        this.apiMessage = data;
-      } catch (error) {
-        console.log(error);
-      }
-    },
-  },
-  mounted() {
+  created() {
     this.callApi();
   },
+  methods: {
+    ...mapActions(["callApi"]),
+
+  },
+  
+
+  // data() {
+  //   return {
+  //     userdata: this.$auth.user,
+  //     profileData: [],
+  //     token: null,
+  //     userId: null,
+  //     newStr: null,
+  //   };
+  // },
+  
 };
 </script>
