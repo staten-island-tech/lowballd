@@ -29,7 +29,7 @@
           <img
             alt="Mobile Phone Stand"
             class="object-cover rounded-xl"
-            src="https://images.unsplash.com/photo-1627844541143-a561a1a9b72a"
+            :src="prod.images[0]"
           />
         </div>
 
@@ -70,141 +70,129 @@
 
       <div class="sticky top-0">
         <div class="flex flex-row">
-    <div class="avatar pt-4">
-        <div class="rounded-full w-24 h-24 ring ring-primary ring-offset-base-100 ring-offset-2">
-            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGBvBlLy-uljw/profile-displayphoto-shrink_200_200/0/1610509335728?e=1648684800&v=beta&t=u9GCzx6GctOLBqOeRB1Z9Jv7aBXeb8XZrHCyvFBA-qw">
-        </div>
-    </div> 
-    <div class="p-4">
-        <h1>Alston Chan</h1>
-        <p class="text-slate-500 text-sm">Staten Island, NY</p>
-        <div class="rating">
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
-            <input type="radio" name="rating-2" checked="checked" class="mask mask-star-2 bg-warning"> 
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning">
-            <p class="pl-2 pt-[3px]">(483)</p>
-        </div>
-        <!--<a href="#" class="text-blue-600 visited:text-purple-600">Message Seller</a>-->
-    </div>
-</div>
-
-        <div class="flex justify-between mt-8">
-          <div class="max-w-[35ch]">
-            <h1 class="text-2xl font-bold">
-              Fun Product That Does Something Cool
-            </h1>
-
-            <p class="mt-0.5 text-sm">
-              Highest Rated Product
-            </p>
-
-            <div class="flex mt-2 -ml-0.5">
-              <svg
-                class="w-5 h-5 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-
-              <svg
-                class="w-5 h-5 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-
-              <svg
-                class="w-5 h-5 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-
-              <svg
-                class="w-5 h-5 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-
-              <svg
-                class="w-5 h-5 text-gray-200"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
+          <div class="avatar pt-4">
+            <div class="rounded-full w-24 h-24 ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGBvBlLy-uljw/profile-displayphoto-shrink_200_200/0/1610509335728?e=1648684800&v=beta&t=u9GCzx6GctOLBqOeRB1Z9Jv7aBXeb8XZrHCyvFBA-qw">
             </div>
-          </div>
-
-          <p class="text-lg font-bold">
-            $119.99
-          </p>
-        </div>
-
-        <details class="relative mt-4 group">
-          <summary class="block">
-            <div>
-              <div class="prose max-w-none group-open:hidden">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa veniam dicta beatae eos ex error culpa delectus rem tenetur, architecto quam nesciunt, dolor veritatis nisi minus inventore, rerum at recusandae?
-                </p>
+          </div> 
+            <div class="p-4">
+              <h1>Alston Chan</h1>
+              <p class="text-slate-500 text-sm">Staten Island, NY</p>
+              <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning"> 
+                  <input type="radio" name="rating-2" checked="checked" class="mask mask-star-2 bg-warning"> 
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning">
+                  <p class="pl-2 pt-[3px]">{{prod.likes.length}}</p>
               </div>
-
-              <span class="mt-4 text-sm font-medium underline cursor-pointer group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0">
-                Read More
-              </span>
+              <!--<a href="#" class="text-blue-600 visited:text-purple-600">Message Seller</a>-->
             </div>
-          </summary>
+      </div>
 
-          <div class="pb-6 prose max-w-none">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa veniam dicta beatae eos ex error culpa delectus rem tenetur, architecto quam nesciunt, dolor veritatis nisi minus inventore, rerum at recusandae?
-            </p>
+      <div class="flex justify-between mt-8">
+        <div class="max-w-[35ch]">
+          <h1 class="text-2xl font-bold">{{prod.title}}</h1>
+          <p class="mt-0.5 text-sm">Highest Rated Product</p>
+          <div class="flex mt-2 -ml-0.5">
+            <svg
+              class="w-5 h-5 text-yellow-400"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam sapiente nobis ea veritatis error consequatur nisi exercitationem iure laudantium culpa, animi temporibus non! Maxime et quisquam amet. A, deserunt!
-            </p>
-            <div class="flex flex-col w-full pt-12">
-    <div class="flex justify-between">
-        <div class="grid font-bold">Size</div> 
-        <h1 class="text-slate-700 text-right">Small</h1>
-    </div>
-        <div class="divider"></div> 
-    <div class="flex justify-between">
-        <div class="grid font-bold">Brand</div>
-        <h1 class="text-slate-700 text-right">Nike</h1>
-    </div>
-        <div class="divider"></div> 
-    <div class="flex justify-between">
-        <div class="grid font-bold">Condition</div>
-        <h1 class="text-slate-700 text-right">Brand New</h1>
-    </div>
-        <div class="divider"></div>
-    <div class="flex justify-between"> 
-        <div class="grid font-bold">Style</div>
-        <h1 class="text-slate-700 text-right">High Top Jordan Air</h1>
-    </div>
-        <div class="divider"></div>
-    <div class="flex justify-between"> 
-        <div class="grid font-bold">Color</div>
-        <h1 class="text-slate-700 text-right">Red-Black</h1>
-    </div>
-        <div class="divider"></div> 
-    <div class="flex justify-between">
-        <div class="grid font-bold">Shipping</div>
-        <h1 class="text-slate-700 text-right">Free</h1>
-    </div>
-        <div class="divider"></div>
-  
-</div>
+            <svg
+              class="w-5 h-5 text-yellow-400"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+
+            <svg
+              class="w-5 h-5 text-yellow-400"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+
+            <svg
+              class="w-5 h-5 text-yellow-400"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+
+            <svg
+              class="w-5 h-5 text-gray-200"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
           </div>
-        </details>
+        </div>
+
+        <p class="text-lg font-bold">
+          {{prod.price}}
+        </p>
+      </div>
+
+      <details class="relative mt-4 group">
+        <summary class="block">
+          <div>
+            <div class="prose max-w-none group-open:hidden">
+              <p>
+                {{prod.description}}
+              </p>
+            </div>
+
+            <span class="mt-4 text-sm font-medium underline cursor-pointer group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0">
+              Read More
+            </span>
+          </div>
+        </summary>
+
+        <div class="pb-6 prose max-w-none">
+          <p>{{prod.description}}</p>
+          <div class="flex flex-col w-full pt-12">
+            <div class="flex justify-between">
+              <div class="grid font-bold">Size</div> 
+              <h1 class="text-slate-700 text-right">{{prod.size}}</h1>
+          </div>
+          <div class="divider"></div> 
+          <div class="flex justify-between">
+            <div class="grid font-bold">Brand</div>
+            <h1 class="text-slate-700 text-right">{{prod.brand}}</h1>
+          </div>
+          <div class="divider"></div> 
+          <div class="flex justify-between">
+            <div class="grid font-bold">Condition</div>
+            <h1 class="text-slate-700 text-right">{{prod.condition}}</h1>
+          </div>
+          <div class="divider"></div>
+          <div class="flex justify-between"> 
+            <div class="grid font-bold">Style</div>
+            <h1 class="text-slate-700 text-right">{{prod.style}}</h1>
+          </div>
+          <div class="divider"></div>
+          <div class="flex justify-between"> 
+              <div class="grid font-bold">Color</div>
+              <h1 class="text-slate-700 text-right">{{prod.color}}</h1>
+          </div>
+          <div class="divider"></div> 
+          <div class="flex justify-between">
+              <div class="grid font-bold">Shipping</div>
+              <h1 class="text-slate-700 text-right">{{prod.ship}}</h1>
+          </div>
+          <div class="divider"></div>
+
+        </div>
+        </div>
+      </details>
 
         <form class="mt-8">
           <fieldset>
-            <legend class="mb-1 text-sm font-medium">Color</legend>
+            <legend class="mb-1 text-sm font-medium">Tag</legend>
 
             <div class="flow-root">
               <div class="flex flex-wrap -m-0.5">
@@ -212,25 +200,11 @@
                   <input type="radio" name="color" id="color_tt" class="sr-only peer" />
 
                   <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    Texas Tea
+                   {{prod.tags}}
+                    
                   </span>
                 </label>
 
-                <label for="color_fr" class="cursor-pointer p-0.5">
-                  <input type="radio" name="color" id="color_fr" class="sr-only peer" />
-
-                  <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    Fiesta Red
-                  </span>
-                </label>
-
-                <label for="color_cb" class="cursor-pointer p-0.5">
-                  <input type="radio" name="color" id="color_cb" class="sr-only peer" />
-
-                  <span class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white">
-                    Cobalt Blue
-                  </span>
-                </label>
               </div>
             </div>
           </fieldset>
@@ -309,3 +283,37 @@
   </div>
 </section>
 </template>
+
+<script>  
+  export default {
+    name:'productTest',
+    data() {
+      return {
+        prod:{}
+      }
+    },
+    mounted() {
+      console.log(this.$route.params.id)
+    },
+    async created() {
+      const response = await fetch(`https://lowballd-backend.onrender.com/api/posts/${this.$route.params.id}/`);
+      const data = await response.json();
+      this.prod = data;
+      console.log(this.prod)
+    }
+
+    // data: () => {
+    //   return {
+    //       Main: {
+    //           title: "",
+    //           price: "",
+    //           imgUrl: "",
+    //       },
+    //   }
+    // },
+    // created: function () {
+    //   console.log(this.Main)
+    // }
+  }
+
+</script>

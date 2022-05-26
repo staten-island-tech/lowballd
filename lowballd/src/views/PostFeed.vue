@@ -1,81 +1,173 @@
 <template>
-
-    <GlobalNavbar />
+  <div>
+    <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
-      
-<div>
-  <div class="md:grid md:grid-cols-3 md:gap-6">
-    <div class="mt-5 md:mt-0 md:col-span-2">
-      <form action="#" method="POST">
-        <div class="shadow sm:rounded-md sm:overflow-hidden">
-          <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-            <h1 class="text-2xl mb-4">Share your fit with the world</h1>
-            <div class="grid grid-cols-3 gap-6">
+      <div>
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+          <div class="mt-5 md:mt-0 md:col-span-2">
+            <form
+              @submit.prevent="postData"
+              action="#"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <div class="shadow sm:rounded-md sm:overflow-hidden">
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                  <h1 class="text-2xl mb-4">Share your fit with the world</h1>
+                  <div class="grid grid-cols-3 gap-6">
+                    <div>
+                      <label
+                        for="date"
+                        class="block text-sm font-medium text-gray-700 pb-1"
+                        >When did you wear this?</label
+                      >
+                      <div class="relative">
+                        <div
+                          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                        ></div>
+                        <input
+                          type="date"
+                          id="start"
+                          name="outfit-date"
+                          min="2022-01-01"
+                          :value="dateToYYYYMMDD(posts.date)"
+                          @input="posts.date = $event.target.valueAsDate"
+                        />
+                      </div>
+                    </div>
 
-              <div>
-                <label for="date" class="block text-sm font-medium text-gray-700 pb-1">When did you wear this?</label>
-              <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    <div class="col-span-6 sm:col-span-3">
+                      <label
+                        for="title"
+                        class="block text-sm font-medium text-gray-700"
+                        >Title</label
+                      >
+                      <input
+                        v-model="posts.title"
+                        type="text"
+                        name="title"
+                        id="post-title"
+                        autocomplete="given-name"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      for="about"
+                      class="block text-sm font-medium text-gray-700"
+                      >Description</label
+                    >
+                    <div class="mt-1">
+                      <textarea
+                        v-model="posts.description"
+                        id="about"
+                        name="about"
+                        rows="3"
+                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                        placeholder="Provide a brief caption for your outfit."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700">
+                      Add photos
+                    </label>
+
+                    <UploadImages
+                      :max="5"
+                      maxError="Maximum of 5 files."
+                      clearAll="Clear All"
+                      ref="file"
+                      @change="uploadFile"
+                    />
+                    <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
+                  </div>
                 </div>
-
-                <input datepicker datepicker-buttons type="text" id="datepickerId" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                  <button
+                    type="submit"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
-              </div>
-
-              <div class="col-span-6 sm:col-span-3">
-                <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                <input type="text" name="title" id="post-title" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-              </div>
-              
-            </div>
-
-            <div>
-              <label for="about" class="block text-sm font-medium text-gray-700">Description</label>
-              <div class="mt-1">
-                <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Provide a brief caption for your outfit."></textarea>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700"> Add photos </label>
-
-                <UploadImages :max="5" maxError="Maximum of 5 files." clearAll="Clear All"/>
-
-            </div>
-          </div>
-          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+            </form>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
-</div>
-
-</div>
-
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
-import Datepicker from '@themesberg/tailwind-datepicker/Datepicker';
-import UploadImages from "../components/postfeed/vue-upload-drop-images.vue"
+import UploadImages from "../components/postfeed/vue-upload-drop-images.vue";
+import axios from "axios";
 
 export default {
   name: "PostFeed",
   components: {
-    GlobalNavbar, UploadImages
+    GlobalNavbar,
+    UploadImages,
+  },
+  data() {
+    return {
+      posts: {
+        date: new Date(),
+        title: null,
+        description: null,
+        images: null,
+        userId: null,
+      },
+    };
   },
   mounted() {
-    const datepickerEl = document.getElementById('datepickerId');
-    new Datepicker(datepickerEl, {
-        // options
-    }); 
+    this.posts.userId = this.$refs.navbarGlobal.userId;
+    console.log(this.userId);
+  },
+  methods: {
+    uploadFile() {
+      this.posts.images = this.$refs.file.files;
+      console.log(this.posts.images);
     },
+    async postData(e) {
+      const formData = new FormData();
+      formData.append("userId", this.posts.userId);
+      formData.append("title", this.posts.title);
+      formData.append("description", this.posts.description);
+      // formData.append('pictures', this.posts.images, this.posts.images.name);
+      for (var i = 0; i < this.posts.images.length; i++) {
+        let file = this.posts.images[i];
+        formData.append("pictures", file, file.name);
+      }
+
+      formData.append("date", this.posts.date);
+      const headers = { "Content-Type": `multipart/form-data` };
+      const res = await axios.post(
+        "https://lowballd-backend.onrender.com/api/posts/upload",
+        formData,
+        { headers }
+      );
+      console.log(res);
+      alert("Post has been saved");
+    },
+    dateToYYYYMMDD(d) {
+      // alternative implementations in https://stackoverflow.com/q/23593052/1850609
+      return (
+        d &&
+        new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000)
+          .toISOString()
+          .split("T")[0]
+      );
+    },
+  },
 };
 </script>
 
 <style scoped>
-@import 'https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css';
+@import "https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css";
 </style>
