@@ -6,8 +6,6 @@ import router from "./router";
 import store from "./store";
 import 'flowbite';
 
-// Import the Auth0 configuration
-
 import authConfig from "../auth_config.json";
 import { setupAuth } from "./auth";
 
@@ -20,3 +18,6 @@ function callbackRedirect(appState) {
 setupAuth(authConfig, callbackRedirect).then((auth) => {
   app.use(auth).mount("#app");
 });
+
+
+app.use(store)

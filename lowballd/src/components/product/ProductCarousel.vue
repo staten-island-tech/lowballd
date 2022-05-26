@@ -29,8 +29,22 @@
 </template>
 
 <script>
-    import 'tw-elements';
-    export default {
-        name: 'ProductCarousel',
-    }
+  import Card from "/src/components/marketplace/Card.vue";
+  import 'tw-elements';
+
+  export default {
+      name: 'ProductCarousel',
+      components: {
+        Card,
+      },
+      data () {
+        return {
+            Main: {
+                title: '',
+                price: '',
+                imgUrl: '',
+            }
+        }
+    },
+  }
 </script>

@@ -2,7 +2,7 @@
   <GlobalNavbar />
   <SearchBar />
   <MarketLanding></MarketLanding>
-  <Footer></Footer>
+  <Footer />
 </template>
 
 <script>
