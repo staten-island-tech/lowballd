@@ -1,14 +1,14 @@
 <template>
 <GlobalNavbar/>
 <div class="min-h-screen ">
-<h1 class="text-center text-4xl mt-[20%]">Thank you for verifying your email</h1>
+<div class="mt-[5%] flex items-center justify-center">
+  <img class="w-1/6 h-1/6 " src="https://www.svgrepo.com/show/209758/email-mail.svg">
+</div>
+<h1 class="text-center text-4xl mt-[2%]">Thank you for verifying your email</h1>
 
-<a href="http://localhost:3000/">
-<button class="ml-[46.5%] mr-[46.5 %] mt-[2%] bg-slate-400 hover:bg-blue-200 text-white font-bold py-2 px-4 rounded">
-
-  Take Me Back 
-</button>
-</a>
+<router-link to="/" @click="checkLogin" class=" mt-[2%] flex items-center justify-center text-2xl my-auto"
+      >Take Me back</router-link
+    >
 </div>
 
 </template>
@@ -22,3 +22,4 @@ export default {
     },
 } 
 </script>
+
