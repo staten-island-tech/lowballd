@@ -14,7 +14,6 @@
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                 <h1 class="text-2xl mb-4">List an item for sale</h1>
                 <div class="grid grid-cols-3 gap-6">
-
                   <div class="col-span-6 sm:col-span-3">
                     <label
                       for="title"
@@ -50,7 +49,7 @@
                 </div>
 
                 <div class="grid xl:grid-cols-2 xl:gap-6">
-                    <div class="relative">
+                  <div class="relative">
                     <label
                       for="title"
                       class="block text-sm font-medium text-gray-700"
@@ -58,7 +57,7 @@
                     >
                     <input
                       v-model="listing.price"
-                      type="text" 
+                      type="text"
                       inputmode="numeric"
                       name="price"
                       id="listingprice"
@@ -66,7 +65,7 @@
                       placeholder="xx.xx"
                     />
                     <span class="absolute bottom-1.5 left-2 text-gray-700">
-                        $
+                      $
                     </span>
                   </div>
                   <div class="">
@@ -75,19 +74,24 @@
                       class="block text-sm font-medium text-gray-700"
                       >Category</label
                     >
-                    <select @change="updateCategory()" ref="listingcategory" id="listingcategory" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                        <option selected>Choose a category</option>
-                        <option value="Tops">Tops</option>
-                        <option value="Bottoms">Bottoms</option>
-                        <option value="Outerwear">Outerwear</option>
-                        <option value="Accessories">Accessories</option>
-                        <option value="Shoes">Shoes</option>
+                    <select
+                      @change="updateCategory()"
+                      ref="listingcategory"
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    >
+                      <option selected>Choose a category</option>
+                      <option value="Tops">Tops</option>
+                      <option value="Bottoms">Bottoms</option>
+                      <option value="Outerwear">Outerwear</option>
+                      <option value="Accessories">Accessories</option>
+                      <option value="Shoes">Shoes</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="grid xl:grid-cols-2 xl:gap-6">
-                    <div class="">
+                  <div class="">
                     <label
                       for="title"
                       class="block text-sm font-medium text-gray-700"
@@ -108,13 +112,18 @@
                       class="block text-sm font-medium text-gray-700"
                       >Condition</label
                     >
-                    <select @change="updateCondition()" ref="listingcondition" id="listingcategory" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                        <option selected>What condition is this in?</option>
-                        <option value="New">New</option>
-                        <option value="Open Box">Open Box</option>
-                        <option value="Lightly Worn">Lightly Worn</option>
-                        <option value="Heavily Worn">Heavily Worn</option>
-                        <option value="Poor">Poor Condition</option>
+                    <select
+                      @change="updateCondition()"
+                      ref="listingcondition"
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    >
+                      <option selected>What condition is this in?</option>
+                      <option value="New">New</option>
+                      <option value="Open Box">Open Box</option>
+                      <option value="Lightly Worn">Lightly Worn</option>
+                      <option value="Heavily Worn">Heavily Worn</option>
+                      <option value="Poor">Poor Condition</option>
                     </select>
                   </div>
                 </div>
@@ -182,23 +191,23 @@ export default {
       this.listing.images = this.$refs.file.files;
       console.log(this.listing.images);
     },
-    updateCategory(){
-        this.listing.category = this.$refs.listingcategory.value;
-        console.log(this.listing.category)
+    updateCategory() {
+      this.listing.category = this.$refs.listingcategory.value;
+      console.log(this.listing.category);
     },
-    updateCondition(){
-        this.listing.condition = this.$refs.listingcondition.value;
-        console.log(this.listing.condition)
+    updateCondition() {
+      this.listing.condition = this.$refs.listingcondition.value;
+      console.log(this.listing.condition);
     },
     async postData(e) {
       const formData = new FormData();
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
       formData.append("description", this.listing.description);
-        formData.append("category", this.listing.category);
-        formData.append("price", this.listing.price);
-        formData.append("size", this.listing.size);
-        formData.append("condition", this.listing.condition);
+      formData.append("category", this.listing.category);
+      formData.append("price", this.listing.price);
+      formData.append("size", this.listing.size);
+      formData.append("condition", this.listing.condition);
 
       for (var i = 0; i < this.listing.images.length; i++) {
         let file = this.listing.images[i];
