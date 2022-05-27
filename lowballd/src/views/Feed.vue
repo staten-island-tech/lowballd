@@ -19,7 +19,16 @@
       </button>
     </div>
   </div>
-  <FeedCard></FeedCard>
+  <div class="mx-auto flex flex-wrap">
+    <FeedCard v-for="item in apiMessage"
+        :key="item.id"
+        :postTitle="item.title"
+        :postDescription="item.description"
+        :postImage="item.images[0]"
+        :postDate="item.date.slice(4,-42)">
+    </FeedCard>
+  </div>
+  
 </template>
 
 <script>
@@ -31,6 +40,36 @@ export default {
   components: {
     GlobalNavbar,
     FeedCard,
+  },
+  data() {
+    return {
+      apiMessage: [],
+    };
+  },
+  methods: {
+    async callApi() {
+      // Get the access token from the auth wrapper
+      //const token = await this.$auth.getTokenSilently();
+      try {
+        // const token = await this.$auth.getTokenSilently();
+        const response = await fetch(
+          "https://lowballd-backend.onrender.com/api/posts/",
+          {
+            // headers: {
+            //   Authorization: `Bearer ${token}`,
+            // },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        this.apiMessage = data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  mounted() {
+    this.callApi();
   },
 };
 </script>

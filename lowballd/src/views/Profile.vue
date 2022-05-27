@@ -20,16 +20,16 @@ import ProfileCard from "../components/profile/ProfileCard.vue";
 import ProfileContent from "../components/profile/ProfileContent.vue";
 
 export default {
-  data() {
-    return {
-      authenticationStatus: this.$auth.isAuthenticated,
-    };
-  },
   name: "Profile",
   components: {
     GlobalNavbar,
     ProfileCard,
     ProfileContent,
+  },
+  data() {
+    return {
+      authenticationStatus: this.$auth.isAuthenticated,
+    };
   },
 };
 </script>
