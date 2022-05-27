@@ -1,17 +1,5 @@
 <template>
     <GlobalNavbar></GlobalNavbar>
-    <div v-if="authenticationStatus" class="authenticated">
-      <div
-        class="w-full flex flex-row justify-around sm:flex sm:flex-col sm:justify-center"
-      >
-        <ProfileCard></ProfileCard>
-        <ProfileContent></ProfileContent>
-      </div>
-    </div>
-    <h1 v-else>
-      Oh no, looks like you aren't signed in 😢, please return to the home page
-      to sign in
-    </h1>
     <div>
       <div class="flex flex-col items-center justify-center p-3 min-h-full">
         
@@ -26,10 +14,10 @@
         <div v-if="isModalVisible">
           <div
             @click="onToggle"
-            class="absolute bg-black opacity-70 inset-0 z-0"
+            class="absolute bg-black opacity-70 inset-0 z-10"
           ></div>
           <div
-            class="w-full max-w-lg p-3 absolute mx-auto my-auto rounded-xl shadow-lg bg-white z-100"
+            class="w-full max-w-lg p-3 absolute left-[29rem] mx-auto my-auto rounded-xl shadow-lg bg-white z-10"
           >
             <div>
               <div class="text-center p-3 flex-auto justify-center leading-6">
@@ -45,10 +33,15 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                <h2 class="text-2xl font-bold py-4">Are you sure?</h2>
-                <p class="text-md text-gray-500 px-8">
-                  Do you really want to exit without saving your work?
-                </p>
+                <h2 class="text-2xl font-bold py-4">Update Your Profile Picture Below</h2>
+                <UploadImages
+                      :max="1"
+                      maxError="Maximum of 1 file."
+                      clearAll="Clear All"
+                      ref="file"
+                      @change="uploadFile"
+                    />
+                
               </div>
               <div class="p-3 mt-2 text-center space-x-4 md:block">
                 <button
@@ -60,7 +53,7 @@
                   @click="onToggle"
                   class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600"
                 >
-                  Close
+                  Cancel
                 </button>
               </div>
             </div>
@@ -68,12 +61,25 @@
         </div>
       </transition> 
       </div>
+    <div v-if="authenticationStatus" class="authenticated">
+      <div
+        class="w-full flex flex-row justify-around sm:flex sm:flex-col sm:justify-center"
+      >
+        <ProfileCard></ProfileCard>
+        <ProfileContent></ProfileContent>
+      </div>
+    </div>
+    <h1 v-else>
+      Oh no, looks like you aren't signed in 😢, please return to the home page
+      to sign in
+    </h1>
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import ProfileCard from "../components/profile/ProfileCard.vue";
 import ProfileContent from "../components/profile/ProfileContent.vue";
+import UploadImages from "../components/postfeed/vue-upload-drop-images.vue";
 
 export default {
   name: "Profile",
@@ -81,6 +87,7 @@ export default {
     GlobalNavbar,
     ProfileCard,
     ProfileContent,
+    UploadImages,
   },
   data() {
     return {
