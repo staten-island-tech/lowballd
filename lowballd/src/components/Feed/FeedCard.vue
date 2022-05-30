@@ -30,7 +30,7 @@
         </div>
         <div class="flex space-x-1 items-center">
           <span @click="likePost()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+            <svg ref="heartIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
             </svg>
           </span>
@@ -44,6 +44,7 @@
 
 <script>
 import axios from "axios";
+
 export default {
   name: "FeedCard",
   data() {
@@ -53,6 +54,7 @@ export default {
       likes: 0,
       comments: 0,
       descPreview: null,
+      id: null,
     }
   },
   props: {
@@ -78,14 +80,23 @@ export default {
     async likePost() {
       const likeData = { "userId": `${this.currentUserId}` };
       console.log(likeData)
-      const res = await axios.post(
+      const res = await axios.put(
         `http://localhost:3001/api/posts/${this.postId}/like`,
-        likeData
+        { 
+          "userId": `${this.currentUserId}` 
+        }
       );
       console.log(res);
+      const heartButton = this.$refs.heartIcon;
+      if (res.data === "Liked") {
+        this.likes += 1;
+        heartButton.classList.add('text-red-500');
+      } else {
+        this.likes -= 1;
+        heartButton.classList.remove('text-red-500');
+      }
     },
-  },
-  async mounted() {
+    async getUserInfo() {
       try {
         const response = await fetch(
           `https://lowballd-backend.onrender.com/api/user/${this.userId}`
@@ -96,6 +107,14 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+  },
+  mounted() {
+    this.getUserInfo();
+    const heartButton = this.$refs.heartIcon;
+    if (this.likeCount.includes(this.currentUserId)) {
+      heartButton.classList.add('text-red-500');
+    }
   },
   created() {
     for (let i = 0; i < this.likeCount.length; i++) {
@@ -105,7 +124,8 @@ export default {
       this.descPreview = this.postDescription.substring(0, 45) + "...";
     } else {
       this.descPreview = this.postDescription;
-    }
+    };
+    
   },
 };
 </script>
