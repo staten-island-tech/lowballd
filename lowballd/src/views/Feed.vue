@@ -1,5 +1,5 @@
 <template>
-  <GlobalNavbar />
+  <GlobalNavbar ref="navbarGlobal"/>
   <div>
     <h1 class="text-center text-3xl mt-20 font-['Spectral'] font-semibold">
       OUTFIT OF THE DAY
@@ -22,7 +22,10 @@
   <div class="mx-auto flex flex-wrap">
     <FeedCard v-for="item in apiMessage"
         :key="item.id"
+        :currentUserId="currentUserId"
+        :postId="item._id"
         :userId="item.userId"
+        :likeCount="item.likes"
         :postTitle="item.title"
         :postDescription="item.description"
         :postImage="item.images[0]"
@@ -45,6 +48,7 @@ export default {
   data() {
     return {
       apiMessage: [],
+      currentUserId: null,
     };
   },
   methods: {
@@ -62,6 +66,8 @@ export default {
     },
   },
   mounted() {
+    this.currentUserId = this.$refs.navbarGlobal.userId;
+    console.log(this.currentUserId)
     this.callApi();
   },
 };
