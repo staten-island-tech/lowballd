@@ -25,17 +25,7 @@
                       type="text"
                       name="title"
                       id="post-title"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -52,17 +42,7 @@
                       id="listingdescription"
                       name="description"
                       rows="3"
-                      class="
-                        shadow-sm
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        mt-1
-                        block
-                        w-full
-                        sm:text-sm
-                        border border-gray-300
-                        rounded-md
-                      "
+                      class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                       placeholder="Provide a brief caption for your outfit."
                     ></textarea>
                   </div>
@@ -81,18 +61,7 @@
                       inputmode="numeric"
                       name="price"
                       id="listingprice"
-                      class="
-                        pl-8
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="pl-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="xx.xx"
                     />
                     <span class="absolute bottom-1.5 left-2 text-gray-700">
@@ -109,17 +78,7 @@
                       @change="updateCategory()"
                       ref="listingcategory"
                       id="listingcategory"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
                       <option value="Tops">Tops</option>
@@ -143,17 +102,7 @@
                       type="text"
                       name="size"
                       id="listingsize"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="ex. One Size, Small, M, 10.5"
                     />
                   </div>
@@ -167,17 +116,7 @@
                       @change="updateCondition()"
                       ref="listingcondition"
                       id="listingcategory"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
                       <option value="New">New</option>
@@ -206,23 +145,10 @@
               </div>
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
-                  type="submit"
-                  class="
-                    inline-flex
-                    justify-center
-                    py-2
-                    px-4
-                    border border-transparent
-                    shadow-sm
-                    text-sm
-                    font-medium
-                    rounded-md
-                    text-white
-                    bg-indigo-600
-                    hover:bg-indigo-700
-                    focus:outline-none
-                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-                  "
+                  @click="showAlert"
+                  id="submit"
+                  type="button"
+                  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit
                 </button>
@@ -262,16 +188,43 @@ export default {
     this.listing.userId = this.$refs.navbarGlobal.userId;
     console.log(this.userId);
   },
+
   methods: {
-    checklogin() {
+    /*postSaved() {
+      $("#btn").click(function(){
+
+        var title = $("#post-title").val();
+        if (title == '') {
+          showAlert() {
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "Please fill in the missing fields  to continue",
+            });
+
+        },}
+        else{
+          showAlert() {
+            this.$swal({
+              icon: "success",
+              title: "Your post has been successfully saved",
+              text: "Please return to the homepage",
+            });
+        },}
+      }),
+    },*/
+    
+
+    showAlert() {
       this.$swal({
-        icon: "Your post has been successfully saved",
-        title: "Please return to the homepage",
-        text: "success",
-        });
-
-
-    }
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
+    },
 
     uploadFile() {
       this.listing.images = this.$refs.file.files;
