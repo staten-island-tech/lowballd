@@ -13,11 +13,11 @@
       <h1 class="text-base md:text-sm">{{ profileData.email }}</h1>
       <div class="flex flex-row justify-center mt-2">
         <p class="text-sm text-slate-700 pr-2">
-          <span class="font-bold">{{ totalFollowers }}</span>
+          <span class="font-bold">{{ followers }}</span>
           Followers
         </p>
         <p class="text-sm text-slate-700">
-          <span class="font-bold">{{ totalFollowing }}</span>
+          <span class="font-bold">{{ following }}</span>
           Following
         </p>
       </div>
@@ -60,8 +60,8 @@ export default {
       userdata: this.$auth.user,
       authenticationStatus: this.$auth.isAuthenticated,
       profileData: [],
-      totalFollowers: [],
-      totalFollowing: [],
+      followers: [],
+      following: [],
     };
   },
 
@@ -82,8 +82,8 @@ export default {
         const data = await response.json();
         console.log(data);
         this.profileData = data;
-        this.totalFollowers = data.totalFollowers.length;
-        this.totalFollowing = data.totalFollowing.length;
+        this.followers = data.followers.length;
+        this.following = data.following.length;
       } catch (error) {
         console.log(error);
       }
@@ -101,4 +101,3 @@ export default {
   },
 };
 </script>
-
