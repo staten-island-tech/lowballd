@@ -5,6 +5,7 @@
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
+            @submit= "postData"
             @submit.prevent="postData"
             action="#"
             method="POST"
@@ -23,8 +24,9 @@
                     <input
                       v-model="listing.title"
                       type="text"
-                      name="title"
-                      id="post-title"
+                      name="Title"
+                      id="title"
+                    
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
                   </div>
@@ -39,7 +41,7 @@
                   <div class="mt-1">
                     <textarea
                       v-model="listing.description"
-                      id="listingdescription"
+                      id="description"
                       name="description"
                       rows="3"
                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
@@ -60,7 +62,7 @@
                       type="text"
                       inputmode="numeric"
                       name="price"
-                      id="listingprice"
+                      id="price"
                       class="pl-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="xx.xx"
                     />
@@ -77,7 +79,7 @@
                     <select
                       @change="updateCategory()"
                       ref="listingcategory"
-                      id="listingcategory"
+                      id="category"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
@@ -101,7 +103,7 @@
                       v-model="listing.size"
                       type="text"
                       name="size"
-                      id="listingsize"
+                      id="size"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="ex. One Size, Small, M, 10.5"
                     />
@@ -115,7 +117,7 @@
                     <select
                       @change="updateCondition()"
                       ref="listingcondition"
-                      id="listingcategory"
+                      id="condition"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
@@ -138,6 +140,7 @@
                     maxError="Maximum of 5 files."
                     clearAll="Clear All"
                     ref="file"
+                    id= "file"
                     @change="uploadFile"
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
@@ -190,33 +193,26 @@ export default {
   },
 
   methods: {
-    /*postSaved() {
-      $("#btn").click(function(){
-
-        var title = $("#post-title").val();
-        if (title == '') {
-          showAlert() {
+    showAlert() {
+      var title = document.getElementById("file").value;
+      var title = document.getElementById("title").value;
+      var description = document.getElementById("description").value;
+      var price = document.getElementById("price").value;
+      var size = document.getElementById("size").value;
+      var category = document.getElementById("category").value;
+      var condition = document.getElementById("condition").value;
+        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" || file == 0 ) {
+          
             this.$swal({
               icon: "error",
               title: "Oops...",
               text: "Please fill in the missing fields  to continue",
             });
 
-        },}
+        }
         else{
-          showAlert() {
+          
             this.$swal({
-              icon: "success",
-              title: "Your post has been successfully saved",
-              text: "Please return to the homepage",
-            });
-        },}
-      }),
-    },*/
-    
-
-    showAlert() {
-      this.$swal({
         icon: "success",
         title: "Your post has been successfully saved",
         html:
@@ -224,8 +220,9 @@ export default {
           '<a href="/"><b>here</b></a> ' +
           "to return to the homepage",
       });
+        }
+      
     },
-
     uploadFile() {
       this.listing.images = this.$refs.file.files;
       console.log(this.listing.images);
@@ -238,7 +235,7 @@ export default {
       this.listing.condition = this.$refs.listingcondition.value;
       console.log(this.listing.condition);
     },
-    async postData(e) {
+    async postData() {
       const formData = new FormData();
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
