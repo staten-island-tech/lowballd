@@ -6,7 +6,7 @@
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
             @submit= "postData"
-            @submit.prevent="postData"
+            @submit.prevent= "postData"
             action="#"
             method="POST"
             enctype="multipart/form-data"
@@ -25,7 +25,7 @@
                       v-model="listing.title"
                       type="text"
                       name="Title"
-                      id="title"
+                      id="listing.title"
                     
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
@@ -41,7 +41,7 @@
                   <div class="mt-1">
                     <textarea
                       v-model="listing.description"
-                      id="description"
+                      id="listing.description"
                       name="description"
                       rows="3"
                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
@@ -62,7 +62,7 @@
                       type="text"
                       inputmode="numeric"
                       name="price"
-                      id="price"
+                      id="listing.price"
                       class="pl-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="xx.xx"
                     />
@@ -79,7 +79,7 @@
                     <select
                       @change="updateCategory()"
                       ref="listingcategory"
-                      id="category"
+                      id="listing.category"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
@@ -103,7 +103,7 @@
                       v-model="listing.size"
                       type="text"
                       name="size"
-                      id="size"
+                      id="listing.size"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="ex. One Size, Small, M, 10.5"
                     />
@@ -117,7 +117,7 @@
                     <select
                       @change="updateCondition()"
                       ref="listingcondition"
-                      id="condition"
+                      id="listing.condition"
                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
@@ -140,7 +140,7 @@
                     maxError="Maximum of 5 files."
                     clearAll="Clear All"
                     ref="file"
-                    id= "file"
+                
                     @change="uploadFile"
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
@@ -149,7 +149,7 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   @click="showAlert"
-                  id="submit"
+                  
                   type="button"
                   class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
@@ -194,14 +194,14 @@ export default {
 
   methods: {
     showAlert() {
-      var title = document.getElementById("file").value;
-      var title = document.getElementById("title").value;
-      var description = document.getElementById("description").value;
-      var price = document.getElementById("price").value;
-      var size = document.getElementById("size").value;
-      var category = document.getElementById("category").value;
-      var condition = document.getElementById("condition").value;
-        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" || file == 0 ) {
+      
+      var title = document.getElementById("listing.title").value;
+      var description = document.getElementById("listing.description").value;
+      var price = document.getElementById("listing.price").value;
+      var size = document.getElementById("listing.size").value;
+      var category = document.getElementById("listing.category").value;
+      var condition = document.getElementById("listing.condition").value;
+        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" ) {
           
             this.$swal({
               icon: "error",
