@@ -9,8 +9,8 @@
     <div class="w-full h-96 bg-cover bg-center cursor-pointer" :style="backgroundStyles(postImage)"></div>
     <div class="flex p-4 justify-between">
       <div class="flex items-center space-x-2">
-        <img class="w-10 rounded-full" src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg" alt="sara" />
-        <h2 class="text-gray-800 font-bold cursor-pointer">Felipe Sacudon</h2>
+        <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
+        <h2 class="text-gray-800 font-bold cursor-pointer">{{username}}</h2>
       </div>
       <div class="flex space-x-2">
         <div class="flex space-x-1 items-center">
@@ -38,7 +38,14 @@
 <script>
 export default {
   name: "FeedCard",
+  data() {
+    return {
+      username: null,
+      profilePicture: null,
+    }
+  },
   props: {
+    userId: String,
     postTitle: String,
     postDate: String,
     postImage: String,
@@ -50,10 +57,23 @@ export default {
   },
   methods: {
     backgroundStyles(postImage) {
-                return {
-                    'background-image': `url(${postImage})`,
-                }
-            },
-  }
+      return {
+        'background-image': `url(${postImage})`,
+      }
+    },
+  },
+  async mounted() {
+      try {
+        const response = await fetch(
+          `https://lowballd-backend.onrender.com/api/user/${this.userId}`
+        );
+        const data = await response.json();
+        console.log(data)
+        this.username = data.username;
+        this.profilePicture = data.profile_picture;
+      } catch (error) {
+        console.log(error);
+      }
+  },
 };
 </script>

@@ -22,6 +22,7 @@
   <div class="mx-auto flex flex-wrap">
     <FeedCard v-for="item in apiMessage"
         :key="item.id"
+        :userId="item.userId"
         :postTitle="item.title"
         :postDescription="item.description"
         :postImage="item.images[0]"
@@ -48,17 +49,9 @@ export default {
   },
   methods: {
     async callApi() {
-      // Get the access token from the auth wrapper
-      //const token = await this.$auth.getTokenSilently();
       try {
-        // const token = await this.$auth.getTokenSilently();
         const response = await fetch(
-          "https://lowballd-backend.onrender.com/api/posts/",
-          {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
-          }
+          "https://lowballd-backend.onrender.com/api/posts/"
         );
         const data = await response.json();
         console.log(data);
