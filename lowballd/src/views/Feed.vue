@@ -1,5 +1,5 @@
 <template>
-  <GlobalNavbar />
+  <GlobalNavbar ref="navbarGlobal"/>
   <div>
     <h1 class="text-center text-3xl mt-20 font-['Spectral'] font-semibold">
       OUTFIT OF THE DAY
@@ -19,7 +19,20 @@
       </button>
     </div>
   </div>
-  <FeedCard></FeedCard>
+  <div class="mx-auto flex flex-wrap">
+    <FeedCard v-for="item in apiMessage"
+        :key="item.id"
+        :currentUserId="currentUserId"
+        :postId="item._id"
+        :userId="item.userId"
+        :likeCount="item.likes"
+        :postTitle="item.title"
+        :postDescription="item.description"
+        :postImage="item.images[0]"
+        :postDate="item.date.slice(4,-42)">
+    </FeedCard>
+  </div>
+  
 </template>
 
 <script>
@@ -31,6 +44,31 @@ export default {
   components: {
     GlobalNavbar,
     FeedCard,
+  },
+  data() {
+    return {
+      apiMessage: [],
+      currentUserId: null,
+    };
+  },
+  methods: {
+    async callApi() {
+      try {
+        const response = await fetch(
+          "https://lowballd-backend.onrender.com/api/posts/"
+        );
+        const data = await response.json();
+        console.log(data);
+        this.apiMessage = data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  mounted() {
+    this.currentUserId = this.$refs.navbarGlobal.userId;
+    console.log(this.currentUserId)
+    this.callApi();
   },
 };
 </script>
