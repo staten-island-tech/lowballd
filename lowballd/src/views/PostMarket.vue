@@ -5,14 +5,14 @@
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
-            @submit= "postData"
-            @submit.prevent= "postData"
+            @submit="postData"
+            @submit.prevent="postData"
             action="#"
             method="POST"
             enctype="multipart/form-data"
           >
             <div class="shadow sm:rounded-md sm:overflow-hidden">
-              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+              <div class="px-4 py-5 bg-white space-y-6 sm:p-6 mt-10">
                 <h1 class="text-2xl mb-4">List an item for sale</h1>
                 <div class="grid grid-cols-3 gap-6">
                   <div class="col-span-6 sm:col-span-3">
@@ -26,8 +26,17 @@
                       type="text"
                       name="Title"
                       id="listing.title"
-                    
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     />
                   </div>
                 </div>
@@ -44,7 +53,17 @@
                       id="listing.description"
                       name="description"
                       rows="3"
-                      class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                      class="
+                        shadow-sm
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        mt-1
+                        block
+                        w-full
+                        sm:text-sm
+                        border border-gray-300
+                        rounded-md
+                      "
                       placeholder="Provide a brief description for what you are selling."
                     ></textarea>
                   </div>
@@ -63,7 +82,18 @@
                       inputmode="numeric"
                       name="price"
                       id="listing.price"
-                      class="pl-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        pl-8
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                       placeholder="xx.xx"
                     />
                     <span class="absolute bottom-1.5 left-2 text-gray-700">
@@ -80,7 +110,17 @@
                       @change="updateCategory()"
                       ref="listingcategory"
                       id="listing.category"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     >
                       <option selected>Choose a category</option>
                       <option value="Tops">Tops</option>
@@ -104,7 +144,17 @@
                       type="text"
                       name="size"
                       id="listing.size"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                       placeholder="ex. One Size, Small, M, 10.5"
                     />
                   </div>
@@ -118,7 +168,17 @@
                       @change="updateCondition()"
                       ref="listingcondition"
                       id="listing.condition"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     >
                       <option selected>What condition is this in?</option>
                       <option value="New">New</option>
@@ -134,24 +194,39 @@
                   <label class="block text-sm font-medium text-gray-700">
                     Add photos (up to 5)
                   </label>
-                  
+
                   <UploadImages
                     :max="5"
                     maxError="Maximum of 5 files."
                     clearAll="Clear All"
                     ref="file"
-                    id= "attachment"
+                    id="attachment"
                     onchange="Filevalidation()"
                     @change="uploadFile"
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
                 </div>
               </div>
-              <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 mb-20">
                 <button
                   @click="showAlert"
                   type="button"
-                  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="
+                    inline-flex
+                    justify-center
+                    py-2
+                    px-4
+                    border border-transparent
+                    shadow-sm
+                    text-sm
+                    font-medium
+                    rounded-md
+                    text-white
+                    bg-indigo-600
+                    hover:bg-indigo-700
+                    focus:outline-none
+                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  "
                 >
                   Submit
                 </button>
@@ -162,9 +237,11 @@
       </div>
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
+import Footer from "../components/footer/Footer.vue";
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import UploadImages from "../components/postfeed/vue-upload-drop-images.vue";
 import axios from "axios";
@@ -174,6 +251,7 @@ export default {
   components: {
     GlobalNavbar,
     UploadImages,
+    Footer,
   },
   data() {
     return {
@@ -193,36 +271,39 @@ export default {
   },
 
   methods: {
-    
     showAlert() {
-      
       var title = document.getElementById("listing.title").value;
       var description = document.getElementById("listing.description").value;
       var price = document.getElementById("listing.price").value;
       var size = document.getElementById("listing.size").value;
       var category = document.getElementById("listing.category").value;
       var condition = document.getElementById("listing.condition").value;
-        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" /*|| (document.getElementById("attachment").value !== "")*/) {
-          
-            this.$swal({
-              icon: "error",
-              title: "Oops...",
-              text: "Please fill in the missing fields  to continue",
-            });
 
-        }
-        else{
-          
-            this.$swal({
-        icon: "success",
-        title: "Your post has been successfully saved",
-        html:
-          "Click " +
-          '<a href="/"><b>here</b></a> ' +
-          "to return to the homepage",
-      });
-        }
-      
+      if (
+        this.$refs.file.files.length === 0 ||
+        title == "" ||
+        description == "" ||
+        price == "" ||
+        size == "" ||
+        category == "Choose a category" ||
+        condition ==
+          "What condition is this in?" /*|| (document.getElementById("attachment").value !== "")*/
+      ) {
+        this.$swal({
+          icon: "error",
+          title: "Oops...",
+          text: "Please fill in the missing fields  to continue",
+        });
+      } else {
+        this.$swal({
+          icon: "success",
+          title: "Your post has been successfully saved",
+          html:
+            "Click " +
+            '<a href="/"><b>here</b></a> ' +
+            "to return to the homepage",
+        });
+      }
     },
     uploadFile() {
       this.listing.images = this.$refs.file.files;

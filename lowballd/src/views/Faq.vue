@@ -149,18 +149,20 @@
           </div>
         </div>
       </section>
-    
+    <Footer />
    
 
 
 </template>
 
 <script>
+import Footer from "../components/footer/Footer.vue";
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 export default {
     name: 'Faq',
     components: {
-        GlobalNavbar
+        GlobalNavbar,
+        Footer
     },
 } 
 </script>

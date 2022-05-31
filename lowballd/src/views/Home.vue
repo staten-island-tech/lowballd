@@ -235,15 +235,17 @@
   </div>
 </section>
   </div>
+  <Footer />
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
+import Footer from "../components/footer/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    GlobalNavbar,
+    GlobalNavbar, Footer
   },
 };
 </script>

@@ -73,9 +73,11 @@
       Oh no, looks like you aren't signed in 😢, please return to the home page
       to sign in
     </h1>
+    <Footer/>
 </template>
 
 <script>
+import Footer from "../components/footer/Footer.vue";
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import ProfileCard from "../components/profile/ProfileCard.vue";
 import ProfileContent from "../components/profile/ProfileContent.vue";
@@ -88,6 +90,7 @@ export default {
     ProfileCard,
     ProfileContent,
     UploadImages,
+    Footer,
   },
   data() {
     return {

@@ -31,6 +31,7 @@
         :postImage="item.images[0]"
         :postDate="item.date.slice(4,-42)">
     </FeedCard>
+    <Footer />
   </div>
   
 </template>
@@ -38,12 +39,14 @@
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import FeedCard from "../components/Feed/FeedCard.vue";
+import Footer from "../components/footer/Footer.vue";
 
 export default {
   name: "Home",
   components: {
     GlobalNavbar,
     FeedCard,
+    Footer,
   },
   data() {
     return {

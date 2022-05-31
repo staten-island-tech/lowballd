@@ -11,7 +11,7 @@
               method="POST"
               enctype="multipart/form-data"
             >
-              <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="shadow sm:rounded-md sm:overflow-hidden mt-20">
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                   <h1 class="text-2xl mb-4">Share your fit with the world</h1>
                   <div class="grid grid-cols-3 gap-6">
@@ -87,7 +87,7 @@
                     <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
                   </div>
                 </div>
-                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 mb-20">
                   <button
                     @click= "showAlert"
                     type="submit"
@@ -103,18 +103,21 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import UploadImages from "../components/postfeed/vue-upload-drop-images.vue";
 import axios from "axios";
+import Footer from "../components/footer/Footer.vue";
 
 export default {
   name: "PostFeed",
   components: {
     GlobalNavbar,
     UploadImages,
+    Footer,
   },
   data() {
     return {
@@ -137,7 +140,7 @@ export default {
       var title = document.getElementById("post-title").value;
       var about = document.getElementById("about").value;
       var start = document.getElementById("start").value;
-        if (title == "" || about =="" || start == "mm/dd/yyyy" /*|| (document.getElementById('attachment').value !=="" )*/) {
+        if (this.$refs.file.files.length === 0 || title == "" || about =="" || start == "mm/dd/yyyy" /*|| (document.getElementById('attachment').value !=="" )*/) {
           
             this.$swal({
               icon: "error",

@@ -24,15 +24,17 @@
     </ul>
 </div>
 <div class="flex flex-row justify-center w-4/5 mx-auto divider"></div>
+<Footer/>
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
+import Footer from "../components/footer/Footer.vue";
 
 export default {
     name: 'ViewProfile',
     components: {
-        GlobalNavbar, 
+        GlobalNavbar, Footer 
     },
 }
 </script>
