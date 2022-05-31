@@ -379,29 +379,15 @@ export default {
       prod: {},
     };
   },
-  mounted() {
-    console.log(this.$route.params.id);
-  },
   async created() {
+    console.log(this.$route.params.id);
     const response = await fetch(
-      `https://lowballd-backend.onrender.com/api/posts/${this.$route.params.id}/`
+      //Think the url changed - waiting for confirmation 
+      `https://lowballd-backend.onrender.com/api/market/${this.$route.params.id}`
     );
     const data = await response.json();
     this.prod = data;
     console.log(this.prod);
   },
-
-  // data: () => {
-  //   return {
-  //       Main: {
-  //           title: "",
-  //           price: "",
-  //           imgUrl: "",
-  //       },
-  //   }
-  // },
-  // created: function () {
-  //   console.log(this.Main)
-  // }
 };
 </script>
