@@ -1,6 +1,6 @@
 <template>
-  <section class="sm:w-full w-100 flex justify-center flex-row flex-wrap">
-    <Filter />
+  <section class="sm:w-full flex justify-center flex-row flex-wrap my-10">
+    <!-- <Filter /> -->
     <div v-for="product in $store.state.products" :id="product.id">
       <Card :product="product" />
     </div>
