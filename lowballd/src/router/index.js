@@ -11,6 +11,7 @@ import Api from "../views/tokentest.vue";
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
 import Contact from "../views/Contact.vue";
+import PostMarket from "../views/PostMarket.vue";
 
 import productTest from "../components/product/ProductTest.vue";
 
@@ -29,6 +30,7 @@ const routes = [
 
   { path: "/marketplace/:id", name: "productTest", component: productTest },
   { path: "/contact", name: "Contact", component: Contact },
+  { path: "/sell", name: "PostMarket", component: PostMarket },
 ];
 const router = createRouter({
   history: createWebHistory(),

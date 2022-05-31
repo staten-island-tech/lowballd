@@ -18,7 +18,7 @@
         v-for="item in postsArray"
         :key="item.id"
         :postImage="item.images[0]"
-        :postDate="item.date.slice(4, -42)"
+        :postDate="item.date.slice(4,-42)"
       ></UserPost>
     </div>
   </div>
