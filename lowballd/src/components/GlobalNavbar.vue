@@ -5,12 +5,14 @@
     >
     <div class="my-auto">
       <router-link to="feed" @click="checkLogin" class="px-6">Feed</router-link>
+      
       <router-link to="marketplace" @click="checkLogin" class="px-6"
         >Marketplace</router-link
       >
       <router-link to="contact" @click="checkLogin" class="px-6"
         >Contact</router-link
       >
+      <router-link to="faq" @click="checkLogin" class="px-6">Faq</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>

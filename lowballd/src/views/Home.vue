@@ -81,7 +81,7 @@
 
           <a
             class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="https://dev-5t61kzw2.us.auth0.com/u/login/identifier?state=hKFo2SB4VERYNlBzWGxFaHB6OGdZb3A3M0s2NkQ2SmxOWWlvQ6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGxXRWRMOTBMLTE2LUNYVkN4UFNSS0RwMkh4RXExbkU1o2NpZNkgWnhwbVBQbU1XaW16WDJsSXA1Tm1vVE5remIwUTNUVE4"
+            href="https://dev-5t61kzw2.us.auth0.com/u/login/identifier?state=hKFo2SBVX1pjbHlIUUJwb2VkWS1PU091aHBxWFhmS24yT0o2RqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDBfaXRERlF1dmxuTkJDNEU3LXAtYnVQdG5aRVhxXy1Io2NpZNkgWnhwbVBQbU1XaW16WDJsSXA1Tm1vVE5remIwUTNUVE4"
           >
             Get started
           </a>
@@ -127,8 +127,8 @@
 
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
@@ -146,8 +146,8 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
@@ -164,8 +164,8 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
@@ -181,8 +181,8 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
@@ -198,8 +198,8 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
@@ -215,8 +215,8 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-          href="/accountant"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
             <img class="w-40 h-35"
