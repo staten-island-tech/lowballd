@@ -1,129 +1,225 @@
 <template>
-  <div>
-    <div
-      class="bg-slate-200 m-12 p-4 h-[39rem] w-[19.5rem]"
-      v-for="post in apiMessage"
-      :key="post"
-    >
-      <div class="flex flex-row">
-        <div class="h-12 w-12 rounded-full bg-slate-500"></div>
-        <div class="flex flex-col -mt-2">
-          <p1 class="m-2 text-xl">online_tutorials</p1>
-          <p2 class="-mt-3 ml-2">Patna, India</p2>
-        </div>
-      </div>
-      <h1 class="mt-2">${{ post.price }}</h1>
-      <div class="mt-8 bg-slate-500 h-[18rem] w-[17rem]">
-        <img :src="post.images" alt="" />
-      </div>
-      <div class="flex flex-row mt-2">
-        <svg
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+  <transition name="fade">
+      <div v-if="showModal" class="fixed z-10 inset-0 overflow-y-auto">
+        <div
+          class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
         >
-          <path
-            d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"
-          />
-        </svg>
-        <svg
-          class="ml-2"
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-        >
-          <path
-            d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"
-          />
-        </svg>
-        <svg
-          class="ml-2"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"
-          />
-        </svg>
-        <svg
-          class="ml-40"
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-        >
-          <path
-            d="M5 0v24l7-6 7 6v-24h-14zm1 1h12v20.827l-6-5.144-6 5.144v-20.827z"
-          />
-        </svg>
-      </div>
-      <div>
-        <h1 class="mt-2">3,684 likes</h1>
-        <h1 class="mt-2"></h1>
-        <div class="flex flex-row">
-          <h1>
-            <span class="font-bold"></span
-            ><span class="ml-[4px]">{{ post.description }}</span
-            ><span class="ml-[4px] text-blue-500">#stylish #breathtaking</span>
-          </h1>
-        </div>
-        <h1 class="mt-2 text-slate-500 font-light">View all 245 comments</h1>
-      </div>
-      <div class="flex flex-row mt-2">
-        <div class="h-8 w-8 rounded-full bg-slate-500"></div>
-        <p1 class="m-2 text-slate-400">Add a comment...</p1>
-      </div>
-      <h1 class="text-slate-500">4 hours ago</h1>
-    </div>
+          <div @click="showModal = false" class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span
+            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          ></span
+          >&#8203;
+          <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-headline"
+          >
+          <div class="p-10 w-[60rem] h-[32rem] flex flex-row justify-between">
+            <div class="w-[27rem]">
+              <div class="rounded-2xl w-full h-[27rem] bg-cover bg-center cursor-pointer" :style="backgroundStyles(postImage)"></div>
+            </div>
 
-    <!--<h1 class="mt-2 text-slate-500 font-light">View all 245 comments</h1>
-      <div class="flex flex-row mt-2">
-        <div class="h-8 w-8 rounded-full bg-slate-500"></div>
-            <p1 class="m-2 text-slate-400">Add a comment...</p1>
-      </div>-->
+            <div class="w-[25rem] h-[27rem] flex flex-col justify-between">
+
+              <div class="flex flex-col">
+                <div class="text-gray-700 text-lg font-bold rounded-lg inline-flex mt-4 ml-4 py-2 cursor-pointer">
+                  <div class="w-4 h-4 mt-1 fill-black mr-2 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M152 64H296V24C296 10.75 306.7 0 320 0C333.3 0 344 10.75 344 24V64H384C419.3 64 448 92.65 448 128V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V128C0 92.65 28.65 64 64 64H104V24C104 10.75 114.7 0 128 0C141.3 0 152 10.75 152 24V64zM48 448C48 456.8 55.16 464 64 464H384C392.8 464 400 456.8 400 448V192H48V448z"/></svg> 
+                  </div>
+                  <span class="pt-[2.5px]">
+                    {{postDate}}
+                  </span>
+                </div>
+
+                <div>
+                </div>
+
+                <div class="flex flex-col flex-grow">
+                  <h1 class="text-3xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100">{{postTitle}}</h1>
+                  <p class="ml-4 mt-1 mb-2 text-gray-700 cursor-pointer">{{postDescription}}</p>
+                </div>
+              </div>
+
+              <div class="flex p-4 justify-between">
+                <div class="flex items-center space-x-2">
+                  <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
+                  <h2 class="text-gray-800 font-bold cursor-pointer">{{username}}</h2>
+                </div>
+                <div class="flex space-x-2">
+                  <div class="flex space-x-1 items-center">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </span>
+                    <span>{{comments}}</span>
+                  </div>
+                  <div class="flex space-x-1 items-center">
+                    <span @click="likePost()">
+                      <svg ref="heartIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>{{likes}}</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+              
+          </div>
+
+            <div
+              class="flex justify-between bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+            >
+            <div></div>
+              <span
+                class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+              >
+                <button
+                  type="button"
+                  class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                  @click="showModal = false"
+                >
+                  Close
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+  <div @click="showModal = true" class="m-10 w-96 bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-[1.01] hover:shadow-2xl">
+    <div>
+      <div class="text-white text-xs font-bold rounded-lg bg-green-500 inline-flex mt-4 ml-4 py-2 px-3 cursor-pointer">
+        <div class="w-4 h-4 fill-white mr-2 mb-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M152 64H296V24C296 10.75 306.7 0 320 0C333.3 0 344 10.75 344 24V64H384C419.3 64 448 92.65 448 128V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V128C0 92.65 28.65 64 64 64H104V24C104 10.75 114.7 0 128 0C141.3 0 152 10.75 152 24V64zM48 448C48 456.8 55.16 464 64 464H384C392.8 464 400 456.8 400 448V192H48V448z"/></svg> 
+        </div>
+        <span class="pt-[2.5px]">
+          {{postDate}}
+        </span>
+      </div>
+      <h1 class="text-2xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100">{{postTitle}}</h1>
+      <p class="ml-4 mt-1 mb-2 text-gray-700 cursor-pointer">{{descPreview}}</p>
+    </div>
+    <div class="w-full h-96 bg-cover bg-center cursor-pointer" :style="backgroundStyles(postImage)"></div>
+    <div class="flex p-4 justify-between">
+      <div class="flex items-center space-x-2">
+        <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
+        <h2 class="text-gray-800 font-bold cursor-pointer">{{username}}</h2>
+      </div>
+      <div class="flex space-x-2">
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </span>
+          <span>{{comments}}</span>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span @click="likePost()">
+            <svg ref="heartIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          <span>{{likes}}</span>
+        </div>
+      </div>
+    </div>
   </div>
+  
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  props: ["name"],
   name: "FeedCard",
   data() {
     return {
-      apiMessage: [],
-    };
+      username: null,
+      profilePicture: null,
+      likes: 0,
+      comments: 0,
+      descPreview: null,
+      id: null,
+      showModal: false,
+    }
+  },
+  props: {
+    currentUserId: String,
+    userId: String,
+    postId: String,
+    likeCount: Array,
+    postTitle: String,
+    postDate: String,
+    postImage: String,
+    postDescription: String,
+    postCategory: String,
+    postPrice: String,
+    postSize: String,
+    postCondition: String,
   },
   methods: {
-    async callApi() {
-      // Get the access token from the auth wrapper
-      //const token = await this.$auth.getTokenSilently();
+    backgroundStyles(postImage) {
+      return {
+        'background-image': `url(${postImage})`,
+      }
+    },
+    async likePost() {
+      const likeData = { "userId": `${this.currentUserId}` };
+      console.log(likeData)
+      const res = await axios.put(
+        `http://localhost:3001/api/posts/${this.postId}/like`,
+        { 
+          "userId": `${this.currentUserId}` 
+        }
+      );
+      console.log(res);
+      const heartButton = this.$refs.heartIcon;
+      if (res.data === "Liked") {
+        this.likes += 1;
+        heartButton.classList.add('text-red-500');
+      } else {
+        this.likes -= 1;
+        heartButton.classList.remove('text-red-500');
+      }
+    },
+    async getUserInfo() {
       try {
-        // const token = await this.$auth.getTokenSilently();
         const response = await fetch(
-          "https://lowballd-backend.onrender.com/api/posts/",
-          {
-            // headers: {
-            //   Authorization: `Bearer ${token}`,
-            // },
-          }
+          `https://lowballd-backend.onrender.com/api/user/${this.userId}`
         );
         const data = await response.json();
-        console.log(data);
-        this.apiMessage = data;
+        this.username = data.username;
+        this.profilePicture = data.profile_picture;
       } catch (error) {
         console.log(error);
       }
     },
   },
   mounted() {
-    this.callApi();
+    this.getUserInfo();
+    const heartButton = this.$refs.heartIcon;
+    if (this.likeCount.includes(this.currentUserId)) {
+      heartButton.classList.add('text-red-500');
+    }
+  },
+  created() {
+    for (let i = 0; i < this.likeCount.length; i++) {
+      this.likes += 1;
+    };
+    if (this.postDescription.length > 45) {
+      this.descPreview = this.postDescription.substring(0, 45) + "...";
+    } else {
+      this.descPreview = this.postDescription;
+    };
+    
   },
 };
 </script>
