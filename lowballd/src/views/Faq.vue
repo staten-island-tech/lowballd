@@ -2,7 +2,7 @@
 <GlobalNavbar/>
 <section class="text-gray-700">
         <div class="container px-5 py-24 mx-auto">
-          <div class="text-center mb-20">
+          <div class="text-center mb-20 ">
             <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
               Frequently Asked Question
             </h1>
@@ -11,12 +11,25 @@
               can do for you.
             </p>
           </div>
-          <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+          <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 border-2 border-white-900 p-[1%]">
+          
           
             <div class="w-full lg:w-1/2 px-4 py-2"><h1 class="text-xl">Shipping</h1>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  How do I change or cancel my order?
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  How do I change or cancel my order
+                </summary>
+
+                <span>
+                  Laboris qui labore cillum culpa in sunt quis sint veniam.
+                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                  minim velit nostrud pariatur culpa magna in aute.
+                </span>
+              </details>
+              
+              <details class="mb-4">
+                <summary class="font-semibold bg-gray-200  py-2 px-4">
+                  How can I track my order
                 </summary>
 
                 <span>
@@ -26,33 +39,22 @@
                 </span>
               </details>
               <details class="mb-4">
-                <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
-                  How can I track my order?
-                </summary>
-
-                <span>
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
-                </span>
-              </details>
-              <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  I placed an order, but never recieved a confirmation email.
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  I placed an order, but never recieved a confirmation email
                 </summary>
                 
                 <span>
                   Laboris qui labore cillum culpa in sunt quis sint veniam.
                   Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  minim velit nostrud pariatur culpa magna in aute. 
                 </span>
               </details>
             </div>
             <div class="w-full lg:w-1/2 px-4 py-2">
-            <h1 class="text-xl">Billing & Payment</h1>
+            <h1 class="text-xl">Account Management</h1>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  What payment methods are accepted?
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  Signing In
                 </summary>
 
                 <span class="px-4 py-2">
@@ -62,8 +64,8 @@
                 </span>
               </details>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  My card declined.
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  Forgot password/username
                 </summary>
 
                 <span class="px-4 py-2">
@@ -73,44 +75,8 @@
                 </span>
               </details>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  When will I recieve my refund?
-                </summary>
-
-                <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
-                </span>
-              </details>
-            </div>
-            <div class="w-full lg:w-1/2 px-4 py-2">
-            <h1 class="text-xl">Account</h1>
-              <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  What payment methods are accepted?
-                </summary>
-
-                <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
-                </span>
-              </details>
-              <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  My card declined?
-                </summary>
-
-                <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
-                </span>
-              </details>
-              <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  When will I recieve my refund?
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  Account privacy
                 </summary>
 
                 <span class="px-4 py-2">
@@ -121,10 +87,10 @@
               </details>
             </div>
             <div class="w-full lg:w-1/2 px-4 py-2">
-            <h1 class="text-xl">Billing & Payment</h1>
+            <h1 class="text-xl">Buying/Selling</h1>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  What payment methods are accepted?
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  What payment methods are accepted
                 </summary>
 
                 <span class="px-4 py-2">
@@ -134,8 +100,8 @@
                 </span>
               </details>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  My card declined?
+                <summary class="font-semibold  bg-gray-200 py-2 px-4">
+                  My card declined
                 </summary>
 
                 <span class="px-4 py-2">
@@ -145,8 +111,32 @@
                 </span>
               </details>
               <details class="mb-4">
-                <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  When will I recieve my refund?
+                <summary class="font-semibold  bg-gray-200 py-2 px-4">
+                  How do I get a refund
+                </summary>
+
+                <span class="px-4 py-2">
+                  Laboris qui labore cillum culpa in sunt quis sint veniam.
+                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                  minim velit nostrud pariatur culpa magna in aute.
+                </span>
+              </details>
+            
+              <details class="mb-4">
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  Where can I list items
+                </summary>
+
+                <span class="px-4 py-2">
+                  Laboris qui labore cillum culpa in sunt quis sint veniam.
+                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                  minim velit nostrud pariatur culpa magna in aute.
+                </span>
+              </details>
+              
+              <details class="mb-4">
+                <summary class="font-semibold  bg-gray-200  py-2 px-4">
+                  How to get paid by Lowballd
                 </summary>
 
                 <span class="px-4 py-2">

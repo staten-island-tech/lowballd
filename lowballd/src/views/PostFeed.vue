@@ -77,6 +77,7 @@
                     </label>
 
                     <UploadImages
+                      id= "attachment"
                       :max="5"
                       maxError="Maximum of 5 files."
                       clearAll="Clear All"
@@ -88,6 +89,7 @@
                 </div>
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                   <button
+                    @click= "showAlert"
                     type="submit"
                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
@@ -130,6 +132,37 @@ export default {
     console.log(this.userId);
   },
   methods: {
+    showAlert() {
+      
+      var title = document.getElementById("post-title").value;
+      var about = document.getElementById("about").value;
+      var start = document.getElementById("start").value;
+        if (title == "" || about =="" || start == "mm/dd/yyyy" /*|| (document.getElementById('attachment').value !=="" )*/) {
+          
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "Please fill in the missing fields  to continue",
+            });
+
+        }
+        else{
+          
+            this.$swal({
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
+        }
+      
+    },
+
+
+
+
     uploadFile() {
       this.posts.images = this.$refs.file.files;
       console.log(this.posts.images);
@@ -153,7 +186,7 @@ export default {
         { headers }
       );
       console.log(res);
-      alert("Post has been saved");
+      
     },
     dateToYYYYMMDD(d) {
       // alternative implementations in https://stackoverflow.com/q/23593052/1850609

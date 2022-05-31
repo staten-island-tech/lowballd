@@ -134,13 +134,14 @@
                   <label class="block text-sm font-medium text-gray-700">
                     Add photos (up to 5)
                   </label>
-
+                  
                   <UploadImages
                     :max="5"
                     maxError="Maximum of 5 files."
                     clearAll="Clear All"
                     ref="file"
-                
+                    id= "attachment"
+                    onchange="Filevalidation()"
                     @change="uploadFile"
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
@@ -149,7 +150,6 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   @click="showAlert"
-                  
                   type="button"
                   class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
@@ -193,6 +193,7 @@ export default {
   },
 
   methods: {
+    
     showAlert() {
       
       var title = document.getElementById("listing.title").value;
@@ -201,7 +202,7 @@ export default {
       var size = document.getElementById("listing.size").value;
       var category = document.getElementById("listing.category").value;
       var condition = document.getElementById("listing.condition").value;
-        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" ) {
+        if (title == "" || description =="" || price == "" || size == "" || category == "Choose a category" || condition == "What condition is this in?" /*|| (document.getElementById("attachment").value !== "")*/) {
           
             this.$swal({
               icon: "error",
