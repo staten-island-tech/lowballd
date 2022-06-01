@@ -17,8 +17,8 @@
             aria-modal="true"
             aria-labelledby="modal-headline"
           >
-          <div class="p-10 w-[50rem]">
-            <h1 class="text-3xl mb-4">Upload a new profile picture</h1>
+          <div class="p-10 w-[30rem]">
+            <h1 class="text-2xl mb-4">Upload a new profile picture</h1>
             <UploadImages
                       :max="5"
                       maxError="Maximum of 1 file."
