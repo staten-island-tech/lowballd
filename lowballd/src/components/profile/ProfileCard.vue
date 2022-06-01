@@ -61,7 +61,7 @@
       <div class="my-2"></div>
       <div class="avatar mx-auto my-4">
         <div
-          class="rounded-full w-24 h-24 ring ring-primary ring-offset-base-100 ring-offset-2"
+          class="rounded-full w-24 h-24 ring ring-green-500 ring-offset-base-100 ring-offset-2"
         >
           <img :src="profileData.profile_picture" />
         </div>
