@@ -23,26 +23,31 @@
       </div>
       <div class="py-6">
         <button
+          @click="this.$emit('set-shown-value', 1)"
           class="btn btn-sm w-4/5 mx-auto mb-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Feed Posts
         </button>
         <button
+          @click="this.$emit('set-shown-value', 2)"
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Listings
         </button>
         <button
+          @click="this.$emit('set-shown-value', 3)"
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Manage Account
         </button>
         <button
+         @click="this.$emit('set-shown-value', 4)"
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Your Purchases
         </button>
         <button
+          @click="this.$emit('set-shown-value', 5)"
           class="btn btn-sm w-4/5 mx-auto my-2 bg-gray-100 text-slate-900 hover:bg-sky-100"
         >
           Notification Settings
@@ -55,6 +60,7 @@
 <script>
 export default {
   name: "ProfileCard",
+  emits: ['set-shown-value'],
   data() {
     return {
       userdata: this.$auth.user,
@@ -87,6 +93,9 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    setShownValue(value) {
+      this.$emit("setshownvalue", value);
     },
   },
   created() {
