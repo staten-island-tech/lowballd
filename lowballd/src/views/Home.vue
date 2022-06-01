@@ -275,8 +275,36 @@
   </div>
 
 </section>
+<section>
+<div class="relative bg-cover h-80 bg-no-repeat bg-fixed">
+  <h1 class="text-3xl font-bold sm:text-4xl text-center">Share your outfits</h1>
+    <div class="flex flex-row w-[100%] h-[70%] overflow-hidden">
+      <div class="bg-center bg-cover flex-1">
+        <div style= "background-image: url('https://storage.googleapis.com/depop-blog-assets/image1_10_RYTFdvC_resized.jpg')">
+        </div>
+      </div>
+      <div class="bg-center bg-cover flex-1">
+        <div class="style= background-image: url('https://storage.googleapis.com/depop-blog-assets/image1_10_RYTFdvC_resized.jpg')">
+        </div>
+      </div>
+      <div class="bg-center bg-cover flex-1">
+        <div class="style= background-image: url('https://storage.googleapis.com/depop-blog-assets/image1_10_RYTFdvC_resized.jpg')">
+        </div>
+      </div>
+      <div class="bg-center bg-cover flex-1">
+        <div class="style= background-image: url('https://storage.googleapis.com/depop-blog-assets/image1_10_RYTFdvC_resized.jpg')">
+        </div>
+      </div>
+      
+    </div>
+</div>
   
-  <Footer />
+                
+            
+  
+  
+</section>
+<Footer />
 </template>
 
 <script>
