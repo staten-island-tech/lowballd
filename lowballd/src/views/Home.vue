@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <GlobalNavbar />
-    <token></token>
-    <div class="h-screen w-screen flex flex-col justify-center">
+  <GlobalNavbar/>
+  <token></token>
+    <div class="w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
+        style="background-image:url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elfa-closet-1570213713.jpg)">
+        <div class="h-screen w-screen flex flex-col justify-center">
       <div class="flex flex-row justify-around -mt-12 h-96">
         <div class="h-2/3 w-1/3 text-left">
           <p class="font-normal mb-1">— NOW PRESENTING</p>
@@ -52,11 +53,13 @@
         </div>
       </div>
     </div>
+  </div>
     <section>
+  
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full">
+        <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[100ms]" v-motion-slide-visible-once-left>
           <img
             class="absolute inset-0 object-cover w-full h-full"
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/narrative/homepage-narrative-seller@2x.jpg"
@@ -65,7 +68,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100">
+      <div class="relative flex items-center bg-gray-100  ease-in duration-[100ms]" v-motion-slide-visible-once-right>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
         ></span>
@@ -95,7 +98,7 @@
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
-      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0">
+      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[100ms]" v-motion-slide-visible-once-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -125,7 +128,7 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[100ms]" v-motion-slide-visible-once-right>
         <a
           class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
           
@@ -234,7 +237,45 @@
     </div>
   </div>
 </section>
+<section>
+  <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8 mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
+      <div class="relative z-10 lg:py-16">
+        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[100ms]" v-motion-slide-visible-once-left>
+          <img
+            class="absolute inset-0 object-cover w-full h-full "
+            src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/seller/sell-easily.jpg"
+            alt="Indoors house"
+          />
+        </div>
+      </div>
+
+      <div class="relative flex items-center bg-gray-100 ease-in duration-[100ms]" v-motion-slide-visible-once-right>
+        <span
+          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
+        ></span>
+        <div class="p-8 sm:p-16 lg:p-24 ">
+          <h2 class="text-5xl font-bold sm:text-3xl">
+            Sell your clothes
+          </h2>
+
+          <p class="mt-4 text-gray-600 text-lg">
+            Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
+          </p>
+
+          <a
+            class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
+            href="/sell"
+          >
+            Start selling
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
+
+</section>
+  
   <Footer />
 </template>
 
@@ -249,3 +290,5 @@ export default {
   },
 };
 </script>
+
+
