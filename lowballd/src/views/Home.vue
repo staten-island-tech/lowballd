@@ -25,7 +25,7 @@
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[100ms]" v-motion-slide-visible-once-left>
+        <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[180ms]" v-motion-slide-visible-once-left>
           <img
             class="absolute inset-0 object-cover w-full h-full"
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/narrative/homepage-narrative-seller@2x.jpg"
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-200  ease-in duration-[100ms]" v-motion-slide-visible-once-right>
+      <div class="relative flex items-center bg-gray-100  ease-in duration-[180ms]" v-motion-slide-visible-once-right>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
         ></span>
@@ -50,8 +50,9 @@
 
           <a
             class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="https://dev-5t61kzw2.us.auth0.com/u/login/identifier?state=hKFo2SBVX1pjbHlIUUJwb2VkWS1PU091aHBxWFhmS24yT0o2RqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDBfaXRERlF1dmxuTkJDNEU3LXAtYnVQdG5aRVhxXy1Io2NpZNkgWnhwbVBQbU1XaW16WDJsSXA1Tm1vVE5remIwUTNUVE4"
+           
           >
+            
             Get started
           </a>
         </div>
@@ -64,7 +65,7 @@
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
-      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[100ms]" v-motion-slide-visible-once-left>
+      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-once-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -94,7 +95,7 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[100ms]" v-motion-slide-visible-once-right>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
         <a
           class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
           
@@ -115,7 +116,7 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-100 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
           
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
@@ -133,7 +134,7 @@
         </a>
 
         <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
+          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-100 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
           
         >
           <span class="inline-block p-3 rounded-lg bg-gray-50">
@@ -207,7 +208,7 @@
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8 mb-20">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[100ms]" v-motion-slide-visible-once-left>
+        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[180ms]" v-motion-slide-visible-once-left>
           <img
             class="absolute inset-0 object-cover w-full h-full "
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/seller/sell-easily.jpg"
@@ -216,7 +217,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-200 ease-in duration-[100ms]" v-motion-slide-visible-once-right>
+      <div class="relative flex items-center bg-gray-100 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
@@ -242,7 +243,7 @@
 
 </section>
   <section>
-    <div class=" relative flex items-center bg-gray-200 ease-in duration-[100ms]" >
+    <div class=" relative flex items-center bg-gray-100 ease-in duration-[150ms]"  v-motion-slide-visible-once-bottom >
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
@@ -279,14 +280,6 @@
         
       
       </div>
-       <div class="mt-[-3%] relative flex items-center bg-gray-100 pb-8">
-        <span
-          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
-        ></span>
-        <div class="p-8 sm:p-16 lg:p-24 ">
-          
-        </div>
-      </div>
       </section>
   <section class=" mb-72">
   <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -294,7 +287,7 @@
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
     </div>
-      <div class="max-w-lg mx-auto text-center  lg:text-left lg:mx-0 ease-in duration-[100ms]" v-motion-slide-visible-once-left>
+      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-once-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -324,7 +317,7 @@
         </a>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[100ms]" v-motion-slide-visible-once-right>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
     
       <div class="relative w-full max-w-lg">
         <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" v-motion-slide-visible-once-top style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
@@ -343,13 +336,14 @@
 </template>
 
 <script>
+
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
 
 export default {
   name: "Home",
   components: {
-    GlobalNavbar, Footer
+    GlobalNavbar, Footer,
   },
 };
 </script>
