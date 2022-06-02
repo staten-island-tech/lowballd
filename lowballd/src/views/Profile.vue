@@ -1,72 +1,33 @@
 <template>
     <GlobalNavbar></GlobalNavbar>
-    <div>
-      <div class="flex flex-col items-center justify-center p-3 min-h-full">
-        
-        <button
-          @click="onToggle"
-          class="bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600"
-        >
-          Open
-        </button>
-      </div>
-            <transition name="fade">
-        <div v-if="isModalVisible">
-          <div
-            @click="onToggle"
-            class="absolute bg-black opacity-70 inset-0 z-10"
-          ></div>
-          <div
-            class="w-full max-w-lg p-3 absolute left-[29rem] mx-auto my-auto rounded-xl shadow-lg bg-white z-10"
-          >
-            <div>
-              <div class="text-center p-3 flex-auto justify-center leading-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-16 h-16 flex items-center text-purple-500 mx-auto"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <h2 class="text-2xl font-bold py-4">Update Your Profile Picture Below</h2>
-                <UploadImages
-                      :max="1"
-                      maxError="Maximum of 1 file."
-                      clearAll="Clear All"
-                      ref="file"
-                      @change="uploadFile"
-                    />
-                
-              </div>
-              <div class="p-3 mt-2 text-center space-x-4 md:block">
-                <button
-                  class="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-md hover:shadow-lg hover:bg-gray-100"
-                >
-                  Save
-                </button>
-                <button
-                  @click="onToggle"
-                  class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </transition> 
-      </div>
     <div v-if="authenticationStatus" class="authenticated">
+      <transition name="fade">
+      <div v-if="showModal" class="fixed z-10 inset-0 overflow-y-auto">
+        <div
+          class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+        >
+          <div @click="showModal = false" class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span
+            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          ></span
+          >&#8203;
+          <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-headline"
+          >
+        </div>
+        </div>
+      </div>
+    </transition>
       <div
         class="w-full flex flex-row justify-around sm:flex sm:flex-col sm:justify-center"
       >
-        <ProfileCard></ProfileCard>
-        <ProfileContent></ProfileContent>
+        <ProfileCard @set-shown-value="changeShownValue"></ProfileCard>
+        <ProfileContent :shown="this.shownValue" ref="profilecontent"></ProfileContent>
       </div>
     </div>
     <h1 v-else>
@@ -92,8 +53,15 @@ export default {
   data() {
     return {
       authenticationStatus: this.$auth.isAuthenticated,
+      shownValue: 1,
     };
   },
+  methods: {
+    changeShownValue(value) {
+      this.shownValue = value;
+      console.log(this.shownValue)
+    },
+    },
 };
 </script>
 <style scoped>
