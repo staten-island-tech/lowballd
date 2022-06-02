@@ -27,44 +27,10 @@
           <div class="aspect-w-1 aspect-h-1">
             <img
               alt="Mobile Phone Stand"
-              class="object-cover rounded-xl"
-              :src="prod.images[0]"
+              class="object-cover rounded-xl w-auto max-h-100"
+              :src="prod.images"
             />
           </div>
-
-          <!-- <div class="grid grid-cols-2 gap-4 lg:mt-4">
-          <div class="aspect-w-1 aspect-h-1">
-            <img
-              alt="Mobile Phone Stand"
-              class="object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1627844541143-a561a1a9b72a"
-            />
-          </div>
-
-          <div class="aspect-w-1 aspect-h-1">
-            <img
-              alt="Mobile Phone Stand"
-              class="object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1627844541143-a561a1a9b72a"
-            />
-          </div>
-
-          <div class="aspect-w-1 aspect-h-1">
-            <img
-              alt="Mobile Phone Stand"
-              class="object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1627844541143-a561a1a9b72a"
-            />
-          </div>
-
-          <div class="aspect-w-1 aspect-h-1">
-            <img
-              alt="Mobile Phone Stand"
-              class="object-cover rounded-xl"
-              src="https://images.unsplash.com/photo-1627844541143-a561a1a9b72a"
-            />
-          </div>
-        </div> -->
         </div>
 
         <div class="sticky top-0">
@@ -108,7 +74,7 @@
                   name="rating-2"
                   class="mask mask-star-2 bg-warning"
                 />
-                <p class="pl-2 pt-[3px]">{{ prod.likes.length }}</p>
+                <p class="pl-2 pt-[3px]">{{ prod.likes }}</p>
               </div>
               <!--<a href="#" class="text-blue-600 visited:text-purple-600">Message Seller</a>-->
             </div>
@@ -252,9 +218,10 @@
                     />
 
                     <span
+                      v-for="tag in prod.tags"
                       class="inline-block px-3 py-1 text-xs font-medium border rounded-full group peer-checked:bg-black peer-checked:text-white"
                     >
-                      {{ prod.tags }}
+                      {{ tag }}
                     </span>
                   </label>
                 </div>
@@ -379,15 +346,22 @@ export default {
       prod: {},
     };
   },
-  async created() {
-    console.log(this.$route.params.id);
-    const response = await fetch(
-      //Think the url changed - waiting for confirmation 
-      `https://lowballd-backend.onrender.com/api/market/${this.$route.params.id}`
-    );
-    const data = await response.json();
-    this.prod = data;
-    console.log(this.prod);
+  methods: {
+    async getDataById() {
+      console.log(this.$route.params.id);
+      const response = await fetch(
+        //Think the url changed - waiting for confirmation 
+        `https://lowballd-backend.onrender.com/api/market/${this.$route.params.id}`
+      );
+      const data = await response.json();
+      this.prod = data;
+      console.log(data.userId);
+    },
+
   },
+  created() {
+    this.getDataById();
+  }
+  
 };
 </script>
