@@ -2,14 +2,14 @@
   <GlobalNavbar/>
   <token></token>
   
-    <div class="w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
+  <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
         style="background-image:url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elfa-closet-1570213713.jpg)">
-        <div class="h-screen w-screen flex flex-col justify-center">
+    <div class="h-screen w-screen flex flex-col justify-center">
       <div class="flex flex-row justify-around -mt-12 h-96">
-        <div class="h-2/3 w-1/3 text-left">
-          <p class="font-normal text-center text-2xl mb-1 text-gray-100">— NOW PRESENTING</p>
-          <h1 class="font-bold text-8xl text-gray-100 mb-4 text-center">Lowballd</h1>
-          <h2 class="font-normal text-gray-100 text-center text-2xl text-lg">
+        <div class="h-2/3 w-1/3 text-left ">
+          <p class="font-extrabold text-center text-2xl mb-1 text-white">— NOW PRESENTING</p>
+          <h1 class="font-extrabold text-8xl text-white mb-4 text-center ">Lowballd</h1>
+          <h2 class="font-extrabold  text-white text-center text-2xl text-lg">
             An innovative fashion marketplace. A brand new social media.
           </h2>
           
@@ -25,7 +25,7 @@
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[180ms]" v-motion-slide-visible-once-left>
+        <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[180ms]" v-motion-slide-visible-left>
           <img
             class="absolute inset-0 object-cover w-full h-full"
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/narrative/homepage-narrative-seller@2x.jpg"
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100  ease-in duration-[180ms]" v-motion-slide-visible-once-right>
+      <div class="relative flex items-center bg-gray-100  ease-in duration-[180ms]" v-motion-slide-visible-right>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
         ></span>
@@ -65,7 +65,7 @@
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
-      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-once-left>
+      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -95,7 +95,7 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-right>
         <a
           class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
           
@@ -114,6 +114,7 @@
             Lorem ipsum dolor sit amet consectetur.
           </p>
         </a>
+          
 
         <a
           class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-100 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
@@ -208,7 +209,7 @@
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8 mb-20">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[180ms]" v-motion-slide-visible-once-left>
+        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[180ms]" v-motion-slide-visible-left>
           <img
             class="absolute inset-0 object-cover w-full h-full "
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/seller/sell-easily.jpg"
@@ -217,7 +218,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
+      <div class="relative flex items-center bg-gray-100 ease-in duration-[180ms]" v-motion-slide-visible-right>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
@@ -243,7 +244,7 @@
 
 </section>
   <section>
-    <div class=" relative flex items-center bg-gray-100 ease-in duration-[150ms]"  v-motion-slide-visible-once-bottom >
+    <div class=" relative flex items-center bg-gray-100 ease-in duration-[500ms]"  v-motion-fade-visible>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
@@ -252,7 +253,7 @@
             Share your outfits
           </h2>
 
-          <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] mb-[2%]">
+          <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] mb-[2%] whitespace-normal">
             Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
 
@@ -287,7 +288,7 @@
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
     </div>
-      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-once-left>
+      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -317,12 +318,12 @@
         </a>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-once-right>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
     
       <div class="relative w-full max-w-lg">
-        <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" v-motion-slide-visible-once-top style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
+        <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
         <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://assets.vogue.com/photos/600af64645612e3c356a87c1/master/w_2560%2Cc_limit/noah%2520x%2520louis%2520v%25201.21-3.jpg)"></div>
-        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" v-motion-slide-visible-once-right style="background-image:url(https://i.pinimg.com/736x/69/05/38/690538007051e5525f565017d86ef240.jpg)"></div>
+        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url(https://i.pinimg.com/736x/69/05/38/690538007051e5525f565017d86ef240.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(https://fashionista.com/.image/t_share/MTY2ODQ5MDkyMzM5NjM5MzE1/best-new-york-fashion-week-street-style-spring-2020.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-[93%] left-[200%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(https://cdn.decorpad.com/photos/2020/06/01/m_modular-closet-system.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-32 left-[250%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.pinimg.com/564x/0e/1b/74/0e1b740f3d8bd502d259e578b2eabe5a.jpg)"></div>
