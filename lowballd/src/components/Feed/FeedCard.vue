@@ -175,7 +175,7 @@ export default {
       const likeData = { "userId": `${this.currentUserId}` };
       console.log(likeData)
       const res = await axios.put(
-        `http://localhost:3001/api/posts/${this.postId}/like`,
+        `https://lowballd-backend.onrender.com/api/posts/${this.postId}/like`,
         { 
           "userId": `${this.currentUserId}` 
         }

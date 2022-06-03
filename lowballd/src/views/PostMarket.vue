@@ -215,7 +215,7 @@ export default {
       }
       const headers = { "Content-Type": `multipart/form-data` };
       const res = await axios.post(
-        "http://localhost:3001/api/market/upload",
+        "https://lowballd-backend.onrender.com/api/market/upload",
         formData,
         { headers }
       );
