@@ -12,7 +12,7 @@
       <router-link to="contact" @click="checkLogin" class="px-6"
         >Contact</router-link
       >
-      <router-link to="faq" @click="checkLogin" class="px-6">Faq</router-link>
+      <router-link to="faq" @click="checkLogin" class="px-6">FAQ</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>

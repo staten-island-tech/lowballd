@@ -26,11 +26,14 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
         <div class="relative h-64 sm:h-80 lg:h-full  ease-in duration-[180ms]" v-motion-slide-visible-left>
-          <img
-            class="absolute inset-0 object-cover w-full h-full"
-            src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/narrative/homepage-narrative-seller@2x.jpg"
-            alt="Indoors house"
-          />
+          <iframe
+          id="ytplayer"
+          class="absolute inset-0  pt-[10%] pb-[10%] w-full h-full"
+            src="https://www.youtube.com/embed/dTe0S2nzB3I"
+            alt="Indoors house">
+          
+          </iframe>
+            
         </div>
       </div>
 
@@ -69,7 +72,7 @@
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
-          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Depop.
+          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
         </p>
 
         <a
@@ -108,11 +111,7 @@
           </span>
 
           <h6 class="mt-2 font-bold text-center">Luxury</h6>
-          
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
         </a>
           
 
@@ -129,9 +128,6 @@
 
           <h6 class="mt-2 font-bold text-center">Streetwear</h6>
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
         </a>
 
         <a
@@ -146,9 +142,6 @@
 
           <h6 class="mt-2 font-bold text-center">Avant Grade</h6>
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
         </a>
 
         <a
@@ -163,9 +156,6 @@
 
           <h6 class="mt-2 font-bold text-center">Vintage</h6>
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
         </a>
 
         <a
@@ -180,9 +170,6 @@
 
           <h6 class="mt-2 font-bold text-center">Techwear</h6>
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
         </a>
 
         <a
@@ -197,9 +184,7 @@
 
           <h6 class="mt-2 font-bold text-center">Minimalist</h6>
 
-          <p class="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
+
         </a>
       </div>
     </div>
@@ -228,7 +213,9 @@
           </h2>
 
           <p class="mt-4 text-gray-600 text-lg">
-            Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
+            Lowballd is a huge online community filled with buyers and sellers from every walk of life. It’s the place where the next generation comes to discover unique items and transform fashion. So when it comes to deciding what to sell on Lowballd, the choice is up to you and your imagination. Whatever your vibe we’ll share our pro tips to help you get there. It's simple to get started.
+
+.
           </p>
 
           <a
@@ -340,6 +327,23 @@
 
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
+ 
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '360',
+      width: '640',
+      videoId: 'M7lc1UVf-VE'
+    });
+  }
 
 export default {
   name: "Home",
