@@ -2,5 +2,5 @@
   "domain": "dev-5t61kzw2.us.auth0.com",
   "client_id": "ZxpmPPmMWimzX2lIp5NmoTNkzb0Q3TTN",
   "redirect_uri": "https://lowballd.com/",
-  "audience": "https://lowballd-backend.onrender.com/api/"
+  "audience": "http://localhost:3001/api"
 }
