@@ -90,4 +90,8 @@ export default {
 .btn:hover {
   @apply bg-slate-400;
 }
+
+.button:active {
+  @apply bg-green-500;
+}
 </style>
