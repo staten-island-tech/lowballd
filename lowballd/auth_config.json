@@ -3,4 +3,5 @@
   "client_id": "ZxpmPPmMWimzX2lIp5NmoTNkzb0Q3TTN",
   "redirect_uri": "https://lowballd.com/",
   "audience": "http://localhost:3001/api"
+  
 }
