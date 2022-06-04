@@ -1,16 +1,12 @@
 <template>
   <div class="w-full h-20 flex flex-row justify-between px-8 py-4">
-    <router-link to="/" @click="checkLogin" class="text-xl my-auto"
-      >Lowballd</router-link
-    >
+    <router-link to="/" class="text-xl my-auto">Lowballd</router-link>
     <div class="my-auto">
       <router-link to="feed" @click="checkLogin" class="px-6">Feed</router-link>
       <router-link to="marketplace" @click="checkLogin" class="px-6"
         >Marketplace</router-link
       >
-      <router-link to="contact" @click="checkLogin" class="px-6"
-        >Contact</router-link
-      >
+      <router-link to="contact" class="px-6">Contact</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>
