@@ -1,26 +1,26 @@
 <template>
-  <GlobalNavbar/>
-  <token></token>
+<GlobalNavbar/>
+<token></token>
   
-  <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
+<div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
         style="background-image:url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elfa-closet-1570213713.jpg)">
-    <div class="h-screen w-screen flex flex-col justify-center">
-      <div class="flex flex-row justify-around -mt-12 h-96">
-        <div class="h-2/3 w-1/3 text-left ">
-          <p class="font-extrabold text-center text-2xl mb-1 text-white">— NOW PRESENTING</p>
+  <div class="h-screen w-screen flex flex-col justify-center">
+    <div class="flex flex-row justify-around -mt-12 h-96">
+      <div class="h-2/3 w-1/3 text-left ">
+          <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
           <h1 class="font-extrabold text-8xl text-white mb-4 text-center ">Lowballd</h1>
           <h2 class="font-extrabold  text-white text-center text-2xl text-lg">
             An innovative fashion marketplace. A brand new social media.
           </h2>
           
-        </div>
-        <div class="w-1/2 h-full">
+      </div>
+      <div class="w-1/2 h-full">
           
-        </div>
       </div>
     </div>
   </div>
-    <section>
+</div>
+<section>
   
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
@@ -64,11 +64,10 @@
   </div>
 </section>
 <section>
-  <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="max-w-screen-xl mb-20 px-4 py-16 sm:px-6 lg:px-8">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
-    >
-      <div class="max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
+      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 ml-[10%] lg:items-center">
+      <div class= " max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
@@ -79,117 +78,32 @@
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          <span class="text-sm font-medium"> Browse more </span>
-
-          <svg
-            class="w-5 h-5 ml-3"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
+          Browse more
         </a>
       </div>
-
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[180ms]" v-motion-slide-visible-right>
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"
-            />
-
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Luxury</h6>
-
-        </a>
-          
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-100 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/hHu9wROVc4oPwjH5oBBzh/49023c5409f1c667eca2c93553865601/ShopByStyle_Streetwear2.jpg?fm=webp&h=245&w=390"
-            />
-
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Streetwear</h6>
-
-        </a>
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-100 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/2I3OaWW2bWHgka7uk0px2m/fbf148955eefc10e5b7e66d106016375/ShopByStyle_Web-AvantGarde.jpg?fm=webp&h=245&w=390"
-            />
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Avant Grade</h6>
-
-        </a>
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/64c54eca4b895d9aba3ca6aad1465d1e/ShopByStyle_Web-Vintage4.jpg?fm=webp&h=245&w=390"
-            />
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Vintage</h6>
-
-        </a>
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/7767e0a2dcd4dff3fd77e46297121e3c/ShopByStyle_Web-Tech3.jpg?fm=webp&h=245&w=390"
-            />
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Techwear</h6>
-
-        </a>
-
-        <a
-          class="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200 hover:scale-[110%]"
-          
-        >
-          <span class="inline-block p-3 rounded-lg bg-gray-50">
-            <img class="w-40 h-35"
-            src="https://images.ctfassets.net/bdvz0u6oqffk/1itLXxA6Ajm41pG1sU7HuN/7f295c2f005a71791794b4f19a18d384/ShopByStyle_Web-Minimal-2.jpg?fm=webp&h=245&w=390"
-            />
-          </span>
-
-          <h6 class="mt-2 font-bold text-center">Minimalist</h6>
-
-
-        </a>
+      
+      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
+        
+<section class="mt-[-50%]">
+        <div class="content">
+          <div class="carrousel">
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/hHu9wROVc4oPwjH5oBBzh/49023c5409f1c667eca2c93553865601/ShopByStyle_Streetwear2.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/2I3OaWW2bWHgka7uk0px2m/fbf148955eefc10e5b7e66d106016375/ShopByStyle_Web-AvantGarde.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/64c54eca4b895d9aba3ca6aad1465d1e/ShopByStyle_Web-Vintage4.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/7767e0a2dcd4dff3fd77e46297121e3c/ShopByStyle_Web-Tech3.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/1itLXxA6Ajm41pG1sU7HuN/7f295c2f005a71791794b4f19a18d384/ShopByStyle_Web-Minimal-2.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/73f89a357d1de4f379d7cf7bcdb9cbee/Style_5.png?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/LBz479rx3wuqhRNA98TFf/3dd1e89db00c87079df8eb9a8fa43a10/Streetwear.jpg?fm=webp&h=245&w=390"></figure>
+            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/0a7cfd535f322ea919dd90e5e32041e5/Style_4.png?fm=webp&h=245&w=390"></figure>
+          </div>
+        </div>
+      </section>
       </div>
     </div>
   </div>
-</section>
+</section>        
+
 <section>
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8 mb-20">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
@@ -213,9 +127,7 @@
           </h2>
 
           <p class="mt-4 text-gray-600 text-lg">
-            Lowballd is a huge online community filled with buyers and sellers from every walk of life. It’s the place where the next generation comes to discover unique items and transform fashion. So when it comes to deciding what to sell on Lowballd, the choice is up to you and your imagination. Whatever your vibe we’ll share our pro tips to help you get there. It's simple to get started.
-
-.
+            Want to sell used clothes? Try Lowballd. List your clothes fast and sell with no fees. No space left in your closet? List it in our marketplace to declutter your closet space. Simply don't enjoy one of your fashion pieces anymore? Like that saying - one man's trash can be another man's treasure. 
           </p>
 
           <a
@@ -231,7 +143,7 @@
 
 </section>
   <section>
-    <div class=" relative flex items-center bg-gray-100 ease-in duration-[500ms]"  v-motion-fade-visible>
+    <div class=" relative flex items-center bg-gray-100 ease-in duration-[300ms]"  v-motion-fade-visible>
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
@@ -241,7 +153,7 @@
           </h2>
 
           <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] mb-[2%] whitespace-normal">
-            Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
+            The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
           </p>
 
           <a
@@ -255,6 +167,8 @@
     
     
       <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
+        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7  "
+        style="background-image:url(https://gracefulstory.com/wp-content/uploads/2016/09/street-style-1200x700.jpg)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7  "
         style="background-image:url(https://gracefulstory.com/wp-content/uploads/2016/09/street-style-1200x700.jpg)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
@@ -279,7 +193,7 @@
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
-          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Depop.
+          The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
         </p>
 
         <a
@@ -317,33 +231,15 @@
     
     </div>
   </div>
-
 </section>
-
 <Footer/>
+
 </template>
 
 <script>
 
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
- 
-// Load the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
-      videoId: 'M7lc1UVf-VE'
-    });
-  }
 
 export default {
   name: "Home",
@@ -352,5 +248,70 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.content{
+  left: 35%;
+  width:200px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+  margin: auto;
+} 
+
+.carrousel{
+  width:100%;
+  position: absolute;
+  
+  animation: rotate 15s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+
+}
+.carrousel figure{
+  width:90%;
+  height:200px;
+  position: absolute;
+}
+.carrousel img{
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%
+  
+}
+.carrousel img:hover{
+  transform: scale(1.1) ;
+  transition:all 1000ms;
+}
+  @keyframes rotate{
+    0% {
+      transform: rotateY(0deg) ;
+   }
+   100% {
+      transform: rotateY(360deg);
+   }
+  } 
+
+.carrousel figure:nth-child(1) { transform:rotateY(0deg) translateZ(350px); }
+.carrousel figure:nth-child(2) { transform:rotateY(40deg) translateZ(350px); }
+.carrousel figure:nth-child(3) { transform:rotateY(80deg) translateZ(350px); }
+.carrousel figure:nth-child(4) { transform:rotateY(120deg) translateZ(350px); }
+.carrousel figure:nth-child(5) { transform:rotateY(160deg) translateZ(350px); }
+.carrousel figure:nth-child(6) { transform:rotateY(200deg) translateZ(350px); }
+.carrousel figure:nth-child(7) { transform:rotateY(240deg) translateZ(350px); }
+.carrousel figure:nth-child(8) { transform:rotateY(280deg) translateZ(350px); }
+.carrousel figure:nth-child(9) { transform:rotateY(320deg) translateZ(350px); }
+
+
+
+  
+  
+</style>
 
 
