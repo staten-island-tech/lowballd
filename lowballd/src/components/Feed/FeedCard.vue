@@ -269,6 +269,10 @@ export default {
       }
     },
     async likePost() {
+      if (!this.$auth.isAuthenticated.value) {
+        alert("please login to like this post");
+        return;
+      } else {
       const likeData = { "userId": `${this.currentUserId}` };
       console.log(likeData)
       const res = await axios.put(
@@ -289,6 +293,7 @@ export default {
         this.likes -= 1;
         heartButton.classList.remove('text-red-500');
         modalHeartButton.classList.remove('text-red-500');
+      }
       }
     },
     async getUserInfo() {

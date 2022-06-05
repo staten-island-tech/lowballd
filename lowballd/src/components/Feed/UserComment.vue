@@ -5,9 +5,14 @@
                         <div ref="commentPicture" class="h-12 w-12 bg-cover bg-center rounded-full">
                         </div>
                         <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">{{username}}</p>
+                            <div class="flex flex-row justify-center">
+                                <p class="font-bold">{{username}}</p> 
+                                <p class="ml-2 mt-1 text-xs text-slate-400">{{date}}</p>
+                            </div>
+                            
                             <p class="text-sm text-slate-500">{{comment}}</p>
                         </div>
+                        
                     </div>
                 </div>
 </template>
