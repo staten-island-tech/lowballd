@@ -2,11 +2,11 @@
 
                 <div class="w-full h-20 flex flex-col justify-center">
                     <div class="flex flex-row">
-                        <div :style="backgroundStyles(image)" class="h-12 w-12 bg-cover rounded-full">
+                        <div ref="commentPicture" class="h-12 w-12 bg-cover bg-center rounded-full">
                         </div>
                         <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">{{commenter.username}}</p>
-                            <p class="text-sm text-slate-500">{{commenter.comment}}</p>
+                            <p class="font-bold">{{username}}</p>
+                            <p class="text-sm text-slate-500">{{comment}}</p>
                         </div>
                     </div>
                 </div>
@@ -15,19 +15,41 @@
 <script>
 export default {
     name: 'UserComment',
+    
+    data() {
+        return {
+            username: null,
+            profile_picture: null,
+        };
+    },
     props: {
-        commenter: {
-            username: 'Mike Whalen',
-            profile_picture: 'https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg',
-            comment: "This sucks",
-        }
+            userId: null,
+            date: null,
+            comment: null,
     },
     methods: {
         backgroundStyles(image) {
             return {
-                'background-image': `url(${commenter.profile_picture})`,
+                'background-image': `url(${profile_picture})`,
             }
         },
+        async getUserInfo() {
+            try {
+                const response = await fetch(
+                `https://lowballd-backend.onrender.com/api/user/${this.userId}`
+                );
+                const data = await response.json();
+                this.username = data.username;
+                this.profilePicture = data.profile_picture;
+                const commentPic = this.$refs.commentPicture;
+                commentPic.style.backgroundImage = `url(${this.profilePicture})`;
+            } catch (error) {
+                console.log(error);
+            }
+        },
+    },
+    mounted() {
+        this.getUserInfo();
+    },
     }
-}
 </script>

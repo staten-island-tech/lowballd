@@ -52,7 +52,7 @@
                 </div>
                 <div class="flex space-x-2">
                   <div class="flex space-x-1 items-center">
-                    <span>
+                    <span @click="showComments = true">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
@@ -116,70 +116,45 @@
           >
           <div class="p-10 w-[30rem] h-[30rem] flex flex-row justify-between flex flex-col">
             <div>
-              <h1 class="text-3xl font-bold text-gray-800">Comments</h1>
+              <h1 class="text-3xl font-bold text-gray-800 -mb-6">Comments</h1>
             </div>
 
-            <div class="overflow-scroll h-full w-full">
-              <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
+            <div class="overflow-scroll h-4/6 w-full">
+
+                <UserComment v-for="comment in commentsCount" :userId="comment.userId" :comment="comment.comment" :date="comment.date"></UserComment>
+                
+            </div>
+            <div class="w-full h-1/6">
+                <div class="flex justify-between">
+                    <div class="w-4/5 mt-1">
+                      <textarea
+                        v-model="userComment"
+                        id="commentbox"
+                        name="commentbox"
+                        rows="2"
+                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                        placeholder="Leave a comment..."
+                      ></textarea>
                     </div>
-                </div>
-                <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full h-20 flex flex-col justify-center">
-                    <div class="flex flex-row">
-                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
-                        </div>
-                        <div class="mx-4 flex flex-col justify-center">
-                            <p class="font-bold">Mike Whalen</p>
-                            <p class="text-sm text-slate-500">This sucks!</p>
-                        </div>
-                    </div>
-                </div>
+                    <button
+                    @click="postComment"
+                    class="
+                    mt-2
+                    w-1/5
+                    border border-transparent
+                    shadow-sm
+                    text-sm
+                    font-medium
+                    rounded-md
+                    text-white
+                    bg-green-600
+                    hover:bg-green-700
+                    focus:outline-none
+                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Post
+                  </button>
+                  </div>
             </div>
               
           </div>
@@ -269,6 +244,7 @@ export default {
       id: null,
       showModal: false,
       showComments: false,
+      userComment: null,
     }
   },
   props: {
@@ -276,6 +252,7 @@ export default {
     userId: String,
     postId: String,
     likeCount: Array,
+    commentsCount: Array, 
     postTitle: String,
     postDate: String,
     postImage: String,
@@ -326,6 +303,38 @@ export default {
         console.log(error);
       }
     },
+    async postComment() {
+      let commentDate = new Date();
+      let dd = commentDate.getDate();
+
+      let mm = commentDate.getMonth()+1; 
+      const yyyy = commentDate.getFullYear();
+      if(dd<10) 
+      {
+          dd=`0${dd}`;
+      } 
+
+      if(mm<10) 
+      {
+          mm=`0${mm}`;
+      } 
+      commentDate = `${mm}-${dd}-${yyyy}`;
+
+      if (this.userComment.length < 1) {
+        alert('Please enter a comment');
+      } else {
+        const commentData = {
+          "userId": `${this.currentUserId}`,
+          "comment": `${this.userComment}`,
+          "date": `${commentDate}`
+        };
+        const res = await axios.patch(
+          `http://localhost:3001/api/posts/${this.postId}/comment`,
+          commentData
+        );
+        console.log(res);
+      }
+    }
   },
   mounted() {
     this.getUserInfo();
@@ -339,6 +348,9 @@ export default {
   created() {
     for (let i = 0; i < this.likeCount.length; i++) {
       this.likes += 1;
+    };
+    for (let i = 0; i < this.commentsCount.length; i++) {
+      this.comments += 1;
     };
     if (this.postDescription.length > 45) {
       this.descPreview = this.postDescription.substring(0, 45) + "...";
