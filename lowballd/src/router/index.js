@@ -13,7 +13,7 @@ import Email from "../views/Email.vue";
 import Contact from "../views/Contact.vue";
 import Faq from "../views/Faq.vue";
 import PostMarket from "../views/PostMarket.vue";
-
+import ProfileSetup from "../views/ProfileSetup.vue";
 import productTest from "../components/product/ProductTest.vue";
 
 const routes = [
@@ -32,6 +32,7 @@ const routes = [
   { path: "/marketplace/:id", name: "productTest", component: productTest },
   { path: "/contact", name: "Contact", component: Contact },
   { path: "/sell", name: "PostMarket", component: PostMarket },
+  { path: "/accountsetup", name: "ProfileSetup", component: ProfileSetup },
 ];
 const router = createRouter({
   history: createWebHistory(),

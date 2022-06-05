@@ -2,7 +2,7 @@
   <div>
     <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
-      <div>
+      <div v-if="this.$auth.isAuthenticated.value">
         <div class="md:grid md:grid-cols-3 md:gap-6">
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form
@@ -101,6 +101,12 @@
           </div>
         </div>
       </div>
+      <div v-else>
+        <div class=" flex items-center justify-center">
+          <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
+        </div>
+        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline hover:cursor-pointer" @click="login()">login</a> to post a listing.</h1>   
+    </div>
     </div>
   </div>
   <Footer />
@@ -199,6 +205,17 @@ export default {
           .toISOString()
           .split("T")[0]
       );
+    },
+    async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
     },
   },
 };
