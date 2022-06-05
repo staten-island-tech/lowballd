@@ -149,8 +149,8 @@
 </section>
 <section class="mb-64">
   <div class=" pl-[20rem] pr-[40rem] pt-[20rem] ">
-      <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold sm:text-4xl h-[20rem] mt-[10%]">Reach out</h2>
+      <div class=" text-center ease-in duration-[180ms] h-[20rem]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold sm:text-4xl  mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
           The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
