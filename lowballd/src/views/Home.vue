@@ -64,8 +64,8 @@
   <div class=" mb-20 py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-      <div class= " max-w-lg mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
+      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold ">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
           Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
