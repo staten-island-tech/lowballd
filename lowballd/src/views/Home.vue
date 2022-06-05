@@ -172,25 +172,7 @@
       </div>
       </section>
   <section class=" mb-72">
-    <div class=" py-16 px-8">
-    <div
-      class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold ">Find your style</h2>
-
-        <p class="mt-4 text-gray-600 text-lg">
-          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
-        </p>
-
-        <a
-          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/marketplace"
-        >
-          Browse more
-        </a>
-      </div>
-      
-      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
+    
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
     
       <div class="relative w-full max-w-lg">
