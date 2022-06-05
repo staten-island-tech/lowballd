@@ -174,7 +174,20 @@
   <section class=" mb-72">
     
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
-    
+      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold ">Find your style</h2>
+
+        <p class="mt-4 text-gray-600 text-lg">
+          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
+        </p>
+
+        <a
+          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+          href="/marketplace"
+        >
+          Browse more
+        </a>
+      </div>
       <div class="relative w-full max-w-lg">
         <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
         <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://assets.vogue.com/photos/600af64645612e3c356a87c1/master/w_2560%2Cc_limit/noah%2520x%2520louis%2520v%25201.21-3.jpg)"></div>
