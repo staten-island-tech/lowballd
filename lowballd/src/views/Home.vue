@@ -138,7 +138,7 @@
 </section>
   <section>
       <div
-      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center">
+      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center bg-gray-200">
       <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold ">Find your style</h2>
 
