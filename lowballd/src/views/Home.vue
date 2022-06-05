@@ -63,7 +63,7 @@
 <section>
   <div class=" mb-20 py-16 px-8">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
+      class="grid grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
       <div class= " max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
