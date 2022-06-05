@@ -2,7 +2,7 @@
   <div>
     <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
-      <div v-if="this.$auth.isAuthenticated.value">
+      <div>
         <div class="md:grid md:grid-cols-3 md:gap-6">
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form
@@ -89,7 +89,7 @@
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                   <button
                     type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Submit
                   </button>
@@ -157,7 +157,7 @@ export default {
             this.$swal({
               icon: "error",
               title: "Oops...",
-              text: "Please fill in the missing fields to continue",
+              text: "Please fill in the missing fields  to continue",
             });
 
         }

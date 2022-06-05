@@ -69,9 +69,7 @@ export default {
   methods: {
     // Log the user in
     async login() {
-      this.$auth.loginWithRedirect({
-        returnTo: window.location.origin,
-      });
+      this.$auth.loginWithRedirect();
     },
     // Log the user out
     logout() {
@@ -91,9 +89,5 @@ export default {
 
 .btn:hover {
   @apply bg-slate-400;
-}
-
-.button:active {
-  @apply bg-green-500;
 }
 </style>
