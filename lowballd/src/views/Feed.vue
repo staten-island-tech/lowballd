@@ -26,6 +26,7 @@
         :postId="item._id"
         :userId="item.userId"
         :likeCount="item.likes"
+        :commentsCount="item.comments"
         :postTitle="item.title"
         :postDescription="item.description"
         :postImage="item.images[0]"
