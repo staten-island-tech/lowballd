@@ -103,6 +103,7 @@ export const routeGuard = (to, from, next) => {
 export const setupAuth = async (options, callbackRedirect) => {
   client = await createAuth0Client({
     ...options,
+    useRefreshTokens: true,
   });
 
   try {

@@ -1,7 +1,7 @@
 <template>
   <GlobalNavbar ref="navbarGlobal" />
   <div class="w-4/5 mx-auto my-6">
-    <div>
+    <div v-if="this.$auth.isAuthenticated.value">
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
@@ -109,18 +109,8 @@
                     <select
                       @change="updateCategory()"
                       ref="listingcategory"
-                      id="listing.category"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
                       <option value="Tops">Tops</option>
@@ -167,18 +157,8 @@
                     <select
                       @change="updateCondition()"
                       ref="listingcondition"
-                      id="listing.condition"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
                       <option value="New">New</option>
@@ -210,7 +190,7 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 mb-20">
                 <button
                   @click="showAlert"
-                  type="button"
+                  type="submit"
                   class="
                     inline-flex
                     justify-center
@@ -233,6 +213,15 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <div class="flex justify-center">
+        <div class="text-center">
+          <h1 class="text-2xl mb-4">
+            Please <a href="/login">login</a> to post a listing.
+          </h1>
         </div>
       </div>
     </div>
@@ -333,7 +322,7 @@ export default {
       }
       const headers = { "Content-Type": `multipart/form-data` };
       const res = await axios.post(
-        "http://localhost:3001/api/market/upload",
+        "https://lowballd-backend.onrender.com/api/market/upload",
         formData,
         { headers }
       );

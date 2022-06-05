@@ -2,7 +2,7 @@
   <div>
     <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
-      <div>
+      <div v-if="this.$auth.isAuthenticated.value">
         <div class="md:grid md:grid-cols-3 md:gap-6">
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form
@@ -91,13 +91,22 @@
                   <button
                     @click= "showAlert"
                     type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Submit
                   </button>
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+      <div v-else>
+        <div class="flex justify-center">
+          <div class="text-center">
+            <h1 class="text-2xl mb-4">
+              Please <a href="/login">login</a> to post an outfit.
+            </h1>
           </div>
         </div>
       </div>
