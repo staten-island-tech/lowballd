@@ -173,7 +173,7 @@
       </section>
   <section class=" mb-72">
   <div class=" py-16 px-8">
-      <div class=" mx-auto text-center mt-[20%] text-left mx-0 ease-in duration-[180ms] ml-[30%] bg-gray-200 " v-motion-slide-visible-left>
+      <div class=" mx-auto text-center mt-[20%] text-left mx-0 ease-in duration-[180ms] ml-[20%] px-[10%] bg-gray-200 " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
