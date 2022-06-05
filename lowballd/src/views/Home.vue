@@ -186,6 +186,8 @@ export default {
     GlobalNavbar, Footer,
   },
   // Log the user in
+methods: {
+    // Log the user in
     async login() {
       this.$auth.loginWithRedirect({
         returnTo: window.location.origin,
@@ -197,6 +199,7 @@ export default {
         returnTo: window.location.origin,
       });
     },
+  },
 };
 </script>
 
