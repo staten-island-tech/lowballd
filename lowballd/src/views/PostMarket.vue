@@ -25,7 +25,7 @@
                       v-model="listing.title"
                       type="text"
                       name="Title"
-                      id="listing-title"
+                      id="post-title"
                       class="
                         mt-1
                         focus:ring-indigo-500
@@ -267,7 +267,7 @@ export default {
   },
   methods: {
     showAlert() {
-      var title = document.getElementById("listing-title").value;
+      var title = document.getElementById("post-title").value;
       var description = document.getElementById("listingdescription").value;
       var price = document.getElementById("listingprice").value;
       var size = document.getElementById("listingsize").value;
