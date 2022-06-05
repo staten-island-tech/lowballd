@@ -138,7 +138,7 @@
 </section>
   <section>
       <div
-      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center bg-gray-200 ease-in duration-[200ms]" v-motion-fade-visible>
+      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[200ms]" v-motion-fade-visible>
       <div class= "p-8 mx-auto text-center ease-in duration-[200ms]" v-motion-fade-visible>
         <h2 class="text-3xl font-bold ">Share your outfit</h2>
 
@@ -172,9 +172,9 @@
       </div>
       </section>
   <section class=" mb-72">
-  <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class=" py-16 px-8">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
+      class="grid-cols-2 gap-y-8 gap-x-16 items-center"
     >
     </div>
       <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
