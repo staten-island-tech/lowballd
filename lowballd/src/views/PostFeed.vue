@@ -106,7 +106,7 @@
         <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline hover:cursor-pointer" @click="login()">login</a> to post a listing.</h1>  
       </div>
     </div>
-    
+  <Footer/>
   </div>
 </template>
 
