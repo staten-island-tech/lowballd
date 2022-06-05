@@ -19,20 +19,18 @@ export default {
       //const token = await this.$auth.getTokenSilently();
       try {
         const token = await this.$auth.getTokenSilently();
-        const response = await fetch(
-          "https://lowballd-backend.onrender.com/authorized",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch("http://localhost:3001/authorized", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         const data = await response.json();
         console.log(data);
         this.apiMessage = data;
       } catch (error) {
         console.log(error);
       }
+      
     },
   },
 };
