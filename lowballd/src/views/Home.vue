@@ -1,27 +1,23 @@
 <template>
 <GlobalNavbar/>
 <token></token>
-  
-<div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
-        style="background-image:url(https://i.pinimg.com/originals/c7/e5/fc/c7e5fcae592e9a3dba1f328ccfed9456.jpg)">
-  <div class="h-screen w-screen flex flex-col justify-center">
-    <div class="flex flex-row justify-around -mt-12 h-96">
-      <div class="h-2/3 w-1/3 text-left ">
-          <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
-          <h1 class="font-extrabold text-8xl text-white mb-4 text-center">Lowballd</h1>
-          <h2 class="font-extrabold  text-white text-center text-2xl">
-            An innovative fashion marketplace. A brand new social media.
-          </h2>
-          
-      </div>
-      <div class="w-1/2 h-full">
-          
+<section>
+  <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]" style="background-image:url(https://i.pinimg.com/originals/c7/e5/fc/c7e5fcae592e9a3dba1f328ccfed9456.jpg)">
+    <div class="h-screen w-screen flex flex-col justify-center">
+      <div class="flex flex-row justify-around -mt-12 h-96">
+        <div class="h-2/3 w-1/3 text-left ">
+            <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
+            <h1 class="font-extrabold text-8xl text-white mb-4 text-center">Lowballd</h1>
+            <h2 class="font-extrabold  text-white text-center text-2xl">
+              An innovative fashion marketplace. A brand new social media.
+            </h2>    
+        </div>
+        <div class="w-1/2 h-full"></div>
       </div>
     </div>
   </div>
-</div>
-<section>
-  
+</section>
+<section> 
   <div class=" py-16 mx-auto px-8">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
@@ -31,28 +27,20 @@
           class="absolute inset-0  pt-[10%] pb-[10%] w-full h-full"
             src="https://www.youtube.com/embed/dTe0S2nzB3I"
             alt="Indoors house">
-          
-          </iframe>
-            
+          </iframe> 
         </div>
       </div>
 
       <div class="relative flex items-center ease-in duration-[180ms]" v-motion-slide-visible-right>
-
         <div class="p-8 ">
           <h2 class=" font-bold text-3xl">
             What is Lowballd?
           </h2>
-
           <p class="mt-4 text-gray-600 text-lg">
             Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
-
           <a
-            class="inline-block px-12 py-3 mt-8 font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-           
-          >
-            
+            class="inline-block px-12 py-3 mt-8 font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"> 
             Get started
           </a>
         </div>
@@ -66,11 +54,9 @@
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
       <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold ">Find your style</h2>
-
         <p class="mt-4 text-gray-600 text-lg">
           Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
         </p>
-
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
@@ -79,28 +65,26 @@
         </a>
       </div>
       
-      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
-        
-<section>
-        <div class="content">
-          <div class="carrousel">
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/hHu9wROVc4oPwjH5oBBzh/49023c5409f1c667eca2c93553865601/ShopByStyle_Streetwear2.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/2I3OaWW2bWHgka7uk0px2m/fbf148955eefc10e5b7e66d106016375/ShopByStyle_Web-AvantGarde.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/64c54eca4b895d9aba3ca6aad1465d1e/ShopByStyle_Web-Vintage4.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/7767e0a2dcd4dff3fd77e46297121e3c/ShopByStyle_Web-Tech3.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/1itLXxA6Ajm41pG1sU7HuN/7f295c2f005a71791794b4f19a18d384/ShopByStyle_Web-Minimal-2.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/73f89a357d1de4f379d7cf7bcdb9cbee/Style_5.png?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/LBz479rx3wuqhRNA98TFf/3dd1e89db00c87079df8eb9a8fa43a10/Streetwear.jpg?fm=webp&h=245&w=390"></figure>
-            <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/0a7cfd535f322ea919dd90e5e32041e5/Style_4.png?fm=webp&h=245&w=390"></figure>
+      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>   
+        <section>
+          <div class="content">
+            <div class="carrousel">
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/hHu9wROVc4oPwjH5oBBzh/49023c5409f1c667eca2c93553865601/ShopByStyle_Streetwear2.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/2I3OaWW2bWHgka7uk0px2m/fbf148955eefc10e5b7e66d106016375/ShopByStyle_Web-AvantGarde.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/64c54eca4b895d9aba3ca6aad1465d1e/ShopByStyle_Web-Vintage4.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/7767e0a2dcd4dff3fd77e46297121e3c/ShopByStyle_Web-Tech3.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/1itLXxA6Ajm41pG1sU7HuN/7f295c2f005a71791794b4f19a18d384/ShopByStyle_Web-Minimal-2.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/vWBsGV7ZIMFsxKgJq6VL4/73f89a357d1de4f379d7cf7bcdb9cbee/Style_5.png?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/LBz479rx3wuqhRNA98TFf/3dd1e89db00c87079df8eb9a8fa43a10/Streetwear.jpg?fm=webp&h=245&w=390"></figure>
+              <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/0a7cfd535f322ea919dd90e5e32041e5/Style_4.png?fm=webp&h=245&w=390"></figure>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </div>
   </div>
 </section>        
-
 <section>
   <div class=" py-16 mx-auto px-8 mb-20">
     <div class="grid grid-cols-2 h-screen">
@@ -120,15 +104,12 @@
           <h2 class=" font-bold text-3xl">
             Sell your clothes
           </h2>
-
           <p class="mt-4 text-gray-600 text-lg">
             Want to sell used clothes? Try Lowballd. List your clothes fast and sell with no fees. No space left in your closet? List it in our marketplace to declutter your closet space. Simply don't enjoy one of your fashion pieces anymore? Like that saying - one man's trash can be another man's treasure. 
           </p>
-
           <a
             class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="/sell"
-          >
+            href="/sell">
             Start selling
           </a>
         </div>
@@ -136,42 +117,34 @@
     </div>
   </div>
 </section>
-  <section>
-      <div
-      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[200ms]" v-motion-fade-visible>
-      <div class= "p-8 mx-auto text-center ease-in duration-[200ms]" v-motion-fade-visible>
-        <h2 class="text-3xl font-bold ">Share your outfit</h2>
-
-          <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
+<section>
+  <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[200ms]" v-motion-fade-visible>
+    <div class= "p-8 mx-auto text-center ease-in duration-    [200ms]" v-motion-fade-visible>
+      <h2 class="text-3xl font-bold ">Share your outfit</h2>
+        <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
             The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
-          </p>
-
-          <a
+        </p>
+        <a
             class="inline-flex items-center px-12 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="/shareoutfit"
-          >
+            href="/shareoutfit">
             Start sharing
-          </a>
-        </div>
+        </a>
       </div>
-    
-    
-      <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
-        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7  "
-        style="background-image:url(https://preview.redd.it/fehgbh015ig81.jpg?auto=webp&s=fdaaf46f0d7b926b5bf7579494bea482b35b468d)"></div>
-        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
-        style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/25/08/ts-lindseybyrnes-sim-2885-e.jpg?width=1200)"></div>
-        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
-        style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/09/26/16/istock-1005864440.jpg?width=1200)"></div>
-        <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
-        style="background-image:url(https://www.vmcdn.ca/f/files/rwcpulse/images/redwoodcitypulse/stories/katsy_skatebaording_02_web-1536x1024.jpg;w=1200;h=800;mode=crop)"></div>
-        <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
-        style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
-        
-      
-      </div>
-      </section>
-  <section class=" mb-72">
+    </div>
+  <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
+    <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7  "
+      style="background-image:url(https://preview.redd.it/fehgbh015ig81.jpg?auto=webp&s=fdaaf46f0d7b926b5bf7579494bea482b35b468d)"></div>
+    <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
+      style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/25/08/ts-lindseybyrnes-sim-2885-e.jpg?width=1200)"></div>
+    <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
+      style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/09/26/16/istock-1005864440.jpg?width=1200)"></div>
+    <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
+      style="background-image:url(https://www.vmcdn.ca/f/files/rwcpulse/images/redwoodcitypulse/stories/katsy_skatebaording_02_web-1536x1024.jpg;w=1200;h=800;mode=crop)"></div>
+    <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7 ease-linear"
+      style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
+  </div> 
+</section>
+<section class=" mb-72">
   <div class=" pl-[20rem] pr-[40rem] py-16">
       <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
@@ -185,21 +158,6 @@
           href="/marketplace"
         >
           <span class="text-sm font-medium"> Contact us </span>
-
-          <svg
-            class="w-5 h-5 ml-3"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
         </a>
       </div>
     </div>
@@ -212,12 +170,10 @@
         <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(https://fashionista.com/.image/t_share/MTY2ODQ5MDkyMzM5NjM5MzE1/best-new-york-fashion-week-street-style-spring-2020.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-[93%] left-[180%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(https://cdn.decorpad.com/photos/2020/06/01/m_modular-closet-system.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.pinimg.com/564x/0e/1b/74/0e1b740f3d8bd502d259e578b2eabe5a.jpg)"></div>
-    
     </div>
   </div>
 </section>
 <Footer/>
-
 </template>
 
 <script>
