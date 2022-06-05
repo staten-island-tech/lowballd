@@ -1,10 +1,11 @@
 <template>
   <GlobalNavbar ref="navbarGlobal" />
   <div class="w-4/5 mx-auto my-6">
-    <div>
+    <div v-if="this.$auth.isAuthenticated.value">
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
+            
             @submit.prevent="postData"
             action="#"
             method="POST"
@@ -24,7 +25,7 @@
                       v-model="listing.title"
                       type="text"
                       name="Title"
-                      id="listing.title"
+                      id="post-title"
                       class="
                         mt-1
                         focus:ring-indigo-500
@@ -49,7 +50,7 @@
                   <div class="mt-1">
                     <textarea
                       v-model="listing.description"
-                      id="listing.description"
+                      id="listingdescription"
                       name="description"
                       rows="3"
                       class="
@@ -80,7 +81,7 @@
                       type="text"
                       inputmode="numeric"
                       name="price"
-                      id="listing.price"
+                      id="listingprice"
                       class="
                         pl-8
                         mt-1
@@ -108,18 +109,8 @@
                     <select
                       @change="updateCategory()"
                       ref="listingcategory"
-                      id="listing.category"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
                       <option value="Tops">Tops</option>
@@ -142,7 +133,7 @@
                       v-model="listing.size"
                       type="text"
                       name="size"
-                      id="listing.size"
+                      id="listingsize"
                       class="
                         mt-1
                         focus:ring-indigo-500
@@ -166,18 +157,8 @@
                     <select
                       @change="updateCondition()"
                       ref="listingcondition"
-                      id="listing.condition"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      id="listingcategory"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
                       <option value="New">New</option>
@@ -209,7 +190,7 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 mb-20">
                 <button
                   @click="showAlert"
-                  type="button"
+                  type="submit"
                   class="
                     inline-flex
                     justify-center
@@ -274,15 +255,24 @@ export default {
     this.listing.userId = this.$refs.navbarGlobal.userId;
     console.log(this.userId);
   },
-
+  name: "Login",
+  props: ["logindata"],
+  
+  data() {
+    return {
+      userdata: this.$auth.user,
+      token: null,
+      newStr: null,
+    };
+  },
   methods: {
     showAlert() {
-      var title = document.getElementById("listing.title").value;
-      var description = document.getElementById("listing.description").value;
-      var price = document.getElementById("listing.price").value;
-      var size = document.getElementById("listing.size").value;
-      var category = document.getElementById("listing.category").value;
-      var condition = document.getElementById("listing.condition").value;
+      var title = document.getElementById("post-title").value;
+      var description = document.getElementById("listingdescription").value;
+      var price = document.getElementById("listingprice").value;
+      var size = document.getElementById("listingsize").value;
+      var category = document.getElementById("listingcategory").value;
+      var condition = document.getElementById("listingcondition").value;
 
       if (
         this.$refs.file.files.length === 0 ||
@@ -322,7 +312,7 @@ export default {
       this.listing.condition = this.$refs.listingcondition.value;
       console.log(this.listing.condition);
     },
-    async postData() {
+    async postData(e) {
       const formData = new FormData();
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
@@ -338,15 +328,28 @@ export default {
       }
       const headers = { "Content-Type": `multipart/form-data` };
       const res = await axios.post(
-        "http://localhost:3001/api/market/upload",
+        "https://lowballd-backend.onrender.com/api/market/upload",
         formData,
         { headers }
       );
       console.log(res);
       alert("Post has been saved");
     },
+        // Log the user in
+    async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
   },
 };
+
 </script>
 
 <style scoped>
