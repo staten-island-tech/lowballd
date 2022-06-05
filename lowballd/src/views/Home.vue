@@ -244,11 +244,11 @@ export default {
 
 <style scoped>
 .content{
-  left: 40%;
+  left: 35%;
   width:200px;
   perspective: 1000px;
   position: relative;
-  padding-top: 0px;
+  padding-top: 20%;
   
 } 
 .carrousel{
