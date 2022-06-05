@@ -174,7 +174,7 @@
   <section class=" mb-72">
   <div class=" py-16 px-8">
     
-      <div class="mx-auto mt-[20%] text-left mx-0 left-ease-in left-[30%] duration-[180ms]" v-motion-slide-visible-left>
+      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
