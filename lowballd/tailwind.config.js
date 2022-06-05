@@ -1,75 +1,74 @@
 module.exports = {
-  mode: "jit",
-  purge: false,
-  // ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      animation: {
-        spinslow: "spinslow linear infinite",
+      animation:{
+        spinslow: "spinslow linear infinite" ,
       },
       keyframes: {
         spinslow: {
-          "0%": {
+          "0%" : {
             transform: "rotateY(360deg)",
           },
-          "25%": {
+          "25%" : {
             transform: "rotateY(270deg)",
           },
-          "50%": {
+          "50%" : {
             transform: "rotateY(180deg)",
           },
-          "75%": {
+          "75%" : {
             transform: "rotateY(90deg)",
           },
-          "100%": {
+          "100%" : {
             transform: "rotateY(0deg)",
           },
-        },
-      },
+      }
+    },
 
       animation: {
-        blob: "blob 4s infinite",
+        blob: "blob 4s infinite"
       },
 
       keyframes: {
         blob: {
-          "0%": {
+          "0%" : {
             transform: "scale(1)",
           },
-          "33%": {
+          "33%" : {
             transform: "scale(1.1)",
           },
-          "66%": {
+          "66%" : {
             transform: "scale(0.9)",
           },
-          "100%": {
+          "100%" : {
             transform: "scale(1)",
           },
         },
       },
 
       flex: {
-        7: "7 7 0%",
+        '7': '7 7 0%'
       },
       screens: {
-        sm: { max: "640px" },
+        'sm': {'max': '640px'},
         // => @media (min-width: 640px) { ... }
 
-        md: "768px",
+        'md': '768px',
         // => @media (min-width: 768px) { ... }
 
-        lg: "1024px",
+        'lg': '1024px',
         // => @media (min-width: 1024px) { ... }
 
-        xl: "1280px",
+        'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
 
-        "2xl": "1536px",
+        '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       },
       fontFamily: {
-        Spartan: ['"League Spartan"', "sans-serif"],
+        Spartan: ['"League Spartan"', 'sans-serif'],
       },
     },
   },
@@ -77,13 +76,13 @@ module.exports = {
     extend: {},
   },
   content: [
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
-    "./node_modules/flowbite/**/*.js",
+    "./src/**/*.{vue,js,ts,jsx,tsx}", 
+    './node_modules/tw-elements/dist/js/**/*.js',
+    "./node_modules/flowbite/**/*.js"
   ],
   plugins: [
-    require("tw-elements/dist/plugin"),
-    require("daisyui"),
-    require("flowbite/plugin"),
+    require('tw-elements/dist/plugin'),
+    require('daisyui'),
+    require('flowbite/plugin')
   ],
-};
+}
