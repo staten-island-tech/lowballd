@@ -187,7 +187,7 @@
       class="grid grid-cols-1 items-center"
     >
     </div>
-      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
+      <div class=" mx-auto text-center mt-[20%] lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
