@@ -2,7 +2,7 @@
   <div>
     <GlobalNavbar ref="navbarGlobal" />
     <div class="w-4/5 mx-auto my-6">
-      <div>
+      <div v-if="this.$auth.isAuthenticated.value">
         <div class="md:grid md:grid-cols-3 md:gap-6">
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form
@@ -88,8 +88,22 @@
                 </div>
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                   <button
+                    @click="showAlert"
                     type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="inline-flex
+                    justify-center
+                    py-2
+                    px-4
+                    border border-transparent
+                    shadow-sm
+                    text-sm
+                    font-medium
+                    rounded-md
+                    text-white
+                    bg-indigo-600
+                    hover:bg-indigo-700
+                    focus:outline-none
+                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Submit
                   </button>
@@ -99,7 +113,14 @@
           </div>
         </div>
       </div>
+            <div v-else>
+        <div class=" flex items-center justify-center">
+          <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
+        </div>
+        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline hover:cursor-pointer" @click="login()">login</a> to post a listing.</h1>  
+      </div>
     </div>
+  <Footer/>
   </div>
 </template>
 
@@ -125,11 +146,43 @@ export default {
       },
     };
   },
+
   mounted() {
     this.posts.userId = this.$refs.navbarGlobal.userId;
     console.log(this.userId);
   },
   methods: {
+    showAlert() {
+      
+      var title = document.getElementById("post-title").value;
+      var about = document.getElementById("about").value;
+      var start = document.getElementById("start").value;
+        if (this.$refs.file.files.length === 0 || title == "" || about =="" || start == "mm/dd/yyyy" /*|| (document.getElementById('attachment').value !=="" )*/) {
+          
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "Please fill in the missing fields to continue",
+            });
+
+        }
+        else{
+          
+            this.$swal({
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
+        }
+      
+    },
+
+
+
+
     uploadFile() {
       this.posts.images = this.$refs.file.files;
       console.log(this.posts.images);
@@ -163,6 +216,18 @@ export default {
           .toISOString()
           .split("T")[0]
       );
+    },
+        // Log the user in
+    async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
     },
   },
 };

@@ -7,7 +7,7 @@ import store from "./store";
 import "flowbite";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
-
+import { MotionPlugin } from "@vueuse/motion";
 import authConfig from "../auth_config.json";
 import { setupAuth } from "./auth";
 
@@ -23,3 +23,4 @@ setupAuth(authConfig, callbackRedirect).then((auth) => {
 });
 
 app.use(store);
+app.use(MotionPlugin)

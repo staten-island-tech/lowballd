@@ -72,10 +72,11 @@
             <ChatBox></ChatBox>
         </div>
     </div>
-    
+    <Footer />
 </template>
 
 <script>
+import Footer from "../components/footer/Footer.vue";
 import ChatUserPreview from "../components/chat/ChatUserPreview.vue";
 import ChatBox from "../components/chat/ChatBox.vue";
 import GlobalNavbar from "../components/GlobalNavbar.vue";
@@ -83,7 +84,7 @@ import GlobalNavbar from "../components/GlobalNavbar.vue";
 export default {
     name: 'Chat',
     components: {
-        GlobalNavbar, ChatUserPreview, ChatBox
+        GlobalNavbar, ChatUserPreview, ChatBox, Footer
     },
 }
 

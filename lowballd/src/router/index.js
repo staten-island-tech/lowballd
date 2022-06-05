@@ -11,6 +11,7 @@ import Api from "../views/tokentest.vue";
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
 import Contact from "../views/Contact.vue";
+import Faq from "../views/Faq.vue";
 import PostMarket from "../views/PostMarket.vue";
 import ProfileSetup from "../views/ProfileSetup.vue";
 
@@ -28,6 +29,7 @@ const routes = [
   { path: "/token", name: "token", component: Api },
   { path: "/shareoutfit", name: "PostFeed", component: PostFeed },
   { path: "/verfiedemail", name: "Email", component: Email },
+  { path: "/faq", name: "Faq", component: Faq },
   { path: "/marketplace/:id", name: "productTest", component: productTest },
   { path: "/contact", name: "Contact", component: Contact },
   { path: "/sell", name: "PostMarket", component: PostMarket },

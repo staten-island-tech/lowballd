@@ -69,7 +69,9 @@ export default {
   methods: {
     // Log the user in
     async login() {
-      this.$auth.loginWithRedirect();
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
     },
     // Log the user out
     logout() {
