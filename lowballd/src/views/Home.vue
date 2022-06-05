@@ -114,9 +114,9 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100 ease-in duration-[180ms]" v-motion-slide-visible-right>
+      <div class="relative flex items-center bg-gray-200 ease-in duration-[180ms]" v-motion-slide-visible-right>
         <span
-          class="hidden inset-y-0 absolute w-16 bg-gray-100 block left-16 "
+          class="hidden inset-y-0 absolute w-16 bg-gray-200 block -left-16 "
         ></span>
         <div class="">
           <h2 class=" font-bold text-3xl">
