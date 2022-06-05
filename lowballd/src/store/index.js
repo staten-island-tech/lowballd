@@ -17,7 +17,7 @@ const store = createStore({
   actions: {
     callApi({ commit }) {
       //https://lowballd-backend.onrender.com/api/posts/
-      return fetch("https://lowballd-backend.onrender.com/api/market")
+      return fetch("https://lowballd-backend.onrender.com/api/posts/")
         .then(response => {
           return response.json();
         })
