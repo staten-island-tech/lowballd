@@ -8,8 +8,8 @@
     <div class="flex flex-row justify-around -mt-12 h-96">
       <div class="h-2/3 w-1/3 text-left ">
           <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
-          <h1 class="font-extrabold text-8xl text-white mb-4 text-center ">Lowballd</h1>
-          <h2 class="font-extrabold  text-white text-center text-2xl text-lg">
+          <h1 class="font-extrabold text-8xl text-white mb-4 text-center">Lowballd</h1>
+          <h2 class="font-extrabold  text-white text-center text-2xl">
             An innovative fashion marketplace. A brand new social media.
           </h2>
           
@@ -43,7 +43,7 @@
         ></span>
 
         <div class="p-8 sm:p-16 lg:p-24">
-          <h2 class="text-5xl font-bold sm:text-3xl">
+          <h2 class=" font-bold text-3xl">
             What is Lowballd?
           </h2>
 
