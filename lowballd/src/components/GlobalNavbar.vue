@@ -14,7 +14,7 @@
     </div>
   </div>
 </template>
-
+ 
 <script>
 import Login from "../components/login/LoginComponent.vue";
 
