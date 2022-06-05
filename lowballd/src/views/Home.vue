@@ -185,7 +185,8 @@ export default {
   components: {
     GlobalNavbar, Footer,
   },
-   async login() {
+  // Log the user in
+    async login() {
       this.$auth.loginWithRedirect({
         returnTo: window.location.origin,
       });
