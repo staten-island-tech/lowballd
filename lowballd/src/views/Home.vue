@@ -172,38 +172,25 @@
       </div>
       </section>
   <section class=" mb-72">
-  <div class=" py-16 px-8">
-    
-      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold mt-[10%]">Reach out</h2>
+    <div class="mb-20 py-16 px-8">
+    <div
+      class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
+      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold ">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
-          The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
+          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
         </p>
 
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          <span class="text-sm font-medium"> Contact us </span>
-
-          <svg
-            class="w-5 h-5 ml-3"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
+          Browse more
         </a>
       </div>
-    </div>
+      
+      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
     
       <div class="relative w-full max-w-lg">
