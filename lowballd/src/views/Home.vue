@@ -170,7 +170,7 @@
         <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url(https://i.pinimg.com/736x/69/05/38/690538007051e5525f565017d86ef240.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(https://fashionista.com/.image/t_share/MTY2ODQ5MDkyMzM5NjM5MzE1/best-new-york-fashion-week-street-style-spring-2020.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-[93%] left-[180%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(https://cdn.decorpad.com/photos/2020/06/01/m_modular-closet-system.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.pinimg.com/564x/0e/1b/74/0e1b740f3d8bd502d259e578b2eabe5a.jpg)"></div>
+        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://helios-i.mashable.com/imagery/articles/02q65HSGQqUP38kSTVS4iVD/hero-image.fill.size_1200x900.v1623372913.jpg)"></div>
     </div>
   </div>
 </section>
