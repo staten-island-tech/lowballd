@@ -102,10 +102,10 @@
 </section>        
 
 <section>
-  <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8 mb-20">
-    <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
-      <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full ease-in duration-[180ms]" v-motion-slide-visible-left>
+  <div class=" py-16 mx-auto px-8 mb-20">
+    <div class="grid grid-cols-2 h-screen">
+      <div class="relative z-10 py-16">
+        <div class="relative h-full ease-in duration-[180ms]" v-motion-slide-visible-left>
           <img
             class="absolute inset-0 object-cover w-full h-full "
             src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/seller/sell-easily.jpg"
@@ -119,7 +119,7 @@
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
         <div class="p-8 sm:p-16 lg:p-24 ">
-          <h2 class="text-5xl font-bold sm:text-3xl">
+          <h2 class=" font-bold text-3xl">
             Sell your clothes
           </h2>
 
