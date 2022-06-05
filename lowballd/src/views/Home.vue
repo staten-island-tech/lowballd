@@ -172,11 +172,7 @@
       </div>
       </section>
   <section class=" mb-72">
-  <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
-    >
-    </div>
+  <div class=" pl-[20rem] pr-[20rem] py-16">
       <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
