@@ -1,25 +1,27 @@
 <template>
 <GlobalNavbar/>
 <token></token>
-<section>
-  <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
+  
+<div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
         style="background-image:url(https://i.pinimg.com/originals/c7/e5/fc/c7e5fcae592e9a3dba1f328ccfed9456.jpg)">
-    <div class="h-screen w-screen flex flex-col justify-center">
-      <div class="flex flex-row justify-around -mt-12 h-96">
-        <div class="h-2/3 w-1/3 text-left ">
+  <div class="h-screen w-screen flex flex-col justify-center">
+    <div class="flex flex-row justify-around -mt-12 h-96">
+      <div class="h-2/3 w-1/3 text-left ">
           <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
           <h1 class="font-extrabold text-8xl text-white mb-4 text-center ">Lowballd</h1>
           <h2 class="font-extrabold  text-white text-center text-2xl text-lg">
             An innovative fashion marketplace. A brand new social media.
-          </h2>  
-        </div>
-        <div class="w-1/2 h-full">   
-        </div>
+          </h2>
+          
       </div>
-   </div>
+      <div class="w-1/2 h-full">
+          
+      </div>
+    </div>
   </div>
-</section>
+</div>
 <section>
+  
   <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <div class="relative z-10 lg:py-16">
@@ -49,7 +51,7 @@
             Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
 
-          <a @click="login()"
+          <a
             class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
            
           >
@@ -80,7 +82,9 @@
         </a>
       </div>
       
-      <div class=" ease-in duration-[180ms]" v-motion-slide-visible-right>
+      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
+        
+<section class="mt-[-50%]">
         <div class="content">
           <div class="carrousel">
             <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"></figure>
@@ -94,6 +98,7 @@
             <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/7ICpfHe5ShaBXBruw5JydC/0a7cfd535f322ea919dd90e5e32041e5/Style_4.png?fm=webp&h=245&w=390"></figure>
           </div>
         </div>
+      </section>
       </div>
     </div>
   </div>
@@ -163,15 +168,15 @@
     
       <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7  "
-        style="background-image:url(https://i.pinimg.com/originals/eb/46/e4/eb46e4b3d971a04ec7cbf65f9e3e4fc5.jpg)"></div>
+        style="background-image:url(https://preview.redd.it/fehgbh015ig81.jpg?auto=webp&s=fdaaf46f0d7b926b5bf7579494bea482b35b468d)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
         style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/25/08/ts-lindseybyrnes-sim-2885-e.jpg?width=1200)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
         style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/09/26/16/istock-1005864440.jpg?width=1200)"></div>
         <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
-        style="background-image:url(https://www.apetogentleman.com/wp-content/uploads/2019/05/casual-dressing-tips1.jpg)"></div>
+        style="background-image:url(https://www.vmcdn.ca/f/files/rwcpulse/images/redwoodcitypulse/stories/katsy_skatebaording_02_web-1536x1024.jpg;w=1200;h=800;mode=crop)"></div>
         <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
-        style="background-image:url(https://imageio.forbes.com/specials-images/imageserve/61b4d9a183efddf89ac25ef0/0x0.jpg?format=jpg&width=1200)"></div>
+        style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
         
       
       </div>
@@ -230,10 +235,8 @@
 </template>
 
 <script>
-
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
-
 export default {
   name: "Home",
   components: {
@@ -243,29 +246,24 @@ export default {
 </script>
 
 <style scoped>
-
 .content{
+  left: 40%;
   width:200px;
-  perspective: 1200px;
+  perspective: 1000px;
   position: relative;
-  margin: auto;
-  padding-bottom: 15rem;
+  padding-top: 120px;
   
 } 
-
 .carrousel{
-  
   width:100%;
   position: absolute;
-  left: 35%;
+  height: ;
   animation: rotate 15s infinite linear;
   transform-style: preserve-3d;
 }
-
 .carrousel:hover{
   animation-play-state: paused;
   cursor: pointer;
-
 }
 .carrousel figure{
   width:90%;
@@ -291,7 +289,6 @@ export default {
       transform: rotateY(360deg);
    }
   } 
-
 .carrousel figure:nth-child(1) { transform:rotateY(0deg) translateZ(300px); }
 .carrousel figure:nth-child(2) { transform:rotateY(40deg) translateZ(300px); }
 .carrousel figure:nth-child(3) { transform:rotateY(80deg) translateZ(300px); }
@@ -301,11 +298,9 @@ export default {
 .carrousel figure:nth-child(7) { transform:rotateY(240deg) translateZ(300px); }
 .carrousel figure:nth-child(8) { transform:rotateY(280deg) translateZ(300px); }
 .carrousel figure:nth-child(9) { transform:rotateY(320deg) translateZ(300px); }
-
-
-
   
   
 </style>
+
 
 
