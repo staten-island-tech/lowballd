@@ -14,7 +14,7 @@
           <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 border-2 border-white-900 p-[1%]">
           
           
-            <div class=" lg:w-1/2 px-4 py-2"><h1 class="text-xl">Shipping</h1>
+            <div class=" px-4 py-2"><h1 class="text-xl">Shipping</h1>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200  py-2 px-4">
                   How do I change or cancel my order
@@ -50,7 +50,7 @@
                 </span>
               </details>
             </div>
-            <div class="w-full lg:w-1/2 px-4 py-2">
+            <div class="px-4 py-2">
             <h1 class="text-xl">Account Management</h1>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200  py-2 px-4">
@@ -86,7 +86,7 @@
                 </span>
               </details>
             </div>
-            <div class="w-full lg:w-1/2 px-4 py-2">
+            <div class=" px-4 py-2">
             <h1 class="text-xl">Buying/Selling</h1>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200  py-2 px-4">
