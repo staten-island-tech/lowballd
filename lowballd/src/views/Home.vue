@@ -40,9 +40,11 @@
             Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
           <a
-            class="inline-block px-12 py-3 mt-8 font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"> 
-            Get started
-          </a>
+          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+          @click="login()"
+        >
+          <span class="text-sm font-medium"> Contact us </span>
+        </a>
         </div>
       </div>
     </div>
@@ -61,7 +63,7 @@
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          Browse more
+          <span class="text-sm font-medium"> Browse more </span>
         </a>
       </div>
       
@@ -125,9 +127,10 @@
             The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
         </p>
         <a
-            class="inline-flex items-center px-12 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
-            href="/shareoutfit">
-            Start sharing
+          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+          href="/shareoutift"
+        >
+          <span class="text-sm font-medium"> Start posting </span>
         </a>
       </div>
     </div>
@@ -144,8 +147,8 @@
       style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
   </div> 
 </section>
-<section class=" mb-72">
-  <div class=" pl-[20rem] pr-[40rem] py-16">
+<section class="mb-64">
+  <div class=" pl-[20rem] pr-[40rem] pt-60 ">
       <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
@@ -184,6 +187,17 @@ export default {
   components: {
     GlobalNavbar, Footer,
   },
+   async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
 };
 </script>
 
