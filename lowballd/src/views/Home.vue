@@ -39,7 +39,7 @@
 
       <div class="relative flex items-center bg-gray-100  ease-in duration-[180ms]" v-motion-slide-visible-right>
         <span
-          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16"
+          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-200 lg:block lg:-left-16"
         ></span>
 
         <div class="p-8 ">
