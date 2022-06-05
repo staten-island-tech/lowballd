@@ -22,7 +22,7 @@
 </div>
 <section>
   
-  <div class=" py-16 mx-auto max-w-screen-2xl px-8">
+  <div class=" py-16 mx-auto px-8">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
         <div class="relative h-full  ease-in duration-[180ms]" v-motion-slide-visible-left>
