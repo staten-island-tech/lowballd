@@ -40,9 +40,11 @@
             Lowballd is the fashion marketplace app where the next generation come to discover unique items. With a global community buying, selling and connecting to make fashion more inclusive, diverse and less wasteful. This is what transforming fashion looks like.
           </p>
           <a
-            class="inline-block px-12 py-3 mt-8 font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"> 
-            Get started
-          </a>
+          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+          @click="login()"
+        >
+          <span class="text-sm font-medium"> Contact us </span>
+        </a>
         </div>
       </div>
     </div>
@@ -61,7 +63,7 @@
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          Browse more
+          <span class="text-sm font-medium"> Browse more </span>
         </a>
       </div>
       
@@ -185,6 +187,17 @@ export default {
   components: {
     GlobalNavbar, Footer,
   },
+   async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
 };
 </script>
 
