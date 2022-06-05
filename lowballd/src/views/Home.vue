@@ -148,7 +148,7 @@
   </div> 
 </section>
 <section class="">
-  <div class=" pl-[20rem] pr-[40rem] pt-64 pb-64">
+  <div class=" pl-[20rem] pr-[40rem] pt-60 mb-64">
       <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
