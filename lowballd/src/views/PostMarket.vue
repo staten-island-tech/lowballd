@@ -217,10 +217,13 @@
       </div>
     </div>
     <div v-else>
-              <div class=" flex items-center justify-center">
-          <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
+      <div class="flex justify-center">
+        <div class="text-center">
+          <h1 class="text-2xl mb-4">
+            Please <a href="/login">login</a> to post a listing.
+          </h1>
         </div>
-        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline" href="/login">login</a> to post a listing.</h1>   
+      </div>
     </div>
   </div>
   <Footer/>

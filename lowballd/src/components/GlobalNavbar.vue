@@ -8,7 +8,6 @@
         >Marketplace</router-link
       >
       <router-link to="contact" class="px-6">Contact</router-link>
-      <router-link to="Faq" class="px-6">FAQ</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>
