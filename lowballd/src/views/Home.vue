@@ -147,7 +147,7 @@
           </p>
 
           <a
-            class="inline-flex items-center pt-4 px-12 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
+            class="inline-flex items-center px-12 py-2 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
             href="/shareoutfit"
           >
             Start sharing
@@ -172,22 +172,43 @@
       </div>
       </section>
   <section class=" mb-72">
-    
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
-      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold ">Find your style</h2>
+  <div class=" py-16 px-8">
+    <div
+      class="grid-cols-2 gap-y-8 gap-x-16 items-center"
+    >
+    </div>
+      <div class="max-w-lg mx-auto text-center mt-[20%] lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
-          Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
+          The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
         </p>
 
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          Browse more
+          <span class="text-sm font-medium"> Contact us </span>
+
+          <svg
+            class="w-5 h-5 ml-3"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
         </a>
       </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
+    
       <div class="relative w-full max-w-lg">
         <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
         <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://assets.vogue.com/photos/600af64645612e3c356a87c1/master/w_2560%2Cc_limit/noah%2520x%2520louis%2520v%25201.21-3.jpg)"></div>
