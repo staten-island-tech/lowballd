@@ -219,7 +219,7 @@
     </div>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
     
-      <div class="relative w-full max-w-lg">
+      <div class="relative w-full ">
         <div class="bg-center bg-cover absolute -top-10 -left-[-260%] w-52 h-52 animate-blob" style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
         <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://assets.vogue.com/photos/600af64645612e3c356a87c1/master/w_2560%2Cc_limit/noah%2520x%2520louis%2520v%25201.21-3.jpg)"></div>
         <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url(https://i.pinimg.com/736x/69/05/38/690538007051e5525f565017d86ef240.jpg)"></div>
