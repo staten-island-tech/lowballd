@@ -248,7 +248,7 @@ export default {
   width:200px;
   perspective: 1000px;
   position: relative;
-  padding-bottom: 200%;
+  padding-bottom: 150%;
   
 } 
 .carrousel{
