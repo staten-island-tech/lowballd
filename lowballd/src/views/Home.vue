@@ -81,7 +81,7 @@
       
       <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>
         
-<section class="mt-[-40%]">
+<section class="mt-[-80%]">
         <div class="content">
           <div class="carrousel">
             <figure class= "shadow"> <img src="https://images.ctfassets.net/bdvz0u6oqffk/3oRUvnntTxFd1pYQy4DA5E/4a8c47c29af2911bde70e45aae6735c6/ShopByStyle-LuxuryLVPuffer.jpg?fm=webp&h=245&w=390"></figure>
