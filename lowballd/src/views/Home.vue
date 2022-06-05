@@ -61,7 +61,7 @@
   </div>
 </section>
 <section>
-  <div class="max-w-screen-xl mb-20 px-4 py-16 sm:px-6 lg:px-8">
+  <div class=" mb-20 px-4 py-16 sm:px-6 lg:px-8">
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
       <div class= " max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
