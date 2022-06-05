@@ -3,7 +3,7 @@
 <token></token>
   
 <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]"
-        style="background-image:url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elfa-closet-1570213713.jpg)">
+        style="background-image:url(https://i.pinimg.com/originals/c7/e5/fc/c7e5fcae592e9a3dba1f328ccfed9456.jpg)">
   <div class="h-screen w-screen flex flex-col justify-center">
     <div class="flex flex-row justify-around -mt-12 h-96">
       <div class="h-2/3 w-1/3 text-left ">
@@ -66,7 +66,7 @@
 <section>
   <div class="max-w-screen-xl mb-20 px-4 py-16 sm:px-6 lg:px-8">
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 ml-[10%] lg:items-center">
+      class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
       <div class= " max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
@@ -168,17 +168,15 @@
     
       <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7  "
-        style="background-image:url(https://gracefulstory.com/wp-content/uploads/2016/09/street-style-1200x700.jpg)"></div>
-        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7  "
-        style="background-image:url(https://gracefulstory.com/wp-content/uploads/2016/09/street-style-1200x700.jpg)"></div>
+        style="background-image:url(https://preview.redd.it/fehgbh015ig81.jpg?auto=webp&s=fdaaf46f0d7b926b5bf7579494bea482b35b468d)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
         style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/25/08/ts-lindseybyrnes-sim-2885-e.jpg?width=1200)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
-        style="background-image:url(https://images.ctfassets.net/sc7uy4u0eewy/2E06B9vay4Y4SgYsuu8yso/a5aee5fb4cbe2e73a5b2deab3fcd0e7f/_DSC4524.jpg)"></div>
+        style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/09/26/16/istock-1005864440.jpg?width=1200)"></div>
         <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
-        style="background-image:url(https://www.apetogentleman.com/wp-content/uploads/2019/05/casual-dressing-tips1.jpg)"></div>
+        style="background-image:url(https://www.vmcdn.ca/f/files/rwcpulse/images/redwoodcitypulse/stories/katsy_skatebaording_02_web-1536x1024.jpg;w=1200;h=800;mode=crop)"></div>
         <div class=" flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
-        style="background-image:url(https://fashionista.com/.image/t_share/MTY2ODQ5MDkyMzM5NjM5MzE1/best-new-york-fashion-week-street-style-spring-2020.jpg)"></div>
+        style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
         
       
       </div>
@@ -252,18 +250,18 @@ export default {
 <style scoped>
 
 .content{
-  left: 35%;
+  left: 40%;
   width:200px;
   perspective: 1000px;
   position: relative;
-  padding-top: 80px;
-  margin: auto;
+  padding-top: 120px;
+  
 } 
 
 .carrousel{
   width:100%;
   position: absolute;
-  
+  height: ;
   animation: rotate 15s infinite linear;
   transform-style: preserve-3d;
 }
@@ -298,15 +296,15 @@ export default {
    }
   } 
 
-.carrousel figure:nth-child(1) { transform:rotateY(0deg) translateZ(350px); }
-.carrousel figure:nth-child(2) { transform:rotateY(40deg) translateZ(350px); }
-.carrousel figure:nth-child(3) { transform:rotateY(80deg) translateZ(350px); }
-.carrousel figure:nth-child(4) { transform:rotateY(120deg) translateZ(350px); }
-.carrousel figure:nth-child(5) { transform:rotateY(160deg) translateZ(350px); }
-.carrousel figure:nth-child(6) { transform:rotateY(200deg) translateZ(350px); }
-.carrousel figure:nth-child(7) { transform:rotateY(240deg) translateZ(350px); }
-.carrousel figure:nth-child(8) { transform:rotateY(280deg) translateZ(350px); }
-.carrousel figure:nth-child(9) { transform:rotateY(320deg) translateZ(350px); }
+.carrousel figure:nth-child(1) { transform:rotateY(0deg) translateZ(300px); }
+.carrousel figure:nth-child(2) { transform:rotateY(40deg) translateZ(300px); }
+.carrousel figure:nth-child(3) { transform:rotateY(80deg) translateZ(300px); }
+.carrousel figure:nth-child(4) { transform:rotateY(120deg) translateZ(300px); }
+.carrousel figure:nth-child(5) { transform:rotateY(160deg) translateZ(300px); }
+.carrousel figure:nth-child(6) { transform:rotateY(200deg) translateZ(300px); }
+.carrousel figure:nth-child(7) { transform:rotateY(240deg) translateZ(300px); }
+.carrousel figure:nth-child(8) { transform:rotateY(280deg) translateZ(300px); }
+.carrousel figure:nth-child(9) { transform:rotateY(320deg) translateZ(300px); }
 
 
 
