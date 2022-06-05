@@ -157,7 +157,7 @@
     
     
       <div class="flex flex-row h-[40rem] mx-auto overflow-hidden ease-in duration-[100ms] mb-10">
-        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1500 ease-out duration-500 hover:flex-7  "
+        <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-500 ease-out duration-500 hover:flex-7  "
         style="background-image:url(https://preview.redd.it/fehgbh015ig81.jpg?auto=webp&s=fdaaf46f0d7b926b5bf7579494bea482b35b468d)"></div>
         <div class="flex-1 h-full w-full bg-cover bg-center transition-all flex ease-in duration-1000 ease-out duration-1000 hover:flex-7 ease-linear"
         style="background-image:url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/10/25/08/ts-lindseybyrnes-sim-2885-e.jpg?width=1200)"></div>
