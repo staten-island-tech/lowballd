@@ -118,7 +118,7 @@
         <span
           class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
         ></span>
-        <div class="p-8 sm:p-16 lg:p-24 ">
+        <div class="">
           <h2 class=" font-bold text-3xl">
             Sell your clothes
           </h2>
