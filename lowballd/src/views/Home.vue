@@ -177,18 +177,18 @@
       class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
     >
     </div>
-      <div class="max-w-lg mx-auto text-center mt-[20%] mx-0 ease-in duration-[180ms] " v-motion-slide-visible-left>
+      <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
-        <p class="mt-4 text-gray-600 text-lg left-[6rem]">
+        <p class="mt-4 text-gray-600 text-lg">
           The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
         </p>
 
         <a
-          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring left-[6rem]"
+          class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/marketplace"
         >
-          <span class="text-sm font-medium left-[6rem]"> Contact us </span>
+          <span class="text-sm font-medium"> Contact us </span>
 
           <svg
             class="w-5 h-5 ml-3"
