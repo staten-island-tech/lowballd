@@ -5,7 +5,7 @@
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
           <form
-            
+            @submit="postData"
             @submit.prevent="postData"
             action="#"
             method="POST"
@@ -25,7 +25,7 @@
                       v-model="listing.title"
                       type="text"
                       name="Title"
-                      id="post-title"
+                      id="listing.title"
                       class="
                         mt-1
                         focus:ring-indigo-500
@@ -50,7 +50,7 @@
                   <div class="mt-1">
                     <textarea
                       v-model="listing.description"
-                      id="listingdescription"
+                      id="listing.description"
                       name="description"
                       rows="3"
                       class="
@@ -81,7 +81,7 @@
                       type="text"
                       inputmode="numeric"
                       name="price"
-                      id="listingprice"
+                      id="listing.price"
                       class="
                         pl-8
                         mt-1
@@ -133,7 +133,7 @@
                       v-model="listing.size"
                       type="text"
                       name="size"
-                      id="listingsize"
+                      id="listing.size"
                       class="
                         mt-1
                         focus:ring-indigo-500
@@ -216,7 +216,7 @@
         </div>
       </div>
     </div>
-        <div v-else>
+    <div v-else>
               <div class=" flex items-center justify-center">
           <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
         </div>
@@ -267,12 +267,12 @@ export default {
   },
   methods: {
     showAlert() {
-      var title = document.getElementById("post-title").value;
-      var description = document.getElementById("listingdescription").value;
-      var price = document.getElementById("listingprice").value;
-      var size = document.getElementById("listingsize").value;
-      var category = document.getElementById("listingcategory").value;
-      var condition = document.getElementById("listingcondition").value;
+      var title = document.getElementById("listing.title").value;
+      var description = document.getElementById("listing.description").value;
+      var price = document.getElementById("listing.price").value;
+      var size = document.getElementById("listing.size").value;
+      var category = document.getElementById("listing.category").value;
+      var condition = document.getElementById("listing.condition").value;
 
       if (
         this.$refs.file.files.length === 0 ||
@@ -312,7 +312,7 @@ export default {
       this.listing.condition = this.$refs.listingcondition.value;
       console.log(this.listing.condition);
     },
-    async postData(e) {
+    async postData() {
       const formData = new FormData();
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
