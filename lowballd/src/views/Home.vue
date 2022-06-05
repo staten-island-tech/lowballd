@@ -138,8 +138,8 @@
 </section>
   <section>
       <div
-      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center bg-gray-200" v-motion-fade-visible>
-      <div class= "p-8 mx-auto text-center ease-in duration-[180ms]" v-motion-fade-visible>
+      class="grid grid-cols-1 gap-y-8 gap-x-16 items-center bg-gray-200 ease-in duration-[200ms]" v-motion-fade-visible>
+      <div class= "p-8 mx-auto text-center ease-in duration-[200ms]" v-motion-fade-visible>
         <h2 class="text-3xl font-bold ">Share your outfit</h2>
 
           <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
