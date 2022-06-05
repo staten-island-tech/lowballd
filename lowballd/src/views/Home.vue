@@ -182,9 +182,9 @@
       </div>
       </section>
   <section class=" mb-72">
-  <div class="max-w-screen-xl px-4 py-16">
+  <div class=" px-4 py-16">
     <div
-      class="grid grid-cols-1 items-center"
+      class="grid grid-cols-1 gap-y-8items-center"
     >
     </div>
       <div class=" mx-auto text-center mt-[20%] lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
