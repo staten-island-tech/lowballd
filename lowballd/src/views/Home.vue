@@ -147,8 +147,8 @@
       style="background-image:url(https://sm.mashable.com/mashable_sea/article/d/dont-flip-/dont-flip-olivia-rodrigos-collab-with-casetify-is-a-90s-tech_dngf.jpg)"></div>
   </div> 
 </section>
-<section class="">
-  <div class=" pl-[20rem] pr-[40rem] pt-60 mb-64">
+<section class="mb-64">
+  <div class=" pl-[20rem] pr-[40rem] pt-60 ">
       <div class=" text-center ease-in duration-[180ms] " v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
 
