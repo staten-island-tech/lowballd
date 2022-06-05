@@ -220,7 +220,7 @@
               <div class=" flex items-center justify-center">
           <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
         </div>
-        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline" @click="login()">login</a> to post a listing.</h1>   
+        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline" href="/login">login</a> to post a listing.</h1>   
     </div>
   </div>
   <Footer/>
@@ -255,16 +255,7 @@ export default {
     this.listing.userId = this.$refs.navbarGlobal.userId;
     console.log(this.userId);
   },
-  name: "Login",
-  props: ["logindata"],
-  
-  data() {
-    return {
-      userdata: this.$auth.user,
-      token: null,
-      newStr: null,
-    };
-  },
+
   methods: {
     showAlert() {
       var title = document.getElementById("listing.title").value;
@@ -335,21 +326,8 @@ export default {
       console.log(res);
       alert("Post has been saved");
     },
-        // Log the user in
-    async login() {
-      this.$auth.loginWithRedirect({
-        returnTo: window.location.origin,
-      });
-    },
-    // Log the user out
-    logout() {
-      this.$auth.logout({
-        returnTo: window.location.origin,
-      });
-    },
   },
 };
-
 </script>
 
 <style scoped>
