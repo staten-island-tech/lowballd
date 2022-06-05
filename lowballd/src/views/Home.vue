@@ -41,7 +41,7 @@
           </p>
           <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring">
-          <span @click="login()" class="text-sm font-medium"> Get started </span>
+          <span class="text-sm font-medium"> <a @click="login()">Get started</a></span>
         </a>
         </div>
       </div>
