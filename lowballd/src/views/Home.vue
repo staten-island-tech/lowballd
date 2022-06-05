@@ -139,8 +139,8 @@
   <section>
       <div
       class="grid grid-cols-1 gap-y-8 gap-x-16 items-center bg-gray-200">
-      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
-        <h2 class="text-3xl font-bold ">Find your style</h2>
+      <div class= "p-8 mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <h2 class="text-3xl font-bold ">Share your outfit</h2>
 
           <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
             The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
@@ -150,7 +150,7 @@
             class="inline-flex items-center px-12 py-4 text-sm font-medium text-white bg-indigo-600 border border-indigo-600 rounded active:text-indigo-500 hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring"
             href="/shareoutfit"
           >
-            Share your outfit
+            Start sharing
           </a>
         </div>
       </div>
