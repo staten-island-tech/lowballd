@@ -137,10 +137,9 @@
   </div>
 </section>
   <section>
-    <div class=" relative flex items-center bg-gray-100 ease-in duration-[300ms]"  v-motion-fade-visible>
-        
-        <div class="p-8 sm:p-16 lg:p-24 ">
-          <h2 class="text-5xl font-bold sm:text-3xl text-center">
+    <div class=" relative flex items-center bg-gray-200 ease-in duration-[300ms]"  v-motion-fade-visible>
+        <div class="p-24 ">
+          <h2 class=" font-bold text-3xl text-center">
             Share your outfits
           </h2>
 
