@@ -172,7 +172,7 @@
       </div>
       </section>
   <section class=" mb-72">
-    <div class="mb-20 py-16 px-8">
+    <div class=" py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
       <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
