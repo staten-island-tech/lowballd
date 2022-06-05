@@ -207,6 +207,17 @@ export default {
           .split("T")[0]
       );
     },
+    async login() {
+      this.$auth.loginWithRedirect({
+        returnTo: window.location.origin,
+      });
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
+    },
   },
 };
 </script>
