@@ -99,13 +99,14 @@
           </div>
         </div>
       </div>
-      <div v-else>
+            <div v-else>
         <div class=" flex items-center justify-center">
           <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
         </div>
         <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline hover:cursor-pointer" @click="login()">login</a> to post a listing.</h1>  
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -146,6 +147,37 @@ export default {
     console.log(this.userId);
   },
   methods: {
+    showAlert() {
+      
+      var title = document.getElementById("post-title").value;
+      var about = document.getElementById("about").value;
+      var start = document.getElementById("start").value;
+        if (this.$refs.file.files.length === 0 || title == "" || about =="" || start == "mm/dd/yyyy" /*|| (document.getElementById('attachment').value !=="" )*/) {
+          
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "Please fill in the missing fields to continue",
+            });
+
+        }
+        else{
+          
+            this.$swal({
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
+        }
+      
+    },
+
+
+
+
     uploadFile() {
       this.posts.images = this.$refs.file.files;
       console.log(this.posts.images);
