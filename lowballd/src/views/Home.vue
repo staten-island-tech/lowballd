@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-200 ease-in duration-[180ms]" v-motion-slide-visible-right>
+      <div class="relative flex items-center ease-in duration-[180ms]" v-motion-slide-visible-right>
         
         <div class="p-8">
           <h2 class=" font-bold text-3xl">
@@ -135,13 +135,10 @@
       </div>
     </div>
   </div>
-
 </section>
   <section>
     <div class=" relative flex items-center bg-gray-100 ease-in duration-[300ms]"  v-motion-fade-visible>
-        <span
-          class="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-100 lg:block lg:-left-16 "
-        ></span>
+        
         <div class="p-8 sm:p-16 lg:p-24 ">
           <h2 class="text-5xl font-bold sm:text-3xl text-center">
             Share your outfits
