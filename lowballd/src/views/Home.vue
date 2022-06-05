@@ -64,7 +64,7 @@
   <div class=" mb-20 py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-      <div class= " max-w-lg mx-auto text-center lg:text-left lg:mx-0 ease-in duration-[180ms]" v-motion-slide-visible-left>
+      <div class= " max-w-lg mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style</h2>
 
         <p class="mt-4 text-gray-600 text-lg">
