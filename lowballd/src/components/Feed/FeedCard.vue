@@ -1,6 +1,7 @@
 <template>
   <transition name="fade">
-      <div v-if="showModal" class="fixed z-10 inset-0 overflow-y-auto">
+      <div v-show="showModal" class="fixed z-10 inset-0 overflow-y-auto">
+
         <div
           class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
         >
@@ -43,6 +44,7 @@
                 </div>
               </div>
 
+              
               <div class="flex p-4 justify-between">
                 <div class="flex items-center space-x-2">
                   <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
@@ -59,7 +61,7 @@
                   </div>
                   <div class="flex space-x-1 items-center">
                     <span @click="likePost()">
-                      <svg ref="heartIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                      <svg ref="modalHeartIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-red-400 transition duration-100 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                       </svg>
                     </span>
@@ -93,7 +95,119 @@
       </div>
     </transition>
 
-  <div @click="showModal = true" class="m-10 w-96 bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-[1.01] hover:shadow-2xl">
+    <transition name="fade">
+      <div v-show="showComments" class="-mt-4 fixed z-30 inset-0 overflow-y-auto">
+
+        <div
+          class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+        >
+          <div @click="showComments = false" class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+          </div>
+          <span
+            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          ></span
+          >&#8203;
+          <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-headline"
+          >
+          <div class="p-10 w-[30rem] h-[30rem] flex flex-row justify-between flex flex-col">
+            <div>
+              <h1 class="text-3xl font-bold text-gray-800">Comments</h1>
+            </div>
+
+            <div class="overflow-scroll h-full w-full">
+              <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-20 flex flex-col justify-center">
+                    <div class="flex flex-row">
+                        <div class="bg-[url('https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg')] h-12 w-12 bg-cover rounded-full">
+                        </div>
+                        <div class="mx-4 flex flex-col justify-center">
+                            <p class="font-bold">Mike Whalen</p>
+                            <p class="text-sm text-slate-500">This sucks!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+          </div>
+
+            <div
+              class="flex justify-between bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+            >
+            <div></div>
+              <span
+                class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+              >
+                <button
+                  type="button"
+                  class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                  @click="showComments = false"
+                >
+                  Close
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+  <div class="m-10 w-96 bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-[1.01] hover:shadow-2xl">
+    <div @click="showModal = true">
+
     <div>
       <div class="text-white text-xs font-bold rounded-lg bg-green-500 inline-flex mt-4 ml-4 py-2 px-3 cursor-pointer">
         <div class="w-4 h-4 fill-white mr-2 mb-1">
@@ -107,6 +221,7 @@
       <p class="ml-4 mt-1 mb-2 text-gray-700 cursor-pointer">{{descPreview}}</p>
     </div>
     <div class="w-full h-96 bg-cover bg-center cursor-pointer" :style="backgroundStyles(postImage)"></div>
+    </div>
     <div class="flex p-4 justify-between">
       <div class="flex items-center space-x-2">
         <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
@@ -114,7 +229,7 @@
       </div>
       <div class="flex space-x-2">
         <div class="flex space-x-1 items-center">
-          <span>
+          <span @click="showComments = true">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
@@ -137,9 +252,13 @@
 
 <script>
 import axios from "axios";
+import UserComment from "./UserComment.vue";
 
 export default {
   name: "FeedCard",
+  components: {
+    UserComment
+  },
   data() {
     return {
       username: null,
@@ -149,6 +268,7 @@ export default {
       descPreview: null,
       id: null,
       showModal: false,
+      showComments: false,
     }
   },
   props: {
@@ -182,12 +302,16 @@ export default {
       );
       console.log(res);
       const heartButton = this.$refs.heartIcon;
+      const modalHeartButton = this.$refs.modalHeartIcon;
+
       if (res.data === "Liked") {
         this.likes += 1;
         heartButton.classList.add('text-red-500');
+        modalHeartButton.classList.add('text-red-500');
       } else {
         this.likes -= 1;
         heartButton.classList.remove('text-red-500');
+        modalHeartButton.classList.remove('text-red-500');
       }
     },
     async getUserInfo() {
@@ -206,8 +330,10 @@ export default {
   mounted() {
     this.getUserInfo();
     const heartButton = this.$refs.heartIcon;
+    const modalHeartButton = this.$refs.modalHeartIcon;
     if (this.likeCount.includes(this.currentUserId)) {
       heartButton.classList.add('text-red-500');
+      modalHeartButton.classList.add('text-red-500');
     }
   },
   created() {
