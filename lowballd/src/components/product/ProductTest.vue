@@ -23,6 +23,10 @@
                     <p class="font-bold">Condition</p>
                     <p>{{ prod.condition }}</p>
                   </div>
+                  <div class="mr-8">
+                    <p class="font-bold">Size</p>
+                    <p>{{ prod.size }}</p>
+                  </div>
                   <div>
                     <p class="font-bold">Listed Since</p>
                     <p>{{ createdDate }}</p>
