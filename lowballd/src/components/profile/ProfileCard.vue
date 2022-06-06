@@ -166,14 +166,16 @@ export default {
       this.$emit("setshownvalue", value);
     },
     async updatePfp() {
-      const picture = this.$refs.file.files;
+      var formData = new FormData();
+      const picture = this.$refs.file.files[0];
+      formData.append("picture", picture);
       console.log(picture)
       if (picture.length < 1) {
         alert("Please upload an image.");
       } else {
         const res = await axios.patch(
-          `http://localhost:3000/api/user/update/pfp/${this.profileData._id}`,
-          picture
+          `http://localhost:3001/api/user/update/pfp/${this.profileData._id}`, formData, {
+          }
         );
         console.log(res);
       }
