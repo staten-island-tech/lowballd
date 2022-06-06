@@ -61,6 +61,7 @@
               </div>
 
               <div class="flex p-4 justify-between">
+                <router-link :to="'/profiles/' + this.userId">
                 <div class="flex items-center space-x-2">
                   <img
                     class="w-10 h-10 cover rounded-full"
@@ -70,6 +71,7 @@
                     {{ username }}
                   </h2>
                 </div>
+                </router-link>
                 <div class="flex space-x-2">
                   <div class="flex space-x-1 items-center">
                     <span @click="showComments = true">
@@ -245,10 +247,14 @@
       ></div>
     </div>
     <div class="flex p-4 justify-between">
-      <div class="flex items-center space-x-2">
-        <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
-        <h2 class="text-gray-800 font-bold cursor-pointer">{{ username }}</h2>
+      <router-link :to="'/profiles/' + this.userId">
+      <div class="hover:cursor-pointer flex items-center space-x-2">
+        
+          <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
+          <h2 class="text-gray-800 font-bold cursor-pointer">{{ username }}</h2>
+        
       </div>
+      </router-link>
       <div class="flex space-x-2">
         <div class="flex space-x-1 items-center">
           <span @click="showComments = true">
@@ -418,6 +424,7 @@ export default {
       }
     },
   },
+
   mounted() {
     this.getUserInfo();
     const heartButton = this.$refs.heartIcon;
