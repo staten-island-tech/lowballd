@@ -230,15 +230,6 @@ export default {
           title: "Oops...",
           text: "Please fill in the missing fields  to continue",
         });
-      } else {
-        this.$swal({
-          icon: "success",
-          title: "Your post has been successfully saved",
-          html:
-            "Click " +
-            '<a href="/"><b>here</b></a> ' +
-            "to return to the homepage",
-        });
       }
     },
     uploadFile() {
@@ -272,8 +263,14 @@ export default {
         formData,
         { headers }
       );
-      console.log(res);
-      alert("Post has been saved");
+      this.$swal({
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
     },
     async login() {
       this.$auth.loginWithRedirect({
