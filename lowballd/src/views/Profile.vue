@@ -1,5 +1,5 @@
 <template>
-    <GlobalNavbar></GlobalNavbar>
+    <GlobalNavbar ref="navbarGlobal"></GlobalNavbar>
     <div v-if="authenticationStatus" class="authenticated">
       <transition name="fade">
       <div v-if="showModal" class="fixed z-10 inset-0 overflow-y-auto">
@@ -27,7 +27,7 @@
         class="w-full flex flex-row justify-around sm:flex sm:flex-col sm:justify-center"
       >
         <ProfileCard @set-shown-value="changeShownValue"></ProfileCard>
-        <ProfileContent :shown="this.shownValue" ref="profilecontent"></ProfileContent>
+        <ProfileContent :shown="this.shownValue" :userId="this.currentUserId" ref="profilecontent"></ProfileContent>
       </div>
     </div>
     <h1 v-else>
@@ -57,6 +57,7 @@ export default {
     return {
       authenticationStatus: this.$auth.isAuthenticated,
       shownValue: 1,
+      currentUserId: null,
     };
   },
   methods: {
@@ -65,6 +66,10 @@ export default {
       console.log(this.shownValue)
     },
     },
+  mounted() {
+    this.currentUserId = this.$refs.navbarGlobal.userId;
+    console.log(this.currentUserId)
+  }
 };
 </script>
 <style scoped>
