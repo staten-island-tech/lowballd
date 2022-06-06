@@ -61,7 +61,7 @@
               </div>
 
               <div class="flex p-4 justify-between">
-                <router-link :to="'/profiles/' + this.userId">
+                <router-link class="hover:cursor-pointer" :to="'/profiles/' + this.userId">
                 <div class="flex items-center space-x-2">
                   <img
                     class="w-10 h-10 cover rounded-full"

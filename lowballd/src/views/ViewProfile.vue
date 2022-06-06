@@ -20,22 +20,29 @@
 <div class="flex flex-row justify-center w-4/5 mx-auto divider"></div>
 <div class="flex flex-row justify-center w-4/5 mx-auto">
     <ul class="flex flex-row text-xl">
-        <li class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">FITS OF THE DAY</li>
-        <li class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">MARKETPLACE LISTINGS</li>
+        <li @click="showFeedPosts = true, showMarketPosts = false" class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">FITS OF THE DAY</li>
+        <li @click="showFeedPosts = false, showMarketPosts = true" class="px-16 hover:underline underline-offset-4 hover:-translate-y-1 transition-all ease-in-out cursor-pointer">MARKETPLACE LISTINGS</li>
     </ul>
 </div>
 <div class="flex flex-row justify-center w-4/5 mx-auto divider"></div>
+<div class="w-4/5 mx-auto">
+    <PostGrid v-if="showFeedPosts" :userId="$route.params.id"></PostGrid>
+    <ListingGrid v-if="showMarketPosts" :userId="$route.params.id"></ListingGrid>
+</div>
+
 <Footer/>
 </template>
 
 <script>
 import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
+import PostGrid from "../components/viewprofile/PostGrid.vue";
+import ListingGrid from "../components/viewprofile/ListingGrid.vue";
 
 export default {
     name: 'ViewProfile',
     components: {
-        GlobalNavbar, Footer 
+        GlobalNavbar, Footer, PostGrid, ListingGrid
     },
     data() {
         return {
@@ -47,6 +54,8 @@ export default {
             following: null,
             postsCount: null,
             listingsCount: null,
+            showFeedPosts: true,
+            showMarketPosts: false,
         };
     },
     methods: {
