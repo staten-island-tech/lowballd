@@ -39,7 +39,7 @@
             tabindex="0"
             class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li><router-link to="profile">View Profile</router-link></li>
+            <li><router-link to="/profile">View Profile</router-link></li>
             <li>
               <a
                 v-if="$auth.isAuthenticated.value"

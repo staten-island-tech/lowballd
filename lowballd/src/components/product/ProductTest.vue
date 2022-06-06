@@ -6,10 +6,12 @@
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <img :src="prod.images[0]" class="w-1/2 object-cover object-center rounded border border-gray-200">
             <div class="w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <div class="flex items-center space-x-4 -mt-8 mb-6">
-                <img class="w-12 h-12 object-cover object-center rounded-full" :src="profile_picture" />
-                <h2 class="text-gray-800 text-xl font-bold cursor-pointer">{{ username }}</h2>
-              </div>
+              <router-link class="hover:cursor-pointer" :to="'/profiles/' + prod.userId">
+                <div class="flex items-center space-x-4 -mt-8 mb-6">
+                  <img class="w-12 h-12 object-cover object-center rounded-full" :src="profile_picture" />
+                  <h2 class="text-gray-800 text-xl font-bold cursor-pointer">{{ username }}</h2>
+                </div>
+              </router-link>
                 <h2 class="text-sm title-font text-gray-700 tracking-widest">{{ prod.category }}</h2>
                 <h1 class="text-gray-900 text-4xl title-font font-bold mb-1">{{ prod.title }}</h1>
                 <div class="flex mb-4">
@@ -20,6 +22,10 @@
                   <div class="mr-8">
                     <p class="font-bold">Condition</p>
                     <p>{{ prod.condition }}</p>
+                  </div>
+                  <div class="mr-8">
+                    <p class="font-bold">Size</p>
+                    <p>{{ prod.size }}</p>
                   </div>
                   <div>
                     <p class="font-bold">Listed Since</p>
