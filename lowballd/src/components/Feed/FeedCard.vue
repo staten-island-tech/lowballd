@@ -410,7 +410,11 @@ export default {
           `https://lowballd-backend.onrender.com/api/posts/${this.postId}/comment`,
           commentData
         );
-        console.log(res);
+        this.$swal({
+          icon: "success",
+          title: "Your comment has been successfully posted",
+          text: "you can now view it once the page refreshes",
+        });
       }
     },
   },
