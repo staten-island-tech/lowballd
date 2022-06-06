@@ -21,6 +21,10 @@
                     <p class="font-bold">Condition</p>
                     <p>{{ prod.condition }}</p>
                   </div>
+                  <div class="mr-8">
+                    <p class="font-bold">Size</p>
+                    <p>{{ prod.size }}</p>
+                  </div>
                   <div>
                     <p class="font-bold">Listed Since</p>
                     <p>{{ createdDate }}</p>
@@ -71,6 +75,7 @@ export default {
         `https://lowballd-backend.onrender.com/api/market/${this.$route.params.id}`
       );
       const data = await response.json();
+      console.log(data)
       this.prod = data;
 
       let month = this.prod.createdAt.slice(5, 7);
