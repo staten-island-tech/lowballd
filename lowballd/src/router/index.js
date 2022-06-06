@@ -23,7 +23,7 @@ const routes = [
   { path: "/marketplace", name: "Marketplace", component: Marketplace },
   // { path: "/login", name: "Login", component: Login },
   { path: "/profile", name: "Profile", component: Profile },
-  { path: "/profiles", name: "ViewProfile", component: ViewProfile },
+  { path: "/profiles/:id", name: "ViewProfile", component: ViewProfile },
   { path: "/product", name: "Product", component: Product },
   { path: "/chat", name: "Chat", component: Chat },
   { path: "/token", name: "token", component: Api },
