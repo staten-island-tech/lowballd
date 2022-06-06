@@ -165,12 +165,12 @@
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
     
       <div class="relative w-full max-w-lg">
-        <div class="bg-center bg-cover absolute -top-10 -left-[-240%] w-52 h-52 animate-blob" style="background-image:url(https://images.unsplash.com/photo-1585914924626-15adac1e6402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2V0fGVufDB8fDB8fA%3D%3D&w=1000&q=80)"></div>
-        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(./views/vincent.png)"></div>
-        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url(./views/max.png)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(.views/mo.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-[93%] left-[180%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(./views/alston.png)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://helios-i.mashable.com/imagery/articles/02q65HSGQqUP38kSTVS4iVD/hero-image.fill.size_1200x900.v1623372913.jpg)"></div>
+        <div class="bg-center bg-cover absolute -top-10 -left-[-240%] w-52 h-52 animate-blob" style="background-image:url(https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg)"></div>
+        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://i.ibb.co/DLBmWVF/IMG-7615.png>)"></div>
+        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url()"></div>
+        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
+        <div class="bg-center bg-cover absolute bottom-[93%] left-[180%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
+        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
     </div>
   </div>
 </section>
