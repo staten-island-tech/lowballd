@@ -376,6 +376,14 @@ export default {
       }
     },
     async postComment() {
+      if (!this.$auth.isAuthenticated.value) {
+        this.$swal({
+          icon: "error",
+          title: "Oops...",
+          text: "Please login to continue",
+        });
+        return;
+      }
       let commentDate = new Date();
       let dd = commentDate.getDate();
 
@@ -402,7 +410,11 @@ export default {
           `https://lowballd-backend.onrender.com/api/posts/${this.postId}/comment`,
           commentData
         );
-        console.log(res);
+        this.$swal({
+          icon: "success",
+          title: "Your comment has been successfully posted",
+          text: "you can now view it once the page refreshes",
+        });
       }
     },
   },

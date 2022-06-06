@@ -25,17 +25,7 @@
                       type="text"
                       name="Title"
                       id="listing.title"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
@@ -52,17 +42,7 @@
                       id="listing.description"
                       name="description"
                       rows="3"
-                      class="
-                        shadow-sm
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        mt-1
-                        block
-                        w-full
-                        sm:text-sm
-                        border border-gray-300
-                        rounded-md
-                      "
+                      class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                       placeholder="Provide a brief description for what you are selling."
                     ></textarea>
                   </div>
@@ -81,18 +61,7 @@
                       inputmode="numeric"
                       name="price"
                       id="listing.price"
-                      class="
-                        pl-8
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="pl-8 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="xx.xx"
                     />
                     <span class="absolute bottom-1.5 left-2 text-gray-700">
@@ -109,17 +78,7 @@
                       @change="updateCategory()"
                       ref="listingcategory"
                       id="listing.category"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>Choose a category</option>
                       <option value="Tops">Tops</option>
@@ -143,17 +102,7 @@
                       type="text"
                       name="size"
                       id="listing.size"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       placeholder="ex. One Size, Small, M, 10.5"
                     />
                   </div>
@@ -167,17 +116,7 @@
                       @change="updateCondition()"
                       ref="listingcondition"
                       id="listing.condition"
-                      class="
-                        mt-1
-                        focus:ring-indigo-500
-                        focus:border-indigo-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     >
                       <option selected>What condition is this in?</option>
                       <option value="New">New</option>
@@ -200,7 +139,6 @@
                     clearAll="Clear All"
                     ref="file"
                     id="attachment"
-                    onchange="Filevalidation()"
                     @change="uploadFile"
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
@@ -209,23 +147,8 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 mb-20">
                 <button
                   @click="showAlert"
-                  type="button"
-                  class="
-                    inline-flex
-                    justify-center
-                    py-2
-                    px-4
-                    border border-transparent
-                    shadow-sm
-                    text-sm
-                    font-medium
-                    rounded-md
-                    text-white
-                    bg-indigo-600
-                    hover:bg-indigo-700
-                    focus:outline-none
-                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-                  "
+                  type="submit"
+                  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit
                 </button>
@@ -236,13 +159,24 @@
       </div>
     </div>
     <div v-else>
-        <div class=" flex items-center justify-center">
-          <img class="w-1/6 h-1/6 mt-[10%] " src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg">
-        </div>
-        <h1 class="text-center text-4xl mb-[10%]">Please <a class="hover:text-indigo-700 underline hover:cursor-pointer" @click="login()">login</a> to post a listing.</h1>   
+      <div class="flex items-center justify-center">
+        <img
+          class="w-1/6 h-1/6 mt-[10%]"
+          src="https://static.vecteezy.com/system/resources/previews/000/575/468/original/vector-login-sign-icon.jpg"
+        />
+      </div>
+      <h1 class="text-center text-4xl mb-[10%]">
+        Please
+        <a
+          class="hover:text-indigo-700 underline hover:cursor-pointer"
+          @click="login()"
+          >login</a
+        >
+        to post a listing.
+      </h1>
     </div>
   </div>
-  <Footer/>
+  <Footer />
 </template>
 
 <script>
@@ -296,15 +230,6 @@ export default {
           title: "Oops...",
           text: "Please fill in the missing fields  to continue",
         });
-      } else {
-        this.$swal({
-          icon: "success",
-          title: "Your post has been successfully saved",
-          html:
-            "Click " +
-            '<a href="/"><b>here</b></a> ' +
-            "to return to the homepage",
-        });
       }
     },
     uploadFile() {
@@ -338,10 +263,16 @@ export default {
         formData,
         { headers }
       );
-      console.log(res);
-      alert("Post has been saved");
+      this.$swal({
+        icon: "success",
+        title: "Your post has been successfully saved",
+        html:
+          "Click " +
+          '<a href="/"><b>here</b></a> ' +
+          "to return to the homepage",
+      });
     },
-        async login() {
+    async login() {
       this.$auth.loginWithRedirect({
         returnTo: window.location.origin,
       });
