@@ -3,6 +3,9 @@
         <div v-if="shown === 1">
             <ProfilePosts></ProfilePosts>
         </div>
+        <div v-if="shown === 2">
+            <ProfileListings></ProfileListings>
+        </div>
         <div v-if="shown === 3">
             <ManageAccount :userId="this.currentUserId"></ManageAccount> 
         </div>
@@ -18,6 +21,7 @@ import ProfilePosts from './ProfilePosts.vue'
 import Settings from './Settings.vue'
 import ManageAccount from './ManageAccount.vue'
 import ProfileWatchlist from './ProfileWatchlist.vue'
+import ProfileListings from './ProfileListings.vue'
 
     export default {
         name: 'ProfileContent',
@@ -31,6 +35,7 @@ import ProfileWatchlist from './ProfileWatchlist.vue'
             Settings,
             ManageAccount,
             ProfileWatchlist,
+            ProfileListings,
         },
         props: {
             userId: null,
