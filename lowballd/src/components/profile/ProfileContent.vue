@@ -4,7 +4,7 @@
             <ProfilePosts></ProfilePosts>
         </div>
         <div v-if="shown === 3">
-            <ManageAccount></ManageAccount> 
+            <ManageAccount :userId="this.currentUserId"></ManageAccount> 
         </div>
         <div v-if="shown === 5">
             <Settings></Settings>
@@ -21,6 +21,11 @@ import ProfileWatchlist from './ProfileWatchlist.vue'
 
     export default {
         name: 'ProfileContent',
+        data() {
+            return {
+                currentUserId: null,
+            }
+        },
         components: {
             ProfilePosts,
             Settings,
@@ -28,10 +33,15 @@ import ProfileWatchlist from './ProfileWatchlist.vue'
             ProfileWatchlist,
         },
         props: {
+            userId: null,
             shown: {
                 type: Number,
                 default: 1,
             },
+        },
+        beforeUpdate() {
+            console.log(this.userId)
+            this.currentUserId = this.userId;
         },
         
     }
