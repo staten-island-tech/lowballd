@@ -1,9 +1,9 @@
 <template>
     <footer class="p-10 footer bg-base-200 text-base-content footer-center">
   <div class="grid grid-flow-col gap-4 ">
-    <router-link to="about" class="hover:underline" >ABOUT</router-link> 
     <router-link to="feed" class="hover:underline">FEED</router-link>
     <router-link to="marketplace" class="hover:underline">MARKETPLACE</router-link>
+     <router-link to="contact" class="hover:underline" >CONTACT</router-link> 
     <router-link to="faq" class="hover:underline">FAQ</router-link>
   </div> 
   <div>
