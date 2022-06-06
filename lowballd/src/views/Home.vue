@@ -21,7 +21,7 @@
   <div class=" py-16 mx-auto px-8">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
-        <div class="relative h-full  ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <div class="relative h-full  ease-in duration-[150ms]" v-motion-slide-visible-left>
           <iframe
           id="ytplayer"
           class="absolute inset-0  pt-[10%] pb-[10%] w-full h-full"
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center ease-in duration-[180ms]" v-motion-slide-visible-right>
+      <div class="relative flex items-center ease-in duration-[150ms]" v-motion-slide-visible-right>
         <div class="p-8 ">
           <h2 class=" font-bold text-3xl">
             What is Lowballd?
@@ -52,20 +52,20 @@
   <div class="mb-20 py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-      <div class= " mx-auto text-center ease-in duration-[180ms]" v-motion-slide-visible-left>
+      <div class= " pl-[10%] pr-[10%] text-center ease-in duration-[150ms]" v-motion-slide-visible-left>
         <h2 class="text-3xl font-bold ">Find your style</h2>
         <p class="mt-4 text-gray-600 text-lg">
           Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
         </p>
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-          href="/marketplace"
+          href="/feed"
         >
           <span class="text-sm font-medium"> Browse more </span>
         </a>
       </div>
       
-      <div class=" ease-in duration-[180ms]"        v-motion-slide-visible-right>   
+      <div class=" ease-in duration-[150ms]"        v-motion-slide-visible-right>   
         <section>
           <div class="content">
             <div class="carrousel">
@@ -89,17 +89,16 @@
   <div class=" py-16 mx-auto px-8 mb-20">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
-        <div class="relative h-full ease-in duration-[180ms]" v-motion-slide-visible-left>
+        <div class="relative h-full ease-in duration-[150ms]" v-motion-slide-visible-left>
           <img
             class="absolute inset-0 object-cover w-full h-full "
-            src="https://d2qzw5x58y77kz.cloudfront.net/web/assets/seller/sell-easily.jpg"
+            src="https://i.cbc.ca/1.5164075.1559771487!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/selling-online.jpg"
             alt="Indoors house"
           />
         </div>
       </div>
 
-      <div class="relative flex items-center ease-in duration-[180ms]" v-motion-slide-visible-right>
-        
+      <div class="relative flex items-center ease-in duration-[150ms]" v-motion-slide-visible-right>
         <div class="p-8">
           <h2 class=" font-bold text-3xl">
             Sell your clothes
@@ -118,8 +117,59 @@
   </div>
 </section>
 <section>
-  <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[200ms]" v-motion-fade-visible>
-    <div class= "p-8 mx-auto text-center ease-in duration-    [200ms]" v-motion-fade-visible>
+  <div class=" mt-[10%] mb-[5%] py-16 px-8">
+    <div
+      class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
+        <div class= "pb-[10rem] text-center ease-in duration-[150ms] pl-[10%] pr-[10%]" v-motion-slide-visible-left>
+          <h2 class="text-3xl font-bold ">Expand your wardrobe</h2>
+          <p class="mt-4 text-gray-600 text-lg">
+            Improving a wardrobe is an ongoing process, but knowing where to start is the first step. Evaluate how your wardrobe could stand to improve. Weed out pieces you hate, and then slowly introduce new, better pieces into your closet to replace them. Then simply go on Lowballd and find those pieces.
+          </p>
+          <a
+            class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+            href="/marketplace"
+            >
+            <span class="text-sm font-medium">Start buying</span>
+          </a>
+      
+      <div class="slider ease-in duration-[50ms] " v-motion-fade-visible>
+        <input type="radio" name="slide_switch" id="id5"/>
+	        <label for="id5">
+		        <img src="https://www.organizedinteriors.com/blog/wp-content/uploads/2017/12/her-closet-2.jpg" width="100"/>
+	        </label>
+	          <img src="https://www.organizedinteriors.com/blog/wp-content/uploads/2017/12/her-closet-2.jpg"/>
+	      <input type="radio" name="slide_switch" id="id1"/>
+	        <label for="id1">
+		        <img src="https://cdn.decoist.com/wp-content/uploads/2021/04/Sliding-frosted-glass-doors-used-for-the-small-mens-closet-in-the-contemporary-bedroom-46906.jpg" width="100"/>
+	        </label>
+	          <img src="https://cdn.decoist.com/wp-content/uploads/2021/04/Sliding-frosted-glass-doors-used-for-the-small-mens-closet-in-the-contemporary-bedroom-46906.jpg"/>
+	
+	
+	      <input type="radio" name="slide_switch" id="id2" checked="checked"/>
+	        <label for="id2">
+		        <img src="https://www.tilghmanbuilders.com/hs-fs/hubfs/AA/Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg?width=750&name=Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg" width="100"/>
+	        </label>
+	          <img src="https://www.tilghmanbuilders.com/hs-fs/hubfs/AA/Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg?width=750&name=Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg"/>
+	
+	      <input type="radio" name="slide_switch" id="id3"/>
+	        <label for="id3">
+		        <img src="https://alexkwa.com/wp-content/uploads/2019/04/DSC02537-1200x800.png" width="100"/>
+	        </label>
+	          <img src="https://alexkwa.com/wp-content/uploads/2019/04/DSC02537-1200x800.png"/>
+	
+	      <input type="radio" name="slide_switch" id="id4"/>
+	        <label for="id4">
+		        <img src="https://www.closetworksinc.com/wp-content/uploads/2021/08/M_DSC7099_1200.jpg" width="100"/>
+	        </label>
+	          <img src="https://www.closetworksinc.com/wp-content/uploads/2021/08/M_DSC7099_1200.jpg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[180ms]" v-motion-fade-visible>
+    <div class= "p-8 mx-auto text-center ease-in duration-    [180ms]" v-motion-fade-visible>
       <h2 class="text-3xl font-bold ">Share your outfit</h2>
         <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
             The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
@@ -162,15 +212,15 @@
         </a>
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[500ms]" v-motion-slide-visible-left>
-    
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[200ms]" v-motion-slide-visible-left>
       <div class="relative w-full max-w-lg">
         <div class="bg-center bg-cover absolute -top-10 -left-[-240%] w-52 h-52 animate-blob" style="background-image:url(https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg)"></div>
-        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000" v-motion-slide-visible-once-right style="background-image:url(https://i.ibb.co/DLBmWVF/IMG-7615.png>)"></div>
-        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob animation-delay-4000" style="background-image:url()"></div>
-        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob animation-delay-6000" v-motion-slide-visible-once-left style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-[93%] left-[180%] w-52 h-52 animate-blob animation-delay-8000" v-motion-slide-visible-once-left style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
+        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000"  
+        style="background-image:url(https://i.ibb.co/syVc8bK/IMG-7616.png)"></div>
+        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob" style="background-image:url()"></div>
+        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob" style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
+        <div class="bg-center bg-cover absolute -top-40 left-[180%] w-52 h-52 animate-blob "  style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
+        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob" style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
     </div>
   </div>
 </section>
@@ -204,13 +254,49 @@ methods: {
 </script>
 
 <style scoped>
+.slider{
+	width: 640px;
+	position: relative;
+  left: 120%;
+  top: 2rem;
+}
+.slider>img{
+	position: absolute;
+	left: 0; bottom: 130%; 
+	transition: all 0.5s;
+}
+.slider input[name='slide_switch'] {
+	display: none;
+}
+.slider label {
+	margin: 15px 0 0 18px;
+	border: 3px solid #999;
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	opacity: 0.6;
+}
+.slider label img{
+	display: block;
+}
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
 .content{
   left: 35%;
   width:200px;
   perspective: 1000px;
   position: relative;
-  padding-bottom: 35%;
-  
+  padding-bottom: 30%;
 } 
 .carrousel{
   width:100%;
