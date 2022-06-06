@@ -376,6 +376,14 @@ export default {
       }
     },
     async postComment() {
+      if (!this.$auth.isAuthenticated.value) {
+        this.$swal({
+          icon: "error",
+          title: "Oops...",
+          text: "Please login to continue",
+        });
+        return;
+      }
       let commentDate = new Date();
       let dd = commentDate.getDate();
 
