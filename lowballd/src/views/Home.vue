@@ -2,16 +2,20 @@
 <GlobalNavbar/>
 <token></token>
 <section>
-  <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[25%] pb-[25%]" style="background-image:url(https://i.pinimg.com/originals/c7/e5/fc/c7e5fcae592e9a3dba1f328ccfed9456.jpg)">
-    <div class="h-screen w-screen flex flex-col justify-center">
-      <div class="flex flex-row justify-around -mt-12 h-96">
-        <div class="h-2/3 w-1/3 text-left ">
+<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/fashion.jpg" playsinline autoplay muted loop>
+<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/fashion.webm" type="video/webm">
+<source src="http://thenewcode.com/assets/videos/fashion.mp4" type="video/mp4">
+</video>
+    <div class="contrast-[80%] w-full h-96 bg-fixed bg-center bg-cover bg-center flex justify-center items-center pt-[30%] pb-[25%]" >
+      <div class="h-screen w-screen flex flex-col justify-center">
+        <div class="flex flex-row justify-around -mt-12 h-96">
+          <div class="h-2/3 w-1/3 text-left ">
             <p class="font-extrabold text-left text-2xl mb-1 text-white">— NOW PRESENTING</p>
             <h1 class="font-extrabold text-8xl text-white mb-4 text-center">Lowballd</h1>
             <h2 class="font-extrabold  text-white text-center text-2xl">
               An innovative fashion marketplace. A brand new social media.
             </h2>    
-        </div>
+          </div>
         <div class="w-1/2 h-full"></div>
       </div>
     </div>
@@ -21,7 +25,7 @@
   <div class=" py-16 mx-auto px-8">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
-        <div class="relative h-full  ease-in duration-[150ms]" v-motion-slide-visible-left>
+        <div class="relative h-full  ease-in duration-[180ms]" v-motion-slide-visible-once-left>
           <iframe
           id="ytplayer"
           class="absolute inset-0  pt-[10%] pb-[10%] w-full h-full"
@@ -30,7 +34,7 @@
           </iframe> 
         </div>
       </div>
-      <div class="relative flex items-center ease-in duration-[150ms]" v-motion-slide-visible-right>
+      <div class="relative flex items-center ease-in duration-[150ms]" v-motion-slide-visible-once-right>
         <div class="p-8 ">
           <h2 class=" font-bold text-3xl">
             What is Lowballd?
@@ -51,20 +55,19 @@
   <div class="mb-20 py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-      <div class= " pl-[10%] pr-[10%] text-center ease-in duration-[150ms]" v-motion-slide-visible-left>
+      <div class= " pl-[10%] pr-[10%] text-center ease-in duration-[180ms]" v-motion-slide-visible-once-left>
         <h2 class="text-3xl font-bold ">Find your style</h2>
         <p class="mt-4 text-gray-600 text-lg">
           Shop the biggest brands you know and love. Discover independent brands making waves and the creators behind them. Whatever you're into, find the item and the seller for you on Lowballd.
         </p>
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-
           href="/feed"
         >
           <span class="text-sm font-medium"> Browse more </span>
         </a>
       </div> 
-      <div class=" ease-in duration-[150ms]"        v-motion-slide-visible-right>   
+      <div class=" ease-in duration-[150ms]" v-motion-slide-visible-once-right>   
         <section>
           <div class="content">
             <div class="carrousel">
@@ -88,8 +91,7 @@
   <div class=" py-16 mx-auto px-8 mb-20">
     <div class="grid grid-cols-2 h-screen">
       <div class="relative z-10 py-16">
-
-        <div class="relative h-full ease-in duration-[150ms]" v-motion-slide-visible-left>
+        <div class="relative h-full ease-in duration-[180ms]" v-motion-slide-visible-once-left>
           <img
             class="absolute inset-0 object-cover w-full h-full "
 
@@ -99,7 +101,7 @@
         </div>
       </div>
         
-      <div class="relative flex items-center ease-in duration-[150ms]" v-motion-slide-visible-right>
+      <div class="relative flex items-center ease-in duration-[180ms]" v-motion-slide-visible-once-right>
         <div class="p-8">
           <h2 class=" font-bold text-3xl">
             Sell your clothes
@@ -122,7 +124,7 @@
   <div class=" mt-[10%] mb-[5%] py-16 px-8">
     <div
       class="grid grid-cols-2 gap-y-8 gap-x-16 items-center">
-        <div class= "pb-[10rem] text-center ease-in duration-[150ms] pl-[10%] pr-[10%]" v-motion-slide-visible-left>
+        <div class= "pb-[10rem] text-center ease-in duration-[180ms] pl-[10%] pr-[10%]" v-motion-slide-visible-once-left>
           <h2 class="text-3xl font-bold ">Expand your wardrobe</h2>
           <p class="mt-4 text-gray-600 text-lg">
             Improving a wardrobe is an ongoing process, but knowing where to start is the first step. Evaluate how your wardrobe could stand to improve. Weed out pieces you hate, and then slowly introduce new, better pieces into your closet to replace them. Then simply go on Lowballd and find those pieces.
@@ -134,7 +136,7 @@
             <span class="text-sm font-medium">Start buying</span>
           </a>
       
-      <div class="slider ease-in duration-[50ms] " v-motion-fade-visible>
+      <div class="slider ease-in duration-[50ms] " v-motion-fade-visible-once>
         <input type="radio" name="slide_switch" id="id5"/>
 	        <label for="id5">
 		        <img src="https://www.organizedinteriors.com/blog/wp-content/uploads/2017/12/her-closet-2.jpg" width="100"/>
@@ -145,20 +147,16 @@
 		        <img src="https://cdn.decoist.com/wp-content/uploads/2021/04/Sliding-frosted-glass-doors-used-for-the-small-mens-closet-in-the-contemporary-bedroom-46906.jpg" width="100"/>
 	        </label>
 	          <img src="https://cdn.decoist.com/wp-content/uploads/2021/04/Sliding-frosted-glass-doors-used-for-the-small-mens-closet-in-the-contemporary-bedroom-46906.jpg"/>
-	
-	
 	      <input type="radio" name="slide_switch" id="id2" checked="checked"/>
 	        <label for="id2">
 		        <img src="https://www.tilghmanbuilders.com/hs-fs/hubfs/AA/Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg?width=750&name=Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg" width="100"/>
 	        </label>
 	          <img src="https://www.tilghmanbuilders.com/hs-fs/hubfs/AA/Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg?width=750&name=Master%20suite%20addition%20%7C%20closet%20design%20ideas%20%7C%20shelving.jpg"/>
-	
 	      <input type="radio" name="slide_switch" id="id3"/>
 	        <label for="id3">
 		        <img src="https://alexkwa.com/wp-content/uploads/2019/04/DSC02537-1200x800.png" width="100"/>
 	        </label>
 	          <img src="https://alexkwa.com/wp-content/uploads/2019/04/DSC02537-1200x800.png"/>
-	
 	      <input type="radio" name="slide_switch" id="id4"/>
 	        <label for="id4">
 		        <img src="https://www.closetworksinc.com/wp-content/uploads/2021/08/M_DSC7099_1200.jpg" width="100"/>
@@ -170,7 +168,7 @@
   </div>
 </section>
 <section>
-  <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[180ms]" v-motion-fade-visible>
+  <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[180ms]" v-motion-fade-visible-once>
     <div class= "p-8 mx-auto text-center ease-in duration-    [180ms]" v-motion-fade-visible>
       <h2 class="text-3xl font-bold ">Share your outfit</h2>
         <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
@@ -199,13 +197,11 @@
 </section>
 <section class="mb-64">
   <div class=" pl-[20rem] pr-[40rem] pt-[15rem] ">
-      <div class=" text-center ease-in duration-[180ms] h-[20rem]" v-motion-slide-visible-left>
+      <div class=" text-center ease-in duration-[180ms] h-[20rem]" v-motion-fade-visible-once>
         <h2 class="text-3xl font-bold sm:text-4xl mt-[10%]">Reach out</h2>
-
         <p class="mt-4 text-gray-600 text-lg">
           The world is constantly evolving and so is Lowballd. We are always open for suggestions and ideas from our community. Most questions can be answered on our FAQ page but contact us if you cannot find a resolution there.
         </p>
-
         <a
           class="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
           href="/Contact"
@@ -214,16 +210,23 @@
         </a>
       </div>
     </div>
-    
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[200ms]" v-motion-slide-visible-left>
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[200ms]" v-motion-slide-visible-once-left>
       <div class="relative w-full max-w-lg">
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob animation-delay-10000" v-motion-slide-visible-once-right style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
-        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob animation-delay-2000"  
+        <div class="bg-center bg-cover absolute -top-10 left-[230%] w-72 h-72 animate-blob" 
+        style="background-image:url(https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg)"></div>
+        <div class="bg-center bg-cover absolute top-0 -right-[37%] w-52 h-52 animate-blob"
+        style="background-image: url(https://i.pinimg.com/originals/dc/6b/28/dc6b2804bd65cc163b19849c46f063b0.jpg)"
+        ></div>
+        <div class=" bg-center bg-cover absolute -bottom-52 -left-[-10%] w-72 h-72 animate-blob"  
         style="background-image:url(https://i.ibb.co/syVc8bK/IMG-7616.png)"></div>
-        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob" style="background-image:url()"></div>
-        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob" style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
-        <div class="bg-center bg-cover absolute -top-40 left-[180%] w-52 h-52 animate-blob "  style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob" style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
+        <div class="bg-center bg-cover absolute top-0 -right-[24%] w-52 h-52 animate-blob" 
+        style="background-image:url()"></div>
+        <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob" 
+        style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
+        <div class="bg-center bg-cover absolute -top-40 pt-10 left-[160%] w-52 h-52 animate-blob " 
+        style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
+        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob" 
+        style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
     </div>
   </div>
 </section>
@@ -257,6 +260,23 @@ methods: {
 </script>
 
 <style scoped>
+ * {
+	 box-sizing: border-box;
+}
+ video {
+	 position: absolute;
+	 top: 5 rem;
+	 left: 0;
+	 width: 100%;
+	 object-fit: cover;
+	 object-position: center;
+}
+ div#fashion {
+	 min-height: 100vh;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
 .slider{
 	width: 640px;
 	position: relative;
