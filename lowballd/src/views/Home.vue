@@ -96,7 +96,6 @@
             alt="Indoors house"
           />
         </div>
-        </div>
       </div>
     </div>
   </section>
@@ -249,9 +248,6 @@
       <h2 class="text-3xl font-bold ">Share your outfit</h2>
         <p class="mt-4 text-gray-600 text-lg text-center pl-[20%] pr-[20%] whitespace-normal">
             The clothes a person wears tells us many things: their status in life, for example, or their cultural affiliation or identity. They can tell us what era they live in, and even a person’s current state of mind or intent. Potraying your clothing will help you create fuller, richer character portraits. Share your outfits so everyone can better understand who you are.
-            </p>
-            </div>
-            </div>
   </section>
   <section>
     <div class="py-16 mx-auto px-8 mb-20">
@@ -388,7 +384,6 @@
         <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob" style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
         <div class="bg-center bg-cover absolute -top-40 left-[180%] w-52 h-52 animate-blob "  style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
         <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob" style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
-    </div>
     </div>
   </section>
   <Footer />
