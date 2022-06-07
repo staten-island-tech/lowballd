@@ -72,7 +72,7 @@ export default {
     };
   },
   beforeUpdate() {
-    console.log(this.userId)
+    console.log(this.userId);
   },
   mounted() {
     this.getUserInfo();
@@ -92,21 +92,33 @@ export default {
       }
     },
     async updateUserInfo() {
-      if (this.username.length < 1 && this.location.length < 1 && this.description.length < 1) {
-        alert("Please fill in all fields.");
-      } else {
-        const updatedUserData = {
-          username: `${this.username}`,
-          location: `${this.location}`,
-          description: `${this.description}`,
-        };
+      const updatedUserData = {
+        username: `${this.username}`,
+        location: `${this.location}`,
+        description: `${this.description}`,
+      };
+      try {
         const res = await axios.patch(
           `https://lowballd-backend.onrender.com/api/user/update/${this.userId}`,
           updatedUserData
         );
-        console.log(res)
+        this.$swal({
+          icon: "success",
+          title: "Your profile has been updated!",
+          text: "you can now view it once the page refreshes",
+        });
+      } catch (error) {
+        console.log(error);
       }
-    }
-  }
+
+      if (
+        this.username.length < 1 ||
+        this.location.length < 1 ||
+        this.description.length < 1
+      ) {
+        alert("Please fill in all fields.");
+      }
+    },
+  },
 };
 </script>
