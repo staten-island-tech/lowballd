@@ -1,5 +1,5 @@
 <template>
-  <GlobalNavbar></GlobalNavbar>
+  <GlobalNavbar ref="navbarGlobal"></GlobalNavbar>
   <section>
     <div class="flex flex-row justify-center w-4/5 mx-auto p-10">
       <img
@@ -7,7 +7,30 @@
         :src="profile_picture"
       />
       <div class="flex flex-col justify-center w-1/2 ml-20">
-        <p class="font-bold text-3xl">{{ username }}</p>
+          <div class="flex flex-row">
+              <p class="font-bold text-3xl mr-6">{{ username }}</p>
+              <div>
+          <div v-if="!followed">
+            <button
+              type="button"
+              class="btn btn-sm btn-wide w-[7rem] bg-green-500"
+              @click="followUser"
+            >
+              Follow
+            </button>
+          </div>
+          <div v-else>
+            <button
+              type="button"
+              class="btn btn-sm btn-wide w-[7rem] bg-red-500"
+              @click="unfollowUser"
+            >
+              Unfollow
+            </button>
+          </div>
+        </div>
+          </div>
+        
         <p class="text-gray-600 text-md mb-4">{{ location }}</p>
         <p class="text-md text-slate-500">{{ description }}</p>
         <div class="flex flex-row mt-6">
@@ -61,6 +84,7 @@ import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
 import PostGrid from "../components/viewprofile/PostGrid.vue";
 import ListingGrid from "../components/viewprofile/ListingGrid.vue";
+import axios from "axios";
 
 export default {
   name: "ViewProfile",
@@ -72,6 +96,9 @@ export default {
   },
   data() {
     return {
+      currentUserId: null,
+      userdata: this.$auth.user,
+      profileData: null,
       username: null,
       profile_picture: null,
       location: null,
@@ -82,9 +109,35 @@ export default {
       listingsCount: null,
       showFeedPosts: true,
       showMarketPosts: false,
+      followed: false,
     };
   },
   methods: {
+    async userApi() {
+      if (this.userdata == null) {
+        return;
+      } else {
+        const getUserId = this.userdata.sub.replace("auth0|", "");
+
+        try {
+          const token = await this.$auth.getTokenSilently();
+          const response = await fetch(
+            `https://lowballd-backend.onrender.com/api/user/${getUserId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          const data = await response.json();
+
+          this.profileData = data;
+          console.log(this.profileData.following);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    },
     async getUserInfo() {
       try {
         const response = await fetch(
@@ -125,28 +178,90 @@ export default {
         console.log(error);
       }
     },
-    async followUser() {
+    async checkFollow() {
       try {
         const response = await fetch(
-          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/follow`,
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+          `https://lowballd-backend.onrender.com/api/user/${this.currentUserId}`
         );
         const data = await response.json();
+        if (data.following.includes(this.$route.params.id)) {
+          this.followed = true;
+        } else {
+          this.followed = false;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async followUser() {
+      const userData = {
+        userId: `${this.currentUserId}`,
+      };
+      try {
+        const response = await axios.put(
+          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/follow`,
+          userData
+        );
+        const data = response.data;
         console.log(data);
+        if (data === "you cant follow yourself") {
+          this.$swal({
+            icon: "error",
+            title: "Oops...",
+            text: "You can't follow yourself!",
+          });
+        } else {
+          this.$swal({
+            icon: "success",
+            title: "Success!",
+            text: "You are now following this user!",
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async unfollowUser() {
+      const userData = {
+        userId: `${this.currentUserId}`,
+      };
+      try {
+        const response = await axios.put(
+          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/unfollow`,
+          userData
+        );
+        const data = response.data;
+        console.log(data);
+        if (data === "you cant unfollow yourself") {
+          this.$swal({
+            icon: "error",
+            title: "Oops...",
+            text: "You can't unfollow yourself!",
+          });
+        } else {
+          this.$swal({
+            icon: "success",
+            title: "Success!",
+            text: "this user has been unfollowed!",
+          });
+        }
       } catch (error) {
         console.log(error);
       }
     },
   },
   mounted() {
+    this.userApi();
+    this.currentUserId = this.$refs.navbarGlobal.userId;
+    // this.currentUserFollowing = this.$refs.navbarGlobal.profileData;
+
     this.getUserInfo();
     this.getUserPosts();
     this.getUserListings();
+    
   },
+  beforeUpdate() {
+      this.checkFollow();
+  }
 };
 </script>

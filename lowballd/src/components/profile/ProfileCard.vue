@@ -20,7 +20,7 @@
           <div class="p-10 w-[30rem]">
             <h1 class="text-2xl mb-4">Upload a new profile picture</h1>
             <UploadImages
-                      :max="5"
+                      :max="1"
                       maxError="Maximum of 1 file."
                       clearAll="Clear All"
                       ref="file"
