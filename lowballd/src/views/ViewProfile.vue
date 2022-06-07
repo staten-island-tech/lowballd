@@ -1,5 +1,5 @@
 <template>
-  <GlobalNavbar></GlobalNavbar>
+  <GlobalNavbar ref="navbarGlobal"></GlobalNavbar>
   <section>
     <div class="flex flex-row justify-center w-4/5 mx-auto p-10">
       <img
@@ -23,6 +23,26 @@
           <p class="text-lg text-slate-700">
             <span class="font-bold">{{ following }}</span> Following
           </p>
+        </div>
+        <div>
+          <div v-if="!followed">
+            <button
+              type="button"
+              class="btn btn-sm btn-wide w-[7rem] bg-green-500"
+              @click="followUser"
+            >
+              Follow
+            </button>
+          </div>
+          <div v-else>
+            <button
+              type="button"
+              class="btn btn-sm btn-wide w-[7rem] bg-red-500"
+              @click="unfollowUser"
+            >
+              Unfollow
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -61,6 +81,7 @@ import GlobalNavbar from "../components/GlobalNavbar.vue";
 import Footer from "../components/footer/Footer.vue";
 import PostGrid from "../components/viewprofile/PostGrid.vue";
 import ListingGrid from "../components/viewprofile/ListingGrid.vue";
+import axios from "axios";
 
 export default {
   name: "ViewProfile",
@@ -72,6 +93,8 @@ export default {
   },
   data() {
     return {
+      currentUserId: null,
+      currentUserFollowing: [],
       username: null,
       profile_picture: null,
       location: null,
@@ -82,6 +105,7 @@ export default {
       listingsCount: null,
       showFeedPosts: true,
       showMarketPosts: false,
+      followed: false,
     };
   },
   methods: {
@@ -125,25 +149,79 @@ export default {
         console.log(error);
       }
     },
-    async followUser() {
+    async checkFollow() {
+      console.log(this.currentUserFollowing);
       try {
-        const response = await fetch(
+        if (this.currentUserFollowing.includes(this.$route.params.id)) {
+          this.followed = true;
+        } else {
+          this.followed = false;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async followUser() {
+      const userData = {
+        userId: `${this.currentUserId}`,
+      };
+      try {
+        const response = await axios.put(
           `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/follow`,
-          {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
+          userData
         );
-        const data = await response.json();
+        const data = response.data;
         console.log(data);
+        if (data === "you cant follow yourself") {
+          this.$swal({
+            icon: "error",
+            title: "Oops...",
+            text: "You can't follow yourself!",
+          });
+        } else {
+          this.$swal({
+            icon: "success",
+            title: "Success!",
+            text: "You are now following this user!",
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async unfollowUser() {
+      const userData = {
+        userId: `${this.currentUserId}`,
+      };
+      try {
+        const response = await axios.put(
+          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/unfollow`,
+          userData
+        );
+        const data = response.data;
+        console.log(data);
+        if (data === "you cant unfollow yourself") {
+          this.$swal({
+            icon: "error",
+            title: "Oops...",
+            text: "You can't unfollow yourself!",
+          });
+        } else {
+          this.$swal({
+            icon: "success",
+            title: "Success!",
+            text: "this user has been unfollowed!",
+          });
+        }
       } catch (error) {
         console.log(error);
       }
     },
   },
   mounted() {
+    this.currentUserId = this.$refs.navbarGlobal.userId;
+    this.currentUserFollowing = this.$refs.navbarGlobal.profileData.followers;
+
     this.getUserInfo();
     this.getUserPosts();
     this.getUserListings();
