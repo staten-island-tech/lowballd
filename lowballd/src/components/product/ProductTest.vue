@@ -100,7 +100,7 @@ export default {
   created() {
     this.getDataById();
   },
-  mounted() {
+  beforeMount() {
     this.getUserInfo();
   },
   
