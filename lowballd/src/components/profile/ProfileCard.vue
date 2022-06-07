@@ -37,7 +37,7 @@
                 <button
                   type="button"
                   class="mr-4 inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-purple-500 text-white leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-200 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
-                  @click="showModal = false"
+                  @click="updatePfp()"
                 >
                   Upload
                 </button>
@@ -121,6 +121,8 @@
 
 <script>
 import UploadImages from "../postfeed/vue-upload-drop-images.vue";
+import axios from "axios";
+
 export default {
   name: "ProfileCard",
   emits: ['set-shown-value'],
@@ -165,6 +167,21 @@ export default {
     setShownValue(value) {
       this.$emit("setshownvalue", value);
     },
+    async updatePfp() {
+      var formData = new FormData();
+      const picture = this.$refs.file.files[0];
+      formData.append("picture", picture);
+      console.log(picture)
+      if (picture.length < 1) {
+        alert("Please upload an image.");
+      } else {
+        const res = await axios.patch(
+          `http://localhost:3001/api/user/update/pfp/${this.profileData._id}`, formData, {
+          }
+        );
+        console.log(res);
+      }
+    }
   },
   created() {
     this.callApi();
