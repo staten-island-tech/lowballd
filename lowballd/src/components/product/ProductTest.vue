@@ -99,8 +99,6 @@ export default {
   },
   created() {
     this.getDataById();
-  },
-  mounted() {
     this.getUserInfo();
   },
   
