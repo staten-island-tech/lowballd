@@ -83,8 +83,6 @@ export default {
       let day = this.prod.createdAt.slice(8, 10);
       let year = this.prod.createdAt.slice(0, 4);
       this.createdDate = `${month}/${day}/${year}`;
-    },
-    async getUserInfo() {
       try {
         const response = await fetch(
           `https://lowballd-backend.onrender.com/api/user/${this.prod.userId}`
@@ -99,9 +97,6 @@ export default {
   },
   created() {
     this.getDataById();
-  },
-  beforeMount() {
-    this.getUserInfo();
   },
   
 };
