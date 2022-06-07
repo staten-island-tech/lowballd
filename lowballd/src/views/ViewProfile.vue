@@ -94,7 +94,8 @@ export default {
   data() {
     return {
       currentUserId: null,
-      currentUserFollowing: [],
+      userdata: this.$auth.user,
+      profileData: null,
       username: null,
       profile_picture: null,
       location: null,
@@ -109,6 +110,31 @@ export default {
     };
   },
   methods: {
+    async userApi() {
+      if (this.userdata == null) {
+        return;
+      } else {
+        const getUserId = this.userdata.sub.replace("auth0|", "");
+
+        try {
+          const token = await this.$auth.getTokenSilently();
+          const response = await fetch(
+            `https://lowballd-backend.onrender.com/api/user/${getUserId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          const data = await response.json();
+
+          this.profileData = data;
+          console.log(this.profileData.following);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    },
     async getUserInfo() {
       try {
         const response = await fetch(
@@ -149,10 +175,9 @@ export default {
         console.log(error);
       }
     },
-    async checkFollow() {
-      console.log(this.currentUserFollowing);
+    checkFollow() {
       try {
-        if (this.currentUserFollowing.includes(this.$route.params.id)) {
+        if (this.profileData.following.includes(this.$route.params.id)) {
           this.followed = true;
         } else {
           this.followed = false;
@@ -219,12 +244,16 @@ export default {
     },
   },
   mounted() {
+    this.userApi();
+  },
+  mounted() {
     this.currentUserId = this.$refs.navbarGlobal.userId;
-    this.currentUserFollowing = this.$refs.navbarGlobal.profileData.followers;
+    // this.currentUserFollowing = this.$refs.navbarGlobal.profileData;
 
     this.getUserInfo();
     this.getUserPosts();
     this.getUserListings();
+    this.checkFollow();
   },
 };
 </script>
