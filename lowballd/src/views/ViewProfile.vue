@@ -1,4 +1,114 @@
 <template>
+    <transition name="fade">
+    <div v-if="showFollowerModal" class="-mt-16 fixed z-10 inset-0 overflow-y-auto">
+      <div
+        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div
+          @click="showFollowerModal = false"
+          class="fixed inset-0 transition-opacity"
+        >
+          <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span
+        >&#8203;
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-headline"
+        >
+          <div class="p-10 h-[24rem] w-[30rem]">
+            <h1 class="text-2xl mb-4">Followers ({{ followers }})</h1>
+            <div class="overflow-scroll h-4/6 w-full">
+                <div @click="showFollowerModal = false, this.$router.go()" v-for="follower in completeFollowerList" class="my-4 hover:cursor-pointer">
+                    <router-link :to="'/profiles/' + follower[0]">
+                        <div class="hover:cursor-pointer flex items-center space-x-2">
+                            
+                            <img class="w-10 h-10 cover rounded-full" :src="follower[2]" />
+                            <h2 class="text-gray-800 font-bold cursor-pointer">{{ follower[1] }}</h2>
+                            
+                        </div>
+                    </router-link>
+                </div>
+            </div>
+          </div>
+          <div
+            class="flex justify-between bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+          >
+            <div></div>
+            <span
+              class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+            >
+              <button
+                type="button"
+                class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                @click="showFollowerModal = false"
+              >
+                Close
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+
+  <transition name="fade">
+    <div v-if="showFollowingModal" class="-mt-16 fixed z-10 inset-0 overflow-y-auto">
+      <div
+        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div
+          @click="showFollowingModal = false"
+          class="fixed inset-0 transition-opacity"
+        >
+          <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span
+        >&#8203;
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-headline"
+        >
+          <div class="p-10 h-[24rem] w-[30rem]">
+            <h1 class="text-2xl mb-4">Following ({{ following }})</h1>
+            <div class="overflow-scroll h-4/6 w-full">
+                <div @click="showFollowingModal = false, this.$router.go()" v-for="following in completeFollowingList" class="my-4 hover:cursor-pointer">
+                    <router-link :to="'/profiles/' + following[0]">
+                        <div class="hover:cursor-pointer flex items-center space-x-2">
+                            
+                            <img class="w-10 h-10 cover rounded-full" :src="following[2]" />
+                            <h2 class="text-gray-800 font-bold cursor-pointer">{{ following[1] }}</h2>
+                            
+                        </div>
+                    </router-link>
+                </div>
+            </div>
+          </div>
+          <div
+            class="flex justify-between bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+          >
+            <div></div>
+            <span
+              class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+            >
+              <button
+                type="button"
+                class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                @click="showFollowingModal = false"
+              >
+                Close
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+
   <GlobalNavbar ref="navbarGlobal"></GlobalNavbar>
   <section>
     <div class="flex flex-row justify-center w-4/5 mx-auto p-10">
@@ -40,10 +150,10 @@
           <p class="text-lg text-slate-700 pr-4">
             <span class="font-bold">{{ listingsCount }}</span> Listings
           </p>
-          <p class="text-lg text-slate-700 pr-4">
+          <p @click="showFollowerModal = true" class="text-lg text-slate-700 pr-4">
             <span class="font-bold">{{ followers }}</span> Followers
           </p>
-          <p class="text-lg text-slate-700">
+          <p @click="showFollowingModal = true" class="text-lg text-slate-700">
             <span class="font-bold">{{ following }}</span> Following
           </p>
         </div>
@@ -110,6 +220,12 @@ export default {
       showFeedPosts: true,
       showMarketPosts: false,
       followed: false,
+      showFollowerModal: false,
+      showFollowingModal: false,
+      followerList: null,
+      followingList: null,
+      completeFollowerList: null,
+      completeFollowingList: null,
     };
   },
   methods: {
@@ -132,7 +248,6 @@ export default {
           const data = await response.json();
 
           this.profileData = data;
-          console.log(this.profileData.following);
         } catch (error) {
           console.log(error);
         }
@@ -150,6 +265,8 @@ export default {
         this.description = data.description;
         this.followers = data.followers.length;
         this.following = data.following.length;
+        this.followerList = data.followers;
+        this.followingList = data.following;
       } catch (error) {
         console.log(error);
       }
@@ -249,6 +366,63 @@ export default {
         console.log(error);
       }
     },
+    async getCompleteFollowerList() {
+        try {
+            const response = await fetch(
+            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
+            );
+            const data = await response.json();
+            const followerList = data.followers;
+            const f = []
+            for (let i = 0; i < followerList.length; i++) {
+                try {
+                    const response = await fetch(
+                    `https://lowballd-backend.onrender.com/api/user/${followerList[i]}`
+                    ); 
+                    const data = await response.json();
+                    const username = data.username;
+                    const profile_picture = data.profile_picture;
+                    f.push([followerList[i], username, profile_picture]);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            console.log(f)
+            this.completeFollowerList = f;
+        }
+        catch (error) {
+            console.log(error)
+        }
+    },
+    async getCompleteFollowingList() {
+        try {
+            const response = await fetch(
+            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
+            );
+            const data = await response.json();
+            const followingList = data.following;
+            const f = []
+            for (let i = 0; i < followingList.length; i++) {
+                try {
+                    const response = await fetch(
+                    `https://lowballd-backend.onrender.com/api/user/${followingList[i]}`
+                    ); 
+                    const data = await response.json();
+                    const username = data.username;
+                    const profile_picture = data.profile_picture;
+                    f.push([followingList[i], username, profile_picture]);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            console.log(f)
+            this.completeFollowingList = f;
+            console.log(this.completeFollowingList)
+        }
+        catch (error) {
+            console.log(error)
+        }
+    },
   },
   mounted() {
     this.userApi();
@@ -258,9 +432,10 @@ export default {
     this.getUserInfo();
     this.getUserPosts();
     this.getUserListings();
-    
   },
   beforeUpdate() {
+      this.getCompleteFollowerList();
+      this.getCompleteFollowingList();
       this.checkFollow();
   }
 };

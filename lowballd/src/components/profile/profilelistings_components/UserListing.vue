@@ -11,7 +11,7 @@
                     <p class="text-xs text-gray-500 group-hover:underline group-hover:underline-offset-4">
                         {{category}}
                     </p>
-                    <h3 class="text-md group-hover:underline group-hover:underline-offset-4">
+                    <h3 class="text-sm w-28 group-hover:underline group-hover:underline-offset-4">
                     {{title}}
                     </h3>
                 </div>

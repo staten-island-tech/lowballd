@@ -263,6 +263,7 @@ export default {
         formData,
         { headers }
       );
+      console.log(res)
       this.$swal({
         icon: "success",
         title: "Your post has been successfully saved",
