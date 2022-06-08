@@ -212,7 +212,7 @@
     </div>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ease-in duration-[200ms]" v-motion-slide-visible-once-left>
       <div class="relative w-full max-w-lg">
-        <div class="bg-center bg-cover absolute -top-10 left-[230%] w-72 h-72 animate-blob" 
+        <div class="bg-center bg-cover absolute -top-10 left-[250%] w-72 h-72 animate-blob" 
         style="background-image:url(https://3.files.edl.io/aeb1/20/12/02/154937-46cc468f-b7f4-4bb3-945e-3265bdb605d4.jpg)"></div>
         <div class="bg-center bg-cover absolute top-0 -right-[37%] w-52 h-52 animate-blob"
         style="background-image: url(https://i.pinimg.com/originals/dc/6b/28/dc6b2804bd65cc163b19849c46f063b0.jpg)"
@@ -223,9 +223,9 @@
         style="background-image:url()"></div>
         <div class="bg-center bg-cover absolute bottom-32 -left-[-10%] w-52 h-72 animate-blob" 
         style="background-image:url(https://i.ibb.co/XZwc6bM/IMG-E7607.jpg)"></div>
-        <div class="bg-center bg-cover absolute -top-40 pt-10 left-[160%] w-52 h-52 animate-blob " 
+        <div class="bg-center bg-cover absolute -top-40 pt-[10%] left-[190%] w-52 h-52 animate-blob " 
         style="background-image:url(https://ibb.co/ScJsy6M"><img src="https://i.ibb.co/W0sx5HM/IMG-E7604.jpg)"></div>
-        <div class="bg-center bg-cover absolute bottom-32 left-[230%] w-72 h-72 animate-blob" 
+        <div class="bg-center bg-cover absolute bottom-32 left-[260%] w-72 h-72 animate-blob" 
         style="background-image:url(https://i.ibb.co/kDv5dyg/IMG-E7614-1.jpg)"></div>
     </div>
   </div>
@@ -331,6 +331,7 @@ methods: {
 .carrousel:hover{
   animation-play-state: paused;
   cursor: pointer;
+  
 }
 .carrousel figure{
   width:90%;
