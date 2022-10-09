@@ -3,6 +3,7 @@
 
 Lowballd is a full-stack web application created by the efforts of five students at Staten Island Technical High School's AP Computer Science program. By combining a second-hand clothing marketplace with an "outfit of the day" type social media, Lowballd is the first of it's kind. 
 
+`cd lowballd`
 `npm run dev`
 to start project
 
