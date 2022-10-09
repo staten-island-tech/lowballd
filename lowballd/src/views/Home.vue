@@ -269,7 +269,6 @@ methods: {
 .carrousel{
   width:100%;
   position: absolute;
-  height: ;
   animation: rotate 15s infinite linear;
   transform-style: preserve-3d;
 }
