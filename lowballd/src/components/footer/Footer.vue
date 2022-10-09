@@ -4,7 +4,6 @@
     <router-link to="feed" class="hover:underline">FEED</router-link>
     <router-link to="marketplace" class="hover:underline">MARKETPLACE</router-link>
      <router-link to="contact" class="hover:underline" >CONTACT</router-link> 
-    <router-link to="faq" class="hover:underline">FAQ</router-link>
   </div> 
   <div>
     <p>Copyright © 2021 - All right reserved by LOWBALLD</p>

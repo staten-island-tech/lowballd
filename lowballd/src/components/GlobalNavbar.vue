@@ -1,21 +1,22 @@
 <template>
-  <div class="w-full h-20 flex flex-row justify-between px-8 py-4">
+  <div class="overflow-hidden w-full h-20 flex flex-row justify-between px-8 py-4">
     <router-link to="/" class="text-xl my-auto">Lowballd</router-link>
     <div class="my-auto">
-      <router-link to="/feed" @click="checkLogin" class="px-6"
+      <router-link to="/feed" class="xl:px-6 md:px-4 sm:px-2"
         >Feed</router-link
       >
 
-      <router-link to="/marketplace" @click="checkLogin" class="px-6"
+      <router-link to="/marketplace" class="xl:px-6 md:px-4 sm:px-2"
         >Marketplace</router-link
       >
-      <router-link to="/contact" class="px-6">Contact</router-link>
-      <router-link to="/faq" class="px-6">FAQ</router-link>
+      <router-link to="/contact" class="xl:px-6 md:px-4 sm:px-2">Contact</router-link>
     </div>
     <div class="my-auto">
       <Login :logindata="profileData"></Login>
     </div>
   </div>
+
+
 </template>
 
 <script>

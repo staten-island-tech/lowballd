@@ -18,7 +18,7 @@
       </button>
     </router-link>
   </div>
-  <div class="mx-auto flex flex-wrap">
+  <div class="mx-auto flex justify-center flex-wrap">
     <FeedCard
       v-for="item in apiMessage"
       :key="item.id"
