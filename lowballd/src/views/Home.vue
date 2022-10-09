@@ -58,9 +58,9 @@
   </div>
 </section>
 
-<section class="flex items-center sm:mx-10 sm:mb-40 ">
+<section class="flex items-center sm:mx-10 sm:mb-40">
   <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:h-[50vh] sm:h-[60vh] lg:grid-cols-2">
+    <div class="grid grid-cols-1 lg:h-[50vh] sm:h-[60vh] lg:grid-cols-2" v-motion-slide-visible-once-right>
       <div class="relative z-10 lg:py-16">
         <div class="relative h-30 sm:h-80 lg:h-full">
           <img
@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100">
+      <div class="relative flex items-center bg-gray-100" v-motion-slide-visible-once-left>
         <span
           class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-gray-100"
         ></span>
@@ -99,7 +99,7 @@
 
 <section class="h-[35vh] sm:h-[60vh] sm:mx-10 flex items-center">
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" v-motion-slide-visible-once-right>
       <div
         class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
       >
@@ -133,7 +133,7 @@
       </div>
       </div>
 
-      <div class="lg:py-24 text-left">
+      <div class="lg:py-24 text-left" v-motion-slide-visible-once-left>
         <h2 class="text-3xl font-bold sm:text-4xl">Find your style.</h2>
 
         <p class="mt-4 text-gray-600">
@@ -145,7 +145,7 @@
   </div>
 </section>
 
-<section>
+<section class="mt-40">
   <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[180ms]" v-motion-fade-visible-once>
     <div class= "p-8 mx-auto text-center ease-in duration-    [180ms]" v-motion-fade-visible>
       <h2 class="text-3xl font-bold ">Share your outfit</h2>
