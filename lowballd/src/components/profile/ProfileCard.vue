@@ -128,6 +128,12 @@
         >
           Notification Settings
         </button>
+        <button
+          @click="logout()"
+          class="btn btn-sm w-4/5 mx-auto my-2 bg-red-500 text-slate-100 hover:bg-red-600"
+        >
+          Log Out
+        </button>
       </div>
     </div>
   </div>
@@ -204,6 +210,11 @@ export default {
           console.log(error);
         }
       }
+    },
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin,
+      });
     },
   },
   created() {
