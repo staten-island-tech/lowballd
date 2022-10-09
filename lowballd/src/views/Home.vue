@@ -32,7 +32,7 @@
   </div>
 </section>
 
-<section class="h-[35vh] sm:h-[60vh] sm:mx-10 flex items-center">
+<section class="2xl:h-[50vh] xl:h-[75vh] sm:mx-10 flex items-center">
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" v-motion-slide-visible-once-right>
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
       <div
@@ -60,7 +60,7 @@
 
 <section class="flex items-center sm:mx-10 sm:mb-40">
   <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:h-[50vh] sm:h-[60vh] lg:grid-cols-2" v-motion-slide-visible-once-right>
+    <div class="grid grid-cols-1 h-[75vh] lg:grid-cols-2" v-motion-slide-visible-once-right>
       <div class="relative z-10 lg:py-16">
         <div class="relative h-30 sm:h-80 lg:h-full">
           <img
@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section class="h-[35vh] sm:h-[60vh] sm:mx-10 flex items-center">
+<section class="2xl:h-[50vh] xl:h-[75vh] sm:mx-10 flex items-center">
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16" v-motion-slide-visible-once-right>
       <div
@@ -145,7 +145,7 @@
   </div>
 </section>
 
-<section class="mt-40">
+<section class="mt-20">
   <div class="grid grid-cols-1 gap-y-8 gap-x-16 items-center ease-in duration-[180ms]" v-motion-fade-visible-once>
     <div class= "p-8 mx-auto text-center ease-in duration-    [180ms]" v-motion-fade-visible>
       <h2 class="text-3xl font-bold ">Share your outfit</h2>
