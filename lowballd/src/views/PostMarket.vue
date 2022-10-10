@@ -229,6 +229,7 @@ export default {
           title: "Oops...",
           text: "Please fill in the missing fields  to continue",
         });
+        return;
       }
     },
     uploadFile() {
@@ -244,8 +245,8 @@ export default {
       console.log(this.listing.condition);
     },
     async postData() {
-      showAlert();
       const formData = new FormData();
+
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
       formData.append("description", this.listing.description);

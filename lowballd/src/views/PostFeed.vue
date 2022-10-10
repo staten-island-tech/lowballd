@@ -169,7 +169,6 @@ export default {
     },
 
     uploadFile() {
-      showAlert();
       this.posts.images = this.$refs.file.files;
       console.log(this.posts.images);
     },
