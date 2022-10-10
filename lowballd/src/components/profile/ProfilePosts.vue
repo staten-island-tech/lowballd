@@ -18,7 +18,7 @@
         v-for="item in postsArray"
         :key="item.id"
         :postImage="item.images[0]"
-        :postDate="item.date.slice(4,-42)"
+        :postDate="item.date.slice(4, -42)"
       ></UserPost>
     </div>
   </div>
@@ -45,7 +45,7 @@ export default {
           `https://lowballd-backend.onrender.com/api/posts/profile/${getUserId}`
         );
         const data = await response.json();
-        this.postsArray = data;
+        this.postsArray = data.reverse();
         console.log(this.postsArray);
       } catch (error) {
         console.log(error);

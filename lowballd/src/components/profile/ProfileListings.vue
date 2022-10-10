@@ -4,14 +4,14 @@
       <h1 class="text-2xl m-12">Your Marketplace Listings</h1>
     </div>
     <div class="h-96 w-11/12 mx-auto flex flex-wrap justify-start">
-        <UserListing
-            v-for="item in listingArray"
-            :productId="item._id"
-            :listingImage="item.images[0]"
-            :category="item.category"
-            :title="item.title"
-            :price="item.price"
-        ></UserListing>
+      <UserListing
+        v-for="item in listingArray"
+        :productId="item._id"
+        :listingImage="item.images[0]"
+        :category="item.category"
+        :title="item.title"
+        :price="item.price"
+      ></UserListing>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ import UserListing from "./profilelistings_components/UserListing.vue";
 export default {
   name: "ProfileListings",
   components: {
-      UserListing,
+    UserListing,
   },
   data() {
     return {
@@ -38,7 +38,7 @@ export default {
           `https://lowballd-backend.onrender.com/api/market/profile/${getUserId}`
         );
         const data = await response.json();
-        this.listingArray = data;
+        this.listingArray = data.reverse();
         console.log(this.listingArray);
       } catch (error) {
         console.log(error);

@@ -63,7 +63,7 @@ export default {
         );
         const data = await response.json();
         console.log(data);
-        this.apiMessage = data;
+        this.apiMessage = data.reverse();
       } catch (error) {
         console.log(error);
       }
