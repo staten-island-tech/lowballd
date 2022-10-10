@@ -176,7 +176,7 @@ export default {
           }
         );
         const data = await response.json();
-        console.log(data);
+
         this.profileData = data;
         this.followers = data.followers.length;
         this.following = data.following.length;
@@ -191,7 +191,7 @@ export default {
       var formData = new FormData();
       const picture = this.$refs.file.files[0];
       formData.append("picture", picture);
-      console.log(picture);
+
       if (picture.length < 1) {
         alert("Please upload an image.");
       } else {

@@ -62,7 +62,6 @@ export default {
           "https://lowballd-backend.onrender.com/api/posts/"
         );
         const data = await response.json();
-        console.log(data);
         this.apiMessage = data.reverse();
       } catch (error) {
         console.log(error);
@@ -71,7 +70,6 @@ export default {
   },
   mounted() {
     this.currentUserId = this.$refs.navbarGlobal.userId;
-    console.log(this.currentUserId);
     this.callApi();
   },
 };

@@ -46,7 +46,6 @@ export default {
         );
         const data = await response.json();
         this.postsArray = data.reverse();
-        console.log(this.postsArray);
       } catch (error) {
         console.log(error);
       }

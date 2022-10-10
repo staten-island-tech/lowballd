@@ -13,9 +13,12 @@
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                 <h1 class="text-2xl mb-4">Welcome to Lowballd!</h1>
-                <p class="text-lg mb-4">Thank you for signing up. Please fill out the following fields to finalize your account creation.</p>
+                <p class="text-lg mb-4">
+                  Thank you for signing up. Please fill out the following fields
+                  to finalize your account creation.
+                </p>
                 <div class="grid xl:grid-cols-2 xl:gap-6">
-                    <div class="relative">
+                  <div class="relative">
                     <label
                       for="title"
                       class="block text-sm font-medium text-gray-700"
@@ -23,7 +26,7 @@
                     >
                     <input
                       v-model="profile.username"
-                      type="text" 
+                      type="text"
                       inputmode="numeric"
                       name="price"
                       id="username"
@@ -79,7 +82,6 @@
                   />
                   <!-- <input type="file" ref="file" accept="image/png, image/jpeg" @change="uploadFile"> -->
                 </div>
-
               </div>
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
@@ -120,7 +122,6 @@ export default {
   },
   mounted() {
     this.listing.userId = this.$refs.navbarGlobal.userId;
-    console.log(this.userId);
   },
   methods: {
     uploadFile() {
@@ -128,12 +129,12 @@ export default {
       console.log(this.listing.images);
     },
     async postData(e) {
-        const formData = new FormData();
-        formData.append("userId", this.listing.userId);
-        formData.append("username", this.listing.username);
-        formData.append("location", this.listing.location);
-        formData.append("biography", this.listing.biography);
-        
+      const formData = new FormData();
+      formData.append("userId", this.listing.userId);
+      formData.append("username", this.listing.username);
+      formData.append("location", this.listing.location);
+      formData.append("biography", this.listing.biography);
+
       for (var i = 0; i < this.listing.images.length; i++) {
         let file = this.listing.images[i];
         formData.append("pictures", file, file.name);
@@ -145,7 +146,6 @@ export default {
         formData,
         { headers }
       );
-      console.log(res);
     },
   },
 };

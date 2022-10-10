@@ -71,7 +71,7 @@ export default {
   },
   methods: {
     async getDataById() {
-      console.log(this.$route.params.id);
+      
       const response = await fetch(
         //Think the url changed - waiting for confirmation 
         `https://lowballd-backend.onrender.com/api/market/${this.$route.params.id}`

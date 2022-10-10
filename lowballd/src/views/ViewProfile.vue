@@ -1,6 +1,9 @@
 <template>
-    <transition name="fade">
-    <div v-if="showFollowerModal" class="-mt-16 fixed z-10 inset-0 overflow-y-auto">
+  <transition name="fade">
+    <div
+      v-if="showFollowerModal"
+      class="-mt-16 fixed z-10 inset-0 overflow-y-auto"
+    >
       <div
         class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
       >
@@ -21,16 +24,23 @@
           <div class="p-10 h-[24rem] w-[30rem]">
             <h1 class="text-2xl mb-4">Followers ({{ followers }})</h1>
             <div class="overflow-scroll h-4/6 w-full">
-                <div @click="showFollowerModal = false, this.$router.go()" v-for="follower in completeFollowerList" class="my-4 hover:cursor-pointer">
-                    <router-link :to="'/profiles/' + follower[0]">
-                        <div class="hover:cursor-pointer flex items-center space-x-2">
-                            
-                            <img class="w-10 h-10 cover rounded-full" :src="follower[2]" />
-                            <h2 class="text-gray-800 font-bold cursor-pointer">{{ follower[1] }}</h2>
-                            
-                        </div>
-                    </router-link>
-                </div>
+              <div
+                @click="(showFollowerModal = false), this.$router.go()"
+                v-for="follower in completeFollowerList"
+                class="my-4 hover:cursor-pointer"
+              >
+                <router-link :to="'/profiles/' + follower[0]">
+                  <div class="hover:cursor-pointer flex items-center space-x-2">
+                    <img
+                      class="w-10 h-10 cover rounded-full"
+                      :src="follower[2]"
+                    />
+                    <h2 class="text-gray-800 font-bold cursor-pointer">
+                      {{ follower[1] }}
+                    </h2>
+                  </div>
+                </router-link>
+              </div>
             </div>
           </div>
           <div
@@ -55,7 +65,10 @@
   </transition>
 
   <transition name="fade">
-    <div v-if="showFollowingModal" class="-mt-16 fixed z-10 inset-0 overflow-y-auto">
+    <div
+      v-if="showFollowingModal"
+      class="-mt-16 fixed z-10 inset-0 overflow-y-auto"
+    >
       <div
         class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
       >
@@ -76,16 +89,23 @@
           <div class="p-10 h-[24rem] w-[30rem]">
             <h1 class="text-2xl mb-4">Following ({{ following }})</h1>
             <div class="overflow-scroll h-4/6 w-full">
-                <div @click="showFollowingModal = false, this.$router.go()" v-for="following in completeFollowingList" class="my-4 hover:cursor-pointer">
-                    <router-link :to="'/profiles/' + following[0]">
-                        <div class="hover:cursor-pointer flex items-center space-x-2">
-                            
-                            <img class="w-10 h-10 cover rounded-full" :src="following[2]" />
-                            <h2 class="text-gray-800 font-bold cursor-pointer">{{ following[1] }}</h2>
-                            
-                        </div>
-                    </router-link>
-                </div>
+              <div
+                @click="(showFollowingModal = false), this.$router.go()"
+                v-for="following in completeFollowingList"
+                class="my-4 hover:cursor-pointer"
+              >
+                <router-link :to="'/profiles/' + following[0]">
+                  <div class="hover:cursor-pointer flex items-center space-x-2">
+                    <img
+                      class="w-10 h-10 cover rounded-full"
+                      :src="following[2]"
+                    />
+                    <h2 class="text-gray-800 font-bold cursor-pointer">
+                      {{ following[1] }}
+                    </h2>
+                  </div>
+                </router-link>
+              </div>
             </div>
           </div>
           <div
@@ -117,30 +137,30 @@
         :src="profile_picture"
       />
       <div class="flex flex-col justify-center w-1/2 ml-20">
-          <div class="flex flex-row">
-              <p class="font-bold text-3xl mr-6">{{ username }}</p>
-              <div>
-          <div v-if="!followed">
-            <button
-              type="button"
-              class="btn btn-sm btn-wide w-[7rem] bg-green-500"
-              @click="followUser"
-            >
-              Follow
-            </button>
-          </div>
-          <div v-else>
-            <button
-              type="button"
-              class="btn btn-sm btn-wide w-[7rem] bg-red-500"
-              @click="unfollowUser"
-            >
-              Unfollow
-            </button>
+        <div class="flex flex-row">
+          <p class="font-bold text-3xl mr-6">{{ username }}</p>
+          <div>
+            <div v-if="!followed">
+              <button
+                type="button"
+                class="btn btn-sm btn-wide w-[7rem] bg-green-500"
+                @click="followUser"
+              >
+                Follow
+              </button>
+            </div>
+            <div v-else>
+              <button
+                type="button"
+                class="btn btn-sm btn-wide w-[7rem] bg-red-500"
+                @click="unfollowUser"
+              >
+                Unfollow
+              </button>
+            </div>
           </div>
         </div>
-          </div>
-        
+
         <p class="text-gray-600 text-md mb-4">{{ location }}</p>
         <p class="text-md text-slate-500">{{ description }}</p>
         <div class="flex flex-row mt-6">
@@ -150,7 +170,10 @@
           <p class="text-lg text-slate-700 pr-4">
             <span class="font-bold">{{ listingsCount }}</span> Listings
           </p>
-          <p @click="showFollowerModal = true" class="text-lg text-slate-700 pr-4">
+          <p
+            @click="showFollowerModal = true"
+            class="text-lg text-slate-700 pr-4"
+          >
             <span class="font-bold">{{ followers }}</span> Followers
           </p>
           <p @click="showFollowingModal = true" class="text-lg text-slate-700">
@@ -277,7 +300,6 @@ export default {
           `https://lowballd-backend.onrender.com/api/posts/profile/${this.$route.params.id}`
         );
         const data = await response.json();
-        console.log(data);
         this.postsCount = data.length;
       } catch (error) {
         console.log(error);
@@ -289,7 +311,6 @@ export default {
           `https://lowballd-backend.onrender.com/api/market/profile/${this.$route.params.id}`
         );
         const data = await response.json();
-        console.log(data);
         this.listingsCount = data.length;
       } catch (error) {
         console.log(error);
@@ -314,114 +335,128 @@ export default {
       const userData = {
         userId: `${this.currentUserId}`,
       };
-      try {
-        const response = await axios.put(
-          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/follow`,
-          userData
-        );
-        const data = response.data;
-        console.log(data);
-        if (data === "you cant follow yourself") {
-          this.$swal({
-            icon: "error",
-            title: "Oops...",
-            text: "You can't follow yourself!",
-          });
-        } else {
-          this.$swal({
-            icon: "success",
-            title: "Success!",
-            text: "You are now following this user!",
-          });
+      if (!this.$auth.isAuthenticated.value) {
+        this.$swal({
+          icon: "error",
+          title: "Oops...",
+          text: "Please login to continue",
+        });
+        return;
+      } else {
+        try {
+          const response = await axios.put(
+            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/follow`,
+            userData
+          );
+          const data = response.data;
+          if (data === "you cant follow yourself") {
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "You can't follow yourself!",
+            });
+          } else {
+            this.$swal({
+              icon: "success",
+              title: "Success!",
+              text: "You are now following this user!",
+            });
+          }
+        } catch (error) {
+          console.log(error);
         }
-      } catch (error) {
-        console.log(error);
       }
     },
     async unfollowUser() {
       const userData = {
         userId: `${this.currentUserId}`,
       };
-      try {
-        const response = await axios.put(
-          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/unfollow`,
-          userData
-        );
-        const data = response.data;
-        console.log(data);
-        if (data === "you cant unfollow yourself") {
-          this.$swal({
-            icon: "error",
-            title: "Oops...",
-            text: "You can't unfollow yourself!",
-          });
-        } else {
-          this.$swal({
-            icon: "success",
-            title: "Success!",
-            text: "this user has been unfollowed!",
-          });
+      if (!this.$auth.isAuthenticated.value) {
+        this.$swal({
+          icon: "error",
+          title: "Oops...",
+          text: "Please login to continue",
+        });
+        return;
+      } else {
+        try {
+          const response = await axios.put(
+            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}/unfollow`,
+            userData
+          );
+          const data = response.data;
+          if (data === "you cant unfollow yourself") {
+            this.$swal({
+              icon: "error",
+              title: "Oops...",
+              text: "You can't unfollow yourself!",
+            });
+          } else {
+            this.$swal({
+              icon: "success",
+              title: "Success!",
+              text: "this user has been unfollowed!",
+            });
+          }
+        } catch (error) {
+          console.log(error);
         }
+      }
+    },
+    async getCompleteFollowerList() {
+      try {
+        const response = await fetch(
+          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
+        );
+        const data = await response.json();
+        const followerList = data.followers;
+        const f = [];
+        for (let i = 0; i < followerList.length; i++) {
+          try {
+            const response = await fetch(
+              `https://lowballd-backend.onrender.com/api/user/${followerList[i]}`
+            );
+            const data = await response.json();
+            const username = data.username;
+            const profile_picture = data.profile_picture;
+            f.push([followerList[i], username, profile_picture]);
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        console.log(f);
+        this.completeFollowerList = f;
       } catch (error) {
         console.log(error);
       }
     },
-    async getCompleteFollowerList() {
-        try {
-            const response = await fetch(
-            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
-            );
-            const data = await response.json();
-            const followerList = data.followers;
-            const f = []
-            for (let i = 0; i < followerList.length; i++) {
-                try {
-                    const response = await fetch(
-                    `https://lowballd-backend.onrender.com/api/user/${followerList[i]}`
-                    ); 
-                    const data = await response.json();
-                    const username = data.username;
-                    const profile_picture = data.profile_picture;
-                    f.push([followerList[i], username, profile_picture]);
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-            console.log(f)
-            this.completeFollowerList = f;
-        }
-        catch (error) {
-            console.log(error)
-        }
-    },
     async getCompleteFollowingList() {
-        try {
+      try {
+        const response = await fetch(
+          `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
+        );
+        const data = await response.json();
+        const followingList = data.following;
+        const f = [];
+        for (let i = 0; i < followingList.length; i++) {
+          try {
             const response = await fetch(
-            `https://lowballd-backend.onrender.com/api/user/${this.$route.params.id}`
+              `https://lowballd-backend.onrender.com/api/user/${followingList[i]}`
             );
             const data = await response.json();
-            const followingList = data.following;
-            const f = []
-            for (let i = 0; i < followingList.length; i++) {
-                try {
-                    const response = await fetch(
-                    `https://lowballd-backend.onrender.com/api/user/${followingList[i]}`
-                    ); 
-                    const data = await response.json();
-                    const username = data.username;
-                    const profile_picture = data.profile_picture;
-                    f.push([followingList[i], username, profile_picture]);
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-            console.log(f)
-            this.completeFollowingList = f;
-            console.log(this.completeFollowingList)
+            const username = data.username;
+            const profile_picture = data.profile_picture;
+            f.push([followingList[i], username, profile_picture]);
+          } catch (error) {
+            console.log(error);
+          }
         }
-        catch (error) {
-            console.log(error)
-        }
+        console.log(f);
+        this.completeFollowingList = f;
+        console.log(this.completeFollowingList);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
   mounted() {
@@ -434,9 +469,9 @@ export default {
     this.getUserListings();
   },
   beforeUpdate() {
-      this.getCompleteFollowerList();
-      this.getCompleteFollowingList();
-      this.checkFollow();
-  }
+    this.getCompleteFollowerList();
+    this.getCompleteFollowingList();
+    this.checkFollow();
+  },
 };
 </script>

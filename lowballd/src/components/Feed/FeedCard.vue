@@ -61,16 +61,19 @@
               </div>
 
               <div class="flex p-4 justify-between">
-                <router-link class="hover:cursor-pointer" :to="'/profiles/' + this.userId">
-                <div class="flex items-center space-x-2">
-                  <img
-                    class="w-10 h-10 cover rounded-full"
-                    :src="profilePicture"
-                  />
-                  <h2 class="text-gray-800 font-bold cursor-pointer">
-                    {{ username }}
-                  </h2>
-                </div>
+                <router-link
+                  class="hover:cursor-pointer"
+                  :to="'/profiles/' + this.userId"
+                >
+                  <div class="flex items-center space-x-2">
+                    <img
+                      class="w-10 h-10 cover rounded-full"
+                      :src="profilePicture"
+                    />
+                    <h2 class="text-gray-800 font-bold cursor-pointer">
+                      {{ username }}
+                    </h2>
+                  </div>
                 </router-link>
                 <div class="flex space-x-2">
                   <div class="flex space-x-1 items-center">
@@ -248,12 +251,10 @@
     </div>
     <div class="flex p-4 justify-between">
       <router-link :to="'/profiles/' + this.userId">
-      <div class="hover:cursor-pointer flex items-center space-x-2">
-        
+        <div class="hover:cursor-pointer flex items-center space-x-2">
           <img class="w-10 h-10 cover rounded-full" :src="profilePicture" />
           <h2 class="text-gray-800 font-bold cursor-pointer">{{ username }}</h2>
-        
-      </div>
+        </div>
       </router-link>
       <div class="flex space-x-2">
         <div class="flex space-x-1 items-center">
@@ -347,14 +348,14 @@ export default {
         return;
       } else {
         const likeData = { userId: `${this.currentUserId}` };
-        console.log(likeData);
+
         const res = await axios.put(
           `https://lowballd-backend.onrender.com/api/posts/${this.postId}/like`,
           {
             userId: `${this.currentUserId}`,
           }
         );
-        console.log(res);
+
         const heartButton = this.$refs.heartIcon;
         const modalHeartButton = this.$refs.modalHeartIcon;
 

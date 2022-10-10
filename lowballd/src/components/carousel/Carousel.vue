@@ -29,7 +29,7 @@ export default {
           }
         );
         const data = await response.json();
-        console.log(data);
+
         this.images = data.images;
       } catch (error) {
         console.log(error);

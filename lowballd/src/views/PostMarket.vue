@@ -205,7 +205,6 @@ export default {
   },
   mounted() {
     this.listing.userId = this.$refs.navbarGlobal.userId;
-    console.log(this.userId);
   },
   methods: {
     showAlert() {
@@ -245,6 +244,7 @@ export default {
       console.log(this.listing.condition);
     },
     async postData() {
+      showAlert();
       const formData = new FormData();
       formData.append("userId", this.listing.userId);
       formData.append("title", this.listing.title);
@@ -263,7 +263,6 @@ export default {
         formData,
         { headers }
       );
-      console.log(res)
       this.$swal({
         icon: "success",
         title: "Your post has been successfully saved",

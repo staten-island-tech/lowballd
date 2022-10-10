@@ -7,7 +7,7 @@ import Profile from "../views/Profile.vue";
 import ViewProfile from "../views/ViewProfile.vue";
 import Product from "../views/Product.vue";
 import Chat from "../views/Chat.vue";
-import Api from "../views/tokentest.vue";
+
 import PostFeed from "../views/PostFeed.vue";
 import Email from "../views/Email.vue";
 import Contact from "../views/Contact.vue";
@@ -26,7 +26,7 @@ const routes = [
   { path: "/profiles/:id", name: "ViewProfile", component: ViewProfile },
   { path: "/product", name: "Product", component: Product },
   { path: "/chat", name: "Chat", component: Chat },
-  { path: "/token", name: "token", component: Api },
+
   { path: "/shareoutfit", name: "PostFeed", component: PostFeed },
   { path: "/verfiedemail", name: "Email", component: Email },
   { path: "/faq", name: "Faq", component: Faq },

@@ -147,7 +147,6 @@ export default {
 
   mounted() {
     this.posts.userId = this.$refs.navbarGlobal.userId;
-    console.log(this.userId);
   },
   methods: {
     showAlert() {
@@ -170,6 +169,7 @@ export default {
     },
 
     uploadFile() {
+      showAlert();
       this.posts.images = this.$refs.file.files;
       console.log(this.posts.images);
     },
@@ -191,7 +191,6 @@ export default {
         formData,
         { headers }
       );
-      console.log(res);
       this.$swal({
         icon: "success",
         title: "Your post has been successfully saved",
